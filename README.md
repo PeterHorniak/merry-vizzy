@@ -1,6 +1,7 @@
 # merry-vizzy
 ### Podcasts&Blogs.pbix
 This report visualises my personal spreadsheet data for podcasts and blogs I read.
+I used the Gantt Chart visual to show how I started consuming them over time. There are so many entries that a user has to scroll down, and I'd like a way to visualise them all at once. 
 
 
 ### MyHealth.pbix
