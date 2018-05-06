@@ -16,3 +16,5 @@ This report visualises my readings up to April 2017. I look at overall trends, w
 - Using a JSON theme file
 - Using the buttons feature
 - Using the field properties for documentation
+- Split fields with multiple values into separate rows
+- Plot clusters among variables
