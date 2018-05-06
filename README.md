@@ -12,6 +12,11 @@ I set targets within the visuals for each. Whenever I load in new data, I check 
 ### MyEntertainment_20170403.pbix
 This report visualises my readings up to April 2017. I look at overall trends, where the books are set, and when they are published.
 
+
+### MyEntertainment_20171023.pbix
+This report looks at the proportions of media types over time, and compares the publication of books to when they were set.
+
+
 ### Things to try out
 - Using a JSON theme file
 - Using the buttons feature
