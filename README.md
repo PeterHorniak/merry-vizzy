@@ -9,6 +9,9 @@ This report visualises my Fitbit data for sleep, weight, and activities.
 I set targets within the visuals for each. Whenever I load in new data, I check if I'm meeting my targets.
 
 
+### MyEntertainment_20170403.pbix
+This report visualises my readings up to April 2017. I look at overall trends, where the books are set, and when they are published.
+
 ### Things to try out
 - Using a JSON theme file
 - Using the buttons feature
