@@ -17,7 +17,7 @@ This report visualises my readings up to April 2017. I look at overall trends, w
 This report looks at the proportions of media types over time, and compares the publication of books to when they were set.
 
 
-### Things to try out
+### Things for me to try out
 - Using a JSON theme file
 - Using the buttons feature
 - Using the field properties for documentation
