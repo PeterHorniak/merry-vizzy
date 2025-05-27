@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "AI-Landscape"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "babdc006-12bd-4365-8d53-34c7ddafdacd"
+  }
+}

@@ -1,0 +1,4 @@
+relationship AutoDetected_cf98a7e6-03c9-4e10-b905-7391b2504a73
+	fromColumn: 050_OrgFinal.Full-Location
+	toColumn: 000_tblLocations.Full-Location
+

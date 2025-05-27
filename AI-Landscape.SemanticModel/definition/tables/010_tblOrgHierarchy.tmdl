@@ -1,0 +1,84 @@
+table 010_tblOrgHierarchy
+	lineageTag: c92e3d31-585a-47c1-8773-c68ab55ae46f
+
+	column Level1
+		dataType: string
+		lineageTag: 67f858ce-c923-4c2b-8e07-e2ef77198488
+		summarizeBy: none
+		sourceColumn: Level1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level2
+		dataType: string
+		lineageTag: b8aacd16-5a44-4720-89e3-c4ba2b420d1a
+		summarizeBy: none
+		sourceColumn: Level2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level3
+		dataType: string
+		lineageTag: c5f3ab06-859a-451b-b483-472219c3c949
+		summarizeBy: none
+		sourceColumn: Level3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level4
+		dataType: string
+		lineageTag: b8a76890-4323-4680-84b3-3e9b6b98fce5
+		summarizeBy: none
+		sourceColumn: Level4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level2-acronym
+		dataType: string
+		lineageTag: 99770c7e-5613-4c1e-9e37-bb89adc89d2b
+		summarizeBy: none
+		sourceColumn: Level2-acronym
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level3-acronym
+		dataType: string
+		lineageTag: 811f001f-b023-499d-ac9b-78b28e9ba0c7
+		summarizeBy: none
+		sourceColumn: Level3-acronym
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level4-acronym
+		dataType: string
+		lineageTag: 79af3cb0-68e1-4e01-bdea-9eff2ef528df
+		summarizeBy: none
+		sourceColumn: Level4-acronym
+
+		annotation SummarizationSetBy = Automatic
+
+	column Headcount
+		dataType: int64
+		formatString: 0
+		lineageTag: 3adf14ff-652d-49bc-b422-d7fc1cd824f5
+		summarizeBy: sum
+		sourceColumn: Headcount
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 010_tblOrgHierarchy = m
+		mode: import
+		source =
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI/"),
+				    OrgHierarchy_Table = Source{[name="OrgHierarchy",ItemKind="Table"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(OrgHierarchy_Table, [PromoteAllScalars=true]),
+				    #"Promoted Headers1" = Table.PromoteHeaders(#"Promoted Headers", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers1",{{"Level1", type text}, {"Level2", type text}, {"Level3", type text}, {"Level4", type text}, {"Headcount", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

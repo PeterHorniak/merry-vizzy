@@ -1,0 +1,140 @@
+table 050_OrgFinal
+	lineageTag: a95f0817-2701-4284-b228-3549caa6e99c
+
+	column Organisation
+		dataType: string
+		lineageTag: af2a3529-8de3-40fa-ad3c-269749e0fef0
+		summarizeBy: none
+		sourceColumn: Organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL
+		dataType: string
+		lineageTag: 53dc24b4-ce97-4d49-b4d3-0eec740eff23
+		summarizeBy: none
+		sourceColumn: URL
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Doc heading'
+		dataType: string
+		lineageTag: 122a404c-6600-4b14-8e6a-8c0b200d23d4
+		summarizeBy: none
+		sourceColumn: Doc heading
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mission
+		dataType: string
+		lineageTag: 6f63f450-3264-43a9-9dcc-62e463a6e74b
+		summarizeBy: none
+		sourceColumn: Mission
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Activities general'
+		dataType: string
+		lineageTag: 133ea950-c1f2-431c-b222-cd81b6472ff7
+		summarizeBy: none
+		sourceColumn: Activities general
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Activities AI'
+		dataType: string
+		lineageTag: 436b501d-5207-43cf-9953-75a5549227cd
+		summarizeBy: none
+		sourceColumn: Activities AI
+
+		annotation SummarizationSetBy = Automatic
+
+	column Misc
+		dataType: string
+		lineageTag: 09a5a5ba-722f-4d86-adc8-54d30949eea1
+		summarizeBy: none
+		sourceColumn: Misc
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parent org'
+		dataType: string
+		lineageTag: bd6b55e7-67a3-41b8-abdb-f74c820ad18e
+		summarizeBy: none
+		sourceColumn: Parent org
+
+		annotation SummarizationSetBy = Automatic
+
+	column Locations
+		dataType: string
+		lineageTag: c07a633f-1a8d-4f2f-8608-f0fd16966906
+		summarizeBy: none
+		sourceColumn: Locations
+
+		annotation SummarizationSetBy = Automatic
+
+	column Headcount
+		dataType: string
+		lineageTag: 2c9b5dab-d997-4235-a7e6-9c4266f2af2e
+		summarizeBy: none
+		sourceColumn: Headcount
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Headcount source'
+		dataType: string
+		lineageTag: fe796201-eb83-476e-a6be-4de97238f253
+		summarizeBy: none
+		sourceColumn: Headcount source
+
+		annotation SummarizationSetBy = Automatic
+
+	column Structure
+		dataType: string
+		lineageTag: edbdfd4d-1480-4064-aa97-176d471cfdad
+		summarizeBy: none
+		sourceColumn: Structure
+
+		annotation SummarizationSetBy = Automatic
+
+	column Full-Location
+		dataType: string
+		lineageTag: 671a8899-12ee-4286-b4b1-869476d48391
+		summarizeBy: none
+		sourceColumn: Full-Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location-Combined
+		dataType: string
+		lineageTag: de71f7ba-5d78-4b8f-834a-a9a0128cc381
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: Location-Combined
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address-Main
+		dataType: string
+		lineageTag: a2147006-c9f5-45fd-b3ef-99688572a077
+		dataCategory: Address
+		summarizeBy: none
+		sourceColumn: Address-Main
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 050_OrgFinal = m
+		mode: import
+		source =
+				let
+				    Source = #"010_Organisations",
+				    #"Merged Queries" = Table.NestedJoin(Source, {"Locations"}, #"000_tblLocations", {"Acronym"}, "000_tblLocations", JoinKind.LeftOuter),
+				    #"Expanded 000_tblLocations" = Table.ExpandTableColumn(#"Merged Queries", "000_tblLocations", {"Full-Location"}, {"Full-Location"}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Expanded 000_tblLocations", "Location-Combined", each if [#"Full-Location"] = null then [Locations] else [#"Full-Location"])
+				in
+				    #"Added Conditional Column"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
