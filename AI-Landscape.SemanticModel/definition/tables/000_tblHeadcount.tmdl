@@ -1,0 +1,65 @@
+table 000_tblHeadcount
+	lineageTag: 8d5709c2-5678-4663-9b50-a962c3ba2d07
+
+	column 'Date when correct'
+		dataType: string
+		lineageTag: c15f1ac9-a356-4141-b226-b6e2443c090d
+		summarizeBy: none
+		sourceColumn: Date when correct
+
+		annotation SummarizationSetBy = Automatic
+
+	column Organisation
+		dataType: string
+		lineageTag: 4a8b2058-521d-4847-abea-c70f574eaf9b
+		summarizeBy: none
+		sourceColumn: Organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Source
+		dataType: string
+		lineageTag: 15d1463d-1389-422d-aaff-f22bf1863a96
+		summarizeBy: none
+		sourceColumn: Source
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FTE total'
+		dataType: double
+		lineageTag: 3ba209f5-7ef3-4aec-8e80-f205acf3243a
+		summarizeBy: sum
+		sourceColumn: FTE total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'FTE notkilleveryoneism'
+		dataType: double
+		lineageTag: c38d52af-60d4-4747-9584-d5277bbd0c7f
+		summarizeBy: sum
+		sourceColumn: FTE notkilleveryoneism
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 000_tblHeadcount = m
+		mode: import
+		source =
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI/"),
+				    Headcount_Table = Source{[name="Headcount",ItemKind="Table"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Headcount_Table, [PromoteAllScalars=true]),
+				    #"Promoted Headers1" = Table.PromoteHeaders(#"Promoted Headers", [PromoteAllScalars=true]),
+				    #"Removed Columns" = Table.RemoveColumns(#"Promoted Headers1",{""}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each ([Date when correct] <> null and [Date when correct] <> "")),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Filtered Rows",{{"FTE notkilleveryoneism", type number}, {"FTE total", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

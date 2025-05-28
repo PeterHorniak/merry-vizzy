@@ -1,4 +1,4 @@
-table 010_Organisations
+table 010_tblOrg
 	lineageTag: 489adb6f-eb7f-4d47-9cce-1808ec99e5c8
 
 	column Organisation
@@ -17,27 +17,11 @@ table 010_Organisations
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Doc heading'
-		dataType: string
-		lineageTag: 971f2848-b5d4-4543-84ff-7bbac8529791
-		summarizeBy: none
-		sourceColumn: Doc heading
-
-		annotation SummarizationSetBy = Automatic
-
 	column Mission
 		dataType: string
 		lineageTag: 15d19ba0-4863-468d-a2cb-56579dcda1ea
 		summarizeBy: none
 		sourceColumn: Mission
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Activities general'
-		dataType: string
-		lineageTag: 9b76ef29-3d25-42d4-8c23-f7a41411d42f
-		summarizeBy: none
-		sourceColumn: Activities general
 
 		annotation SummarizationSetBy = Automatic
 
@@ -65,57 +49,41 @@ table 010_Organisations
 
 		annotation SummarizationSetBy = Automatic
 
-	column Locations
+	column Status
 		dataType: string
-		lineageTag: d98b0506-9786-4428-86aa-8ff98d0ecca5
+		lineageTag: 4dc27541-437e-4e36-a8aa-43c52dfe2438
 		summarizeBy: none
-		sourceColumn: Locations
+		sourceColumn: Status
 
 		annotation SummarizationSetBy = Automatic
 
-	column Headcount
+	column 'Key Contacts'
 		dataType: string
-		lineageTag: 19c7a5a5-a928-4dae-bcfa-ffb4fd2e75e9
+		lineageTag: 2cdf78c5-a870-4930-9b3a-ee2d978aca00
 		summarizeBy: none
-		sourceColumn: Headcount
+		sourceColumn: Key Contacts
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Headcount source'
+	column Location
 		dataType: string
-		lineageTag: 424d08cb-3d95-429d-a8e0-9ea92c2867ac
+		lineageTag: 56a7e333-9291-4306-80dd-617188d25047
 		summarizeBy: none
-		sourceColumn: Headcount source
+		sourceColumn: Location
 
 		annotation SummarizationSetBy = Automatic
 
-	column Structure
-		dataType: string
-		lineageTag: a7a109d2-1e94-45f7-98b1-6504788fed23
-		summarizeBy: none
-		sourceColumn: Structure
-
-		annotation SummarizationSetBy = Automatic
-
-	column Address-Main
-		dataType: string
-		lineageTag: ee97c0b9-6491-4098-ba0d-022bd4e6ed72
-		summarizeBy: none
-		sourceColumn: Address-Main
-
-		annotation SummarizationSetBy = Automatic
-
-	partition 010_Organisations = m
+	partition 010_tblOrg = m
 		mode: import
 		source =
 				let
 				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI/"),
-				    Organisations_Table = Source{[name="Organisations",ItemKind="Table"]}[Data],
+				    Organisations_Table = Source{[name="Organisation",ItemKind="Table"]}[Data],
 				    #"Promoted Headers" = Table.PromoteHeaders(Organisations_Table, [PromoteAllScalars=true]),
 				    #"Promoted Headers1" = Table.PromoteHeaders(#"Promoted Headers", [PromoteAllScalars=true]),
-				    #"Removed Columns" = Table.RemoveColumns(#"Promoted Headers1",{"TODO: try adding more serious / colourcoding to charts.#(lf)Also split ""Activities AI"" into individual rows for another chart?"})
+				    #"Removed Columns1" = Table.RemoveColumns(#"Promoted Headers1",{""})
 				in
-				    #"Removed Columns"
+				    #"Removed Columns1"
 
 	annotation PBI_ResultType = Table
 
