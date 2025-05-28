@@ -5,21 +5,21 @@ cultureInfo en-US
 			  "Version": "4.1.0",
 			  "Language": "en-US",
 			  "Entities": {
-			    "entity_010_tbl_org": {
+			    "entity_000_tbl_org": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg"
+			          "ConceptualEntity": "000_tblOrg"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "010 tbl org": {
+			          "000 tbl org": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "010_tblOrg": {
+			          "000_tblOrg": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -27,10 +27,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org.organisation": {
+			    "entity_000_tbl_org.organisation": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg",
+			          "ConceptualEntity": "000_tblOrg",
 			          "ConceptualProperty": "Organisation"
 			        }
 			      },
@@ -93,10 +93,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org.url": {
+			    "entity_000_tbl_org.url": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg",
+			          "ConceptualEntity": "000_tblOrg",
 			          "ConceptualProperty": "URL"
 			        }
 			      },
@@ -139,10 +139,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org.mission": {
+			    "entity_000_tbl_org.mission": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg",
+			          "ConceptualEntity": "000_tblOrg",
 			          "ConceptualProperty": "Mission"
 			        }
 			      },
@@ -255,10 +255,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org.activities_AI": {
+			    "entity_000_tbl_org.activities_AI": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg",
+			          "ConceptualEntity": "000_tblOrg",
 			          "ConceptualProperty": "Activities AI"
 			        }
 			      },
@@ -284,10 +284,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org.misc": {
+			    "entity_000_tbl_org.misc": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg",
+			          "ConceptualEntity": "000_tblOrg",
 			          "ConceptualProperty": "Misc"
 			        }
 			      },
@@ -300,10 +300,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org.parent_org": {
+			    "entity_000_tbl_org.parent_org": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg",
+			          "ConceptualEntity": "000_tblOrg",
 			          "ConceptualProperty": "Parent org"
 			        }
 			      },
@@ -952,16 +952,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "Chain of parenthood": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2584,10 +2574,10 @@ cultureInfo en-US
 			      ],
 			      "SemanticType": "Location"
 			    },
-			    "entity_010_tbl_org.status": {
+			    "entity_000_tbl_org.status": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg",
+			          "ConceptualEntity": "000_tblOrg",
 			          "ConceptualProperty": "Status"
 			        }
 			      },
@@ -2690,10 +2680,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org.key_contact": {
+			    "entity_000_tbl_org.key_contact": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg",
+			          "ConceptualEntity": "000_tblOrg",
 			          "ConceptualProperty": "Key Contacts"
 			        }
 			      },
@@ -2812,10 +2802,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org.location": {
+			    "entity_000_tbl_org.location": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg",
+			          "ConceptualEntity": "000_tblOrg",
 			          "ConceptualProperty": "Location"
 			        }
 			      },
@@ -2924,6 +2914,372 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "entity_000_tbl_org.organisationshortened_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "000_tblOrg",
+			          "ConceptualProperty": "Organisation-Shortened.1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "organisation-shortened.1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "organisation shortened.1": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "organization -shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "corporation -shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "institution -shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "org -shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "organization shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "corporation shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "institution shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "org shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "business -shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "company -shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity_000_tbl_org.organisationshortened_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "000_tblOrg",
+			          "ConceptualProperty": "Organisation-Shortened.2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "organisation-shortened.2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "organisation shortened.2": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "organization -shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "corporation -shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "institution -shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "org -shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "organization shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "corporation shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "institution shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "org shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "business -shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "company -shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity_000_tbl_org.organisationshortened": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "000_tblOrg",
+			          "ConceptualProperty": "Organisation-Shortened"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "organisation-shortened": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "organisation shortened": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "organization shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "corporation shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "institution shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "org shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "business shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "company shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "organization -shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "corporation -shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "institution -shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "org -shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
 			          }
 			        }
 			      ]
@@ -3272,6 +3628,372 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "entity_050_org_final.organisationshortened_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualProperty": "Organisation-Shortened.1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "organisation-shortened.1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "organisation shortened.1": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "organization -shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "corporation -shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "institution -shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "org -shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "organization shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "corporation shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "institution shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "org shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "business -shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "company -shortened.1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity_050_org_final.organisationshortened_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualProperty": "Organisation-Shortened.2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "organisation-shortened.2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "organisation shortened.2": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "organization -shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "corporation -shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "institution -shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "org -shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "organization shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "corporation shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "institution shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "org shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "business -shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "company -shortened.2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity_050_org_final.organisationshortened": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualProperty": "Organisation-Shortened"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "organisation-shortened": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "organisation shortened": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "organization shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "corporation shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "institution shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "org shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "business shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "company shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "organization -shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "corporation -shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "institution -shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "org -shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
 			    "entity_000_tbl_headcount": {
 			      "Definition": {
 			        "Binding": {
@@ -3566,6 +4288,850 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity_010_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "010 hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "010_Hierarchy": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "010 ladder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "010 grading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "010 order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "010 pyramid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "ladder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "grading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pyramid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.level_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "Level1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "level 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Level1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quantity 1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "threshold 1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "amount 1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grade 1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "point 1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "rank 1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "tier 1": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Parent tree": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.level_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "Level2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "level 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Level2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quantity 2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "threshold 2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "amount 2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grade 2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "point 2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "rank 2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "tier 2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.level_3": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "Level3"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "level 3": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Level3": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quantity 3": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "threshold 3": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "amount 3": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grade 3": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "point 3": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "rank 3": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "tier 3": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.level_4": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "Level4"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "level 4": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Level4": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quantity 4": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "threshold 4": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "amount 4": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grade 4": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "point 4": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "rank 4": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "tier 4": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.level_5": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "Level5"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "level 5": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Level5": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quantity 5": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "threshold 5": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "amount 5": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grade 5": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "point 5": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "rank 5": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "tier 5": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.level_6": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "Level6"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "level 6": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Level6": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quantity 6": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "threshold 6": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "amount 6": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grade 6": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "point 6": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "rank 6": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "tier 6": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.entity_000_tblOrg_organisation": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "000_tblOrg.Organisation"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "000_tblOrg.organisation": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "000_tblorg. organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "000_tblorg. corporation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "000_tblorg. institution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "000_tblorg. org": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "000_tblorg. business": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "000_tblorg. company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.lvl_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "Lvl2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lvl 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Lvl2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.lvl_3": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "Lvl3"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lvl 3": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Lvl3": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.lvl_4": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "Lvl4"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lvl 4": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Lvl4": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.lvl_5": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "Lvl5"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lvl 5": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Lvl5": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -3675,7 +5241,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_000_tbl_headcount_has_entity_010_tbl_org": {
+			    "entity_000_tbl_headcount_has_entity_000_tbl_org": {
 			      "Binding": {
 			        "ConceptualEntity": "000_tblHeadcount"
 			      },
@@ -3686,9 +5252,9 @@ cultureInfo en-US
 			            "Entity": "entity_000_tbl_headcount"
 			          }
 			        },
-			        "entity_010_tbl_org": {
+			        "entity_000_tbl_org": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org"
+			            "Entity": "entity_000_tbl_org"
 			          },
 			          "Nouns": [
 			            {
@@ -3706,17 +5272,17 @@ cultureInfo en-US
 			              "Role": "entity_000_tbl_headcount"
 			            },
 			            "Object": {
-			              "Role": "entity_010_tbl_org"
+			              "Role": "entity_000_tbl_org"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing000_tbl_headcounts_have_010_tbl_org"
+			          "ID": "Phrasing000_tbl_headcounts_have_000_tbl_org"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_010_tbl_org"
+			              "Role": "entity_000_tbl_org"
 			            },
 			            "Object": {
 			              "Role": "entity_000_tbl_headcount"
@@ -3724,7 +5290,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_have_000_tbl_headcounts"
+			          "ID": "Phrasing000_tbl_org_have_000_tbl_headcounts"
 			        }
 			      ]
 			    },
@@ -3783,6 +5349,369 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "Phrasing000_tbl_locations_have_050_org_finals"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_lvl_5": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.lvl_5": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.lvl_5"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.lvl_5"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_lvl_5"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_lvl_4": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.lvl_4": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.lvl_4"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.lvl_4"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_lvl_4"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_lvl_3": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.lvl_3": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.lvl_3"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.lvl_3"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_lvl_3"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_lvl_2": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.lvl_2": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.lvl_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.lvl_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_lvl_2"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_entity_000_tblOrg_organisation": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.entity_000_tblOrg_organisation": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.entity_000_tblOrg_organisation"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.entity_000_tblOrg_organisation"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_000_tblOrg_organisations"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_level_6": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.level_6": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.level_6"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.level_6"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_level_6"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_level_5": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.level_5": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.level_5"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.level_5"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_level_5"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_level_4": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.level_4": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.level_4"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.level_4"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_level_4"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_level_3": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.level_3": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.level_3"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.level_3"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_level_3"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_level_2": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.level_2": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.level_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.level_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_level_2"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_level_1": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.level_1": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.level_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.level_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_level_1"
 			        }
 			      ]
 			    },
@@ -3918,6 +5847,105 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "entity_050_org_final_has_organisationshortened": {
+			      "Binding": {
+			        "ConceptualEntity": "050_OrgFinal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_050_org_final": {
+			          "Target": {
+			            "Entity": "entity_050_org_final"
+			          }
+			        },
+			        "entity_050_org_final.organisationshortened": {
+			          "Target": {
+			            "Entity": "entity_050_org_final.organisationshortened"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_050_org_final"
+			            },
+			            "Object": {
+			              "Role": "entity_050_org_final.organisationshortened"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing050_org_finals_have_organisationshortened"
+			        }
+			      ]
+			    },
+			    "entity_050_org_final_has_organisationshortened_2": {
+			      "Binding": {
+			        "ConceptualEntity": "050_OrgFinal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_050_org_final": {
+			          "Target": {
+			            "Entity": "entity_050_org_final"
+			          }
+			        },
+			        "entity_050_org_final.organisationshortened_2": {
+			          "Target": {
+			            "Entity": "entity_050_org_final.organisationshortened_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_050_org_final"
+			            },
+			            "Object": {
+			              "Role": "entity_050_org_final.organisationshortened_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing050_org_finals_have_organisationshortened_2"
+			        }
+			      ]
+			    },
+			    "entity_050_org_final_has_organisationshortened_1": {
+			      "Binding": {
+			        "ConceptualEntity": "050_OrgFinal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_050_org_final": {
+			          "Target": {
+			            "Entity": "entity_050_org_final"
+			          }
+			        },
+			        "entity_050_org_final.organisationshortened_1": {
+			          "Target": {
+			            "Entity": "entity_050_org_final.organisationshortened_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_050_org_final"
+			            },
+			            "Object": {
+			              "Role": "entity_050_org_final.organisationshortened_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing050_org_finals_have_organisationshortened_1"
+			        }
+			      ]
+			    },
 			    "entity_050_org_final_has_location": {
 			      "Binding": {
 			        "ConceptualEntity": "050_OrgFinal"
@@ -4017,20 +6045,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org_has_location": {
+			    "entity_000_tbl_org_has_organisationshortened": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg"
+			        "ConceptualEntity": "000_tblOrg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_010_tbl_org": {
+			        "entity_000_tbl_org": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org"
+			            "Entity": "entity_000_tbl_org"
 			          }
 			        },
-			        "entity_010_tbl_org.location": {
+			        "entity_000_tbl_org.organisationshortened": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org.location"
+			            "Entity": "entity_000_tbl_org.organisationshortened"
 			          }
 			        }
 			      },
@@ -4038,32 +6066,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_010_tbl_org"
+			              "Role": "entity_000_tbl_org"
 			            },
 			            "Object": {
-			              "Role": "entity_010_tbl_org.location"
+			              "Role": "entity_000_tbl_org.organisationshortened"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_have_locations"
+			          "ID": "Phrasing000_tbl_org_have_organisationshortened"
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org_has_key_contact": {
+			    "entity_000_tbl_org_has_organisationshortened_2": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg"
+			        "ConceptualEntity": "000_tblOrg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_010_tbl_org": {
+			        "entity_000_tbl_org": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org"
+			            "Entity": "entity_000_tbl_org"
 			          }
 			        },
-			        "entity_010_tbl_org.key_contact": {
+			        "entity_000_tbl_org.organisationshortened_2": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org.key_contact"
+			            "Entity": "entity_000_tbl_org.organisationshortened_2"
 			          }
 			        }
 			      },
@@ -4071,32 +6099,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_010_tbl_org"
+			              "Role": "entity_000_tbl_org"
 			            },
 			            "Object": {
-			              "Role": "entity_010_tbl_org.key_contact"
+			              "Role": "entity_000_tbl_org.organisationshortened_2"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_have_key_contacts"
+			          "ID": "Phrasing000_tbl_org_have_organisationshortened_2"
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org_has_status": {
+			    "entity_000_tbl_org_has_organisationshortened_1": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg"
+			        "ConceptualEntity": "000_tblOrg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_010_tbl_org": {
+			        "entity_000_tbl_org": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org"
+			            "Entity": "entity_000_tbl_org"
 			          }
 			        },
-			        "entity_010_tbl_org.status": {
+			        "entity_000_tbl_org.organisationshortened_1": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org.status"
+			            "Entity": "entity_000_tbl_org.organisationshortened_1"
 			          }
 			        }
 			      },
@@ -4104,15 +6132,114 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_010_tbl_org"
+			              "Role": "entity_000_tbl_org"
 			            },
 			            "Object": {
-			              "Role": "entity_010_tbl_org.status"
+			              "Role": "entity_000_tbl_org.organisationshortened_1"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_have_statuses"
+			          "ID": "Phrasing000_tbl_org_have_organisationshortened_1"
+			        }
+			      ]
+			    },
+			    "entity_000_tbl_org_has_location": {
+			      "Binding": {
+			        "ConceptualEntity": "000_tblOrg"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_000_tbl_org": {
+			          "Target": {
+			            "Entity": "entity_000_tbl_org"
+			          }
+			        },
+			        "entity_000_tbl_org.location": {
+			          "Target": {
+			            "Entity": "entity_000_tbl_org.location"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_000_tbl_org"
+			            },
+			            "Object": {
+			              "Role": "entity_000_tbl_org.location"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing000_tbl_org_have_locations"
+			        }
+			      ]
+			    },
+			    "entity_000_tbl_org_has_key_contact": {
+			      "Binding": {
+			        "ConceptualEntity": "000_tblOrg"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_000_tbl_org": {
+			          "Target": {
+			            "Entity": "entity_000_tbl_org"
+			          }
+			        },
+			        "entity_000_tbl_org.key_contact": {
+			          "Target": {
+			            "Entity": "entity_000_tbl_org.key_contact"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_000_tbl_org"
+			            },
+			            "Object": {
+			              "Role": "entity_000_tbl_org.key_contact"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing000_tbl_org_have_key_contacts"
+			        }
+			      ]
+			    },
+			    "entity_000_tbl_org_has_status": {
+			      "Binding": {
+			        "ConceptualEntity": "000_tblOrg"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_000_tbl_org": {
+			          "Target": {
+			            "Entity": "entity_000_tbl_org"
+			          }
+			        },
+			        "entity_000_tbl_org.status": {
+			          "Target": {
+			            "Entity": "entity_000_tbl_org.status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_000_tbl_org"
+			            },
+			            "Object": {
+			              "Role": "entity_000_tbl_org.status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing000_tbl_org_have_statuses"
 			        }
 			      ]
 			    },
@@ -4776,20 +6903,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org_has_parent_org": {
+			    "entity_000_tbl_org_has_parent_org": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg"
+			        "ConceptualEntity": "000_tblOrg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_010_tbl_org": {
+			        "entity_000_tbl_org": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org"
+			            "Entity": "entity_000_tbl_org"
 			          }
 			        },
-			        "entity_010_tbl_org.parent_org": {
+			        "entity_000_tbl_org.parent_org": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org.parent_org"
+			            "Entity": "entity_000_tbl_org.parent_org"
 			          }
 			        }
 			      },
@@ -4797,32 +6924,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_010_tbl_org"
+			              "Role": "entity_000_tbl_org"
 			            },
 			            "Object": {
-			              "Role": "entity_010_tbl_org.parent_org"
+			              "Role": "entity_000_tbl_org.parent_org"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_have_parent_org"
+			          "ID": "Phrasing000_tbl_org_have_parent_org"
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org_has_misc": {
+			    "entity_000_tbl_org_has_misc": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg"
+			        "ConceptualEntity": "000_tblOrg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_010_tbl_org": {
+			        "entity_000_tbl_org": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org"
+			            "Entity": "entity_000_tbl_org"
 			          }
 			        },
-			        "entity_010_tbl_org.misc": {
+			        "entity_000_tbl_org.misc": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org.misc"
+			            "Entity": "entity_000_tbl_org.misc"
 			          }
 			        }
 			      },
@@ -4830,32 +6957,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_010_tbl_org"
+			              "Role": "entity_000_tbl_org"
 			            },
 			            "Object": {
-			              "Role": "entity_010_tbl_org.misc"
+			              "Role": "entity_000_tbl_org.misc"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_have_miscs"
+			          "ID": "Phrasing000_tbl_org_have_miscs"
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org_has_activities_AI": {
+			    "entity_000_tbl_org_has_activities_AI": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg"
+			        "ConceptualEntity": "000_tblOrg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_010_tbl_org": {
+			        "entity_000_tbl_org": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org"
+			            "Entity": "entity_000_tbl_org"
 			          }
 			        },
-			        "entity_010_tbl_org.activities_AI": {
+			        "entity_000_tbl_org.activities_AI": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org.activities_AI"
+			            "Entity": "entity_000_tbl_org.activities_AI"
 			          }
 			        }
 			      },
@@ -4863,32 +6990,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_010_tbl_org"
+			              "Role": "entity_000_tbl_org"
 			            },
 			            "Object": {
-			              "Role": "entity_010_tbl_org.activities_AI"
+			              "Role": "entity_000_tbl_org.activities_AI"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_have_activities_AI"
+			          "ID": "Phrasing000_tbl_org_have_activities_AI"
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org_has_mission": {
+			    "entity_000_tbl_org_has_mission": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg"
+			        "ConceptualEntity": "000_tblOrg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_010_tbl_org": {
+			        "entity_000_tbl_org": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org"
+			            "Entity": "entity_000_tbl_org"
 			          }
 			        },
-			        "entity_010_tbl_org.mission": {
+			        "entity_000_tbl_org.mission": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org.mission"
+			            "Entity": "entity_000_tbl_org.mission"
 			          }
 			        }
 			      },
@@ -4896,32 +7023,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_010_tbl_org"
+			              "Role": "entity_000_tbl_org"
 			            },
 			            "Object": {
-			              "Role": "entity_010_tbl_org.mission"
+			              "Role": "entity_000_tbl_org.mission"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_have_missions"
+			          "ID": "Phrasing000_tbl_org_have_missions"
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org_has_url": {
+			    "entity_000_tbl_org_has_url": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg"
+			        "ConceptualEntity": "000_tblOrg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_010_tbl_org": {
+			        "entity_000_tbl_org": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org"
+			            "Entity": "entity_000_tbl_org"
 			          }
 			        },
-			        "entity_010_tbl_org.url": {
+			        "entity_000_tbl_org.url": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org.url"
+			            "Entity": "entity_000_tbl_org.url"
 			          }
 			        }
 			      },
@@ -4929,32 +7056,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_010_tbl_org"
+			              "Role": "entity_000_tbl_org"
 			            },
 			            "Object": {
-			              "Role": "entity_010_tbl_org.url"
+			              "Role": "entity_000_tbl_org.url"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_have_urls"
+			          "ID": "Phrasing000_tbl_org_have_urls"
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org_has_organisation": {
+			    "entity_000_tbl_org_has_organisation": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg"
+			        "ConceptualEntity": "000_tblOrg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_010_tbl_org": {
+			        "entity_000_tbl_org": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org"
+			            "Entity": "entity_000_tbl_org"
 			          }
 			        },
-			        "entity_010_tbl_org.organisation": {
+			        "entity_000_tbl_org.organisation": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org.organisation"
+			            "Entity": "entity_000_tbl_org.organisation"
 			          }
 			        }
 			      },
@@ -4962,15 +7089,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_010_tbl_org"
+			              "Role": "entity_000_tbl_org"
 			            },
 			            "Object": {
-			              "Role": "entity_010_tbl_org.organisation"
+			              "Role": "entity_000_tbl_org.organisation"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_have_organisations"
+			          "ID": "Phrasing000_tbl_org_have_organisations"
 			        }
 			      ]
 			    },
@@ -5064,33 +7191,33 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_010_tbl_org_in_location": {
+			    "entity_000_tbl_org_in_location": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg"
+			        "ConceptualEntity": "000_tblOrg"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_010_tbl_org": {
+			        "entity_000_tbl_org": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org"
+			            "Entity": "entity_000_tbl_org"
 			          }
 			        },
-			        "entity_010_tbl_org.location": {
+			        "entity_000_tbl_org.location": {
 			          "Target": {
-			            "Entity": "entity_010_tbl_org.location"
+			            "Entity": "entity_000_tbl_org.location"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "entity_010_tbl_org.location"
+			          "Role": "entity_000_tbl_org.location"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "entity_010_tbl_org"
+			              "Role": "entity_000_tbl_org"
 			            },
 			            "Prepositions": [
 			              {
@@ -5100,12 +7227,12 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "entity_010_tbl_org.location"
+			              "Role": "entity_000_tbl_org.location"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_are_in_locations"
+			          "ID": "Phrasing000_tbl_org_are_in_locations"
 			        }
 			      ]
 			    },

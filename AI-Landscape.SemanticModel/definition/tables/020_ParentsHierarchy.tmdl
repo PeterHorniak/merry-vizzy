@@ -21,7 +21,7 @@ table 020_ParentsHierarchy
 		mode: import
 		source =
 				let
-				    Source = #"010_tblOrg",
+				    Source = #"000_tblOrg",
 				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Parent org"}),
 				    #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each true)
 				in

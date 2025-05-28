@@ -90,11 +90,35 @@ table 050_OrgFinal
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Organisation-Shortened.1'
+		dataType: string
+		lineageTag: 0f982550-d827-47e0-9cfb-8c5c0fc85843
+		summarizeBy: none
+		sourceColumn: Organisation-Shortened.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Organisation-Shortened.2'
+		dataType: string
+		lineageTag: df576ff7-1067-4f51-851f-fdb8f5d10758
+		summarizeBy: none
+		sourceColumn: Organisation-Shortened.2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Organisation-Shortened
+		dataType: string
+		lineageTag: 1bbbf6e0-c2cb-466f-9956-3db1021d49df
+		summarizeBy: none
+		sourceColumn: Organisation-Shortened
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 050_OrgFinal = m
 		mode: import
 		source =
 				let
-				    Source = #"010_tblOrg",
+				    Source = #"000_tblOrg",
 				    #"Merged Queries" = Table.NestedJoin(Source, {"Location"}, #"000_tblLocations", {"Acronym"}, "000_tblLocations", JoinKind.LeftOuter),
 				    #"Expanded 000_tblLocations" = Table.ExpandTableColumn(#"Merged Queries", "000_tblLocations", {"Full-Location"}, {"Full-Location"}),
 				    #"Added Conditional Column" = Table.AddColumn(#"Expanded 000_tblLocations", "Location-Combined", each if [#"Full-Location"] = null then [Location] else [#"Full-Location"])

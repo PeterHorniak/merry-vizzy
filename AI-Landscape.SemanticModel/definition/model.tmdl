@@ -10,17 +10,18 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBIDesktopVersion = 2.143.878.0 (25.05)+b20aa3b866ec1b70879135a4e60e4b1301c75b21
 
-annotation PBI_QueryOrder = ["010_tblOrg","020_ActivitiesSplit","020_ParentsHierarchy","010_tblOrgHierarchy","000_tblLocations","050_OrgFinal","000_tblHeadcount"]
+annotation PBI_QueryOrder = ["000_tblOrg","020_ActivitiesSplit","020_ParentsHierarchy","010_tblOrgHierarchy","000_tblLocations","050_OrgFinal","000_tblHeadcount","010_Hierarchy"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table 010_tblOrg
+ref table 000_tblOrg
 ref table 020_ActivitiesSplit
 ref table 020_ParentsHierarchy
 ref table 010_tblOrgHierarchy
 ref table 000_tblLocations
 ref table 050_OrgFinal
 ref table 000_tblHeadcount
+ref table 010_Hierarchy
 
 ref cultureInfo en-US
 

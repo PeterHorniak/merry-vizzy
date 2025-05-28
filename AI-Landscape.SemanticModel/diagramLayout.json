@@ -74,10 +74,23 @@
         },
         {
           "location": {
+            "x": 1754,
+            "y": 87
+          },
+          "nodeIndex": "000_tblHeadcount",
+          "nodeLineageTag": "8d5709c2-5678-4663-9b50-a962c3ba2d07",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
             "x": 0,
             "y": 25
           },
-          "nodeIndex": "010_tblOrg",
+          "nodeIndex": "000_tblOrg",
           "size": {
             "height": 300,
             "width": 234
@@ -86,13 +99,13 @@
         },
         {
           "location": {
-            "x": 1754,
-            "y": 87
+            "x": 2038,
+            "y": 51
           },
-          "nodeIndex": "000_tblHeadcount",
-          "nodeLineageTag": "8d5709c2-5678-4663-9b50-a962c3ba2d07",
+          "nodeIndex": "010_Hierarchy",
+          "nodeLineageTag": "1b0ff087-9ecd-4948-962c-1ed2335ff8c0",
           "size": {
-            "height": 176,
+            "height": 248,
             "width": 234
           },
           "zIndex": 0

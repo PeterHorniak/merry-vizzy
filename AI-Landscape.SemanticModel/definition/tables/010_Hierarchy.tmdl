@@ -1,0 +1,117 @@
+table 010_Hierarchy
+	lineageTag: 1b0ff087-9ecd-4948-962c-1ed2335ff8c0
+
+	column Level1
+		dataType: string
+		lineageTag: 619737c0-bfd0-4fc6-b754-419f4513df63
+		summarizeBy: none
+		sourceColumn: Level1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level2
+		dataType: string
+		lineageTag: 73451c26-5922-46b7-b0a5-68329ff6e90f
+		summarizeBy: none
+		sourceColumn: Level2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level3
+		dataType: string
+		lineageTag: abe92382-9702-4d9a-9bd1-589b9c9c0f45
+		summarizeBy: none
+		sourceColumn: Level3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level4
+		dataType: string
+		lineageTag: c09e9214-9152-46bc-9e5c-c2fbe7bfd7c3
+		summarizeBy: none
+		sourceColumn: Level4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level5
+		dataType: string
+		lineageTag: e38e9f8b-d613-4e6d-8280-6d16f9ddab75
+		summarizeBy: none
+		sourceColumn: Level5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level6
+		dataType: string
+		lineageTag: 6c511817-efbf-4f2c-86b4-7ce6d6bce23a
+		summarizeBy: none
+		sourceColumn: Level6
+
+		annotation SummarizationSetBy = Automatic
+
+	column '000_tblOrg.Organisation'
+		dataType: string
+		lineageTag: 3c5f7aba-e382-48fb-8fc7-635fa6f157fe
+		summarizeBy: none
+		sourceColumn: 000_tblOrg.Organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lvl2
+		dataType: string
+		lineageTag: 88750d50-9546-4ae4-b8eb-e9f25d949697
+		summarizeBy: none
+		sourceColumn: Lvl2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lvl3
+		dataType: string
+		lineageTag: 13f8a9cc-c157-485a-8959-1fa189ec3477
+		summarizeBy: none
+		sourceColumn: Lvl3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lvl4
+		dataType: string
+		lineageTag: 0f66654c-83e0-47d9-9055-044de1df316c
+		summarizeBy: none
+		sourceColumn: Lvl4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lvl5
+		dataType: string
+		lineageTag: ee912051-f300-4d45-ab5a-d8c0b41ea1a8
+		summarizeBy: none
+		sourceColumn: Lvl5
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 010_Hierarchy = m
+		mode: import
+		source =
+				let
+				    Source = "World",
+				    #"Converted to Table" = #table(1, {{Source}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Converted to Table",{{"Column1", "Level1"}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Renamed Columns", {"Level1"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
+				    #"Expanded 000_tblOrg" = Table.ExpandTableColumn(#"Merged Queries", "000_tblOrg", {"Organisation", "Organisation-Shortened"}, {"Level2", "Lvl2"}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Expanded 000_tblOrg", {"Level2"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
+				    #"Expanded 000_tblOrg1" = Table.ExpandTableColumn(#"Merged Queries1", "000_tblOrg", {"Organisation", "Organisation-Shortened"}, {"Level3", "Lvl3"}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Expanded 000_tblOrg1", {"Level3"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
+				    #"Expanded 000_tblOrg2" = Table.ExpandTableColumn(#"Merged Queries2", "000_tblOrg", {"Organisation", "Organisation-Shortened"}, {"Level4", "Lvl4"}),
+				    #"Merged Queries3" = Table.NestedJoin(#"Expanded 000_tblOrg2", {"Level4"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
+				    #"Expanded 000_tblOrg3" = Table.ExpandTableColumn(#"Merged Queries3", "000_tblOrg", {"Organisation", "Organisation-Shortened"}, {"Level5", "Lvl5"}),
+				    #"Merged Queries4" = Table.NestedJoin(#"Expanded 000_tblOrg3", {"Level5"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
+				    #"Expanded 000_tblOrg4" = Table.ExpandTableColumn(#"Merged Queries4", "000_tblOrg", {"Organisation"}, {"Level6"}),
+				    #"Merged Queries5" = Table.NestedJoin(#"Expanded 000_tblOrg4", {"Level6"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
+				    #"Expanded 000_tblOrg5" = Table.ExpandTableColumn(#"Merged Queries5", "000_tblOrg", {"Organisation"}, {"000_tblOrg.Organisation"})
+				in
+				    #"Expanded 000_tblOrg5"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
