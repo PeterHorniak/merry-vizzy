@@ -1111,114 +1111,72 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final": {
+			    "entity_050_tbl_org_final": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal"
+			          "ConceptualEntity": "050_tblOrg-Final"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "050 org final": {
+			          "050 tbl org final": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "050_OrgFinal": {
+			          "050_tblOrg-Final": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "final": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "org final": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "concluding": {
+			          "050 tbl org decider": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.464
 			          }
 			        },
 			        {
-			          "closing": {
+			          "050 tbl org round": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.45
 			          }
 			        },
 			        {
-			          "ultimate": {
+			          "050 tbl org match": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.45
 			          }
 			        },
 			        {
-			          "finishing": {
+			          "050 tbl org game": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "050 org decider": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.458
-			          }
-			        },
-			        {
-			          "absolute": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.452
-			          }
-			        },
-			        {
-			          "org decider": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.451
+			            "Weight": 0.45
 			          }
 			        }
 			      ]
 			    },
-			    "entity_050_org_final.organisation": {
+			    "entity_050_tbl_org_final.organisation": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualEntity": "050_tblOrg-Final",
 			          "ConceptualProperty": "Organisation"
 			        }
 			      },
@@ -1281,10 +1239,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final.url": {
+			    "entity_050_tbl_org_final.url": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualEntity": "050_tblOrg-Final",
 			          "ConceptualProperty": "URL"
 			        }
 			      },
@@ -1327,10 +1285,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final.mission": {
+			    "entity_050_tbl_org_final.mission": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualEntity": "050_tblOrg-Final",
 			          "ConceptualProperty": "Mission"
 			        }
 			      },
@@ -1443,10 +1401,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final.activities_AI": {
+			    "entity_050_tbl_org_final.activities_AI": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualEntity": "050_tblOrg-Final",
 			          "ConceptualProperty": "Activities AI"
 			        }
 			      },
@@ -1472,10 +1430,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final.misc": {
+			    "entity_050_tbl_org_final.misc": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualEntity": "050_tblOrg-Final",
 			          "ConceptualProperty": "Misc"
 			        }
 			      },
@@ -1488,10 +1446,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final.parent_org": {
+			    "entity_050_tbl_org_final.parent_org": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualEntity": "050_tblOrg-Final",
 			          "ConceptualProperty": "Parent org"
 			        }
 			      },
@@ -1509,260 +1467,6 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
-			    },
-			    "entity_050_org_final.fulllocation": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
-			          "ConceptualProperty": "Full-Location"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "full-location": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "full location": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "full-locality": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "full-placement": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "full-scene": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "full-venue": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "full locality": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "full placement": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "full scene": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "full venue": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "full-address": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "full-place": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        }
-			      ]
-			    },
-			    "entity_050_org_final.locationcombined": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
-			          "ConceptualProperty": "Location-Combined"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "location-combined": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "state or province": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "location combined": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "locality combined": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "placement combined": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "scene combined": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "venue combined": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "address combined": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "place combined": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "position combined": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "setting combined": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "site combined": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "spot combined": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        }
-			      ],
-			      "SemanticType": "Location"
 			    },
 			    "entity_000_tbl_org.status": {
 			      "Definition": {
@@ -2474,10 +2178,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final.status": {
+			    "entity_050_tbl_org_final.status": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualEntity": "050_tblOrg-Final",
 			          "ConceptualProperty": "Status"
 			        }
 			      },
@@ -2580,10 +2284,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final.key_contact": {
+			    "entity_050_tbl_org_final.key_contact": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualEntity": "050_tblOrg-Final",
 			          "ConceptualProperty": "Key Contacts"
 			        }
 			      },
@@ -2702,10 +2406,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final.location": {
+			    "entity_050_tbl_org_final.location": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualEntity": "050_tblOrg-Final",
 			          "ConceptualProperty": "Location"
 			        }
 			      },
@@ -2818,10 +2522,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final.organisationshortened_1": {
+			    "entity_050_tbl_org_final.organisationshortened_1": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualEntity": "050_tblOrg-Final",
 			          "ConceptualProperty": "Organisation-Shortened.1"
 			        }
 			      },
@@ -2940,10 +2644,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final.organisationshortened_2": {
+			    "entity_050_tbl_org_final.organisationshortened_2": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualEntity": "050_tblOrg-Final",
 			          "ConceptualProperty": "Organisation-Shortened.2"
 			        }
 			      },
@@ -3062,10 +2766,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final.organisationshortened": {
+			    "entity_050_tbl_org_final.organisationshortened": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "050_OrgFinal",
+			          "ConceptualEntity": "050_tblOrg-Final",
 			          "ConceptualProperty": "Organisation-Shortened"
 			        }
 			      },
@@ -3653,16 +3357,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Descendants": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "Parent tree": {
 			            "State": "Suggested",
 			            "Source": {
@@ -3763,6 +3457,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Descendants": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4383,7 +4087,7 @@ cultureInfo en-US
 			    }
 			  },
 			  "Relationships": {
-			    "entity_000_tbl_headcount_has_entity_050_org_final": {
+			    "entity_000_tbl_headcount_has_entity_050_tbl_org_final1": {
 			      "Binding": {
 			        "ConceptualEntity": "000_tblHeadcount"
 			      },
@@ -4394,9 +4098,9 @@ cultureInfo en-US
 			            "Entity": "entity_000_tbl_headcount"
 			          }
 			        },
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          },
 			          "Nouns": [
 			            {
@@ -4414,17 +4118,17 @@ cultureInfo en-US
 			              "Role": "entity_000_tbl_headcount"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing000_tbl_headcounts_have_050_org_finals"
+			          "ID": "Phrasing000_tbl_headcounts_have_050_tbl_org_finals"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
 			              "Role": "entity_000_tbl_headcount"
@@ -4432,11 +4136,11 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_000_tbl_headcounts"
+			          "ID": "Phrasing050_tbl_org_finals_have_000_tbl_headcounts"
 			        }
 			      ]
 			    },
-			    "entity_000_tbl_headcount_has_entity_020_parents_hierarchy": {
+			    "entity_000_tbl_headcount_has_entity_020_parents_hierarchy1": {
 			      "Binding": {
 			        "ConceptualEntity": "000_tblHeadcount"
 			      },
@@ -4489,7 +4193,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_000_tbl_headcount_has_entity_000_tbl_org": {
+			    "entity_000_tbl_headcount_has_entity_000_tbl_org1": {
 			      "Binding": {
 			        "ConceptualEntity": "000_tblHeadcount"
 			      },
@@ -4539,64 +4243,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "Phrasing000_tbl_org_have_000_tbl_headcounts"
-			        }
-			      ]
-			    },
-			    "entity_050_org_final_has_entity_000_tbl_location": {
-			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_050_org_final": {
-			          "Target": {
-			            "Entity": "entity_050_org_final"
-			          }
-			        },
-			        "entity_000_tbl_location": {
-			          "Target": {
-			            "Entity": "entity_000_tbl_location"
-			          },
-			          "Nouns": [
-			            {
-			              "full-location": {
-			                "State": "Generated"
-			              }
-			            },
-			            {
-			              "full location": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_050_org_final"
-			            },
-			            "Object": {
-			              "Role": "entity_000_tbl_location"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_000_tbl_locations"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_000_tbl_location"
-			            },
-			            "Object": {
-			              "Role": "entity_050_org_final"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing000_tbl_locations_have_050_org_finals"
 			        }
 			      ]
 			    },
@@ -5095,20 +4741,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_has_organisationshortened": {
+			    "entity_050_tbl_org_final_has_organisationshortened": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_050_org_final.organisationshortened": {
+			        "entity_050_tbl_org_final.organisationshortened": {
 			          "Target": {
-			            "Entity": "entity_050_org_final.organisationshortened"
+			            "Entity": "entity_050_tbl_org_final.organisationshortened"
 			          }
 			        }
 			      },
@@ -5116,32 +4762,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final.organisationshortened"
+			              "Role": "entity_050_tbl_org_final.organisationshortened"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_organisationshortened"
+			          "ID": "Phrasing050_tbl_org_finals_have_organisationshortened"
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_has_organisationshortened_2": {
+			    "entity_050_tbl_org_final_has_organisationshortened_2": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_050_org_final.organisationshortened_2": {
+			        "entity_050_tbl_org_final.organisationshortened_2": {
 			          "Target": {
-			            "Entity": "entity_050_org_final.organisationshortened_2"
+			            "Entity": "entity_050_tbl_org_final.organisationshortened_2"
 			          }
 			        }
 			      },
@@ -5149,32 +4795,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final.organisationshortened_2"
+			              "Role": "entity_050_tbl_org_final.organisationshortened_2"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_organisationshortened_2"
+			          "ID": "Phrasing050_tbl_org_finals_have_organisationshortened_2"
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_has_organisationshortened_1": {
+			    "entity_050_tbl_org_final_has_organisationshortened_1": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_050_org_final.organisationshortened_1": {
+			        "entity_050_tbl_org_final.organisationshortened_1": {
 			          "Target": {
-			            "Entity": "entity_050_org_final.organisationshortened_1"
+			            "Entity": "entity_050_tbl_org_final.organisationshortened_1"
 			          }
 			        }
 			      },
@@ -5182,32 +4828,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final.organisationshortened_1"
+			              "Role": "entity_050_tbl_org_final.organisationshortened_1"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_organisationshortened_1"
+			          "ID": "Phrasing050_tbl_org_finals_have_organisationshortened_1"
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_has_location": {
+			    "entity_050_tbl_org_final_has_location": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_050_org_final.location": {
+			        "entity_050_tbl_org_final.location": {
 			          "Target": {
-			            "Entity": "entity_050_org_final.location"
+			            "Entity": "entity_050_tbl_org_final.location"
 			          }
 			        }
 			      },
@@ -5215,32 +4861,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final.location"
+			              "Role": "entity_050_tbl_org_final.location"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_locations"
+			          "ID": "Phrasing050_tbl_org_finals_have_locations"
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_has_key_contact": {
+			    "entity_050_tbl_org_final_has_key_contact": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_050_org_final.key_contact": {
+			        "entity_050_tbl_org_final.key_contact": {
 			          "Target": {
-			            "Entity": "entity_050_org_final.key_contact"
+			            "Entity": "entity_050_tbl_org_final.key_contact"
 			          }
 			        }
 			      },
@@ -5248,32 +4894,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final.key_contact"
+			              "Role": "entity_050_tbl_org_final.key_contact"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_key_contacts"
+			          "ID": "Phrasing050_tbl_org_finals_have_key_contacts"
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_has_status": {
+			    "entity_050_tbl_org_final_has_status": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_050_org_final.status": {
+			        "entity_050_tbl_org_final.status": {
 			          "Target": {
-			            "Entity": "entity_050_org_final.status"
+			            "Entity": "entity_050_tbl_org_final.status"
 			          }
 			        }
 			      },
@@ -5281,15 +4927,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final.status"
+			              "Role": "entity_050_tbl_org_final.status"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_statuses"
+			          "ID": "Phrasing050_tbl_org_finals_have_statuses"
 			        }
 			      ]
 			    },
@@ -5491,20 +5137,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_has_locationcombined": {
+			    "entity_050_tbl_org_final_has_parent_org": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_050_org_final.locationcombined": {
+			        "entity_050_tbl_org_final.parent_org": {
 			          "Target": {
-			            "Entity": "entity_050_org_final.locationcombined"
+			            "Entity": "entity_050_tbl_org_final.parent_org"
 			          }
 			        }
 			      },
@@ -5512,32 +5158,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final.locationcombined"
+			              "Role": "entity_050_tbl_org_final.parent_org"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_locationcombined"
+			          "ID": "Phrasing050_tbl_org_finals_have_parent_org"
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_has_parent_org": {
+			    "entity_050_tbl_org_final_has_misc": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_050_org_final.parent_org": {
+			        "entity_050_tbl_org_final.misc": {
 			          "Target": {
-			            "Entity": "entity_050_org_final.parent_org"
+			            "Entity": "entity_050_tbl_org_final.misc"
 			          }
 			        }
 			      },
@@ -5545,32 +5191,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final.parent_org"
+			              "Role": "entity_050_tbl_org_final.misc"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_parent_org"
+			          "ID": "Phrasing050_tbl_org_finals_have_miscs"
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_has_misc": {
+			    "entity_050_tbl_org_final_has_activities_AI": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_050_org_final.misc": {
+			        "entity_050_tbl_org_final.activities_AI": {
 			          "Target": {
-			            "Entity": "entity_050_org_final.misc"
+			            "Entity": "entity_050_tbl_org_final.activities_AI"
 			          }
 			        }
 			      },
@@ -5578,32 +5224,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final.misc"
+			              "Role": "entity_050_tbl_org_final.activities_AI"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_miscs"
+			          "ID": "Phrasing050_tbl_org_finals_have_activities_AI"
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_has_activities_AI": {
+			    "entity_050_tbl_org_final_has_mission": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_050_org_final.activities_AI": {
+			        "entity_050_tbl_org_final.mission": {
 			          "Target": {
-			            "Entity": "entity_050_org_final.activities_AI"
+			            "Entity": "entity_050_tbl_org_final.mission"
 			          }
 			        }
 			      },
@@ -5611,32 +5257,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final.activities_AI"
+			              "Role": "entity_050_tbl_org_final.mission"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_activities_AI"
+			          "ID": "Phrasing050_tbl_org_finals_have_missions"
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_has_mission": {
+			    "entity_050_tbl_org_final_has_url": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_050_org_final.mission": {
+			        "entity_050_tbl_org_final.url": {
 			          "Target": {
-			            "Entity": "entity_050_org_final.mission"
+			            "Entity": "entity_050_tbl_org_final.url"
 			          }
 			        }
 			      },
@@ -5644,32 +5290,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final.mission"
+			              "Role": "entity_050_tbl_org_final.url"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_missions"
+			          "ID": "Phrasing050_tbl_org_finals_have_urls"
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_has_url": {
+			    "entity_050_tbl_org_final_has_organisation": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_050_org_final.url": {
+			        "entity_050_tbl_org_final.organisation": {
 			          "Target": {
-			            "Entity": "entity_050_org_final.url"
+			            "Entity": "entity_050_tbl_org_final.organisation"
 			          }
 			        }
 			      },
@@ -5677,48 +5323,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Object": {
-			              "Role": "entity_050_org_final.url"
+			              "Role": "entity_050_tbl_org_final.organisation"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_urls"
-			        }
-			      ]
-			    },
-			    "entity_050_org_final_has_organisation": {
-			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_050_org_final": {
-			          "Target": {
-			            "Entity": "entity_050_org_final"
-			          }
-			        },
-			        "entity_050_org_final.organisation": {
-			          "Target": {
-			            "Entity": "entity_050_org_final.organisation"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_050_org_final"
-			            },
-			            "Object": {
-			              "Role": "entity_050_org_final.organisation"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_have_organisations"
+			          "ID": "Phrasing050_tbl_org_finals_have_organisations"
 			        }
 			      ]
 			    },
@@ -6118,33 +5731,33 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity_050_org_final_in_entity_000_tbl_location": {
+			    "entity_050_tbl_org_final_in_location": {
 			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
+			        "ConceptualEntity": "050_tblOrg-Final"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_050_org_final": {
+			        "entity_050_tbl_org_final": {
 			          "Target": {
-			            "Entity": "entity_050_org_final"
+			            "Entity": "entity_050_tbl_org_final"
 			          }
 			        },
-			        "entity_000_tbl_location": {
+			        "entity_050_tbl_org_final.location": {
 			          "Target": {
-			            "Entity": "entity_000_tbl_location"
+			            "Entity": "entity_050_tbl_org_final.location"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "entity_000_tbl_location"
+			          "Role": "entity_050_tbl_org_final.location"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "entity_050_org_final"
+			              "Role": "entity_050_tbl_org_final"
 			            },
 			            "Prepositions": [
 			              {
@@ -6154,57 +5767,12 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "entity_000_tbl_location"
+			              "Role": "entity_050_tbl_org_final.location"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_are_in_000_tbl_locations"
-			        }
-			      ]
-			    },
-			    "entity_050_org_final_in_location": {
-			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_050_org_final": {
-			          "Target": {
-			            "Entity": "entity_050_org_final"
-			          }
-			        },
-			        "entity_050_org_final.location": {
-			          "Target": {
-			            "Entity": "entity_050_org_final.location"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "entity_050_org_final.location"
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "entity_050_org_final"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "entity_050_org_final.location"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_are_in_locations"
+			          "ID": "Phrasing050_tbl_org_finals_are_in_locations"
 			        }
 			      ]
 			    },
@@ -6250,51 +5818,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "Phrasing000_tbl_org_are_in_locations"
-			        }
-			      ]
-			    },
-			    "entity_050_org_final_in_locationcombined": {
-			      "Binding": {
-			        "ConceptualEntity": "050_OrgFinal"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_050_org_final": {
-			          "Target": {
-			            "Entity": "entity_050_org_final"
-			          }
-			        },
-			        "entity_050_org_final.locationcombined": {
-			          "Target": {
-			            "Entity": "entity_050_org_final.locationcombined"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "entity_050_org_final.locationcombined"
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "entity_050_org_final"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "entity_050_org_final.locationcombined"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing050_org_finals_are_in_locationcombined"
 			        }
 			      ]
 			    },

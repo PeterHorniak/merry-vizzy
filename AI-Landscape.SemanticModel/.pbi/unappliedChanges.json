@@ -1,0 +1,210 @@
+{
+  "version": "1.0",
+  "conceptualSchemaSettings": {},
+  "queries": [
+    {
+      "name": "000_tblOrg",
+      "lineageTag": "489adb6f-eb7f-4d47-9cce-1808ec99e5c8",
+      "queryGroupId": "dc4d6503-4ce5-4ae5-a74d-929141a73d92",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI/\"),",
+        "    Organisations_Table = Source{[name=\"Organisation\",ItemKind=\"Table\"]}[Data],",
+        "    #\"Promoted Headers\" = Table.PromoteHeaders(Organisations_Table, [PromoteAllScalars=true]),",
+        "    #\"Promoted Headers1\" = Table.PromoteHeaders(#\"Promoted Headers\", [PromoteAllScalars=true]),",
+        "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Promoted Headers1\",{\"\"}),",
+        "    #\"Removed Bottom Rows\" = Table.RemoveLastN(#\"Removed Columns1\",1),",
+        "    #\"Duplicated Column\" = Table.DuplicateColumn(#\"Removed Bottom Rows\", \"Organisation\", \"Organisation-Shortened\"),",
+        "    #\"Split Column by Delimiter\" = Table.SplitColumn(#\"Duplicated Column\", \"Organisation-Shortened\", Splitter.SplitTextByEachDelimiter({\"(\"}, QuoteStyle.Csv, true), {\"Organisation-Shortened.1\", \"Organisation-Shortened.2\"}),",
+        "    #\"Replaced Value23\" = Table.ReplaceValue(#\"Split Column by Delimiter\",\")\",\"\",Replacer.ReplaceText,{\"Organisation-Shortened.2\"}),",
+        "    #\"Added Conditional Column\" = Table.AddColumn(#\"Replaced Value23\", \"Organisation-Shortened\", each if [#\"Organisation-Shortened.2\"] = null then [#\"Organisation-Shortened.1\"] else [#\"Organisation-Shortened.2\"]),",
+        "    #\"Replaced Value\" = Table.ReplaceValue(#\"Added Conditional Column\",\"University\",\"Uni\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value10\" = Table.ReplaceValue(#\"Replaced Value\",\"Australian Capital Territory\",\"ACT\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value14\" = Table.ReplaceValue(#\"Replaced Value10\",\"Western Australia\",\"WA\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value15\" = Table.ReplaceValue(#\"Replaced Value14\",\"Queensland\",\"QLD\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value11\" = Table.ReplaceValue(#\"Replaced Value15\",\"New South Wales\",\"NSW\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value12\" = Table.ReplaceValue(#\"Replaced Value11\",\"Victoria\",\"VIC\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value13\" = Table.ReplaceValue(#\"Replaced Value12\",\"South Australia\",\"SA\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value6\" = Table.ReplaceValue(#\"Replaced Value13\",\"Australians\",\"Aussies\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value7\" = Table.ReplaceValue(#\"Replaced Value6\",\"Effective Altruism\",\"EA\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value8\" = Table.ReplaceValue(#\"Replaced Value7\",\"Artificial Intelligence\",\"AI\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value9\" = Table.ReplaceValue(#\"Replaced Value8\",\"Technology\",\"Tech\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value9\",\"Governance\",\"Gov\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"Government\",\"Govt\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Australian\",\"Aus\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value4\" = Table.ReplaceValue(#\"Replaced Value3\",\"Federal\",\"Fed\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value5\" = Table.ReplaceValue(#\"Replaced Value4\",\"Australia\",\"Aus\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value16\" = Table.ReplaceValue(#\"Replaced Value5\",\"Mathematic\",\"Math\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value17\" = Table.ReplaceValue(#\"Replaced Value16\",\"Group\",\"Grp\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value18\" = Table.ReplaceValue(#\"Replaced Value17\",\"International\",\"Intl\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value19\" = Table.ReplaceValue(#\"Replaced Value18\",\"Development\",\"Dev\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value20\" = Table.ReplaceValue(#\"Replaced Value19\",\" and\",\" &\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value21\" = Table.ReplaceValue(#\"Replaced Value20\",\"Intelligence\",\"Intell.\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value22\" = Table.ReplaceValue(#\"Replaced Value21\",\"Commonwealth Scientific & Industrial Research Organisation (CSIRO)\",\"CSIRO\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value24\" = Table.ReplaceValue(#\"Replaced Value22\",\"Institute\",\"Institute\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value25\" = Table.ReplaceValue(#\"Replaced Value24\",\"Conference\",\"Conf\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value26\" = Table.ReplaceValue(#\"Replaced Value25\",\"Fundamentals\",\"Fundies\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value27\" = Table.ReplaceValue(#\"Replaced Value26\",\"Institute\",\"Inst.\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value28\" = Table.ReplaceValue(#\"Replaced Value27\",\"Automated\",\"Auto.\",Replacer.ReplaceText,{\"Organisation-Shortened\"}),",
+        "    #\"Replaced Value29\" = Table.ReplaceValue(#\"Replaced Value28\",\"Existential\",\"Exist.\",Replacer.ReplaceText,{\"Organisation-Shortened\"})",
+        "in",
+        "    #\"Replaced Value29\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = GoogleSheets.Contents(\\\"https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI/\\\"),\\n    Organisations_Table = Source{[name=\\\"Organisation\\\",ItemKind=\\\"Table\\\"]}[Data],\\n    #\\\"Promoted Headers\\\" = Table.PromoteHeaders(Organisations_Table, [PromoteAllScalars=true]),\\n    #\\\"Promoted Headers1\\\" = Table.PromoteHeaders(#\\\"Promoted Headers\\\", [PromoteAllScalars=true]),\\n    #\\\"Removed Columns1\\\" = Table.RemoveColumns(#\\\"Promoted Headers1\\\",{\\\"\\\"}),\\n    #\\\"Removed Bottom Rows\\\" = Table.RemoveLastN(#\\\"Removed Columns1\\\",1),\\n    #\\\"Duplicated Column\\\" = Table.DuplicateColumn(#\\\"Removed Bottom Rows\\\", \\\"Organisation\\\", \\\"Organisation-Shortened\\\"),\\n    #\\\"Split Column by Delimiter\\\" = Table.SplitColumn(#\\\"Duplicated Column\\\", \\\"Organisation-Shortened\\\", Splitter.SplitTextByEachDelimiter({\\\"(\\\"}, QuoteStyle.Csv, true), {\\\"Organisation-Shortened.1\\\", \\\"Organisation-Shortened.2\\\"}),\\n    #\\\"Replaced Value23\\\" = Table.ReplaceValue(#\\\"Split Column by Delimiter\\\",\\\")\\\",\\\"\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened.2\\\"}),\\n    #\\\"Added Conditional Column\\\" = Table.AddColumn(#\\\"Replaced Value23\\\", \\\"Organisation-Shortened\\\", each if [#\\\"Organisation-Shortened.2\\\"] = null then [#\\\"Organisation-Shortened.1\\\"] else [#\\\"Organisation-Shortened.2\\\"]),\\n    #\\\"Replaced Value\\\" = Table.ReplaceValue(#\\\"Added Conditional Column\\\",\\\"University\\\",\\\"Uni\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value10\\\" = Table.ReplaceValue(#\\\"Replaced Value\\\",\\\"Australian Capital Territory\\\",\\\"ACT\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value14\\\" = Table.ReplaceValue(#\\\"Replaced Value10\\\",\\\"Western Australia\\\",\\\"WA\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value15\\\" = Table.ReplaceValue(#\\\"Replaced Value14\\\",\\\"Queensland\\\",\\\"QLD\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value11\\\" = Table.ReplaceValue(#\\\"Replaced Value15\\\",\\\"New South Wales\\\",\\\"NSW\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value12\\\" = Table.ReplaceValue(#\\\"Replaced Value11\\\",\\\"Victoria\\\",\\\"VIC\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value13\\\" = Table.ReplaceValue(#\\\"Replaced Value12\\\",\\\"South Australia\\\",\\\"SA\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value6\\\" = Table.ReplaceValue(#\\\"Replaced Value13\\\",\\\"Australians\\\",\\\"Aussies\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value7\\\" = Table.ReplaceValue(#\\\"Replaced Value6\\\",\\\"Effective Altruism\\\",\\\"EA\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value8\\\" = Table.ReplaceValue(#\\\"Replaced Value7\\\",\\\"Artificial Intelligence\\\",\\\"AI\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value9\\\" = Table.ReplaceValue(#\\\"Replaced Value8\\\",\\\"Technology\\\",\\\"Tech\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value1\\\" = Table.ReplaceValue(#\\\"Replaced Value9\\\",\\\"Governance\\\",\\\"Gov\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value2\\\" = Table.ReplaceValue(#\\\"Replaced Value1\\\",\\\"Government\\\",\\\"Govt\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value3\\\" = Table.ReplaceValue(#\\\"Replaced Value2\\\",\\\"Australian\\\",\\\"Aus\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value4\\\" = Table.ReplaceValue(#\\\"Replaced Value3\\\",\\\"Federal\\\",\\\"Fed\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value5\\\" = Table.ReplaceValue(#\\\"Replaced Value4\\\",\\\"Australia\\\",\\\"Aus\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value16\\\" = Table.ReplaceValue(#\\\"Replaced Value5\\\",\\\"Mathematic\\\",\\\"Math\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value17\\\" = Table.ReplaceValue(#\\\"Replaced Value16\\\",\\\"Group\\\",\\\"Grp\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value18\\\" = Table.ReplaceValue(#\\\"Replaced Value17\\\",\\\"International\\\",\\\"Intl\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value19\\\" = Table.ReplaceValue(#\\\"Replaced Value18\\\",\\\"Development\\\",\\\"Dev\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value20\\\" = Table.ReplaceValue(#\\\"Replaced Value19\\\",\\\" and\\\",\\\" &\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value21\\\" = Table.ReplaceValue(#\\\"Replaced Value20\\\",\\\"Intelligence\\\",\\\"Intell.\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value22\\\" = Table.ReplaceValue(#\\\"Replaced Value21\\\",\\\"Commonwealth Scientific & Industrial Research Organisation (CSIRO)\\\",\\\"CSIRO\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value24\\\" = Table.ReplaceValue(#\\\"Replaced Value22\\\",\\\"Institute\\\",\\\"Institute\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value25\\\" = Table.ReplaceValue(#\\\"Replaced Value24\\\",\\\"Conference\\\",\\\"Conf\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value26\\\" = Table.ReplaceValue(#\\\"Replaced Value25\\\",\\\"Fundamentals\\\",\\\"Fundies\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value27\\\" = Table.ReplaceValue(#\\\"Replaced Value26\\\",\\\"Institute\\\",\\\"Inst.\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value28\\\" = Table.ReplaceValue(#\\\"Replaced Value27\\\",\\\"Automated\\\",\\\"Auto.\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"}),\\n    #\\\"Replaced Value29\\\" = Table.ReplaceValue(#\\\"Replaced Value28\\\",\\\"Existential\\\",\\\"Exist.\\\",Replacer.ReplaceText,{\\\"Organisation-Shortened\\\"})\\nin\\n    #\\\"Replaced Value29\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "000_tblLocations",
+      "lineageTag": "486af6ca-195f-4402-97cd-6b4f33ec1261",
+      "queryGroupId": "dc4d6503-4ce5-4ae5-a74d-929141a73d92",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45WCnZU0lEKzi8tyVBwLC0uKUrMyUzUQTCVYnWilcJBasJTi0tSi/Jwq/ILDgcq80stV4AYF56Yk1qMrijM0xmoKCwzuSS/CM2IWAA=\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Acronym = _t, #\"Full-Location\" = _t]),",
+        "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Acronym\", type text}, {\"Full-Location\", type text}})",
+        "in",
+        "    #\"Changed Type\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\\\"i45WCnZU0lEKzi8tyVBwLC0uKUrMyUzUQTCVYnWilcJBasJTi0tSi/Jwq/ILDgcq80stV4AYF56Yk1qMrijM0xmoKCwzuSS/CM2IWAA=\\\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Acronym = _t, #\\\"Full-Location\\\" = _t]),\\n    #\\\"Changed Type\\\" = Table.TransformColumnTypes(Source,{{\\\"Acronym\\\", type text}, {\\\"Full-Location\\\", type text}})\\nin\\n    #\\\"Changed Type\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "000_tblHeadcount",
+      "lineageTag": "8d5709c2-5678-4663-9b50-a962c3ba2d07",
+      "queryGroupId": "dc4d6503-4ce5-4ae5-a74d-929141a73d92",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI/\"),",
+        "    Headcount_Table = Source{[name=\"Headcount\",ItemKind=\"Table\"]}[Data],",
+        "    #\"Promoted Headers\" = Table.PromoteHeaders(Headcount_Table, [PromoteAllScalars=true]),",
+        "    #\"Promoted Headers1\" = Table.PromoteHeaders(#\"Promoted Headers\", [PromoteAllScalars=true]),",
+        "    #\"Removed Columns\" = Table.RemoveColumns(#\"Promoted Headers1\",{\"\"}),",
+        "    #\"Filtered Rows\" = Table.SelectRows(#\"Removed Columns\", each ([Date] <> null and [Date] <> \"\")),",
+        "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Filtered Rows\",{{\"FTE notkilleveryoneism\", type number}, {\"FTE total\", type number}})",
+        "in",
+        "    #\"Changed Type\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = GoogleSheets.Contents(\\\"https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI/\\\"),\\n    Headcount_Table = Source{[name=\\\"Headcount\\\",ItemKind=\\\"Table\\\"]}[Data],\\n    #\\\"Promoted Headers\\\" = Table.PromoteHeaders(Headcount_Table, [PromoteAllScalars=true]),\\n    #\\\"Promoted Headers1\\\" = Table.PromoteHeaders(#\\\"Promoted Headers\\\", [PromoteAllScalars=true]),\\n    #\\\"Removed Columns\\\" = Table.RemoveColumns(#\\\"Promoted Headers1\\\",{\\\"\\\"}),\\n    #\\\"Filtered Rows\\\" = Table.SelectRows(#\\\"Removed Columns\\\", each ([Date when correct] <> null and [Date when correct] <> \\\"\\\")),\\n    #\\\"Changed Type\\\" = Table.TransformColumnTypes(#\\\"Filtered Rows\\\",{{\\\"FTE notkilleveryoneism\\\", type number}, {\\\"FTE total\\\", type number}})\\nin\\n    #\\\"Changed Type\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "010_Hierarchy",
+      "lineageTag": "1b0ff087-9ecd-4948-962c-1ed2335ff8c0",
+      "queryGroupId": "70893c16-7905-4b83-90b0-95ff1e50cd1a",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = \"World\",",
+        "    #\"Converted to Table\" = #table(1, {{Source}}),",
+        "    #\"Renamed Columns\" = Table.RenameColumns(#\"Converted to Table\",{{\"Column1\", \"Level1\"}}),",
+        "    #\"Merged Queries\" = Table.NestedJoin(#\"Renamed Columns\", {\"Level1\"}, #\"000_tblOrg\", {\"Parent org\"}, \"000_tblOrg\", JoinKind.LeftOuter),",
+        "    #\"Expanded 000_tblOrg\" = Table.ExpandTableColumn(#\"Merged Queries\", \"000_tblOrg\", {\"Organisation\", \"Organisation-Shortened\"}, {\"Level2\", \"Lvl2\"}),",
+        "    #\"Merged Queries1\" = Table.NestedJoin(#\"Expanded 000_tblOrg\", {\"Level2\"}, #\"000_tblOrg\", {\"Parent org\"}, \"000_tblOrg\", JoinKind.LeftOuter),",
+        "    #\"Expanded 000_tblOrg1\" = Table.ExpandTableColumn(#\"Merged Queries1\", \"000_tblOrg\", {\"Organisation\", \"Organisation-Shortened\"}, {\"Level3\", \"Lvl3\"}),",
+        "    #\"Merged Queries2\" = Table.NestedJoin(#\"Expanded 000_tblOrg1\", {\"Level3\"}, #\"000_tblOrg\", {\"Parent org\"}, \"000_tblOrg\", JoinKind.LeftOuter),",
+        "    #\"Expanded 000_tblOrg2\" = Table.ExpandTableColumn(#\"Merged Queries2\", \"000_tblOrg\", {\"Organisation\", \"Organisation-Shortened\"}, {\"Level4\", \"Lvl4\"}),",
+        "    #\"Merged Queries3\" = Table.NestedJoin(#\"Expanded 000_tblOrg2\", {\"Level4\"}, #\"000_tblOrg\", {\"Parent org\"}, \"000_tblOrg\", JoinKind.LeftOuter),",
+        "    #\"Expanded 000_tblOrg3\" = Table.ExpandTableColumn(#\"Merged Queries3\", \"000_tblOrg\", {\"Organisation\", \"Organisation-Shortened\"}, {\"Level5\", \"Lvl5\"}),",
+        "    #\"Merged Queries4\" = Table.NestedJoin(#\"Expanded 000_tblOrg3\", {\"Level5\"}, #\"000_tblOrg\", {\"Parent org\"}, \"000_tblOrg\", JoinKind.LeftOuter),",
+        "    #\"Expanded 000_tblOrg4\" = Table.ExpandTableColumn(#\"Merged Queries4\", \"000_tblOrg\", {\"Organisation\"}, {\"Level6\"}),",
+        "    #\"Merged Queries5\" = Table.NestedJoin(#\"Expanded 000_tblOrg4\", {\"Level6\"}, #\"000_tblOrg\", {\"Parent org\"}, \"000_tblOrg\", JoinKind.LeftOuter),",
+        "    #\"Expanded 000_tblOrg5\" = Table.ExpandTableColumn(#\"Merged Queries5\", \"000_tblOrg\", {\"Organisation\"}, {\"Level7\"})",
+        "in",
+        "    #\"Expanded 000_tblOrg5\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = \\\"World\\\",\\n    #\\\"Converted to Table\\\" = #table(1, {{Source}}),\\n    #\\\"Renamed Columns\\\" = Table.RenameColumns(#\\\"Converted to Table\\\",{{\\\"Column1\\\", \\\"Level1\\\"}}),\\n    #\\\"Merged Queries\\\" = Table.NestedJoin(#\\\"Renamed Columns\\\", {\\\"Level1\\\"}, #\\\"000_tblOrg\\\", {\\\"Parent org\\\"}, \\\"000_tblOrg\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded 000_tblOrg\\\" = Table.ExpandTableColumn(#\\\"Merged Queries\\\", \\\"000_tblOrg\\\", {\\\"Organisation\\\", \\\"Organisation-Shortened\\\"}, {\\\"Level2\\\", \\\"Lvl2\\\"}),\\n    #\\\"Merged Queries1\\\" = Table.NestedJoin(#\\\"Expanded 000_tblOrg\\\", {\\\"Level2\\\"}, #\\\"000_tblOrg\\\", {\\\"Parent org\\\"}, \\\"000_tblOrg\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded 000_tblOrg1\\\" = Table.ExpandTableColumn(#\\\"Merged Queries1\\\", \\\"000_tblOrg\\\", {\\\"Organisation\\\", \\\"Organisation-Shortened\\\"}, {\\\"Level3\\\", \\\"Lvl3\\\"}),\\n    #\\\"Merged Queries2\\\" = Table.NestedJoin(#\\\"Expanded 000_tblOrg1\\\", {\\\"Level3\\\"}, #\\\"000_tblOrg\\\", {\\\"Parent org\\\"}, \\\"000_tblOrg\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded 000_tblOrg2\\\" = Table.ExpandTableColumn(#\\\"Merged Queries2\\\", \\\"000_tblOrg\\\", {\\\"Organisation\\\", \\\"Organisation-Shortened\\\"}, {\\\"Level4\\\", \\\"Lvl4\\\"}),\\n    #\\\"Merged Queries3\\\" = Table.NestedJoin(#\\\"Expanded 000_tblOrg2\\\", {\\\"Level4\\\"}, #\\\"000_tblOrg\\\", {\\\"Parent org\\\"}, \\\"000_tblOrg\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded 000_tblOrg3\\\" = Table.ExpandTableColumn(#\\\"Merged Queries3\\\", \\\"000_tblOrg\\\", {\\\"Organisation\\\", \\\"Organisation-Shortened\\\"}, {\\\"Level5\\\", \\\"Lvl5\\\"}),\\n    #\\\"Merged Queries4\\\" = Table.NestedJoin(#\\\"Expanded 000_tblOrg3\\\", {\\\"Level5\\\"}, #\\\"000_tblOrg\\\", {\\\"Parent org\\\"}, \\\"000_tblOrg\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded 000_tblOrg4\\\" = Table.ExpandTableColumn(#\\\"Merged Queries4\\\", \\\"000_tblOrg\\\", {\\\"Organisation\\\"}, {\\\"Level6\\\"}),\\n    #\\\"Merged Queries5\\\" = Table.NestedJoin(#\\\"Expanded 000_tblOrg4\\\", {\\\"Level6\\\"}, #\\\"000_tblOrg\\\", {\\\"Parent org\\\"}, \\\"000_tblOrg\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded 000_tblOrg5\\\" = Table.ExpandTableColumn(#\\\"Merged Queries5\\\", \\\"000_tblOrg\\\", {\\\"Organisation\\\"}, {\\\"000_tblOrg.Organisation\\\"})\\nin\\n    #\\\"Expanded 000_tblOrg5\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "020_ActivitiesSplit",
+      "lineageTag": "d743bfa4-b32b-4f80-9569-a8db58bab608",
+      "queryGroupId": "70893c16-7905-4b83-90b0-95ff1e50cd1a",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = #\"000_tblOrg\",",
+        "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"Organisation\", \"Activities AI\"}),",
+        "    #\"Split Column by Delimiter\" = Table.ExpandListColumn(Table.TransformColumns(#\"Removed Other Columns\", {{\"Activities AI\", Splitter.SplitTextByDelimiter(\", \", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), \"Activities AI\"),",
+        "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Split Column by Delimiter\",{{\"Activities AI\", type text}})",
+        "in",
+        "    #\"Changed Type\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = #\\\"000_tblOrg\\\",\\n    #\\\"Removed Other Columns\\\" = Table.SelectColumns(Source,{\\\"Organisation\\\", \\\"Activities AI\\\"}),\\n    #\\\"Split Column by Delimiter\\\" = Table.ExpandListColumn(Table.TransformColumns(#\\\"Removed Other Columns\\\", {{\\\"Activities AI\\\", Splitter.SplitTextByDelimiter(\\\", \\\", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), \\\"Activities AI\\\"),\\n    #\\\"Changed Type\\\" = Table.TransformColumnTypes(#\\\"Split Column by Delimiter\\\",{{\\\"Activities AI\\\", type text}})\\nin\\n    #\\\"Changed Type\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "020_ParentsHierarchy",
+      "lineageTag": "ca55b85c-a44e-472d-bc96-11d909e54d7d",
+      "queryGroupId": "70893c16-7905-4b83-90b0-95ff1e50cd1a",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = #\"000_tblOrg\",",
+        "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"Organisation\", \"Parent org\"}),",
+        "    #\"Filtered Rows\" = Table.SelectRows(#\"Removed Other Columns\", each true)",
+        "in",
+        "    #\"Filtered Rows\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = #\\\"000_tblOrg\\\",\\n    #\\\"Removed Other Columns\\\" = Table.SelectColumns(Source,{\\\"Organisation\\\", \\\"Parent org\\\"}),\\n    #\\\"Filtered Rows\\\" = Table.SelectRows(#\\\"Removed Other Columns\\\", each true)\\nin\\n    #\\\"Filtered Rows\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "050_tblOrg-Final",
+      "lineageTag": "a95f0817-2701-4284-b228-3549caa6e99c",
+      "queryGroupId": "c1c6966d-ecbb-4694-a0de-ff9288617255",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = #\"000_tblOrg\"",
+        "in",
+        "    Source"
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = #\\\"000_tblOrg\\\",\\n    #\\\"Merged Queries\\\" = Table.NestedJoin(Source, {\\\"Location\\\"}, #\\\"000_tblLocations\\\", {\\\"Acronym\\\"}, \\\"000_tblLocations\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded 000_tblLocations\\\" = Table.ExpandTableColumn(#\\\"Merged Queries\\\", \\\"000_tblLocations\\\", {\\\"Full-Location\\\"}, {\\\"Full-Location\\\"}),\\n    #\\\"Added Conditional Column\\\" = Table.AddColumn(#\\\"Expanded 000_tblLocations\\\", \\\"Location-Combined\\\", each if [#\\\"Full-Location\\\"] = null then [Location] else [#\\\"Full-Location\\\"])\\nin\\n    #\\\"Added Conditional Column\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    }
+  ],
+  "queryGroups": [
+    {
+      "name": "1-Extract",
+      "id": "dc4d6503-4ce5-4ae5-a74d-929141a73d92",
+      "description": ""
+    },
+    {
+      "name": "3-Load",
+      "id": "c1c6966d-ecbb-4694-a0de-ff9288617255",
+      "order": 2,
+      "description": ""
+    },
+    {
+      "name": "2-Transform",
+      "id": "70893c16-7905-4b83-90b0-95ff1e50cd1a",
+      "order": 1,
+      "description": ""
+    }
+  ],
+  "culture": "en-AU",
+  "firewallEnabled": true
+}

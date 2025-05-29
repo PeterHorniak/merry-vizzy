@@ -1,4 +1,4 @@
-table 050_OrgFinal
+table 050_tblOrg-Final
 	lineageTag: a95f0817-2701-4284-b228-3549caa6e99c
 
 	column Organisation
@@ -46,23 +46,6 @@ table 050_OrgFinal
 		lineageTag: bd6b55e7-67a3-41b8-abdb-f74c820ad18e
 		summarizeBy: none
 		sourceColumn: Parent org
-
-		annotation SummarizationSetBy = Automatic
-
-	column Full-Location
-		dataType: string
-		lineageTag: 671a8899-12ee-4286-b4b1-869476d48391
-		summarizeBy: none
-		sourceColumn: Full-Location
-
-		annotation SummarizationSetBy = Automatic
-
-	column Location-Combined
-		dataType: string
-		lineageTag: de71f7ba-5d78-4b8f-834a-a9a0128cc381
-		dataCategory: StateOrProvince
-		summarizeBy: none
-		sourceColumn: Location-Combined
 
 		annotation SummarizationSetBy = Automatic
 
@@ -114,17 +97,14 @@ table 050_OrgFinal
 
 		annotation SummarizationSetBy = Automatic
 
-	partition 050_OrgFinal = m
+	partition 050_tblOrg-Final = m
 		mode: import
 		queryGroup: 3-Load
 		source =
 				let
-				    Source = #"000_tblOrg",
-				    #"Merged Queries" = Table.NestedJoin(Source, {"Location"}, #"000_tblLocations", {"Acronym"}, "000_tblLocations", JoinKind.LeftOuter),
-				    #"Expanded 000_tblLocations" = Table.ExpandTableColumn(#"Merged Queries", "000_tblLocations", {"Full-Location"}, {"Full-Location"}),
-				    #"Added Conditional Column" = Table.AddColumn(#"Expanded 000_tblLocations", "Location-Combined", each if [#"Full-Location"] = null then [Location] else [#"Full-Location"])
+				    Source = #"000_tblOrg"
 				in
-				    #"Added Conditional Column"
+				    Source
 
 	annotation PBI_NavigationStepName = Navigation
 
