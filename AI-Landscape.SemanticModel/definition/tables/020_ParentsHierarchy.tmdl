@@ -19,6 +19,7 @@ table 020_ParentsHierarchy
 
 	partition 020_ParentsHierarchy = m
 		mode: import
+		queryGroup: 2-Transform
 		source =
 				let
 				    Source = #"000_tblOrg",

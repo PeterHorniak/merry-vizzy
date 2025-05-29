@@ -1,14 +1,6 @@
 table 000_tblHeadcount
 	lineageTag: 8d5709c2-5678-4663-9b50-a962c3ba2d07
 
-	column 'Date when correct'
-		dataType: string
-		lineageTag: c15f1ac9-a356-4141-b226-b6e2443c090d
-		summarizeBy: none
-		sourceColumn: Date when correct
-
-		annotation SummarizationSetBy = Automatic
-
 	column Organisation
 		dataType: string
 		lineageTag: 4a8b2058-521d-4847-abea-c70f574eaf9b
@@ -45,8 +37,17 @@ table 000_tblHeadcount
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column Date
+		dataType: string
+		lineageTag: fa6443b7-aab7-4b03-b856-547cbb37b954
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 000_tblHeadcount = m
 		mode: import
+		queryGroup: 1-Extract
 		source =
 				let
 				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI/"),
@@ -54,7 +55,7 @@ table 000_tblHeadcount
 				    #"Promoted Headers" = Table.PromoteHeaders(Headcount_Table, [PromoteAllScalars=true]),
 				    #"Promoted Headers1" = Table.PromoteHeaders(#"Promoted Headers", [PromoteAllScalars=true]),
 				    #"Removed Columns" = Table.RemoveColumns(#"Promoted Headers1",{""}),
-				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each ([Date when correct] <> null and [Date when correct] <> "")),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each ([Date] <> null and [Date] <> "")),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Filtered Rows",{{"FTE notkilleveryoneism", type number}, {"FTE total", type number}})
 				in
 				    #"Changed Type"

@@ -99,6 +99,7 @@ table 000_tblOrg
 
 	partition 000_tblOrg = m
 		mode: import
+		queryGroup: 1-Extract
 		source =
 				let
 				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI/"),

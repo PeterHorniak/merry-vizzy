@@ -19,6 +19,7 @@ table 000_tblLocations
 
 	partition 000_tblLocations = m
 		mode: import
+		queryGroup: 1-Extract
 		source =
 				let
 				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WCnZU0lEKzi8tyVBwLC0uKUrMyUzUQTCVYnWilcJBasJTi0tSi/Jwq/ILDgcq80stV4AYF56Yk1qMrijM0xmoKCwzuSS/CM2IWAA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Acronym = _t, #"Full-Location" = _t]),

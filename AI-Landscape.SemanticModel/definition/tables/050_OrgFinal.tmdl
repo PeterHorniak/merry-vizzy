@@ -116,6 +116,7 @@ table 050_OrgFinal
 
 	partition 050_OrgFinal = m
 		mode: import
+		queryGroup: 3-Load
 		source =
 				let
 				    Source = #"000_tblOrg",

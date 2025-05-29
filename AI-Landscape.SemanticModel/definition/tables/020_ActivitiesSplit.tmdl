@@ -19,6 +19,7 @@ table 020_ActivitiesSplit
 
 	partition 020_ActivitiesSplit = m
 		mode: import
+		queryGroup: 2-Transform
 		source =
 				let
 				    Source = #"000_tblOrg",

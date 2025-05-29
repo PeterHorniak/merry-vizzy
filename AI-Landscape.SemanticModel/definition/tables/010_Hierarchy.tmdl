@@ -49,14 +49,6 @@ table 010_Hierarchy
 
 		annotation SummarizationSetBy = Automatic
 
-	column '000_tblOrg.Organisation'
-		dataType: string
-		lineageTag: 3c5f7aba-e382-48fb-8fc7-635fa6f157fe
-		summarizeBy: none
-		sourceColumn: 000_tblOrg.Organisation
-
-		annotation SummarizationSetBy = Automatic
-
 	column Lvl2
 		dataType: string
 		lineageTag: 88750d50-9546-4ae4-b8eb-e9f25d949697
@@ -89,8 +81,17 @@ table 010_Hierarchy
 
 		annotation SummarizationSetBy = Automatic
 
+	column Level7
+		dataType: string
+		lineageTag: 1e15b43f-1341-44aa-82a3-4ce33273e1a6
+		summarizeBy: none
+		sourceColumn: Level7
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 010_Hierarchy = m
 		mode: import
+		queryGroup: 2-Transform
 		source =
 				let
 				    Source = "World",
@@ -107,7 +108,7 @@ table 010_Hierarchy
 				    #"Merged Queries4" = Table.NestedJoin(#"Expanded 000_tblOrg3", {"Level5"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
 				    #"Expanded 000_tblOrg4" = Table.ExpandTableColumn(#"Merged Queries4", "000_tblOrg", {"Organisation"}, {"Level6"}),
 				    #"Merged Queries5" = Table.NestedJoin(#"Expanded 000_tblOrg4", {"Level6"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
-				    #"Expanded 000_tblOrg5" = Table.ExpandTableColumn(#"Merged Queries5", "000_tblOrg", {"Organisation"}, {"000_tblOrg.Organisation"})
+				    #"Expanded 000_tblOrg5" = Table.ExpandTableColumn(#"Merged Queries5", "000_tblOrg", {"Organisation"}, {"Level7"})
 				in
 				    #"Expanded 000_tblOrg5"
 
