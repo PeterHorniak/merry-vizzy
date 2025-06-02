@@ -1,0 +1,50 @@
+table 005_tblOrg-SplitParents
+	lineageTag: d96f7834-2f02-4171-8577-00660fd7c095
+
+	column Organisation
+		dataType: string
+		lineageTag: 87567ae4-f352-4938-aba9-0f4c150f9abc
+		summarizeBy: none
+		sourceColumn: Organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Organisation-Shortened
+		dataType: string
+		lineageTag: 102f53f7-44aa-421e-b967-ab39e9dec67a
+		summarizeBy: none
+		sourceColumn: Organisation-Shortened
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parent org'
+		dataType: string
+		lineageTag: 10908696-2305-4649-94cf-742ca6a0be27
+		summarizeBy: none
+		sourceColumn: Parent org
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL
+		dataType: string
+		lineageTag: 26fe2c3b-3f26-474a-9039-6fd61d351278
+		summarizeBy: none
+		sourceColumn: URL
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 005_tblOrg-SplitParents = m
+		mode: import
+		queryGroup: 2-Transform
+		source =
+				let
+				    Source = #"000_tblOrg",
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened", "Parent org", "URL"}),
+				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"Parent org", Splitter.SplitTextByDelimiter(", ", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Parent org")
+				in
+				    #"Split Column by Delimiter"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

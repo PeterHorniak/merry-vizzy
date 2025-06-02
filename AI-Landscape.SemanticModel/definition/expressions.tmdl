@@ -1,0 +1,98 @@
+expression 010_tblOrg-Formatting =
+		let
+		    Source = #"000_tblOrg",
+		    #"Replaced Value" = Table.ReplaceValue(Source,"(","https://",Replacer.ReplaceText,{"URL"}),
+		    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value",")","",Replacer.ReplaceText,{"URL"}),
+		    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value1", "URL", Splitter.SplitTextByEachDelimiter({"#(lf)"}, QuoteStyle.Csv, false), {"URL-Main", "URL-Secondary"})
+		in
+		    #"Split Column by Delimiter"
+	lineageTag: b515d12b-1bca-4180-9b56-1111d984fc1b
+	queryGroup: 2-Transform
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 000_tblOrg =
+		let
+		    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI/"),
+		    Organisations_Table = Source{[name="Organisation",ItemKind="Table"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Organisations_Table, [PromoteAllScalars=true]),
+		    #"Promoted Headers1" = Table.PromoteHeaders(#"Promoted Headers", [PromoteAllScalars=true]),
+		    #"Removed Columns1" = Table.RemoveColumns(#"Promoted Headers1",{""}),
+		    #"Removed Bottom Rows" = Table.RemoveLastN(#"Removed Columns1",1),
+		    #"Duplicated Column" = Table.DuplicateColumn(#"Removed Bottom Rows", "Organisation", "Organisation-Shortened"),
+		    #"Split Column by Delimiter" = Table.SplitColumn(#"Duplicated Column", "Organisation-Shortened", Splitter.SplitTextByEachDelimiter({"("}, QuoteStyle.Csv, true), {"Organisation-Shortened.1", "Organisation-Shortened.2"}),
+		    #"Replaced Value23" = Table.ReplaceValue(#"Split Column by Delimiter",")","",Replacer.ReplaceText,{"Organisation-Shortened.2"}),
+		    #"Added Conditional Column" = Table.AddColumn(#"Replaced Value23", "Organisation-Shortened", each if [#"Organisation-Shortened.2"] = null then [#"Organisation-Shortened.1"] else [#"Organisation-Shortened.2"]),
+		    #"Replaced Value" = Table.ReplaceValue(#"Added Conditional Column","University","Uni",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value","Australian Capital Territory","ACT",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value10","Western Australia","WA",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value15" = Table.ReplaceValue(#"Replaced Value14","Queensland","QLD",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value11" = Table.ReplaceValue(#"Replaced Value15","New South Wales","NSW",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value12" = Table.ReplaceValue(#"Replaced Value11","Victoria","VIC",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value13" = Table.ReplaceValue(#"Replaced Value12","South Australia","SA",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value13","Australians","Aussies",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","Effective Altruism","EA",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","Artificial Intelligence","AI",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","Technology","Tech",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value9","Governance","Gov",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","Government","Govt",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","Australian","Aus",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","Federal","Fed",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","Australia","Aus",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value16" = Table.ReplaceValue(#"Replaced Value5","Mathematic","Math",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value17" = Table.ReplaceValue(#"Replaced Value16","Group","Grp",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value18" = Table.ReplaceValue(#"Replaced Value17","International","Intl",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value19" = Table.ReplaceValue(#"Replaced Value18","Development","Dev",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value20" = Table.ReplaceValue(#"Replaced Value19"," and"," &",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value21" = Table.ReplaceValue(#"Replaced Value20","Intelligence","Intell.",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value22" = Table.ReplaceValue(#"Replaced Value21","Commonwealth Scientific & Industrial Research Organisation (CSIRO)","CSIRO",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value24" = Table.ReplaceValue(#"Replaced Value22","Institute","Institute",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value25" = Table.ReplaceValue(#"Replaced Value24","Conference","Conf",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value26" = Table.ReplaceValue(#"Replaced Value25","Fundamentals","Fundies",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value27" = Table.ReplaceValue(#"Replaced Value26","Institute","Inst.",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value28" = Table.ReplaceValue(#"Replaced Value27","Automated","Auto.",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value29" = Table.ReplaceValue(#"Replaced Value28","Existential","Exist.",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value30" = Table.ReplaceValue(#"Replaced Value29","Canada","CA",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value31" = Table.ReplaceValue(#"Replaced Value30","Singapore","SG",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value32" = Table.ReplaceValue(#"Replaced Value31","Korea","KR",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Replaced Value33" = Table.ReplaceValue(#"Replaced Value32","Japan","JP",Replacer.ReplaceText,{"Organisation-Shortened"})
+		in
+		    #"Replaced Value33"
+	lineageTag: f75e56a8-1f8d-4d04-97bb-202cb6253d92
+	queryGroup: 1-Extract
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 000_tblLocations =
+		let
+		    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WCnZU0lEKzi8tyVBwLC0uKUrMyUzUQTCVYnWilcJBasJTi0tSi/Jwq/ILDgcq80stV4AYF56Yk1qMrijM0xmoKCwzuSS/CM2IWAA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Acronym = _t, #"Full-Location" = _t]),
+		    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Acronym", type text}, {"Full-Location", type text}})
+		in
+		    #"Changed Type"
+	lineageTag: e2409cdb-990b-4321-aafb-4c4c3e94c4db
+	queryGroup: 1-Extract
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 015_tblOrg-SplitURLs =
+		let
+		    Source = #"010_tblOrg-Formatting",
+		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened", "URL"}),
+		    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"URL", Splitter.SplitTextByDelimiter("#(cr)#(lf)", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "URL"),
+		    #"Split Column by Delimiter1" = Table.ExpandListColumn(Table.TransformColumns(#"Split Column by Delimiter", {{"URL", Splitter.SplitTextByEachDelimiter({"#(cr)"}, QuoteStyle.Csv, false), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "URL"),
+		    #"Split Column by Delimiter2" = Table.ExpandListColumn(Table.TransformColumns(#"Split Column by Delimiter1", {{"URL", Splitter.SplitTextByDelimiter("#(lf)", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "URL")
+		in
+		    #"Split Column by Delimiter2"
+	lineageTag: b17da685-ca3c-4608-b9e1-2f7706fa0ace
+	queryGroup: 2-Transform
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

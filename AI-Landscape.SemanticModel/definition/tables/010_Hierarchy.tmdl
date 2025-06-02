@@ -89,6 +89,40 @@ table 010_Hierarchy
 
 		annotation SummarizationSetBy = Automatic
 
+	column Level2URL
+		dataType: string
+		lineageTag: 40e98e37-f2e1-435b-8f5e-37a9a10f56ea
+		summarizeBy: none
+		sourceColumn: Level2URL
+
+		annotation SummarizationSetBy = Automatic
+
+	column Level3URL
+		dataType: string
+		lineageTag: 01a53520-b77f-471f-9312-1886193c7935
+		summarizeBy: none
+		sourceColumn: Level3URL
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL-Main
+		dataType: string
+		lineageTag: ce76d8a2-4fb1-4a34-97d7-1e090a79a178
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: URL-Main
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL-Secondary
+		dataType: string
+		lineageTag: dfba53ee-1014-45b9-8a1f-ae426ef98c7f
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: URL-Secondary
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 010_Hierarchy = m
 		mode: import
 		queryGroup: 2-Transform
@@ -97,20 +131,24 @@ table 010_Hierarchy
 				    Source = "World",
 				    #"Converted to Table" = #table(1, {{Source}}),
 				    #"Renamed Columns" = Table.RenameColumns(#"Converted to Table",{{"Column1", "Level1"}}),
-				    #"Merged Queries" = Table.NestedJoin(#"Renamed Columns", {"Level1"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
-				    #"Expanded 000_tblOrg" = Table.ExpandTableColumn(#"Merged Queries", "000_tblOrg", {"Organisation", "Organisation-Shortened"}, {"Level2", "Lvl2"}),
-				    #"Merged Queries1" = Table.NestedJoin(#"Expanded 000_tblOrg", {"Level2"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
-				    #"Expanded 000_tblOrg1" = Table.ExpandTableColumn(#"Merged Queries1", "000_tblOrg", {"Organisation", "Organisation-Shortened"}, {"Level3", "Lvl3"}),
-				    #"Merged Queries2" = Table.NestedJoin(#"Expanded 000_tblOrg1", {"Level3"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
-				    #"Expanded 000_tblOrg2" = Table.ExpandTableColumn(#"Merged Queries2", "000_tblOrg", {"Organisation", "Organisation-Shortened"}, {"Level4", "Lvl4"}),
-				    #"Merged Queries3" = Table.NestedJoin(#"Expanded 000_tblOrg2", {"Level4"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
-				    #"Expanded 000_tblOrg3" = Table.ExpandTableColumn(#"Merged Queries3", "000_tblOrg", {"Organisation", "Organisation-Shortened"}, {"Level5", "Lvl5"}),
-				    #"Merged Queries4" = Table.NestedJoin(#"Expanded 000_tblOrg3", {"Level5"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
-				    #"Expanded 000_tblOrg4" = Table.ExpandTableColumn(#"Merged Queries4", "000_tblOrg", {"Organisation"}, {"Level6"}),
-				    #"Merged Queries5" = Table.NestedJoin(#"Expanded 000_tblOrg4", {"Level6"}, #"000_tblOrg", {"Parent org"}, "000_tblOrg", JoinKind.LeftOuter),
-				    #"Expanded 000_tblOrg5" = Table.ExpandTableColumn(#"Merged Queries5", "000_tblOrg", {"Organisation"}, {"Level7"})
+				    #"Merged Queries" = Table.NestedJoin(#"Renamed Columns", {"Level1"}, #"005_tblOrg-SplitParents", {"Parent org"}, "005_tblOrg-SplitParents", JoinKind.LeftOuter),
+				    Expandedtest = Table.ExpandTableColumn(#"Merged Queries", "005_tblOrg-SplitParents", {"Organisation", "Organisation-Shortened", "URL"}, {"Level2", "Lvl2", "Level2URL"}),
+				    #"Merged Queries1" = Table.NestedJoin(Expandedtest, {"Level2"}, #"005_tblOrg-SplitParents", {"Parent org"}, "005_tblOrg-SplitParents", JoinKind.LeftOuter),
+				    #"Expanded 000_tblOrg1" = Table.ExpandTableColumn(#"Merged Queries1", "005_tblOrg-SplitParents", {"Organisation", "Organisation-Shortened", "URL"}, {"Level3", "Lvl3", "Level3URL"}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Expanded 000_tblOrg1", {"Level3"}, #"005_tblOrg-SplitParents", {"Parent org"}, "005_tblOrg-SplitParents", JoinKind.LeftOuter),
+				    #"Expanded 000_tblOrg2" = Table.ExpandTableColumn(#"Merged Queries2", "005_tblOrg-SplitParents", {"Organisation", "Organisation-Shortened"}, {"Level4", "Lvl4"}),
+				    #"Merged Queries3" = Table.NestedJoin(#"Expanded 000_tblOrg2", {"Level4"}, #"005_tblOrg-SplitParents", {"Parent org"}, "005_tblOrg-SplitParents", JoinKind.LeftOuter),
+				    #"Expanded 000_tblOrg3" = Table.ExpandTableColumn(#"Merged Queries3", "005_tblOrg-SplitParents", {"Organisation", "Organisation-Shortened"}, {"Level5", "Lvl5"}),
+				    #"Merged Queries4" = Table.NestedJoin(#"Expanded 000_tblOrg3", {"Level5"}, #"005_tblOrg-SplitParents", {"Parent org"}, "005_tblOrg-SplitParents", JoinKind.LeftOuter),
+				    #"Expanded 000_tblOrg4" = Table.ExpandTableColumn(#"Merged Queries4", "005_tblOrg-SplitParents", {"Organisation"}, {"Level6"}),
+				    #"Merged Queries5" = Table.NestedJoin(#"Expanded 000_tblOrg4", {"Level6"}, #"005_tblOrg-SplitParents", {"Parent org"}, "005_tblOrg-SplitParents", JoinKind.LeftOuter),
+				    #"Expanded 000_tblOrg5" = Table.ExpandTableColumn(#"Merged Queries5", "005_tblOrg-SplitParents", {"Organisation"}, {"Level7"}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Expanded 000_tblOrg5", "URL-Combined", each if [Level3URL] <> null then [Level3URL] else [Level2URL]),
+				    #"Replaced Value" = Table.ReplaceValue(#"Added Conditional Column","(","https://",Replacer.ReplaceText,{"URL-Combined"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value",")","",Replacer.ReplaceText,{"URL-Combined"}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value1", "URL-Combined", Splitter.SplitTextByEachDelimiter({"#(lf)"}, QuoteStyle.Csv, false), {"URL-Main", "URL-Secondary"})
 				in
-				    #"Expanded 000_tblOrg5"
+				    #"Split Column by Delimiter"
 
 	annotation PBI_NavigationStepName = Navigation
 

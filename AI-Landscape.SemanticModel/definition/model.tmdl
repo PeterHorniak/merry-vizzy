@@ -1,38 +1,37 @@
 model Model
 	culture: en-US
 	defaultPowerBIDataSourceVersion: powerBI_V3
-	sourceQueryCulture: en-US
+	sourceQueryCulture: en-AU
 	dataAccessOptions
 		legacyRedirects
 		returnErrorValuesAsNull
 
 queryGroup 1-Extract
 
-	annotation PBI_QueryGroupOrder = 0
+	annotation PBI_QueryGroupOrder = 1
 
 queryGroup 3-Load
 
-	annotation PBI_QueryGroupOrder = 2
+	annotation PBI_QueryGroupOrder = 3
 
 queryGroup 2-Transform
 
-	annotation PBI_QueryGroupOrder = 1
+	annotation PBI_QueryGroupOrder = 2
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBIDesktopVersion = 2.143.878.0 (25.05)+b20aa3b866ec1b70879135a4e60e4b1301c75b21
 
-annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocations","000_tblHeadcount","010_Hierarchy","020_ActivitiesSplit","020_ParentsHierarchy","050_tblOrg-Final"]
+annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocations","000_tblHeadcount","005_tblOrg-SplitParents","010_tblOrg-Formatting","015_tblOrg-SplitURLs","010_Hierarchy","020_ActivitiesSplit","020_ParentsHierarchy","Org"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table 000_tblOrg
 ref table 020_ActivitiesSplit
 ref table 020_ParentsHierarchy
-ref table 000_tblLocations
-ref table 050_tblOrg-Final
+ref table Org
 ref table 000_tblHeadcount
 ref table 010_Hierarchy
+ref table 005_tblOrg-SplitParents
 
 ref cultureInfo en-US
 

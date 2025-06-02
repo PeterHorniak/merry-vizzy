@@ -1,19 +1,8 @@
-relationship AutoDetected_ebe167f1-79b0-42a9-a9c2-64864cf2862c
-	fromColumn: 000_tblHeadcount.Organisation
-	toColumn: 000_tblOrg.Organisation
-
 relationship AutoDetected_8a517aa5-8730-4a76-8193-0a9c85a034db
 	fromColumn: 000_tblHeadcount.Organisation
 	toColumn: 020_ParentsHierarchy.Organisation
 
 relationship AutoDetected_356d5830-65ea-4330-8b7e-27c3a3657dbc
 	fromColumn: 000_tblHeadcount.Organisation
-	toColumn: 050_tblOrg-Final.Organisation
-
-relationship AutoDetected_88300b0e-36d2-422b-a9fd-8b80b5ec8edc
-	isActive: false
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: 050_tblOrg-Final.'Organisation-Shortened.1'
-	toColumn: 000_tblOrg.'Organisation-Shortened.1'
+	toColumn: Org.Organisation
 

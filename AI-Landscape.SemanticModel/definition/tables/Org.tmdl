@@ -1,4 +1,4 @@
-table 050_tblOrg-Final
+table Org
 	lineageTag: a95f0817-2701-4284-b228-3549caa6e99c
 
 	column Organisation
@@ -6,14 +6,6 @@ table 050_tblOrg-Final
 		lineageTag: af2a3529-8de3-40fa-ad3c-269749e0fef0
 		summarizeBy: none
 		sourceColumn: Organisation
-
-		annotation SummarizationSetBy = Automatic
-
-	column URL
-		dataType: string
-		lineageTag: 53dc24b4-ce97-4d49-b4d3-0eec740eff23
-		summarizeBy: none
-		sourceColumn: URL
 
 		annotation SummarizationSetBy = Automatic
 
@@ -97,12 +89,28 @@ table 050_tblOrg-Final
 
 		annotation SummarizationSetBy = Automatic
 
-	partition 050_tblOrg-Final = m
+	column URL-Main
+		dataType: string
+		lineageTag: 2d2bdd68-9be6-4def-a8c1-7698cb7ca260
+		summarizeBy: none
+		sourceColumn: URL-Main
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL-Secondary
+		dataType: string
+		lineageTag: d9bdd3fc-36ca-4e41-89bf-9532e5cd4ca3
+		summarizeBy: none
+		sourceColumn: URL-Secondary
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Org = m
 		mode: import
 		queryGroup: 3-Load
 		source =
 				let
-				    Source = #"000_tblOrg"
+				    Source = #"010_tblOrg-Formatting"
 				in
 				    Source
 
