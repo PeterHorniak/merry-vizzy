@@ -3624,79 +3624,116 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "table010_tblorghierarchy.level2": {
+			    "entity_020_activities_split.activities_AIshortened": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrgHierarchy",
-			          "ConceptualProperty": "Level2"
+			          "ConceptualEntity": "020_ActivitiesSplit",
+			          "ConceptualProperty": "Activities AI-shortened"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "Who parents whom?": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
+			          "activities AI-shortened": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "activity AI-shortened": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "activities AI shortened": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "activity AI shortened": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        }
+			      ]
+			    },
+			    "entity_020_activities_split.activitiesexplainer": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "020_ActivitiesSplit",
+			          "ConceptualProperty": "Activities-Explainer"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "activities-explainer": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "activity-explainer": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "activities explainer": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "activity explainer": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        },
+			        {
+			          "explainer": {
+			            "State": "Generated",
+			            "Weight": 0.97
 			          }
 			        }
 			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "entity_000_tbl_headcount_has_entity_020_parents_hierarchy": {
+			    "entity_020_activities_split_has_activities_AIshortened": {
 			      "Binding": {
-			        "ConceptualEntity": "000_tblHeadcount"
+			        "ConceptualEntity": "020_ActivitiesSplit"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_000_tbl_headcount": {
+			        "entity_020_activities_split": {
 			          "Target": {
-			            "Entity": "entity_000_tbl_headcount"
+			            "Entity": "entity_020_activities_split"
 			          }
 			        },
-			        "entity_020_parents_hierarchy": {
+			        "entity_020_activities_split.activities_AIshortened": {
 			          "Target": {
-			            "Entity": "entity_020_parents_hierarchy"
-			          },
-			          "Nouns": [
-			            {
-			              "organisation": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
+			            "Entity": "entity_020_activities_split.activities_AIshortened"
+			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_000_tbl_headcount"
+			              "Role": "entity_020_activities_split"
 			            },
 			            "Object": {
-			              "Role": "entity_020_parents_hierarchy"
+			              "Role": "entity_020_activities_split.activities_AIshortened"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing000_tbl_headcounts_have_020_parents_hierarchies"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_020_parents_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "entity_000_tbl_headcount"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing020_parents_hierarchies_have_000_tbl_headcounts"
+			          "ID": "Phrasing020_activities_splits_have_activities_AIshortened"
 			        }
 			      ]
 			    },
@@ -5093,6 +5130,125 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "org_are_in_locations"
+			        }
+			      ]
+			    },
+			    "entity_020_activities_split_activitiesexplainer_explain_entity_020_activities_split": {
+			      "Binding": {
+			        "ConceptualEntity": "020_ActivitiesSplit"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_020_activities_split.activitiesexplainer": {
+			          "Target": {
+			            "Entity": "entity_020_activities_split.activitiesexplainer"
+			          }
+			        },
+			        "entity_020_activities_split": {
+			          "Target": {
+			            "Entity": "entity_020_activities_split"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "entity_020_activities_split.activitiesexplainer"
+			            },
+			            "Verbs": [
+			              {
+			                "explain": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "entity_020_activities_split"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "activitiesexplainers_explain_020_activities_splits"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_020_activities_split.activitiesexplainer"
+			            },
+			            "Object": {
+			              "Role": "entity_020_activities_split"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "activitiesexplainers_have_020_activities_splits"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_020_activities_split"
+			            },
+			            "Object": {
+			              "Role": "entity_020_activities_split.activitiesexplainer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing020_activities_splits_have_activitiesexplainers"
+			        }
+			      ]
+			    },
+			    "entity_000_tbl_headcount_has_entity_020_parents_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "000_tblHeadcount"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_000_tbl_headcount": {
+			          "Target": {
+			            "Entity": "entity_000_tbl_headcount"
+			          }
+			        },
+			        "entity_020_parents_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_020_parents_hierarchy"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_000_tbl_headcount"
+			            },
+			            "Object": {
+			              "Role": "entity_020_parents_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing000_tbl_headcounts_have_020_parents_hierarchies"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_020_parents_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_000_tbl_headcount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing020_parents_hierarchies_have_000_tbl_headcounts"
 			        }
 			      ]
 			    },

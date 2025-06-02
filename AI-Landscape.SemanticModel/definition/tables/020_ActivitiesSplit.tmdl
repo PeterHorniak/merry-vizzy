@@ -17,6 +17,22 @@ table 020_ActivitiesSplit
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Activities AI-shortened'
+		dataType: string
+		lineageTag: 59353eec-8de5-47af-b6e2-732c9e77b4de
+		summarizeBy: none
+		sourceColumn: Activities AI-shortened
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activities-Explainer
+		dataType: string
+		lineageTag: 118e4b73-a94c-4583-827f-05a75dcb5329
+		summarizeBy: none
+		sourceColumn: Activities-Explainer
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 020_ActivitiesSplit = m
 		mode: import
 		queryGroup: 2-Transform
@@ -25,9 +41,23 @@ table 020_ActivitiesSplit
 				    Source = #"000_tblOrg",
 				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Activities AI"}),
 				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"Activities AI", Splitter.SplitTextByDelimiter(", ", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Activities AI"),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Activities AI", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Activities AI", type text}}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Changed Type", "Activities AI", "Activities AI-shortened"),
+				    #"Replaced Value" = Table.ReplaceValue(#"Duplicated Column","mid-career","mid",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","No specific AI focus","None",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","government","govt",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","Coworking","Cowork",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","Advocacy","Advoc.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","Research","Rsrch",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","Advisory","Advis.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","capabilities","capab.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","Charity / nonprofit","Nonprofit",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","existential","exist.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value11" = Table.ReplaceValue(#"Replaced Value9","catastrophic","catast.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value11","mundane","mund.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Added Activities-Explainer" = Table.AddColumn(#"Replaced Value10", "Activities-Explainer", each if [Activities AI] = "Talent early" then "Gets more people into the talent pipeline.#(#)(cr)#(#)(lf) Allows minimal or <3 years experience with no qualifications." else if [Activities AI] = "Talent mid-career" then "For moderately experienced people in AI safety, or experienced people in other fields transitioning over." else if [Activities AI] = "Research policy" then "Creates policy proposals and researches governance structures." else if [Activities AI] = "Research safety mundane" then "Looks at mundane harms that society already has coping mechanisms for. E.g. deepfakes, cheating on school exams." else if [Activities AI] = "Research safety existential" then "Looks at catastrophic or existential harms that society does not have ways to cope with. For example, " else null)
 				in
-				    #"Changed Type"
+				    #"Added Activities-Explainer"
 
 	annotation PBI_NavigationStepName = Navigation
 
