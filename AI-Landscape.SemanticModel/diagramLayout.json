@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 612.99999999999943,
         "y": 0
       },
       "nodes": [
@@ -49,8 +49,8 @@
         },
         {
           "location": {
-            "x": 2038,
-            "y": 51
+            "x": 586.07323854850256,
+            "y": 0
           },
           "nodeIndex": "010_Hierarchy",
           "nodeLineageTag": "1b0ff087-9ecd-4948-962c-1ed2335ff8c0",
@@ -75,10 +75,11 @@
         },
         {
           "location": {
-            "x": 966,
+            "x": 914.48230280327971,
             "y": 0
           },
           "nodeIndex": "Org",
+          "nodeLineageTag": "a95f0817-2701-4284-b228-3549caa6e99c",
           "size": {
             "height": 300,
             "width": 234
@@ -87,7 +88,7 @@
         }
       ],
       "name": "All tables",
-      "zoomValue": 100,
+      "zoomValue": 100.00000000000009,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

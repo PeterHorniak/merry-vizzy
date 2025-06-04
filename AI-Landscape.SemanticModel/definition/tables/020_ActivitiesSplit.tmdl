@@ -33,6 +33,36 @@ table 020_ActivitiesSplit
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Activities AI - Level.1'
+		dataType: string
+		lineageTag: 0513dd52-a119-45e9-bc4f-51882f4dbec0
+		summarizeBy: none
+		sourceColumn: Activities AI - Level.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Activities AI - Level.2'
+		dataType: string
+		lineageTag: 09a21ed7-a154-4c7e-ab50-511108153473
+		summarizeBy: none
+		sourceColumn: Activities AI - Level.2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Activities AI - Level.3'
+		dataType: string
+		lineageTag: 5828a1f4-9156-4a39-adb2-d668d1d3d237
+		summarizeBy: none
+		sourceColumn: Activities AI - Level.3
+
+		annotation SummarizationSetBy = Automatic
+
+	column _ActivitiesAI-Lvl2 = If('020_ActivitiesSplit'[Activities AI - Level.2] = "", "IsNull", '020_ActivitiesSplit'[Activities AI - Level.2])
+		lineageTag: 633c3e20-c7c8-4d45-b175-7dc2cc877e6e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 020_ActivitiesSplit = m
 		mode: import
 		queryGroup: 2-Transform
@@ -55,9 +85,14 @@ table 020_ActivitiesSplit
 				    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","existential","exist.",Replacer.ReplaceText,{"Activities AI-shortened"}),
 				    #"Replaced Value11" = Table.ReplaceValue(#"Replaced Value9","catastrophic","catast.",Replacer.ReplaceText,{"Activities AI-shortened"}),
 				    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value11","mundane","mund.",Replacer.ReplaceText,{"Activities AI-shortened"}),
-				    #"Added Activities-Explainer" = Table.AddColumn(#"Replaced Value10", "Activities-Explainer", each if [Activities AI] = "Talent early" then "Gets more people into the talent pipeline.#(#)(cr)#(#)(lf) Allows minimal or <3 years experience with no qualifications." else if [Activities AI] = "Talent mid-career" then "For moderately experienced people in AI safety, or experienced people in other fields transitioning over." else if [Activities AI] = "Research policy" then "Creates policy proposals and researches governance structures." else if [Activities AI] = "Research safety mundane" then "Looks at mundane harms that society already has coping mechanisms for. E.g. deepfakes, cheating on school exams." else if [Activities AI] = "Research safety existential" then "Looks at catastrophic or existential harms that society does not have ways to cope with. For example, " else null)
+				    #"Replaced Value12" = Table.ReplaceValue(#"Replaced Value10","commercial","commrc.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value13" = Table.ReplaceValue(#"Replaced Value12","Company","Co.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value13","Nonprofit","NPO",Replacer.ReplaceText,{"Activities AI-shortened"}),
+				    #"Added Activities-Explainer" = Table.AddColumn(#"Replaced Value14", "Activities-Explainer", each if [Activities AI] = "Talent early" then "Gets more people into the talent pipeline.#(#)(#)(cr)#(#)(#)(lf) Allows minimal or <3 years experience with no qualifications." else if [Activities AI] = "Talent mid-career" then "For moderately experienced people in AI safety, or experienced people in other fields transitioning over." else if [Activities AI] = "Research policy" then "Creates policy proposals and researches governance structures." else if [Activities AI] = "Research safety mundane" then "Looks at mundane harms that society already has coping mechanisms for. E.g. deepfakes, cheating on school exams." else if [Activities AI] = "Research safety existential" then "Looks at catastrophic or existential harms that society does not have ways to cope with. For example, " else if [Activities AI] = "Company private" then "It has commercial incentives and no public oversight but also not suable for not maximising shareholder profits." else if [Activities AI] = "Company public" then "It has commercial incentives and has public oversight but also can be sued for not maximising shareholder profits." else if [Activities AI] = "Research capabilities" then "Is focused on improving AI capabilities, i.e. letting it do stuff whether safe or not." else null),
+				    #"Duplicated Column1" = Table.DuplicateColumn(#"Added Activities-Explainer", "Activities AI-shortened", "Activities AI - Level"),
+				    #"Split Column by Delimiter1" = Table.SplitColumn(#"Duplicated Column1", "Activities AI - Level", Splitter.SplitTextByDelimiter(" ", QuoteStyle.Csv), {"Activities AI - Level.1", "Activities AI - Level.2", "Activities AI - Level.3"})
 				in
-				    #"Added Activities-Explainer"
+				    #"Split Column by Delimiter1"
 
 	annotation PBI_NavigationStepName = Navigation
 

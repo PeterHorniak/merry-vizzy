@@ -6,3 +6,8 @@ relationship AutoDetected_356d5830-65ea-4330-8b7e-27c3a3657dbc
 	fromColumn: 000_tblHeadcount.Organisation
 	toColumn: Org.Organisation
 
+relationship 254f5655-6963-9342-ce4f-fede99d89588
+	crossFilteringBehavior: bothDirections
+	fromColumn: 010_Hierarchy.LowestLevelOrg
+	toColumn: Org.Organisation
+
