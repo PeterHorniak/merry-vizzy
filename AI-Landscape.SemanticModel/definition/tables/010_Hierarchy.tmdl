@@ -189,9 +189,10 @@ table 010_Hierarchy
 				    #"Added LowestLevelOrg" = Table.AddColumn(#"Sorted Rows", "LowestLevelOrg", each if [Level7] <> null then [Level7] else if [Level6] <> null then [Level6] else if [Level5] <> null then [Level5] else if [Level4] <> null then [Level4] else if [Level3] <> null then [Level3] else if [Level2] <> null then [Level2] else [Level1]),
 				    #"Replaced Value URL-Combined" = Table.ReplaceValue(#"Added LowestLevelOrg","(","https://",Replacer.ReplaceText,{"URL-Combined"}),
 				    #"Replaced Value1 URL-Combined" = Table.ReplaceValue(#"Replaced Value URL-Combined",")","",Replacer.ReplaceText,{"URL-Combined"}),
-				    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value1 URL-Combined", "URL-Combined", Splitter.SplitTextByEachDelimiter({"#(lf)"}, QuoteStyle.Csv, false), {"URL-Main", "URL-Secondary"})
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value1 URL-Combined", "URL-Combined", Splitter.SplitTextByEachDelimiter({"#(lf)"}, QuoteStyle.Csv, false), {"URL-Main", "URL-Secondary"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Split Column by Delimiter",null,"No child orgs",Replacer.ReplaceValue,{"Level2", "Lvl2", "Level3", "Lvl3", "Level4", "Lvl4", "Level5", "Lvl5", "Level6", "Level7"})
 				in
-				    #"Split Column by Delimiter"
+				    #"Replaced Value"
 
 	annotation PBI_NavigationStepName = Navigation
 

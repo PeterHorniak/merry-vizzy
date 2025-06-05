@@ -22,7 +22,7 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBIDesktopVersion = 2.143.1204.0 (25.05)+23c84aace645781dd62b8a26eb0418c7e6a84b72
 
-annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocations","000_tblHeadcount","005_tblOrg-SplitParents","010_tblOrg-Formatting","015_tblOrg-SplitURLs","010_Hierarchy","020_ActivitiesSplit","020_ParentsHierarchy","Org"]
+annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocationsAcronyms","000_tblHeadcount","005_tblOrg-SplitParents","010_tblOrg-Formatting","015_tblOrg-SplitURLs","010_Hierarchy","020_ActivitiesSplit","020_ParentsHierarchy","Org"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
