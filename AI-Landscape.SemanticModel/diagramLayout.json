@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 612.99999999999943,
+        "x": 1111.0000000000014,
         "y": 0
       },
       "nodes": [
@@ -82,6 +82,19 @@
           "nodeLineageTag": "a95f0817-2701-4284-b228-3549caa6e99c",
           "size": {
             "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2322,
+            "y": 192
+          },
+          "nodeIndex": "005_tblOrg-events",
+          "nodeLineageTag": "32d25435-011d-4f2d-b13a-f73159591caa",
+          "size": {
+            "height": 128,
             "width": 234
           },
           "zIndex": 0

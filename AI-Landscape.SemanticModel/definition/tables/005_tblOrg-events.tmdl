@@ -1,0 +1,95 @@
+table 005_tblOrg-events
+	lineageTag: 32d25435-011d-4f2d-b13a-f73159591caa
+
+	column Organisation
+		dataType: string
+		lineageTag: a24b7394-a77f-457a-b63d-3ce0f59a37af
+		summarizeBy: none
+		sourceColumn: Organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: 53456777-228b-42c4-9e8e-ca3cea1a8801
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	column _Year = YEAR('005_tblOrg-events'[Date])
+		formatString: 0
+		lineageTag: 85cfa45b-98fa-4322-8ff0-bcc12fc25b1e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column _Month = MONTH('005_tblOrg-events'[Status.1])
+		formatString: 0
+		lineageTag: 2c572066-2c78-4ad1-8bca-b1be93685602
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: yyyy-mm
+		lineageTag: 11be9495-2622-47a5-b8d6-dcf9d98611db
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Event
+		dataType: string
+		lineageTag: d54ae7ea-883a-410e-aba3-bed84d21e229
+		summarizeBy: none
+		sourceColumn: Event
+
+		annotation SummarizationSetBy = Automatic
+
+	column Event-Type
+		dataType: string
+		lineageTag: 9cfd88b8-68e1-4b4e-b3a7-613c41f66953
+		summarizeBy: none
+		sourceColumn: Event-Type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 005_tblOrg-events = m
+		mode: import
+		queryGroup: 2-Transform
+		source =
+				let
+				    Source = #"000_tblOrg",
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Status"}),
+				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"Status", Splitter.SplitTextByDelimiter("#(lf)", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Status"),
+				    #"Filtered Rows" = Table.SelectRows(#"Split Column by Delimiter", each ([Status] <> "" and [Status] <> "Active!" and [Status] <> "Formerly in CSIRO" and [Status] <> "Inactive" and [Status] <> "Not Yet Active")),
+				    #"Split Column by Delimiter1" = Table.SplitColumn(#"Filtered Rows", "Status", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Date", "Event"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Split Column by Delimiter1",":","",Replacer.ReplaceText,{"Date"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"Date", type date}}),
+				    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Changed Type"),
+				    #"Sorted Rows" = Table.Sort(#"Removed Errors",{{"Date", Order.Ascending}}),
+				    #"Added Index" = Table.AddIndexColumn(#"Sorted Rows", "Index", 1, 1, Int64.Type),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Added Index","Active","⚡ Active",Replacer.ReplaceText,{"Event"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","launch","🚀 launch",Replacer.ReplaceText,{"Event"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","Merge","🤝 Merge",Replacer.ReplaceText,{"Event"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","Inactive","💤 inactive",Replacer.ReplaceText,{"Event"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value6","founded","👶 founded",Replacer.ReplaceText,{"Event"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","ended","🪦 ended",Replacer.ReplaceText,{"Event"}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value2","created","👶 created",Replacer.ReplaceText,{"Event"}),
+				    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","started","👶 started",Replacer.ReplaceText,{"Event"}),
+				    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","moved","🤝moved",Replacer.ReplaceText,{"Event"}),
+				    #"Added Event-Type" = Table.AddColumn(#"Replaced Value9", "Event-Type", each if Text.Contains([Event], "👶") then "👶 founded" else if Text.Contains([Event], "🪦") then "🪦ended" else if Text.Contains([Event], "🤝") then "🤝 merged" else if Text.Contains([Event], "💤") then "💤 inactive" else "Misc")
+				in
+				    #"Added Event-Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

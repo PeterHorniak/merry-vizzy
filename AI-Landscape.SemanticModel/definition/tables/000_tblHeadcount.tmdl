@@ -45,6 +45,22 @@ table 000_tblHeadcount
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Revenue total'
+		dataType: string
+		lineageTag: bc8b7f92-83af-4911-975b-1a2a9e4efd95
+		summarizeBy: none
+		sourceColumn: Revenue total
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Revenue notkilleveryoneism'
+		dataType: string
+		lineageTag: f3d63a3d-bbac-41e2-b798-1b304c49a578
+		summarizeBy: none
+		sourceColumn: Revenue notkilleveryoneism
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 000_tblHeadcount = m
 		mode: import
 		queryGroup: 1-Extract
