@@ -5393,6 +5393,182 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity_005_tbl_org_event.indexascByOrgDate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "005_tblOrg-events",
+			          "ConceptualProperty": "Index-Asc-ByOrgDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "index-asc-ByOrgDate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "index asc ByOrgDate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_event.indexascByDate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "005_tblOrg-events",
+			          "ConceptualProperty": "Index-Asc-ByDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "index-asc-ByDate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "index asc ByDate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_event.organisationshortened": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "005_tblOrg-events",
+			          "ConceptualProperty": "Organisation-Shortened"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "organisation-shortened": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "organisation shortened": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "organization shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "corporation shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "institution shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "org shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "business shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "company shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "organization -shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "corporation -shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "institution -shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "org -shortened": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "Org": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -5446,6 +5622,105 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "Phrasing020_parents_hierarchies_have_000_tbl_headcounts"
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_event_has_organisationshortened": {
+			      "Binding": {
+			        "ConceptualEntity": "005_tblOrg-events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_005_tbl_org_event": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_event"
+			          }
+			        },
+			        "entity_005_tbl_org_event.organisationshortened": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_event.organisationshortened"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_005_tbl_org_event"
+			            },
+			            "Object": {
+			              "Role": "entity_005_tbl_org_event.organisationshortened"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing005_tbl_org_events_have_organisationshortened"
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_event_has_indexascByDate": {
+			      "Binding": {
+			        "ConceptualEntity": "005_tblOrg-events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_005_tbl_org_event": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_event"
+			          }
+			        },
+			        "entity_005_tbl_org_event.indexascByDate": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_event.indexascByDate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_005_tbl_org_event"
+			            },
+			            "Object": {
+			              "Role": "entity_005_tbl_org_event.indexascByDate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing005_tbl_org_events_have_indexascByDates"
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_event_has_indexascByOrgDate": {
+			      "Binding": {
+			        "ConceptualEntity": "005_tblOrg-events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_005_tbl_org_event": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_event"
+			          }
+			        },
+			        "entity_005_tbl_org_event.indexascByOrgDate": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_event.indexascByOrgDate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_005_tbl_org_event"
+			            },
+			            "Object": {
+			              "Role": "entity_005_tbl_org_event.indexascByOrgDate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing005_tbl_org_events_have_indexascByOrgDates"
 			        }
 			      ]
 			    },
