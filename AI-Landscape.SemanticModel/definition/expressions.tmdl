@@ -97,3 +97,56 @@ expression 015_tblOrg-SplitURLs =
 
 	annotation PBI_ResultType = Table
 
+expression 005_tblOrg-events-count =
+		let
+		    Source = #"000_tblOrg",
+		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened", "Status"}),
+		    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"Status", Splitter.SplitTextByDelimiter("#(lf)", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Status"),
+		    #"Filtered Rows" = Table.SelectRows(#"Split Column by Delimiter", each ([Status] <> "" and [Status] <> "Active!" and [Status] <> "Formerly in CSIRO" and [Status] <> "Inactive" and [Status] <> "Not Yet Active")),
+		    #"Split Column by Delimiter1" = Table.SplitColumn(#"Filtered Rows", "Status", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Date", "Event"}),
+		    #"Replaced Value" = Table.ReplaceValue(#"Split Column by Delimiter1",":","",Replacer.ReplaceText,{"Date"}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"Date", type date}}),
+		    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Changed Type"),
+		    #"Sorted Rows" = Table.Sort(#"Removed Errors",{{"Date", Order.Descending}}),
+		    #"Added Index" = Table.AddIndexColumn(#"Sorted Rows", "Index", 1, 1, Int64.Type),
+		    #"Sorted Rows1" = Table.Sort(#"Added Index",{{"Date", Order.Ascending}, {"Organisation", Order.Ascending}}),
+		    #"Added Index1" = Table.AddIndexColumn(#"Sorted Rows1", "Index-Asc-ByOrgDate", 1, 1, Int64.Type),
+		    #"Sorted Rows2" = Table.Sort(#"Added Index1",{{"Date", Order.Ascending}}),
+		    #"Added Index2" = Table.AddIndexColumn(#"Sorted Rows2", "Index-Asc-ByDate", 1, 1, Int64.Type),
+		    #"Added Index3" = Table.AddIndexColumn(#"Added Index2", "Index-Asc-ByDate-ForMerge", 0, 1, Int64.Type),
+		    #"Counted Rows" = Table.RowCount(#"Added Index3")
+		in
+		    #"Counted Rows"
+	lineageTag: 30045c78-3f0a-426d-b3c8-43f53a7342b6
+	queryGroup: 2-Transform
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Number
+
+expression 005_tblOrg-events-ForMerge =
+		let
+		    Source = #"000_tblOrg",
+		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened", "Status"}),
+		    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"Status", Splitter.SplitTextByDelimiter("#(lf)", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Status"),
+		    #"Filtered Rows" = Table.SelectRows(#"Split Column by Delimiter", each ([Status] <> "" and [Status] <> "Active!" and [Status] <> "Formerly in CSIRO" and [Status] <> "Inactive" and [Status] <> "Not Yet Active")),
+		    #"Split Column by Delimiter1" = Table.SplitColumn(#"Filtered Rows", "Status", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Date", "Event"}),
+		    #"Replaced Value" = Table.ReplaceValue(#"Split Column by Delimiter1",":","",Replacer.ReplaceText,{"Date"}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"Date", type date}}),
+		    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Changed Type"),
+		    #"Sorted Rows" = Table.Sort(#"Removed Errors",{{"Date", Order.Descending}}),
+		    #"Added Index" = Table.AddIndexColumn(#"Sorted Rows", "Index", 1, 1, Int64.Type),
+		    #"Sorted Rows1" = Table.Sort(#"Added Index",{{"Date", Order.Ascending}, {"Organisation", Order.Ascending}}),
+		    #"Added Index1" = Table.AddIndexColumn(#"Sorted Rows1", "Index-Asc-ByOrgDate", 1, 1, Int64.Type),
+		    #"Sorted Rows2" = Table.Sort(#"Added Index1",{{"Date", Order.Ascending}}),
+		    #"Added Index2" = Table.AddIndexColumn(#"Sorted Rows2", "Index-Asc-ByDate", 1, 1, Int64.Type),
+		    #"Added Index3" = Table.AddIndexColumn(#"Added Index2", "Index-Asc-ByDate-ForMerge", 0, 1, Int64.Type)
+		in
+		    #"Added Index3"
+	lineageTag: f65ee772-89bb-483a-b5c9-ffe30f87eb83
+	queryGroup: 2-Transform
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
