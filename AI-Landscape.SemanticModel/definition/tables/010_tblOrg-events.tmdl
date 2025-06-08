@@ -95,10 +95,19 @@ table 010_tblOrg-events
 
 	column Index-Asc-ByDate-WithJumps
 		dataType: double
-		formatString: 0
 		lineageTag: 1c0e6f69-f4d6-4765-a3f7-0628fd9b5cdb
 		summarizeBy: sum
 		sourceColumn: Index-Asc-ByDate-WithJumps
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Event-Icon
+		dataType: string
+		lineageTag: cb0aa46c-502b-4611-967e-4e6fccb5197d
+		summarizeBy: none
+		sourceColumn: Event-Icon
 
 		annotation SummarizationSetBy = Automatic
 
@@ -150,9 +159,10 @@ table 010_tblOrg-events
 				    #"Added Custom" = Table.AddColumn(#"Expanded 005_tblOrg-events-ForMerge", "DaysSincePreviousEntry", each [#"Date-NextEntry"]-[Date]),
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"DaysSincePreviousEntry", Int64.Type}}),
 				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type1", "Index-Asc-ByDate-WithJumps", each if [DaysSincePreviousEntry] > 61 then [#"Index-Asc-ByDate"] else (Number.RandomBetween(1,10)*[#"Index-Asc-ByDate"])),
-				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Conditional Column",{{"Index-Asc-ByDate-WithJumps", type number}})
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Conditional Column",{{"Index-Asc-ByDate-WithJumps", type number}}),
+				    Custom1 = Table.AddColumn(#"Changed Type2", "Event-Icon", each if Text.Contains([Event], "👶") then "👶" else if Text.Contains([Event], "🪦") then "🪦" else if Text.Contains([Event], "🤝") then "🤝" else if Text.Contains([Event], "💤") then "💤" else if Text.Contains([Event], "📋") then "📋" else if Text.Contains([Event], "⚡") then "⚡" else if Text.Contains([Event], "📢") then "📢" else if Text.Contains([Event], "💡") then "💡" else if Text.Contains([Event], "📅 ") then "📅 " else if Text.Contains([Event], "🚀") then "🚀" else if Text.Contains([Event], "👥") then "👥" else if Text.Contains([Event], "📄") then "📄" else "❔")
 				in
-				    #"Changed Type2"
+				    Custom1
 
 	annotation PBI_NavigationStepName = Navigation
 

@@ -5621,6 +5621,59 @@ cultureInfo en-US
 			    }
 			  },
 			  "Relationships": {
+			    "entity_000_tbl_headcount_has_entity_020_parents_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "000_tblHeadcount"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_000_tbl_headcount": {
+			          "Target": {
+			            "Entity": "entity_000_tbl_headcount"
+			          }
+			        },
+			        "entity_020_parents_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_020_parents_hierarchy"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_000_tbl_headcount"
+			            },
+			            "Object": {
+			              "Role": "entity_020_parents_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing000_tbl_headcounts_have_020_parents_hierarchies"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_020_parents_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_000_tbl_headcount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing020_parents_hierarchies_have_000_tbl_headcounts"
+			        }
+			      ]
+			    },
 			    "entity_010_tbl_org_event_has_indexascByDateWithJump": {
 			      "Binding": {
 			        "ConceptualEntity": "010_tblOrg-events"
@@ -5915,72 +5968,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "Phrasing010_tbl_org_events_have_dates"
-			        }
-			      ]
-			    },
-			    "entity_010_tbl_org_event_has_entity__month": {
-			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_010_tbl_org_event": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_event"
-			          }
-			        },
-			        "entity_010_tbl_org_event.entity__month": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_event.entity__month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_010_tbl_org_event"
-			            },
-			            "Object": {
-			              "Role": "entity_010_tbl_org_event.entity__month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_events_have__months"
-			        }
-			      ]
-			    },
-			    "entity_010_tbl_org_event_has_entity__year": {
-			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_010_tbl_org_event": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_event"
-			          }
-			        },
-			        "entity_010_tbl_org_event.entity__year": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_event.entity__year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_010_tbl_org_event"
-			            },
-			            "Object": {
-			              "Role": "entity_010_tbl_org_event.entity__year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_events_have__years"
 			        }
 			      ]
 			    },
@@ -7872,59 +7859,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "org_are_in_locations"
-			        }
-			      ]
-			    },
-			    "entity_000_tbl_headcount_has_entity_020_parents_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "000_tblHeadcount"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_000_tbl_headcount": {
-			          "Target": {
-			            "Entity": "entity_000_tbl_headcount"
-			          }
-			        },
-			        "entity_020_parents_hierarchy": {
-			          "Target": {
-			            "Entity": "entity_020_parents_hierarchy"
-			          },
-			          "Nouns": [
-			            {
-			              "organisation": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_000_tbl_headcount"
-			            },
-			            "Object": {
-			              "Role": "entity_020_parents_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing000_tbl_headcounts_have_020_parents_hierarchies"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_020_parents_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "entity_000_tbl_headcount"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing020_parents_hierarchies_have_000_tbl_headcounts"
 			        }
 			      ]
 			    },
