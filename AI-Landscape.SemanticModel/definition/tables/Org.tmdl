@@ -105,14 +105,41 @@ table Org
 
 		annotation SummarizationSetBy = Automatic
 
+	column _LocationsFilled = (COUNTA(Org[Location])/countrows(Org))/countrows(Org)
+		dataType: double
+		formatString: 0%;-0%;0%
+		lineageTag: 29a62380-9b9d-47a3-af51-f3eb8f8a9a96
+		summarizeBy: sum
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column _%Mission = (COUNTA(Org[Mission])/countrows(Org))/countrows(Org)
+		formatString: 0%;-0%;0%
+		lineageTag: 40803b1b-92b8-4467-894d-f37e847aa253
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActiveOrNot
+		dataType: string
+		lineageTag: fd1b0518-2300-471b-a4ea-d75c1342bc2b
+		summarizeBy: none
+		sourceColumn: ActiveOrNot
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Org = m
 		mode: import
 		queryGroup: 3-Load
 		source =
 				let
-				    Source = #"010_tblOrg-Formatting"
+				    Source = #"010_tblOrg-Formatting",
+				    #"Replaced Value" = Table.ReplaceValue(Source,"",null,Replacer.ReplaceValue,{"Organisation", "URL-Main", "URL-Secondary", "Mission", "Activities AI", "Status", "Key Contacts", "Parent org", "Location", "Misc", "Organisation-Shortened.1", "Organisation-Shortened.2", "Organisation-Shortened"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","#(lf)",null,Replacer.ReplaceValue,{"Organisation", "URL-Main", "URL-Secondary", "Mission", "Activities AI", "Status", "Key Contacts", "Parent org", "Location", "Misc", "Organisation-Shortened.1", "Organisation-Shortened.2", "Organisation-Shortened"})
 				in
-				    Source
+				    #"Replaced Value1"
 
 	annotation PBI_NavigationStepName = Navigation
 

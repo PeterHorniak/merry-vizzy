@@ -5618,6 +5618,614 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity_010_tbl_org_event.eventicon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualProperty": "Event-Icon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "event-icon": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "event icon": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "icon": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "event-likeness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "event-representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "event-portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "event-emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "event-logo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "event likeness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "event representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "event portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "event emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "event logo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "qry_last_refreshed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "qryLastRefreshed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qry last refreshed": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        },
+			        {
+			          "qryLastRefreshed": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.8613
+			          }
+			        },
+			        {
+			          "qry end refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry final refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry closing refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry concluding refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry finishing refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry former refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry latest refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry latter refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry past refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry remaining refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "qry_last_refreshed.qry_last_refreshed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "qryLastRefreshed",
+			          "ConceptualProperty": "qryLastRefreshed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qry last refreshed": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qryLastRefreshed": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "qry end refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry final refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry closing refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry concluding refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry finishing refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry former refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry latest refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry latter refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry past refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "qry remaining refreshed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "org.entity__LocationsFilled": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Org",
+			          "ConceptualProperty": "_LocationsFilled"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_LocationsFilled": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "org.entity__mission": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Org",
+			          "ConceptualProperty": "_%Mission"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_%mission": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_ percentage mission": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "_ pct mission": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "_% assignment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "_% duty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "_% operation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "_% errand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "_% enterprise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "_% task": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "_% job": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "_% work": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "org.active_or_not": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Org",
+			          "ConceptualProperty": "ActiveOrNot"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "active or not": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ActiveOrNot": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "active": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "active not": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "functioning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "effective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "operating": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "working": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "Org still active?": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -5671,6 +6279,171 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "Phrasing020_parents_hierarchies_have_000_tbl_headcounts"
+			        }
+			      ]
+			    },
+			    "org_has_active_or_not": {
+			      "Binding": {
+			        "ConceptualEntity": "Org"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          }
+			        },
+			        "org.active_or_not": {
+			          "Target": {
+			            "Entity": "org.active_or_not"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "org.active_or_not"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_active_or_not"
+			        }
+			      ]
+			    },
+			    "org_has_entity__mission": {
+			      "Binding": {
+			        "ConceptualEntity": "Org"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          }
+			        },
+			        "org.entity__mission": {
+			          "Target": {
+			            "Entity": "org.entity__mission"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "org.entity__mission"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have__missions"
+			        }
+			      ]
+			    },
+			    "org_has_entity__LocationsFilled": {
+			      "Binding": {
+			        "ConceptualEntity": "Org"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          }
+			        },
+			        "org.entity__LocationsFilled": {
+			          "Target": {
+			            "Entity": "org.entity__LocationsFilled"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "org.entity__LocationsFilled"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have__LocationsFilleds"
+			        }
+			      ]
+			    },
+			    "qry_last_refreshed_has_qry_last_refreshed": {
+			      "Binding": {
+			        "ConceptualEntity": "qryLastRefreshed"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "qry_last_refreshed": {
+			          "Target": {
+			            "Entity": "qry_last_refreshed"
+			          }
+			        },
+			        "qry_last_refreshed.qry_last_refreshed": {
+			          "Target": {
+			            "Entity": "qry_last_refreshed.qry_last_refreshed"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "qry_last_refreshed"
+			            },
+			            "Object": {
+			              "Role": "qry_last_refreshed.qry_last_refreshed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "qry_last_refreshed_have_qry_last_refreshed"
+			        }
+			      ]
+			    },
+			    "entity_010_tbl_org_event_has_eventicon": {
+			      "Binding": {
+			        "ConceptualEntity": "010_tblOrg-events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_tbl_org_event": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_event"
+			          }
+			        },
+			        "entity_010_tbl_org_event.eventicon": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_event.eventicon"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_tbl_org_event"
+			            },
+			            "Object": {
+			              "Role": "entity_010_tbl_org_event.eventicon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_tbl_org_events_have_eventicons"
 			        }
 			      ]
 			    },
@@ -7859,6 +8632,48 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "org_are_in_locations"
+			        }
+			      ]
+			    },
+			    "qry_last_refreshed_is_refreshed_on_qry_last_refreshed": {
+			      "Binding": {
+			        "ConceptualEntity": "qryLastRefreshed"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "qry_last_refreshed": {
+			          "Target": {
+			            "Entity": "qry_last_refreshed"
+			          }
+			        },
+			        "qry_last_refreshed.qry_last_refreshed": {
+			          "Target": {
+			            "Entity": "qry_last_refreshed.qry_last_refreshed"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "qry_last_refreshed.qry_last_refreshed"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "refresh": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "qry_last_refreshed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "qry_last_refreshed_are_refreshed_on_qry_last_refreshed"
 			        }
 			      ]
 			    },

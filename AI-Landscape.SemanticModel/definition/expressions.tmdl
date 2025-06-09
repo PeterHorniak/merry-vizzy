@@ -4,9 +4,10 @@ expression 010_tblOrg-Formatting =
 		    #"Replaced Value2" = Table.ReplaceValue(Source,"(https://","(",Replacer.ReplaceText,{"URL"}),
 		    #"Replaced Value" = Table.ReplaceValue(#"Replaced Value2","(","https://",Replacer.ReplaceText,{"URL"}),
 		    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value",")","",Replacer.ReplaceText,{"URL"}),
-		    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value1", "URL", Splitter.SplitTextByEachDelimiter({"#(lf)"}, QuoteStyle.Csv, false), {"URL-Main", "URL-Secondary"})
+		    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value1", "URL", Splitter.SplitTextByEachDelimiter({"#(lf)"}, QuoteStyle.Csv, false), {"URL-Main", "URL-Secondary"}),
+		    #"Added ActiveOrNot" = Table.AddColumn(#"Split Column by Delimiter", "ActiveOrNot", each if Text.StartsWith([Status], "Active") then "⚡ active" else if Text.StartsWith([Status], "Inactive") then "💤 inactive" else if Text.StartsWith([Status], "To Be Active") then "⏳ To Be Active" else "❔ unknown")
 		in
-		    #"Split Column by Delimiter"
+		    #"Added ActiveOrNot"
 	lineageTag: b515d12b-1bca-4180-9b56-1111d984fc1b
 	queryGroup: 2-Transform
 

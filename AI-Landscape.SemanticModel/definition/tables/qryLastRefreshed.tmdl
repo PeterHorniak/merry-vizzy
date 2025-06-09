@@ -1,0 +1,27 @@
+table qryLastRefreshed
+	lineageTag: ecbdca64-d934-4d60-bf81-685501b36fb7
+
+	column qryLastRefreshed
+		dataType: dateTime
+		formatString: yyyy-mm-dd h:nn:ss
+		lineageTag: dd86279e-0241-4756-8b7e-4d4b7a1733e7
+		summarizeBy: none
+		sourceColumn: qryLastRefreshed
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition qryLastRefreshed = m
+		mode: import
+		queryGroup: 3-Load
+		source =
+				let
+				    Source = DateTime.FixedLocalNow()+ #duration(0,10,0,0)
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = DateTime
+
