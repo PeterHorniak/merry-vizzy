@@ -6,7 +6,7 @@ expression 010_tblOrg-Formatting =
 		    #"URL replaced ) with blank" = Table.ReplaceValue(#"URL replaced ( with https://",")","",Replacer.ReplaceText,{"URL"}),
 		    #"Split URL by linefeed" = Table.SplitColumn(#"URL replaced ) with blank", "URL", Splitter.SplitTextByEachDelimiter({"#(lf)"}, QuoteStyle.Csv, false), {"URL-Main", "URL-Secondary"}),
 		    #"Added ActiveOrNot" = Table.AddColumn(#"Split URL by linefeed", "ActiveOrNot", each if Text.StartsWith([Status], "Active") then "⚡ active" else if Text.StartsWith([Status], "Inactive") then "💤 inactive" else if Text.StartsWith([Status], "To Be Active") then "⏳ To Be Active" else "❔ unknown"),
-		    #"Added OrgStructure" = Table.AddColumn(#"Added ActiveOrNot", "OrgStructure", each if Text.Contains([Activities AI], "Company private") then "Company private" else if Text.Contains([Activities AI], "Company public") then "Company public" else if Text.Contains([Activities AI], "Charity / nonprofit") then "Charity / nonprofit" else if Text.Contains([Activities AI], "Approved research institute") then "Approved research institute (ARI)" else "None selected")
+		    #"Added OrgStructure" = Table.AddColumn(#"Added ActiveOrNot", "OrgStructure", each if Text.Contains([Activities AI], "Company private") then "Company private" else if Text.Contains([Activities AI], "Company public") then "Company public" else if Text.Contains([Activities AI], "Charity / nonprofit") then "Charity / nonprofit" else if Text.Contains([Activities AI], "Approved research institute") then "Approved research institute (ARI)" else "No structure selected")
 		in
 		    #"Added OrgStructure"
 	lineageTag: b515d12b-1bca-4180-9b56-1111d984fc1b

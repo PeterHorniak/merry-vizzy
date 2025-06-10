@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "c8366ea937b79c4c8fc7",
   "position": {
-    "x": 869.038854805726,
-    "y": 0,
+    "x": 55.652173913043477,
+    "y": 341.33333333333331,
     "z": 1000,
-    "height": 357.95501022494886,
-    "width": 201.55419222903885,
+    "height": 370.27246376811593,
+    "width": 351.7217391304348,
     "tabOrder": 1000
   },
   "visual": {
@@ -29,47 +29,6 @@
               "queryRef": "Org.Location",
               "nativeQueryRef": "Location",
               "active": true
-            }
-          ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Org"
-                    }
-                  },
-                  "Property": "Location"
-                }
-              },
-              "queryRef": "Org.Location",
-              "nativeQueryRef": "Location"
-            }
-          ]
-        },
-        "Size": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Org"
-                        }
-                      },
-                      "Property": "Location"
-                    }
-                  },
-                  "Function": 5
-                }
-              },
-              "queryRef": "CountNonNull(Org.Location)",
-              "nativeQueryRef": "Count of Location"
             }
           ]
         }
@@ -132,5 +91,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a6e8921f419a0913003b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "Location"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

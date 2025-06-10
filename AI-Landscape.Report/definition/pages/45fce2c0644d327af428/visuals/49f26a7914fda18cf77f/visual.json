@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "49f26a7914fda18cf77f",
   "position": {
-    "x": 0,
-    "y": 570.02666666666664,
+    "x": 421.47246376811592,
+    "y": 347.26956521739129,
     "z": 6000,
-    "height": 150.18666666666667,
-    "width": 356.352,
+    "height": 150.631884057971,
+    "width": 424.4405797101449,
     "tabOrder": 6000
   },
   "visual": {
@@ -47,6 +47,28 @@
         }
       }
     },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "stylePreset": [
         {
@@ -70,10 +92,61 @@
                   "Value": "true"
                 }
               }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5728c8ea6b9778e61a7f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_tblOrg-events"
+              }
+            },
+            "Property": "Event"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "11a013b8f16d6b0f624a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_tblOrg-events"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

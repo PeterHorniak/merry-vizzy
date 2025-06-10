@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "a18276f40e4b2821d55a",
   "position": {
-    "x": 0,
-    "y": 441.81321682140907,
+    "x": 862.23768115942028,
+    "y": 347.26956521739129,
     "z": 4000,
-    "height": 127.93009284543966,
-    "width": 356.52648825778266,
+    "height": 150.631884057971,
+    "width": 417.76231884057972,
     "tabOrder": 3000
   },
   "visual": {
@@ -885,7 +885,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -1089,6 +1089,25 @@
                   "Value": "true"
                 }
               }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -1204,6 +1223,39 @@
         },
         "type": "Categorical",
         "howCreated": "User"
+      },
+      {
+        "name": "5a18b0a111d838a17ebb",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "010_tblOrg-events"
+                  }
+                },
+                "Property": "Index-Asc-ByDate-WithJumps"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b8c6e268629771fc720b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_tblOrg-events"
+              }
+            },
+            "Property": "Event-Icon"
+          }
+        },
+        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

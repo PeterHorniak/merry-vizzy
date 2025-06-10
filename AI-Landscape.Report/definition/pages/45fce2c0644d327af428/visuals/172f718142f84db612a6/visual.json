@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "172f718142f84db612a6",
   "position": {
-    "x": 62.217367558711089,
-    "y": 69.208083014746038,
+    "x": 62.3304347826087,
+    "y": 69.008695652173913,
     "z": 9000,
-    "height": 140.51338066630257,
-    "width": 345.34134352812674,
+    "height": 255.25797101449277,
+    "width": 345.04347826086956,
     "tabOrder": 9000
   },
   "visual": {
@@ -109,5 +109,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0138246ded105275ed3c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "Mission"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

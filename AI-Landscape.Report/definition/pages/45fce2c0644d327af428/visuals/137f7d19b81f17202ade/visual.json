@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "137f7d19b81f17202ade",
   "position": {
-    "x": 61.518296013107594,
-    "y": 221.60567995630802,
+    "x": 845.91304347826087,
+    "y": 0,
     "z": 10000,
-    "height": 76.198798470781,
-    "width": 243.97596941561989,
+    "height": 55.652173913043477,
+    "width": 434.08695652173913,
     "tabOrder": 10000
   },
   "visual": {
@@ -60,7 +60,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -86,7 +86,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -101,5 +101,28 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ebde2c71f49ce4f3acb0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "OrgStructure"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
