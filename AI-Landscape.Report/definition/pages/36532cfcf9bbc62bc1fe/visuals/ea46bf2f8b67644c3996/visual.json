@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "ea46bf2f8b67644c3996",
+  "position": {
+    "x": 1042.9149797570851,
+    "y": 0,
+    "z": 4000,
+    "height": 720.97165991902841,
+    "width": 237.085020242915,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020",
+    "query": {
+      "queryState": {
+        "Source": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Lvl5"
+                }
+              },
+              "queryRef": "010_Hierarchy.Lvl5",
+              "nativeQueryRef": "Lvl5"
+            }
+          ]
+        },
+        "Destination": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Level6"
+                }
+              },
+              "queryRef": "010_Hierarchy.Level6",
+              "nativeQueryRef": "Lvl6",
+              "displayName": "Lvl6"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "nodeComplexSettings": [
+        {
+          "properties": {
+            "nodePositions": {
+              "expr": {
+                "Literal": {
+                  "Value": "'[{\"name\":\"ACS\",\"x\":\"0\",\"y\":\"0\"},{\"name\":\"AFAIS\",\"x\":\"0\",\"y\":\"14\"},{\"name\":\"AFR\",\"x\":\"0\",\"y\":\"27\"},{\"name\":\"AI Gov slack\",\"x\":\"0\",\"y\":\"41\"},{\"name\":\"AI Safety Careers Conf\",\"x\":\"0\",\"y\":\"55\"},{\"name\":\"AISANZ AUCK\",\"x\":\"0\",\"y\":\"68\"},{\"name\":\"AISANZ BRIS\",\"x\":\"0\",\"y\":\"82\"},{\"name\":\"AISANZ CANB\",\"x\":\"0\",\"y\":\"96\"},{\"name\":\"AISANZ MELB\",\"x\":\"0\",\"y\":\"109\"},{\"name\":\"AISANZ SYD\",\"x\":\"0\",\"y\":\"123\"},{\"name\":\"AISANZ WELL\",\"x\":\"0\",\"y\":\"136\"},{\"name\":\"ANU\",\"x\":\"0\",\"y\":\"150\"},{\"name\":\"CSIRO\",\"x\":\"0\",\"y\":\"202\"},{\"name\":\"CSU\",\"x\":\"0\",\"y\":\"215\"},{\"name\":\"DISR\",\"x\":\"0\",\"y\":\"229\"},{\"name\":\"Ethe\",\"x\":\"0\",\"y\":\"293\"},{\"name\":\"FLI\",\"x\":\"0\",\"y\":\"307\"},{\"name\":\"Griffith Uni\",\"x\":\"0\",\"y\":\"321\"},{\"name\":\"Harmony Intell.\",\"x\":\"0\",\"y\":\"334\"},{\"name\":\"Humane Intell.\",\"x\":\"0\",\"y\":\"348\"},{\"name\":\"Mileva Security Labs\",\"x\":\"0\",\"y\":\"362\"},{\"name\":\"MIT Computer Science & AI Laboratory\",\"x\":\"0\",\"y\":\"375\"},{\"name\":\"MIT FutureTech\",\"x\":\"0\",\"y\":\"389\"},{\"name\":\"QUT\",\"x\":\"0\",\"y\":\"403\"},{\"name\":\"Select Committee on Adoption of AI\",\"x\":\"0\",\"y\":\"416\"},{\"name\":\"Timaeus\",\"x\":\"0\",\"y\":\"430\"},{\"name\":\"Uni of Adelaide\",\"x\":\"0\",\"y\":\"444\"},{\"name\":\"Uni of Melbourne\",\"x\":\"0\",\"y\":\"457\"},{\"name\":\"UniSC\",\"x\":\"0\",\"y\":\"496\"},{\"name\":\"UQ\",\"x\":\"0\",\"y\":\"510\"},{\"name\":\"USYD\",\"x\":\"0\",\"y\":\"549\"},{\"name\":\"UTS\",\"x\":\"0\",\"y\":\"601\"},{\"name\":\"UWA\",\"x\":\"0\",\"y\":\"627\"},{\"name\":\"null_SK_SELFLINK\",\"x\":\"0\",\"y\":\"641\"},{\"name\":null,\"x\":\"429\",\"y\":\"0\"},{\"name\":\"AI & Ethics Committee\",\"x\":\"429\",\"y\":\"191\"},{\"name\":\"AFR AI Summit 2025\",\"x\":\"429\",\"y\":\"205\"},{\"name\":\"SASH\",\"x\":\"429\",\"y\":\"219\"},{\"name\":\"Human Centred AI Centre @ ANU\",\"x\":\"429\",\"y\":\"233\"},{\"name\":\"Humanising Machine Intell. @ ANU\",\"x\":\"429\",\"y\":\"246\"},{\"name\":\"Intell. Normative Theory\",\"x\":\"429\",\"y\":\"260\"},{\"name\":\"MINT Lab\",\"x\":\"429\",\"y\":\"274\"},{\"name\":\"Data61\",\"x\":\"429\",\"y\":\"287\"},{\"name\":\"AI & Cyber Futures Inst. @ CSU\",\"x\":\"429\",\"y\":\"301\"},{\"name\":\"AI Adoption Tracker\",\"x\":\"429\",\"y\":\"315\"},{\"name\":\"AI Expert Grp\",\"x\":\"429\",\"y\":\"329\"},{\"name\":\"Aus AI Safety Forum 2024\",\"x\":\"429\",\"y\":\"342\"},{\"name\":\"NAIC\",\"x\":\"429\",\"y\":\"356\"},{\"name\":\"Voluntary AI Ethics Principles\",\"x\":\"429\",\"y\":\"370\"},{\"name\":\"MIT AI Risk Repository\",\"x\":\"429\",\"y\":\"384\"},{\"name\":\"QUT Gen AI Lab\",\"x\":\"429\",\"y\":\"448\"},{\"name\":\"AIML\",\"x\":\"429\",\"y\":\"462\"},{\"name\":\"CAIDE @ UniMelbourne\",\"x\":\"429\",\"y\":\"476\"},{\"name\":\"Dan Murfet''s UniMelbourne Lab\",\"x\":\"429\",\"y\":\"489\"},{\"name\":\"RAID\",\"x\":\"429\",\"y\":\"503\"},{\"name\":\"Centre for Human Factors & Sociotechnical Systems\",\"x\":\"429\",\"y\":\"517\"},{\"name\":\"UQ MARS\",\"x\":\"429\",\"y\":\"531\"},{\"name\":\"UQCS\",\"x\":\"429\",\"y\":\"544\"},{\"name\":\"Gradient Inst.\",\"x\":\"429\",\"y\":\"558\"},{\"name\":\"Law & Tech Society\",\"x\":\"429\",\"y\":\"572\"},{\"name\":\"PPE\",\"x\":\"429\",\"y\":\"586\"},{\"name\":\"SPA\",\"x\":\"429\",\"y\":\"599\"},{\"name\":\"Human Centred AI Centre @ UTS\",\"x\":\"429\",\"y\":\"613\"},{\"name\":\"Human Tech Inst. @ UTS\",\"x\":\"429\",\"y\":\"627\"},{\"name\":\"UWA Tech & Policy Lab\",\"x\":\"429\",\"y\":\"641\"}]'"
+                }
+              }
+            },
+            "viewportSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"height\":\"654.2429149797571\",\"width\":\"450\"}'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

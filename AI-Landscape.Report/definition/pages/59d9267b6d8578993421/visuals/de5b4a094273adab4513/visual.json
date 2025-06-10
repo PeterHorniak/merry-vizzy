@@ -1,0 +1,286 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "de5b4a094273adab4513",
+  "position": {
+    "x": 0,
+    "y": 239.99999999999997,
+    "z": 2000,
+    "height": 264.77876106194691,
+    "width": 332.03539823008845,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Level2"
+                }
+              },
+              "queryRef": "010_Hierarchy.Level2",
+              "nativeQueryRef": "Level2",
+              "displayName": "Level2"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Level3"
+                }
+              },
+              "queryRef": "010_Hierarchy.Level3",
+              "nativeQueryRef": "Level31"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Level4"
+                }
+              },
+              "queryRef": "010_Hierarchy.Level4",
+              "nativeQueryRef": "Level4"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Level5"
+                }
+              },
+              "queryRef": "010_Hierarchy.Level5",
+              "nativeQueryRef": "Level5"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Level6"
+                }
+              },
+              "queryRef": "010_Hierarchy.Level6",
+              "nativeQueryRef": "Level6"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "URL-Main"
+                }
+              },
+              "queryRef": "010_Hierarchy.URL-Main",
+              "nativeQueryRef": "URL-Main"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "010_Hierarchy"
+                  }
+                },
+                "Property": "Level2"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {}
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "urlIcon": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "37.00000020183584D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(010_Hierarchy.Level1)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "83.23669449475813D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "010_Hierarchy.Level2"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "90.48918269642508D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "010_Hierarchy.Level3"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "151.0043229839361D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "010_Hierarchy.Level4"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "144.39482747808628D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "010_Hierarchy.Level5"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Underlying data (Orig joined to self 6x)'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading3'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

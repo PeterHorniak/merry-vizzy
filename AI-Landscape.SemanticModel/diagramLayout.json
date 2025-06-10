@@ -19,20 +19,20 @@
             "height": 315.99999999999983,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 1081.0000000000005,
-            "y": 398.99999999999972
+            "x": 1095.0000000000005,
+            "y": 444.99999999999966
           },
           "nodeIndex": "000_tblHeadcount",
           "nodeLineageTag": "8d5709c2-5678-4663-9b50-a962c3ba2d07",
           "size": {
-            "height": 176,
+            "height": 364.99999999999977,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 7
         },
         {
           "location": {
@@ -49,8 +49,8 @@
         },
         {
           "location": {
-            "x": 525.00000000000171,
-            "y": 707.99999999999955
+            "x": 805.00000000000148,
+            "y": 803.99999999999955
           },
           "nodeIndex": "005_tblOrg-SplitParents",
           "nodeLineageTag": "d96f7834-2f02-4171-8577-00660fd7c095",
@@ -71,25 +71,25 @@
             "height": 358.99999999999994,
             "width": 234
           },
-          "zIndex": 9
+          "zIndex": 8
         },
         {
           "location": {
-            "x": 1421.0000000000009,
-            "y": 753.99999999999955
+            "x": 1094.0000000000011,
+            "y": 0
           },
           "nodeIndex": "010_tblOrg-events",
           "nodeLineageTag": "32d25435-011d-4f2d-b13a-f73159591caa",
           "size": {
-            "height": 128,
+            "height": 387.99999999999966,
             "width": 234
           },
           "zIndex": 5
         },
         {
           "location": {
-            "x": 1432.0000000000009,
-            "y": 103.00000000000009
+            "x": 1489.0000000000009,
+            "y": 133.00000000000006
           },
           "nodeIndex": "qryLastRefreshed",
           "nodeLineageTag": "ecbdca64-d934-4d60-bf81-685501b36fb7",
@@ -110,7 +110,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         }
       ],
       "name": "All tables",

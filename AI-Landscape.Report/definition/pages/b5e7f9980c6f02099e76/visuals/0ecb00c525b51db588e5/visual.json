@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "0ecb00c525b51db588e5",
+  "position": {
+    "x": 917.46421267893663,
+    "y": 0,
+    "z": 0,
+    "height": 75.910020449897758,
+    "width": 362.53578732106342,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Thoughts:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Lets you explore one branch at a time."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Doesn't show when same org has multiple parents"
+                  }
+                ],
+                "listType": "bullet"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

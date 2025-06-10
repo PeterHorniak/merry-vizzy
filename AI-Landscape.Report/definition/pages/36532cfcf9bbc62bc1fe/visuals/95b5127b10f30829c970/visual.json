@@ -1,0 +1,118 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "95b5127b10f30829c970",
+  "position": {
+    "x": 458.62348178137654,
+    "y": 0,
+    "z": 1000,
+    "height": 720.32388663967618,
+    "width": 288.25910931174087,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020",
+    "query": {
+      "queryState": {
+        "Source": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Lvl3"
+                }
+              },
+              "queryRef": "010_Hierarchy.Lvl3",
+              "nativeQueryRef": "Lvl3"
+            }
+          ]
+        },
+        "Destination": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Lvl4"
+                }
+              },
+              "queryRef": "010_Hierarchy.Lvl4",
+              "nativeQueryRef": "Lvl4"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "nodeComplexSettings": [
+        {
+          "properties": {
+            "nodePositions": {
+              "expr": {
+                "Literal": {
+                  "Value": "'[{\"name\":\"80K Hours\",\"x\":\"0\",\"y\":\"0\"},{\"name\":\"AI Safety Support\",\"x\":\"0\",\"y\":\"11\"},{\"name\":\"AIO EU\",\"x\":\"0\",\"y\":\"22\"},{\"name\":\"AISANZ\",\"x\":\"0\",\"y\":\"33\"},{\"name\":\"AISI CA\",\"x\":\"0\",\"y\":\"107\"},{\"name\":\"AISI JP\",\"x\":\"0\",\"y\":\"118\"},{\"name\":\"AISI KR\",\"x\":\"0\",\"y\":\"129\"},{\"name\":\"AISI SG\",\"x\":\"0\",\"y\":\"140\"},{\"name\":\"AISI UK\",\"x\":\"0\",\"y\":\"151\"},{\"name\":\"AISI US\",\"x\":\"0\",\"y\":\"162\"},{\"name\":\"All Tech Is Human\",\"x\":\"0\",\"y\":\"174\"},{\"name\":\"Anthropic\",\"x\":\"0\",\"y\":\"185\"},{\"name\":\"ARAAC\",\"x\":\"0\",\"y\":\"196\"},{\"name\":\"Ashgro\",\"x\":\"0\",\"y\":\"207\"},{\"name\":\"Aus AI Industry\",\"x\":\"0\",\"y\":\"218\"},{\"name\":\"Aus Fed Govt\",\"x\":\"0\",\"y\":\"271\"},{\"name\":\"Aus Fed Parliament\",\"x\":\"0\",\"y\":\"292\"},{\"name\":\"Aus Fed Senate\",\"x\":\"0\",\"y\":\"303\"},{\"name\":\"Aus media\",\"x\":\"0\",\"y\":\"314\"},{\"name\":\"AUSCL\",\"x\":\"0\",\"y\":\"326\"},{\"name\":\"Campaign for AI Safety\",\"x\":\"0\",\"y\":\"337\"},{\"name\":\"Commission for the Human Future\",\"x\":\"0\",\"y\":\"348\"},{\"name\":\"Council for the Human Future\",\"x\":\"0\",\"y\":\"359\"},{\"name\":\"Data Analytics Wednesday\",\"x\":\"0\",\"y\":\"370\"},{\"name\":\"DSAi\",\"x\":\"0\",\"y\":\"381\"},{\"name\":\"EA AU\",\"x\":\"0\",\"y\":\"392\"},{\"name\":\"EAGx\",\"x\":\"0\",\"y\":\"404\"},{\"name\":\"EAGx Virtual\",\"x\":\"0\",\"y\":\"415\"},{\"name\":\"Exist. Risk Observatory\",\"x\":\"0\",\"y\":\"426\"},{\"name\":\"FORE\",\"x\":\"0\",\"y\":\"437\"},{\"name\":\"ForHumanity Aus\",\"x\":\"0\",\"y\":\"448\"},{\"name\":\"GAP\",\"x\":\"0\",\"y\":\"459\"},{\"name\":\"MIT\",\"x\":\"0\",\"y\":\"470\"},{\"name\":\"Palisade Research\",\"x\":\"0\",\"y\":\"502\"},{\"name\":\"QLD\",\"x\":\"0\",\"y\":\"513\"},{\"name\":\"Safeground\",\"x\":\"0\",\"y\":\"556\"},{\"name\":\"State Govt ACT\",\"x\":\"0\",\"y\":\"567\"},{\"name\":\"State Govt NSW\",\"x\":\"0\",\"y\":\"578\"},{\"name\":\"State Govt SA\",\"x\":\"0\",\"y\":\"610\"},{\"name\":\"State Govt VIC\",\"x\":\"0\",\"y\":\"621\"},{\"name\":\"State Govt WA\",\"x\":\"0\",\"y\":\"632\"},{\"name\":\"Tech Council of Aus\",\"x\":\"0\",\"y\":\"643\"},{\"name\":null,\"x\":\"323\",\"y\":\"0\"},{\"name\":\"AI Safety Careers Conf\",\"x\":\"323\",\"y\":\"281\"},{\"name\":\"AISANZ AUCK\",\"x\":\"323\",\"y\":\"292\"},{\"name\":\"AISANZ BRIS\",\"x\":\"323\",\"y\":\"303\"},{\"name\":\"AISANZ CANB\",\"x\":\"323\",\"y\":\"315\"},{\"name\":\"AISANZ MELB\",\"x\":\"323\",\"y\":\"326\"},{\"name\":\"AISANZ SYD\",\"x\":\"323\",\"y\":\"337\"},{\"name\":\"AISANZ WELL\",\"x\":\"323\",\"y\":\"349\"},{\"name\":\"Timaeus\",\"x\":\"323\",\"y\":\"360\"},{\"name\":\"ACS\",\"x\":\"323\",\"y\":\"371\"},{\"name\":\"Ethe\",\"x\":\"323\",\"y\":\"383\"},{\"name\":\"Harmony Intell.\",\"x\":\"323\",\"y\":\"394\"},{\"name\":\"Humane Intell.\",\"x\":\"323\",\"y\":\"405\"},{\"name\":\"Mileva Security Labs\",\"x\":\"323\",\"y\":\"417\"},{\"name\":\"CSIRO\",\"x\":\"323\",\"y\":\"428\"},{\"name\":\"DISR\",\"x\":\"323\",\"y\":\"439\"},{\"name\":\"Select Committee on Adoption of AI\",\"x\":\"323\",\"y\":\"450\"},{\"name\":\"AFR\",\"x\":\"323\",\"y\":\"462\"},{\"name\":\"AI Gov slack\",\"x\":\"323\",\"y\":\"473\"},{\"name\":\"AFAIS\",\"x\":\"323\",\"y\":\"484\"},{\"name\":\"FLI\",\"x\":\"323\",\"y\":\"496\"},{\"name\":\"MIT Computer Science & AI Laboratory\",\"x\":\"323\",\"y\":\"507\"},{\"name\":\"MIT FutureTech\",\"x\":\"323\",\"y\":\"518\"},{\"name\":\"Griffith Uni\",\"x\":\"323\",\"y\":\"530\"},{\"name\":\"QUT\",\"x\":\"323\",\"y\":\"541\"},{\"name\":\"UniSC\",\"x\":\"323\",\"y\":\"552\"},{\"name\":\"UQ\",\"x\":\"323\",\"y\":\"564\"},{\"name\":\"ANU\",\"x\":\"323\",\"y\":\"575\"},{\"name\":\"CSU\",\"x\":\"323\",\"y\":\"586\"},{\"name\":\"USYD\",\"x\":\"323\",\"y\":\"598\"},{\"name\":\"UTS\",\"x\":\"323\",\"y\":\"609\"},{\"name\":\"Uni of Adelaide\",\"x\":\"323\",\"y\":\"620\"},{\"name\":\"Uni of Melbourne\",\"x\":\"323\",\"y\":\"632\"},{\"name\":\"UWA\",\"x\":\"323\",\"y\":\"643\"}]'"
+                }
+              }
+            },
+            "viewportSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"height\":\"654.2429149797571\",\"width\":\"339.2307692307692\"}'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "linkLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

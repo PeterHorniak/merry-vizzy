@@ -1,0 +1,101 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "efdd169587c61cbf0f46",
+  "position": {
+    "x": 605.31697341513291,
+    "y": 213.98773006134971,
+    "z": 12000,
+    "height": 94.233128834355824,
+    "width": 128.26175869120655,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "005_tblOrg-SplitContacts"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "005_tblOrg-SplitContacts.Name1",
+              "nativeQueryRef": "Total contacts",
+              "displayName": "Total contacts"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "005_tblOrg-SplitContacts"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "005_tblOrg-SplitContacts.Name",
+              "nativeQueryRef": "Unique contacts",
+              "displayName": "Unique contacts"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "005_tblOrg-SplitContacts"
+                      }
+                    },
+                    "Property": "Name"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

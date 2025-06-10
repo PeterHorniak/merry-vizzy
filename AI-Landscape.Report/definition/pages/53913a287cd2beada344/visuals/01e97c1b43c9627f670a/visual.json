@@ -1,0 +1,285 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "01e97c1b43c9627f670a",
+  "position": {
+    "x": 24.867075664621677,
+    "y": 435.82822085889569,
+    "z": 14000,
+    "height": 159.67280163599182,
+    "width": 615.13292433537833,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "timelineByQueryon2DD9A171C1CB4B148AA3DD23CEF5B2F9",
+    "query": {
+      "queryState": {
+        "date": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_tblOrg-events"
+                    }
+                  },
+                  "Property": "Date"
+                }
+              },
+              "queryRef": "010_tblOrg-events.Date",
+              "nativeQueryRef": "Date"
+            }
+          ]
+        },
+        "label": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_tblOrg-events"
+                    }
+                  },
+                  "Property": "Event"
+                }
+              },
+              "queryRef": "010_tblOrg-events.Event",
+              "nativeQueryRef": "Event"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "010_tblOrg-events"
+                  }
+                },
+                "Property": "Date"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "textSettings": [
+        {
+          "properties": {
+            "spacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "15.899999618530273D"
+                }
+              }
+            },
+            "stagger": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "autoStagger": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "wrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "400D"
+                }
+              }
+            },
+            "labelOrientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Auto'"
+                }
+              }
+            },
+            "annotationStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'annotationLabel'"
+                }
+              }
+            },
+            "boldTitles": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "axisSettings": [
+        {
+          "properties": {
+            "axis": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            },
+            "manualScalePixel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "customFormat": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "And": {
+                    "Left": {
+                      "And": {
+                        "Left": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "010_tblOrg-events"
+                                  }
+                                },
+                                "Property": "Date"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "datetime'2024-11-01T00:00:00'"
+                              }
+                            }
+                          }
+                        },
+                        "Right": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "010_tblOrg-events"
+                                  }
+                                },
+                                "Property": "Event-Type"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "'- 👥 consultation'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "Right": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "010_tblOrg-events"
+                              }
+                            },
+                            "Property": "Event"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'👥 consultation response for Mandatory Guardrails'"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "style": [
+        {
+          "properties": {
+            "timelineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'line'"
+                }
+              }
+            },
+            "minimalistSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            },
+            "today": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "todayFocus": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,821 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "9b4c911176574f48c04d",
+  "position": {
+    "x": 9.7165991902834019,
+    "y": 130.85020242914979,
+    "z": 0,
+    "height": 589.47368421052636,
+    "width": 1270.2834008097166,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "sankey_diagram_visiochart_8c1a6a012eec472d899f79bf867da012",
+    "query": {
+      "queryState": {
+        "category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Lvl2"
+                }
+              },
+              "queryRef": "010_Hierarchy.Lvl2",
+              "nativeQueryRef": "Lvl2"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Lvl3"
+                }
+              },
+              "queryRef": "010_Hierarchy.Lvl3",
+              "nativeQueryRef": "Lvl3"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Lvl4"
+                }
+              },
+              "queryRef": "010_Hierarchy.Lvl4",
+              "nativeQueryRef": "Lvl4"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Lvl5"
+                }
+              },
+              "queryRef": "010_Hierarchy.Lvl5",
+              "nativeQueryRef": "Lvl5"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Level6"
+                }
+              },
+              "queryRef": "010_Hierarchy.Level6",
+              "nativeQueryRef": "Level6"
+            }
+          ]
+        },
+        "measure": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "010_Hierarchy"
+                        }
+                      },
+                      "Property": "Level1"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Min(010_Hierarchy.Level1)",
+              "nativeQueryRef": "# child orgs",
+              "displayName": "# child orgs"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "010_Hierarchy"
+                      }
+                    },
+                    "Property": "Level1"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "nodeLabels": [
+        {
+          "properties": {
+            "showStats": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showPercentage": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "splitLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelOrientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "nodeShape": [
+        {
+          "properties": {
+            "zeroNode": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "pathShape": [
+        {
+          "properties": {
+            "pathColorSource": {
+              "expr": {
+                "Literal": {
+                  "Value": "'target'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "sorting": [
+        {
+          "properties": {
+            "nodeSort": {
+              "expr": {
+                "Literal": {
+                  "Value": "'VA'"
+                }
+              }
+            },
+            "linkSort": {
+              "expr": {
+                "Literal": {
+                  "Value": "'none'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropOffOne": [
+        {
+          "properties": {
+            "dropOffs": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "And": {
+                    "Left": {
+                      "And": {
+                        "Left": {
+                          "And": {
+                            "Left": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "010_Hierarchy"
+                                      }
+                                    },
+                                    "Property": "Lvl2"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'AU'"
+                                  }
+                                }
+                              }
+                            },
+                            "Right": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "010_Hierarchy"
+                                      }
+                                    },
+                                    "Property": "Lvl3"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'AI Safety Support'"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "Right": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "010_Hierarchy"
+                                  }
+                                },
+                                "Property": "Lvl4"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "null"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "Right": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "010_Hierarchy"
+                              }
+                            },
+                            "Property": "Lvl5"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "null"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "dropOffThree": [
+        {
+          "properties": {
+            "dropOffs": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "And": {
+                    "Left": {
+                      "And": {
+                        "Left": {
+                          "And": {
+                            "Left": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "010_Hierarchy"
+                                      }
+                                    },
+                                    "Property": "Lvl2"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'AU'"
+                                  }
+                                }
+                              }
+                            },
+                            "Right": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "010_Hierarchy"
+                                      }
+                                    },
+                                    "Property": "Lvl3"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'AI Safety Support'"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "Right": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "010_Hierarchy"
+                                  }
+                                },
+                                "Property": "Lvl4"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "null"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "Right": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "010_Hierarchy"
+                              }
+                            },
+                            "Property": "Lvl5"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "null"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "dropOffs": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "And": {
+                    "Left": {
+                      "And": {
+                        "Left": {
+                          "And": {
+                            "Left": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "010_Hierarchy"
+                                      }
+                                    },
+                                    "Property": "Lvl2"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'AU'"
+                                  }
+                                }
+                              }
+                            },
+                            "Right": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "010_Hierarchy"
+                                      }
+                                    },
+                                    "Property": "Lvl3"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'Aus Fed Govt'"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "Right": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "010_Hierarchy"
+                                  }
+                                },
+                                "Property": "Lvl4"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "'DISR'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "Right": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "010_Hierarchy"
+                              }
+                            },
+                            "Property": "Lvl5"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'AI Adoption Tracker'"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "dropOffs": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "And": {
+                    "Left": {
+                      "And": {
+                        "Left": {
+                          "And": {
+                            "Left": {
+                              "And": {
+                                "Left": {
+                                  "Comparison": {
+                                    "ComparisonKind": 0,
+                                    "Left": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Entity": "010_Hierarchy"
+                                          }
+                                        },
+                                        "Property": "Lvl2"
+                                      }
+                                    },
+                                    "Right": {
+                                      "Literal": {
+                                        "Value": "'AU'"
+                                      }
+                                    }
+                                  }
+                                },
+                                "Right": {
+                                  "Comparison": {
+                                    "ComparisonKind": 0,
+                                    "Left": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Entity": "010_Hierarchy"
+                                          }
+                                        },
+                                        "Property": "Lvl3"
+                                      }
+                                    },
+                                    "Right": {
+                                      "Literal": {
+                                        "Value": "'AI Safety Support'"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "Right": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "010_Hierarchy"
+                                      }
+                                    },
+                                    "Property": "Lvl4"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "Right": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "010_Hierarchy"
+                                  }
+                                },
+                                "Property": "Lvl5"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "null"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "Right": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "010_Hierarchy"
+                              }
+                            },
+                            "Property": "Level6"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "null"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "dropOffFour": [
+        {
+          "properties": {
+            "dropOffs": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "And": {
+                    "Left": {
+                      "And": {
+                        "Left": {
+                          "And": {
+                            "Left": {
+                              "And": {
+                                "Left": {
+                                  "Comparison": {
+                                    "ComparisonKind": 0,
+                                    "Left": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Entity": "010_Hierarchy"
+                                          }
+                                        },
+                                        "Property": "Lvl2"
+                                      }
+                                    },
+                                    "Right": {
+                                      "Literal": {
+                                        "Value": "'AU'"
+                                      }
+                                    }
+                                  }
+                                },
+                                "Right": {
+                                  "Comparison": {
+                                    "ComparisonKind": 0,
+                                    "Left": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Entity": "010_Hierarchy"
+                                          }
+                                        },
+                                        "Property": "Lvl3"
+                                      }
+                                    },
+                                    "Right": {
+                                      "Literal": {
+                                        "Value": "'AI Safety Support'"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "Right": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "010_Hierarchy"
+                                      }
+                                    },
+                                    "Property": "Lvl4"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "Right": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "010_Hierarchy"
+                                  }
+                                },
+                                "Property": "Lvl5"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "null"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "Right": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "010_Hierarchy"
+                              }
+                            },
+                            "Property": "Level6"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "null"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

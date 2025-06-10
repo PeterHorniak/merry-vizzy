@@ -1,0 +1,167 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "f9dfd2d9894c3d4e4e6b",
+  "position": {
+    "x": 16.463022508038584,
+    "y": 141.30760986066451,
+    "z": 0,
+    "height": 546.70953912111474,
+    "width": 1246.3879957127547,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "2025-##-##_v2.0.0",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "16pt"
+                    }
+                  },
+                  {
+                    "value": "\t\tMajor upgrade! <summary of changes>"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2025-##-##_v1.0.0",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "16pt"
+                    }
+                  },
+                  {
+                    "value": "\t\tFirst public release! <summary of what's there>"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2025-##-##_v0.1.##",
+                    "textStyle": {
+                      "fontSize": "16pt"
+                    }
+                  },
+                  {
+                    "value": "\tIncorporation of <xyz feedback >"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2025-##-##_v0.1.0#",
+                    "textStyle": {
+                      "fontSize": "16pt"
+                    }
+                  },
+                  {
+                    "value": "\tIncorporation of <xyz feedback >"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2025-06-10_v0.1.0",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "16pt"
+                    }
+                  },
+                  {
+                    "value": "\t\t\tFirst release for internal feedback!"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2025-06-08",
+                    "textStyle": {
+                      "fontSize": "16pt"
+                    }
+                  },
+                  {
+                    "value": "\t\t\t\t\t\t\tTimelines query now has spacing between visuals"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2025-06-07",
+                    "textStyle": {
+                      "fontSize": "16pt"
+                    }
+                  },
+                  {
+                    "value": "\t\t\t\t\t\t\tTimelines page added small multiples visual"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2025-06-06",
+                    "textStyle": {
+                      "fontSize": "21.3333px"
+                    }
+                  },
+                  {
+                    "value": "\t\t\t\t\t\t\tTimelines page drafted"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2025-05\t\tDanM & PeterH updated Landscape sheet schema"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2025-01\t\tDan.M started using in LAIR training"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2024-12\t\tPeterH drafted the Landscape sheet based off the doc, using ChatGPT with websearch + manual curation"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2024-11\t\tYanni pitched to PeterH turning doc into sheet"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2024-10\t\tDanM & <LAIR group?> put together Landscape doc"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

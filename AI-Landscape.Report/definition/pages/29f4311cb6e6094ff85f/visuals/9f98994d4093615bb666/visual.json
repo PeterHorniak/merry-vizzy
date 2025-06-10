@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "9f98994d4093615bb666",
+  "position": {
+    "x": 563.85852090032154,
+    "y": 0,
+    "z": 4000,
+    "height": 174.91961414790998,
+    "width": 393.05466237942125,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Ideas:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "We are limited to the following markers, and should consolidate event types to that same number. "
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "x",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " = inactive / ended? maybe also if it merged? RED / BLACK"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "■ = administrative stuff like applications / consultations / funding?, BLUE / PURPLE"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "◆ = networking / conferences / protests? ORANGE"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "+ = founding / birth / launch / idea formed? GREEN"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "▲ = milestones? BLUE / PURPLE?"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "● = misc. GREY"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Every time we add / rename events, then they lose their marker / colouring. So better set on a taxonomy early."
+                  }
+                ],
+                "listType": "bullet"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

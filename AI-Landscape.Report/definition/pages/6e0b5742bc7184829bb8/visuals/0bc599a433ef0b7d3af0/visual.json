@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "0bc599a433ef0b7d3af0",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 3000,
+    "height": 251.94274028629857,
+    "width": 493.41513292433541,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Thoughts:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Needs more data to be meaningful."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Filled map might be useful at suburb level, e.g. to see which politicians need reaching out, where to put posters etc?"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Point map to show places people might want to travel to? E.g. coworking places, or roughly where orgs are based"
+                  }
+                ],
+                "listType": "bullet"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "6d89a928107b30613156",
+  "position": {
+    "x": 0,
+    "y": 96.1963190184049,
+    "z": 10000,
+    "height": 127.60736196319019,
+    "width": 312.14723926380367,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "<short blurb about being pro safe AI development, anti frontier unregulated development? We hope users will use this data to bring forth an abundant future? Then link to VAISS etc?>",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontStyle": "italic"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

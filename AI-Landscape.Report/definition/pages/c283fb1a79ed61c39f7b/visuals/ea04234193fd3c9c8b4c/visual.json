@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "ea04234193fd3c9c8b4c",
+  "position": {
+    "x": 1190.1393354769561,
+    "y": 667.438370846731,
+    "z": 7000,
+    "height": 52.818863879957128,
+    "width": 89.860664523043951,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "v0.1.0"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Feedback?",
+                    "textStyle": {},
+                    "url": "mailto:p.horniak.aus@gmail.com?subject=AI Landscape PBI feedback"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

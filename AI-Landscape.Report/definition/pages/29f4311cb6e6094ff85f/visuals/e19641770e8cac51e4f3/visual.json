@@ -1,0 +1,137 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "e19641770e8cac51e4f3",
+  "position": {
+    "x": 994.64094319399794,
+    "y": 0,
+    "z": 5000,
+    "height": 228.42443729903539,
+    "width": 285.35905680600217,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Emojis in use, probably want <10 types:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "⚡→ Active"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "🚀 → launch"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "🤝 merged, moved → merge"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "💤 inactive"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "👶 born, created, started, founded, incorporated → created"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "🪦 ended, inactive, died → inactive"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "📋 application"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "📢 announced, news, hiring → ?"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "💡 concept"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "🎯 milestone"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "📄 published"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "👥 consultation"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "📅 occurred, event → event"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "TO ADD: "
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "⚠️warning, funding lost → ?"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

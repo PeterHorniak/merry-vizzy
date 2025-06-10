@@ -1,0 +1,253 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "5eff18a6af0d22db53c0",
+  "position": {
+    "x": 10.289389067524116,
+    "y": 188.63879957127546,
+    "z": 0,
+    "height": 531.61843515541261,
+    "width": 1255.3054662379423,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "Gantt1448688115699",
+    "query": {
+      "queryState": {
+        "Task": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_tblOrg-events"
+                    }
+                  },
+                  "Property": "Event"
+                }
+              },
+              "queryRef": "010_tblOrg-events.Event",
+              "nativeQueryRef": "Event"
+            }
+          ]
+        },
+        "Parent": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_tblOrg-events"
+                    }
+                  },
+                  "Property": "Organisation-Shortened"
+                }
+              },
+              "queryRef": "010_tblOrg-events.Organisation-Shortened",
+              "nativeQueryRef": "Organisation-Shortened"
+            }
+          ]
+        },
+        "StartDate": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_tblOrg-events"
+                    }
+                  },
+                  "Property": "Date"
+                }
+              },
+              "queryRef": "010_tblOrg-events.Date",
+              "nativeQueryRef": "Date"
+            }
+          ]
+        },
+        "EndDate": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "010_tblOrg-events"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(010_tblOrg-events.Date)",
+              "nativeQueryRef": "Earliest Date"
+            }
+          ]
+        },
+        "Legend": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_tblOrg-events"
+                    }
+                  },
+                  "Property": "Event-Type"
+                }
+              },
+              "queryRef": "010_tblOrg-events.Event-Type",
+              "nativeQueryRef": "Event-Type"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "010_tblOrg-events"
+                  }
+                },
+                "Property": "Date"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "taskLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "groupTasks": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "scrollToCurrentTime": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "durationMin": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "taskResource": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Inside'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "daysOff": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "firstDayOfWeek": {
+              "expr": {
+                "Literal": {
+                  "Value": "'1'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dateType": [
+        {
+          "properties": {
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Year'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "collapsedTasks": [
+        {
+          "properties": {
+            "list": {
+              "expr": {
+                "Literal": {
+                  "Value": "'[\"ARGC\",\"BCA\",\"ARC\",\"Grattan Inst.\",\"Grattan Inst.\",\"80K Hours\"]'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "collapsedTasksUpdateId": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "'\"ffca500a-1029-41e4-b180-ec9378b8a37a\"'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "e3653f228cbd4105a35c",
+  "position": {
+    "x": 0,
+    "y": 374.784,
+    "z": 1000,
+    "height": 345.42933333333332,
+    "width": 370.00533333333334,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "Sunburst1445472000808",
+    "query": {
+      "queryState": {
+        "Nodes": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "020_ActivitiesSplit"
+                    }
+                  },
+                  "Property": "Activities AI - Level.1"
+                }
+              },
+              "queryRef": "020_ActivitiesSplit.Activities AI - Level.1",
+              "nativeQueryRef": "Activities AI - Level.1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "020_ActivitiesSplit"
+                    }
+                  },
+                  "Property": "Activities AI - Level.2"
+                }
+              },
+              "queryRef": "020_ActivitiesSplit.Activities AI - Level.2",
+              "nativeQueryRef": "Activities AI - Level.2"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "020_ActivitiesSplit"
+                    }
+                  },
+                  "Property": "Activities AI - Level.3"
+                }
+              },
+              "queryRef": "020_ActivitiesSplit.Activities AI - Level.3",
+              "nativeQueryRef": "Activities AI - Level.3"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "020_ActivitiesSplit"
+                        }
+                      },
+                      "Property": "Organisation"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "Min(020_ActivitiesSplit.Organisation)",
+              "nativeQueryRef": "# orgs",
+              "displayName": "# orgs"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "020_ActivitiesSplit"
+                      }
+                    },
+                    "Property": "Organisation"
+                  }
+                },
+                "Function": 2
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "group": [
+        {
+          "properties": {
+            "fontSizeLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4d0513521c75bf8f56df",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "020_ActivitiesSplit"
+              }
+            },
+            "Property": "Activities AI - Level.1"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "0",
+              "Entity": "020_ActivitiesSplit",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "0"
+                              }
+                            },
+                            "Property": "Activities AI - Level.1"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "''"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'None'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'No specific AI focus'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

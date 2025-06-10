@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "4e948005ce1cf7ea943e",
+  "position": {
+    "x": 344.064,
+    "y": 81.92,
+    "z": 2000,
+    "height": 166.57066666666665,
+    "width": 262.144,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "020_ActivitiesSplit"
+                    }
+                  },
+                  "Property": "Activities AI"
+                }
+              },
+              "queryRef": "020_ActivitiesSplit.Activities AI",
+              "nativeQueryRef": "Activities AI1"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

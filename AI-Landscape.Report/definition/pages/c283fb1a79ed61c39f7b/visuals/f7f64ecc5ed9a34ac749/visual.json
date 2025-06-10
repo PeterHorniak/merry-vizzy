@@ -1,0 +1,161 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "f7f64ecc5ed9a34ac749",
+  "position": {
+    "x": 605.31697341513291,
+    "y": 81.145194274028626,
+    "z": 1000,
+    "height": 113.86503067484662,
+    "width": 255.86912065439674,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "Location"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Org.Location",
+              "nativeQueryRef": "Count of Location",
+              "displayName": "# Location"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "_LocationsFilled"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Org._LocationsFilled)",
+              "nativeQueryRef": "Filled",
+              "displayName": "Filled"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "Mission"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Org.Mission",
+              "nativeQueryRef": "Count of Mission1",
+              "displayName": "# Mission"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "_%Mission"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Org._%Mission)",
+              "nativeQueryRef": "Filled1",
+              "displayName": "Filled"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Org"
+                      }
+                    },
+                    "Property": "Location"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Worth adding % complete for all columns?'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

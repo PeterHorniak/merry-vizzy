@@ -1,0 +1,179 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "ea3c00aeb10ca9195be4",
+  "position": {
+    "x": 902.69972451790636,
+    "y": 582.62482219701474,
+    "z": 3000,
+    "height": 137.17495813752498,
+    "width": 306.79990637209892,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "000_tblHeadcount"
+                    }
+                  },
+                  "Property": "Date"
+                }
+              },
+              "queryRef": "000_tblHeadcount.Date",
+              "nativeQueryRef": "Date",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "000_tblHeadcount"
+                    }
+                  },
+                  "Property": "Organisation"
+                }
+              },
+              "queryRef": "000_tblHeadcount.Organisation",
+              "nativeQueryRef": "Organisation"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "000_tblHeadcount"
+                        }
+                      },
+                      "Property": "Source"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(000_tblHeadcount.Source)",
+              "nativeQueryRef": "First Source"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "000_tblHeadcount"
+                        }
+                      },
+                      "Property": "FTE notkilleveryoneism"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(000_tblHeadcount.FTE notkilleveryoneism)",
+              "nativeQueryRef": "FTE notkilleveryoneism"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "000_tblHeadcount"
+                      }
+                    },
+                    "Property": "FTE notkilleveryoneism"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LeftCenter'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "logAxisScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0d45d284ee5068203af3",
+        "ordinal": 1,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "000_tblHeadcount"
+                  }
+                },
+                "Property": "Headcount"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
+}

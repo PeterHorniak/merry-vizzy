@@ -24,7 +24,7 @@ queryGroup 'EXCLUDE SENSITIVE DATA! SEMANTIC MODEL IS PUBLIC'
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBIDesktopVersion = 2.143.1378.0 (25.05)+4e1de9c957866bc5336e0d250838314aa54ff3a8
+annotation PBIDesktopVersion = 2.144.679.0 (25.06)+ef40146207b86a826d1c72a7727a743ee37450e9
 
 annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocationsAcronyms","000_tblHeadcount","005_tblOrg-SplitParents","005_tblOrg-SplitContacts","005_tblOrg-events-count","005_tblOrg-events-ForMerge","010_tblOrg-events","010_tblOrg-Formatting","015_tblOrg-SplitURLs","010_Hierarchy","020_ActivitiesSplit","Contact","Org","qryLastRefreshed"]
 

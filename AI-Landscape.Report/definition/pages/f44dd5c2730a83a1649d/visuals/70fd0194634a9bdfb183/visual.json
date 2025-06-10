@@ -1,0 +1,228 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "70fd0194634a9bdfb183",
+  "position": {
+    "x": 0,
+    "y": 408.72274143302184,
+    "z": 2000,
+    "height": 311.0280373831776,
+    "width": 740.35306334371762,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "000_tblHeadcount"
+                    }
+                  },
+                  "Property": "Date"
+                }
+              },
+              "queryRef": "000_tblHeadcount.Date",
+              "nativeQueryRef": "Date",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "000_tblHeadcount"
+                    }
+                  },
+                  "Property": "Organisation"
+                }
+              },
+              "queryRef": "000_tblHeadcount.Organisation",
+              "nativeQueryRef": "Organisation"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "000_tblHeadcount"
+                        }
+                      },
+                      "Property": "Source"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(000_tblHeadcount.Source)",
+              "nativeQueryRef": "First Source"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "000_tblHeadcount"
+                        }
+                      },
+                      "Property": "FTE notkilleveryoneism"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(000_tblHeadcount.FTE notkilleveryoneism)",
+              "nativeQueryRef": "FTE notkilleveryoneism"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "000_tblHeadcount"
+                      }
+                    },
+                    "Property": "FTE notkilleveryoneism"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LeftCenter'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "logAxisScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c7b02b052a33301593b7",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "000_tblHeadcount"
+              }
+            },
+            "Property": "Organisation"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a5ccfbaa2343f534754d",
+        "ordinal": 1,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "000_tblHeadcount"
+                  }
+                },
+                "Property": "Source"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2c2e2e8febf81936236b",
+        "ordinal": 2,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "000_tblHeadcount"
+                  }
+                },
+                "Property": "FTE notkilleveryoneism"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "27b0b2a52f091c45915a",
+        "ordinal": 3,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "000_tblHeadcount"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
+}

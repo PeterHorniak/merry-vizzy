@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "f767b5c731fb583a596a",
+  "position": {
+    "x": 55.978666666666669,
+    "y": 171.34933333333333,
+    "z": 11000,
+    "height": 77.141333333333336,
+    "width": 204.11733333333333,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "TODO: use variation of most visuals for this page"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

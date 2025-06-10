@@ -18,3 +18,13 @@ relationship 52a1627e-fd67-0c99-7ef4-45a034f6bb8e
 	fromColumn: Contact.Organisation
 	toColumn: Org.Organisation
 
+relationship 339719c5-dbce-98c1-e18f-ca9182072986
+	crossFilteringBehavior: bothDirections
+	fromColumn: 010_tblOrg-events.Organisation
+	toColumn: Org.Organisation
+
+relationship 107b3175-1818-7e70-49db-11fa405327a9
+	crossFilteringBehavior: bothDirections
+	fromColumn: 005_tblOrg-SplitParents.Organisation
+	toColumn: Org.Organisation
+

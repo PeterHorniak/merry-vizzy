@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "387149b46e2681465f11",
+  "displayName": "Timelines",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "e7f78b89cf9e6b3476d9",
+      "target": "3622290bfd6405c6580d",
+      "type": "NoFilter"
+    }
+  ]
+}
