@@ -130,6 +130,14 @@ table Org
 
 		annotation SummarizationSetBy = Automatic
 
+	column OrgStructure
+		dataType: string
+		lineageTag: bbf1fc55-7c61-4a42-8cc3-7d5a0c9e5c12
+		summarizeBy: none
+		sourceColumn: OrgStructure
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Org = m
 		mode: import
 		queryGroup: 3-Load

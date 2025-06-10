@@ -26,7 +26,7 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBIDesktopVersion = 2.143.1378.0 (25.05)+4e1de9c957866bc5336e0d250838314aa54ff3a8
 
-annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocationsAcronyms","000_tblHeadcount","005_tblOrg-SplitParents","005_tblOrg-events-count","005_tblOrg-events-ForMerge","010_tblOrg-events","010_tblOrg-Formatting","015_tblOrg-SplitURLs","010_Hierarchy","020_ActivitiesSplit","020_ParentsHierarchy","Org","qryLastRefreshed"]
+annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocationsAcronyms","000_tblHeadcount","005_tblOrg-SplitParents","005_tblOrg-SplitContacts","005_tblOrg-events-count","005_tblOrg-events-ForMerge","010_tblOrg-events","010_tblOrg-Formatting","015_tblOrg-SplitURLs","010_Hierarchy","020_ActivitiesSplit","020_ParentsHierarchy","Org","qryLastRefreshed"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -38,6 +38,7 @@ ref table 010_Hierarchy
 ref table 005_tblOrg-SplitParents
 ref table 010_tblOrg-events
 ref table qryLastRefreshed
+ref table 005_tblOrg-SplitContacts
 
 ref cultureInfo en-US
 

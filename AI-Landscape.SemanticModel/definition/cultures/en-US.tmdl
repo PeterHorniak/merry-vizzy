@@ -3837,6 +3837,16 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "Level 1": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "AI Activity": {
 			            "State": "Suggested",
 			            "Source": {
@@ -3951,6 +3961,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.605
 			          }
+			        },
+			        {
+			          "Level 2": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4056,6 +4076,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "Level 3": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5222,12 +5252,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "event type": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "type": {
 			            "State": "Generated",
 			            "Weight": 0.97
@@ -5274,46 +5298,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "event category": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "event genre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "event manner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "event variety": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
 			          "event-brand": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -5331,6 +5315,56 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "event-kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "event-style": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "event-form": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "event-grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "Event type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -6226,59 +6260,852 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "org.org_structure": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Org",
+			          "ConceptualProperty": "OrgStructure"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "org structure": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "OrgStructure": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "structure": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "org construction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "org assembly": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "org edifice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "org erection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "construction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "assembly": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "edifice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "erection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "org building": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "building": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_split_contact": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "005_tblOrg-SplitContacts"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "005 tbl org split contact": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "005_tblOrg-SplitContacts": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "005 tbl org split connection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "005 tbl org split interaction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "005 tbl org split phone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "005 tbl org split telephone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "005 tbl org split communication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "005 tbl org split e-mail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "005 tbl org split link": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "005 tbl org split reach": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "005 tbl org split e mail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.648
+			          }
+			        },
+			        {
+			          "005 tbl org split phone number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.629
+			          }
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_split_contact.organisation": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "005_tblOrg-SplitContacts",
+			          "ConceptualProperty": "Organisation"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "organisation": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "corporation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "institution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "business": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_split_contact.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "005_tblOrg-SplitContacts",
+			          "ConceptualProperty": "Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "entity_005_tbl_org_split_contact.title": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "005_tblOrg-SplitContacts",
+			          "ConceptualProperty": "Title"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "title": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "award": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "heading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_split_contact.link": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "005_tblOrg-SplitContacts",
+			          "ConceptualProperty": "Link"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "link": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "connection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "association": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "linkage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "nexus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "tie": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "bond": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "yoke": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_split_contact.is_main": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "005_tblOrg-SplitContacts",
+			          "ConceptualProperty": "IsMain"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is main": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "IsMain": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "main": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "chief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "core": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "central": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "leading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "principal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "head": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "major": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "entity_000_tbl_headcount_has_entity_020_parents_hierarchy": {
+			    "entity_005_tbl_org_split_contact_has_is_main": {
 			      "Binding": {
-			        "ConceptualEntity": "000_tblHeadcount"
+			        "ConceptualEntity": "005_tblOrg-SplitContacts"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity_000_tbl_headcount": {
+			        "entity_005_tbl_org_split_contact": {
 			          "Target": {
-			            "Entity": "entity_000_tbl_headcount"
+			            "Entity": "entity_005_tbl_org_split_contact"
 			          }
 			        },
-			        "entity_020_parents_hierarchy": {
+			        "entity_005_tbl_org_split_contact.is_main": {
 			          "Target": {
-			            "Entity": "entity_020_parents_hierarchy"
-			          },
-			          "Nouns": [
-			            {
-			              "organisation": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
+			            "Entity": "entity_005_tbl_org_split_contact.is_main"
+			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_000_tbl_headcount"
+			              "Role": "entity_005_tbl_org_split_contact"
 			            },
 			            "Object": {
-			              "Role": "entity_020_parents_hierarchy"
+			              "Role": "entity_005_tbl_org_split_contact.is_main"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing000_tbl_headcounts_have_020_parents_hierarchies"
+			          "ID": "Phrasing005_tbl_org_split_contacts_have_is_mains"
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_split_contact_has_link": {
+			      "Binding": {
+			        "ConceptualEntity": "005_tblOrg-SplitContacts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_005_tbl_org_split_contact": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_split_contact"
+			          }
 			        },
+			        "entity_005_tbl_org_split_contact.link": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_split_contact.link"
+			          }
+			        }
+			      },
+			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity_020_parents_hierarchy"
+			              "Role": "entity_005_tbl_org_split_contact"
 			            },
 			            "Object": {
-			              "Role": "entity_000_tbl_headcount"
+			              "Role": "entity_005_tbl_org_split_contact.link"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing020_parents_hierarchies_have_000_tbl_headcounts"
+			          "ID": "Phrasing005_tbl_org_split_contacts_have_links"
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_split_contact_has_title": {
+			      "Binding": {
+			        "ConceptualEntity": "005_tblOrg-SplitContacts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_005_tbl_org_split_contact": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_split_contact"
+			          }
+			        },
+			        "entity_005_tbl_org_split_contact.title": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_split_contact.title"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_005_tbl_org_split_contact"
+			            },
+			            "Object": {
+			              "Role": "entity_005_tbl_org_split_contact.title"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing005_tbl_org_split_contacts_have_titles"
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_split_contact_has_name": {
+			      "Binding": {
+			        "ConceptualEntity": "005_tblOrg-SplitContacts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_005_tbl_org_split_contact": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_split_contact"
+			          }
+			        },
+			        "entity_005_tbl_org_split_contact.name": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_split_contact.name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_005_tbl_org_split_contact"
+			            },
+			            "Object": {
+			              "Role": "entity_005_tbl_org_split_contact.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing005_tbl_org_split_contacts_have_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "entity_005_tbl_org_split_contact"
+			            },
+			            "Name": {
+			              "Role": "entity_005_tbl_org_split_contact.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "names_are_names_IDs_of_005_tbl_org_split_contacts"
+			        }
+			      ]
+			    },
+			    "entity_005_tbl_org_split_contact_has_organisation": {
+			      "Binding": {
+			        "ConceptualEntity": "005_tblOrg-SplitContacts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_005_tbl_org_split_contact": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_split_contact"
+			          }
+			        },
+			        "entity_005_tbl_org_split_contact.organisation": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_split_contact.organisation"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_005_tbl_org_split_contact"
+			            },
+			            "Object": {
+			              "Role": "entity_005_tbl_org_split_contact.organisation"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing005_tbl_org_split_contacts_have_organisations"
+			        }
+			      ]
+			    },
+			    "org_has_org_structure": {
+			      "Binding": {
+			        "ConceptualEntity": "Org"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          }
+			        },
+			        "org.org_structure": {
+			          "Target": {
+			            "Entity": "org.org_structure"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "org.org_structure"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_org_structures"
 			        }
 			      ]
 			    },
@@ -8674,6 +9501,59 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "qry_last_refreshed_are_refreshed_on_qry_last_refreshed"
+			        }
+			      ]
+			    },
+			    "entity_000_tbl_headcount_has_entity_020_parents_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "000_tblHeadcount"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_000_tbl_headcount": {
+			          "Target": {
+			            "Entity": "entity_000_tbl_headcount"
+			          }
+			        },
+			        "entity_020_parents_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_020_parents_hierarchy"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_000_tbl_headcount"
+			            },
+			            "Object": {
+			              "Role": "entity_020_parents_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing000_tbl_headcounts_have_020_parents_hierarchies"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_020_parents_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_000_tbl_headcount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing020_parents_hierarchies_have_000_tbl_headcounts"
 			        }
 			      ]
 			    },
