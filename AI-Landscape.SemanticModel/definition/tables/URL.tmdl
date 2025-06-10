@@ -1,0 +1,41 @@
+table URL
+	lineageTag: 5d9e59df-11be-46f3-9d57-747063c527f1
+
+	column Organisation
+		dataType: string
+		lineageTag: cb9a1668-e5d0-4071-b99a-eaa2410d7552
+		summarizeBy: none
+		sourceColumn: Organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column URLWithMain
+		dataType: string
+		lineageTag: e6419747-0831-43c3-945d-df9b99116220
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: URLWithMain
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsMain
+		dataType: string
+		lineageTag: d8d79910-bbbf-4060-a2e7-a97bf70d98d9
+		summarizeBy: none
+		sourceColumn: IsMain
+
+		annotation SummarizationSetBy = Automatic
+
+	partition URL = m
+		mode: import
+		queryGroup: 3-Load
+		source =
+				let
+				    Source = #"005_tblOrg-SplitURLs"
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

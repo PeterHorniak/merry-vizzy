@@ -94,12 +94,57 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'AI Safety Australia and New Zealand (AISANZ)'"
+                                "Value": "'Department of Industry Science and Resources (DISR)'"
                               }
                             }
                           ]
                         ]
                       }
+                    }
+                  }
+                ]
+              }
+            },
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "selfFilter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "o",
+                    "Entity": "Org",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Contains": {
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "o"
+                              }
+                            },
+                            "Property": "Organisation"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'disr'"
+                          }
+                        }
+                      }
+                    },
+                    "Annotations": {
+                      "PowerBI.MParameterBehavior": 1
                     }
                   }
                 ]

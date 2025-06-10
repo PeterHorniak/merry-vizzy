@@ -22,11 +22,16 @@ queryGroup 'EXCLUDE SENSITIVE DATA! SEMANTIC MODEL IS PUBLIC'
 
 	annotation PBI_QueryGroupOrder = 0
 
+/// Errors in queries that were loaded on 2025/06/11 00:01:34.
+queryGroup 'Query Errors - 2025/06/11 00:01:34'
+
+	annotation PBI_QueryGroupOrder = 4
+
 annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBIDesktopVersion = 2.144.679.0 (25.06)+ef40146207b86a826d1c72a7727a743ee37450e9
 
-annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocationsAcronyms","000_tblHeadcount","005_tblOrg-SplitParents","005_tblOrg-SplitContacts","005_tblOrg-events-count","005_tblOrg-events-ForMerge","010_tblOrg-events","010_tblOrg-Formatting","015_tblOrg-SplitURLs","010_Hierarchy","020_ActivitiesSplit","Contact","Org","qryLastRefreshed"]
+annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocationsAcronyms","000_tblHeadcount","005_tblOrg-SplitParents","005_tblOrg-SplitURLs","005_tblOrg-SplitContacts","005_tblOrg-events-count","005_tblOrg-events-ForMerge","010_tblOrg-events","010_tblOrg-Formatting","015_tblOrg-SplitURLs","010_Hierarchy","020_ActivitiesSplit","URL","Contact","Org","qryLastRefreshed","Errors in 010_tblOrg-events"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -38,6 +43,7 @@ ref table 005_tblOrg-SplitParents
 ref table 010_tblOrg-events
 ref table qryLastRefreshed
 ref table Contact
+ref table URL
 
 ref cultureInfo en-US
 

@@ -28,3 +28,8 @@ relationship 107b3175-1818-7e70-49db-11fa405327a9
 	fromColumn: 005_tblOrg-SplitParents.Organisation
 	toColumn: Org.Organisation
 
+relationship e74c40f1-8187-8f61-f167-0c9fd3f0d1e2
+	crossFilteringBehavior: bothDirections
+	fromColumn: URL.Organisation
+	toColumn: Org.Organisation
+

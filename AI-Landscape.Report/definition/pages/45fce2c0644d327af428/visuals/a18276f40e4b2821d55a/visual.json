@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "a18276f40e4b2821d55a",
   "position": {
-    "x": 356.352,
-    "y": 602.112,
+    "x": 356.52648825778266,
+    "y": 592.11359912616058,
     "z": 13000,
-    "height": 118.10133333333333,
-    "width": 305.152,
+    "height": 127.93009284543966,
+    "width": 304.795193883124,
     "tabOrder": 12000
   },
   "visual": {
@@ -1191,6 +1191,39 @@
         },
         "type": "Categorical",
         "howCreated": "User"
+      },
+      {
+        "name": "ab45c09547419e63d674",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "010_tblOrg-events"
+                  }
+                },
+                "Property": "Index-Asc-ByDate-WithJumps"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "86078b609790f5fa1285",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_tblOrg-events"
+              }
+            },
+            "Property": "Event-Icon"
+          }
+        },
+        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

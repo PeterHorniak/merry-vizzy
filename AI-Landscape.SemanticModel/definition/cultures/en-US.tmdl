@@ -6664,9 +6664,447 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "url": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "URL"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "url": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "website": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "site": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "web address": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
+			          }
+			        }
+			      ]
+			    },
+			    "url.organisation": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "URL",
+			          "ConceptualProperty": "Organisation"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "organisation": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "corporation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "institution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "business": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "url.URL_with_main": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "URL",
+			          "ConceptualProperty": "URLWithMain"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "URL with main": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "URLWithMain": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "website with main": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "site with main": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "web address with main": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.604
+			          }
+			        },
+			        {
+			          "URL": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "url.is_main": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "URL",
+			          "ConceptualProperty": "IsMain"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is main": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "IsMain": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "main": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "chief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "core": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "central": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "leading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "principal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "head": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "major": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "entity_020_activities_split_has_org": {
+			      "Binding": {
+			        "ConceptualEntity": "020_ActivitiesSplit"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_020_activities_split": {
+			          "Target": {
+			            "Entity": "entity_020_activities_split"
+			          }
+			        },
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_020_activities_split"
+			            },
+			            "Object": {
+			              "Role": "org"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing020_activities_splits_have_org"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "entity_020_activities_split"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_020_activities_splits"
+			        }
+			      ]
+			    },
+			    "url_has_is_main": {
+			      "Binding": {
+			        "ConceptualEntity": "URL"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "url": {
+			          "Target": {
+			            "Entity": "url"
+			          }
+			        },
+			        "url.is_main": {
+			          "Target": {
+			            "Entity": "url.is_main"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "url"
+			            },
+			            "Object": {
+			              "Role": "url.is_main"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "urls_have_is_mains"
+			        }
+			      ]
+			    },
+			    "url_has_URL_with_main": {
+			      "Binding": {
+			        "ConceptualEntity": "URL"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "url": {
+			          "Target": {
+			            "Entity": "url"
+			          }
+			        },
+			        "url.URL_with_main": {
+			          "Target": {
+			            "Entity": "url.URL_with_main"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "url"
+			            },
+			            "Object": {
+			              "Role": "url.URL_with_main"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "urls_have_URL_with_main"
+			        }
+			      ]
+			    },
+			    "contact_has_is_main": {
+			      "Binding": {
+			        "ConceptualEntity": "Contact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "contact": {
+			          "Target": {
+			            "Entity": "contact"
+			          }
+			        },
+			        "contact.is_main": {
+			          "Target": {
+			            "Entity": "contact.is_main"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "contact"
+			            },
+			            "Object": {
+			              "Role": "contact.is_main"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "contacts_have_is_mains"
+			        }
+			      ]
+			    },
 			    "contact_has_link": {
 			      "Binding": {
 			        "ConceptualEntity": "Contact"
@@ -9042,92 +9480,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "contact_has_is_main": {
-			      "Binding": {
-			        "ConceptualEntity": "Contact"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "contact": {
-			          "Target": {
-			            "Entity": "contact"
-			          }
-			        },
-			        "contact.is_main": {
-			          "Target": {
-			            "Entity": "contact.is_main"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "contact"
-			            },
-			            "Object": {
-			              "Role": "contact.is_main"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "contacts_have_is_mains"
-			        }
-			      ]
-			    },
-			    "entity_020_activities_split_has_org": {
-			      "Binding": {
-			        "ConceptualEntity": "020_ActivitiesSplit"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_020_activities_split": {
-			          "Target": {
-			            "Entity": "entity_020_activities_split"
-			          }
-			        },
-			        "org": {
-			          "Target": {
-			            "Entity": "org"
-			          },
-			          "Nouns": [
-			            {
-			              "organisation": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_020_activities_split"
-			            },
-			            "Object": {
-			              "Role": "org"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing020_activities_splits_have_org"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "org"
-			            },
-			            "Object": {
-			              "Role": "entity_020_activities_split"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "org_have_020_activities_splits"
-			        }
-			      ]
-			    },
 			    "entity_000_tbl_headcount_has_org": {
 			      "Binding": {
 			        "ConceptualEntity": "000_tblHeadcount"
@@ -9395,6 +9747,59 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "org_have_contacts"
+			        }
+			      ]
+			    },
+			    "url_has_org": {
+			      "Binding": {
+			        "ConceptualEntity": "URL"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "url": {
+			          "Target": {
+			            "Entity": "url"
+			          }
+			        },
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "url"
+			            },
+			            "Object": {
+			              "Role": "org"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "urls_have_org"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "url"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_urls"
 			        }
 			      ]
 			    }

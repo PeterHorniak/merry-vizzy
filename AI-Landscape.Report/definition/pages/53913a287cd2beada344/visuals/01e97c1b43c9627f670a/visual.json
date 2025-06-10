@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "01e97c1b43c9627f670a",
   "position": {
-    "x": 24.867075664621677,
-    "y": 435.82822085889569,
+    "x": 2.7962861824139815,
+    "y": 248.17039868924087,
     "z": 14000,
-    "height": 159.67280163599182,
-    "width": 615.13292433537833,
+    "height": 287.31840524303658,
+    "width": 548.77116329874389,
     "tabOrder": 14000
   },
   "visual": {
@@ -111,14 +111,14 @@
             "annotationStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "'annotationLabel'"
+                  "Value": "'textOnly'"
                 }
               }
             },
             "boldTitles": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -126,6 +126,34 @@
               "expr": {
                 "Literal": {
                   "Value": "8D"
+                }
+              }
+            },
+            "separator": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "dateFormat": {
+              "expr": {
+                "Literal": {
+                  "Value": "'customJS'"
+                }
+              }
+            },
+            "customJS": {
+              "expr": {
+                "Literal": {
+                  "Value": "'-> '"
                 }
               }
             }
@@ -153,6 +181,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
@@ -266,7 +301,7 @@
             "today": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -276,10 +311,90 @@
                   "Value": "false"
                 }
               }
+            },
+            "lineThickness": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "todayColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "maxDateFocus": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "todayTop": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Event and Date. Maybe just have a button saying Timeline Expander? Because of the text clumping'"
+                }
+              }
             }
           }
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a560e2d4f4242fa515db",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_tblOrg-events"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8955d15ce2a4abd0a5ff",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_tblOrg-events"
+              }
+            },
+            "Property": "Event"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
