@@ -22,13 +22,13 @@ expression 000_tblOrg =
 		    Organisations_Table = Source{[name="Organisation",ItemKind="Table"]}[Data],
 		    #"Promoted Headers" = Table.PromoteHeaders(Organisations_Table, [PromoteAllScalars=true]),
 		    #"Promoted Headers1" = Table.PromoteHeaders(#"Promoted Headers", [PromoteAllScalars=true]),
-		    #"Removed Columns1" = Table.RemoveColumns(#"Promoted Headers1",{""}),
-		    #"Removed Bottom Rows" = Table.RemoveLastN(#"Removed Columns1",1),
-		    #"Duplicated Column" = Table.DuplicateColumn(#"Removed Bottom Rows", "Organisation", "Organisation-Shortened"),
-		    #"Split Column by Delimiter" = Table.SplitColumn(#"Duplicated Column", "Organisation-Shortened", Splitter.SplitTextByEachDelimiter({"("}, QuoteStyle.Csv, true), {"Organisation-Shortened.1", "Organisation-Shortened.2"}),
-		    #"Replaced Value23" = Table.ReplaceValue(#"Split Column by Delimiter",")","",Replacer.ReplaceText,{"Organisation-Shortened.2"}),
-		    #"Added Conditional Column" = Table.AddColumn(#"Replaced Value23", "Organisation-Shortened", each if [#"Organisation-Shortened.2"] = null then [#"Organisation-Shortened.1"] else [#"Organisation-Shortened.2"]),
-		    #"Replaced Value" = Table.ReplaceValue(#"Added Conditional Column","University","Uni",Replacer.ReplaceText,{"Organisation-Shortened"}),
+		    #"Removed blank column" = Table.RemoveColumns(#"Promoted Headers1",{""}),
+		    #"Removed bottom row" = Table.RemoveLastN(#"Removed blank column",1),
+		    #"Duplicated Organisation" = Table.DuplicateColumn(#"Removed bottom row", "Organisation", "Organisation-Shortened"),
+		    #"Split Organisation by (" = Table.SplitColumn(#"Duplicated Organisation", "Organisation-Shortened", Splitter.SplitTextByEachDelimiter({"("}, QuoteStyle.Csv, true), {"Organisation-Shortened.1", "Organisation-Shortened.2"}),
+		    #"Replaced ) in Organisation-Shortened.2" = Table.ReplaceValue(#"Split Organisation by (",")","",Replacer.ReplaceText,{"Organisation-Shortened.2"}),
+		    #"Added Organisation-Shortened" = Table.AddColumn(#"Replaced ) in Organisation-Shortened.2", "Organisation-Shortened", each if [#"Organisation-Shortened.2"] = null then [#"Organisation-Shortened.1"] else [#"Organisation-Shortened.2"]),
+		    #"Replaced Value" = Table.ReplaceValue(#"Added Organisation-Shortened","University","Uni",Replacer.ReplaceText,{"Organisation-Shortened"}),
 		    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value","Australian Capital Territory","ACT",Replacer.ReplaceText,{"Organisation-Shortened"}),
 		    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value10","Western Australia","WA",Replacer.ReplaceText,{"Organisation-Shortened"}),
 		    #"Replaced Value15" = Table.ReplaceValue(#"Replaced Value14","Queensland","QLD",Replacer.ReplaceText,{"Organisation-Shortened"}),
@@ -60,9 +60,9 @@ expression 000_tblOrg =
 		    #"Replaced Value30" = Table.ReplaceValue(#"Replaced Value29","Canada","CA",Replacer.ReplaceText,{"Organisation-Shortened"}),
 		    #"Replaced Value31" = Table.ReplaceValue(#"Replaced Value30","Singapore","SG",Replacer.ReplaceText,{"Organisation-Shortened"}),
 		    #"Replaced Value32" = Table.ReplaceValue(#"Replaced Value31","Korea","KR",Replacer.ReplaceText,{"Organisation-Shortened"}),
-		    #"Replaced Value33" = Table.ReplaceValue(#"Replaced Value32","Japan","JP",Replacer.ReplaceText,{"Organisation-Shortened"})
+		    #"Replaced Value23" = Table.ReplaceValue(#"Replaced Value32","Japan","JP",Replacer.ReplaceText,{"Organisation-Shortened"})
 		in
-		    #"Replaced Value33"
+		    #"Replaced Value23"
 	lineageTag: f75e56a8-1f8d-4d04-97bb-202cb6253d92
 	queryGroup: 1-Extract
 
@@ -213,8 +213,8 @@ expression 'Errors in 010_tblOrg-events' =
 		  #"Reordered Columns" = Table.ReorderColumns(#"Kept Errors", {"Row Number", "Organisation", "Organisation-Shortened", "Date", "Event", "Index", "Index-Asc-ByOrgDate", "Index-Asc-ByDate", "Event-Type", "Date-NextEntry", "DaysSincePreviousEntry", "Index-Asc-ByDate-WithJumps", "Event-Icon"})
 		in
 		  #"Reordered Columns"
-	lineageTag: 0ac52aa3-ea99-46d7-9e1f-1a4a8be64f80
-	queryGroup: 'Query Errors - 2025/06/11 00:01:34'
+	lineageTag: e46d64af-a095-4fb8-b24f-1a3f9ec7a528
+	queryGroup: 'Query Errors - 11/06/2025 7:53:17 AM'
 
 	annotation PBI_NavigationStepName = Navigation
 

@@ -1,36 +1,18 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "b6b5aa9ec45531e3f5d7",
+  "name": "c41415f08e1a50609507",
   "position": {
-    "x": 432.02621518296013,
-    "y": 483.0584380120153,
-    "z": 3000,
-    "height": 227.198252321136,
-    "width": 403.36428181321685,
-    "tabOrder": 3000
+    "x": 575.8144927536232,
+    "y": 536.4869565217391,
+    "z": 11000,
+    "height": 183.28115942028987,
+    "width": 351.7217391304348,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020",
     "query": {
       "queryState": {
-        "Source": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Org"
-                    }
-                  },
-                  "Property": "Parent org"
-                }
-              },
-              "queryRef": "Org.Parent org",
-              "nativeQueryRef": "Parent org"
-            }
-          ]
-        },
         "Destination": {
           "projections": [
             {
@@ -38,14 +20,32 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Org"
+                      "Entity": "005_tblOrg-SplitParents"
                     }
                   },
                   "Property": "Organisation-Shortened"
                 }
               },
-              "queryRef": "Org.Organisation-Shortened",
+              "queryRef": "005_tblOrg-SplitParents.Organisation-Shortened",
               "nativeQueryRef": "Organisation-Shortened"
+            }
+          ]
+        },
+        "Source": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "005_tblOrg-SplitParents"
+                    }
+                  },
+                  "Property": "Parent org-shortened"
+                }
+              },
+              "queryRef": "005_tblOrg-SplitParents.Parent org-shortened",
+              "nativeQueryRef": "Parent org-shortened"
             }
           ]
         }
@@ -166,7 +166,21 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Separate table, grain of one row per parent?'"
+                  "Value": "'Parents'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -191,29 +205,29 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "66e658659c57605b7bbc",
+        "name": "fdc19503bf0b553c9f25",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Org"
+                "Entity": "005_tblOrg-SplitParents"
               }
             },
-            "Property": "Parent org"
+            "Property": "Organisation-Shortened"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "6d5bd7c9cdd4958130c9",
+        "name": "d9bf938bc6c839eed93b",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Org"
+                "Entity": "005_tblOrg-SplitParents"
               }
             },
-            "Property": "Organisation-Shortened"
+            "Property": "Parent org-shortened"
           }
         },
         "type": "Categorical"

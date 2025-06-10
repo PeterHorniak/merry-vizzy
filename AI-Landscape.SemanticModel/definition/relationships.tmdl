@@ -33,3 +33,8 @@ relationship e74c40f1-8187-8f61-f167-0c9fd3f0d1e2
 	fromColumn: URL.Organisation
 	toColumn: Org.Organisation
 
+relationship 0d274a17-2558-6a65-738a-16219d65b331
+	crossFilteringBehavior: bothDirections
+	fromColumn: 010_tblOrg-SplitChildren.Organisation
+	toColumn: Org.Organisation
+

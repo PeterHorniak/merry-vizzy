@@ -4,10 +4,10 @@
   "position": {
     "x": 455.794647733479,
     "y": 210.42053522665211,
-    "z": 15001,
+    "z": 16000,
     "height": 139.11523757509559,
     "width": 241.17968323320591,
-    "tabOrder": 15001
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "card",
@@ -128,28 +128,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "0b54b0604606908538c9",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Org"
-                  }
-                },
-                "Property": "Mission"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

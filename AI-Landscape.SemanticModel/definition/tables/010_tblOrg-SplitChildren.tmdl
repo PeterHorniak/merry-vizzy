@@ -1,0 +1,73 @@
+table 010_tblOrg-SplitChildren
+	lineageTag: 42b5d267-e04d-452d-8632-c2fd925d80fc
+
+	column 'Parent org'
+		dataType: string
+		lineageTag: a601aaf7-907e-4dc6-8ab3-7ef2d7ffb585
+		summarizeBy: none
+		sourceColumn: Parent org
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parent org-shortened'
+		dataType: string
+		lineageTag: 7a8663af-0095-4c54-8fb0-3f29e1bcbd9e
+		summarizeBy: none
+		sourceColumn: Parent org-shortened
+
+		annotation SummarizationSetBy = Automatic
+
+	column Organisation
+		dataType: string
+		lineageTag: 62e208ac-0982-4b2c-9f3f-60144daedf48
+		summarizeBy: none
+		sourceColumn: Organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL-ParentOrg
+		dataType: string
+		lineageTag: f5a81d4a-7905-44f3-974b-c1bd99d751a6
+		summarizeBy: none
+		sourceColumn: URL-ParentOrg
+
+		annotation SummarizationSetBy = Automatic
+
+	column Organisation-base
+		dataType: string
+		lineageTag: 8201ff76-0505-4319-b65d-5ac1eba8da5f
+		summarizeBy: none
+		sourceColumn: Organisation-base
+
+		annotation SummarizationSetBy = Automatic
+
+	column Organisation-acronym
+		dataType: string
+		lineageTag: 0d5ef195-1996-4533-89b5-a253e47bc414
+		summarizeBy: none
+		sourceColumn: Organisation-acronym
+
+		annotation SummarizationSetBy = Automatic
+
+	column Organisation-shortened
+		dataType: string
+		lineageTag: 6c476fda-e840-41df-871c-dbe3950c66a4
+		summarizeBy: none
+		sourceColumn: Organisation-shortened
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 010_tblOrg-SplitChildren = m
+		mode: import
+		queryGroup: 2-Transform
+		source =
+				let
+				    Source = #"005_tblOrg-SplitParents",
+				    #"Renamed Columns" = Table.RenameColumns(Source,{{"Organisation", "Parent org"}, {"Organisation-Shortened", "Parent org-shortened"}, {"Parent org", "Organisation"}, {"URL", "URL-ParentOrg"}, {"Parent org-base", "Organisation-base"}, {"Parent org-acronym", "Organisation-acronym"}, {"Parent org-shortened", "Organisation-shortened"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

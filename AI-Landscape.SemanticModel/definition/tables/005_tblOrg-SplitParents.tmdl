@@ -33,6 +33,30 @@ table 005_tblOrg-SplitParents
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Parent org-base'
+		dataType: string
+		lineageTag: 7cd37354-9419-478c-8d98-58d86eaec9b6
+		summarizeBy: none
+		sourceColumn: Parent org-base
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parent org-acronym'
+		dataType: string
+		lineageTag: f0b72015-a2db-460d-a834-2f457810e03d
+		summarizeBy: none
+		sourceColumn: Parent org-acronym
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parent org-shortened'
+		dataType: string
+		lineageTag: 91da608c-ea9d-4aa0-af0d-3b7d40c3a407
+		summarizeBy: none
+		sourceColumn: Parent org-shortened
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 005_tblOrg-SplitParents = m
 		mode: import
 		queryGroup: 2-Transform
@@ -40,9 +64,13 @@ table 005_tblOrg-SplitParents
 				let
 				    Source = #"000_tblOrg",
 				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened", "Parent org", "URL"}),
-				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"Parent org", Splitter.SplitTextByDelimiter(", ", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Parent org")
+				    #"Split Parent org by ," = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"Parent org", Splitter.SplitTextByDelimiter(", ", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Parent org"),
+				    #"Duplicated Parent org" = Table.DuplicateColumn(#"Split Parent org by ,", "Parent org", "Parent org-shortened"),
+				    #"Split Parent org-shortened by (" = Table.SplitColumn(#"Duplicated Parent org", "Parent org-shortened", Splitter.SplitTextByEachDelimiter({"("}, QuoteStyle.Csv, false), {"Parent org-base", "Parent org-acronym"}),
+				    #"Replaced ) in Parent org-acronym" = Table.ReplaceValue(#"Split Parent org-shortened by (",")","",Replacer.ReplaceText,{"Parent org-acronym"}),
+				    #"Added Parent org-shortened" = Table.AddColumn(#"Replaced ) in Parent org-acronym", "Parent org-shortened", each if [#"Parent org-acronym"] = null then [#"Parent org-base"] else [#"Parent org-acronym"])
 				in
-				    #"Split Column by Delimiter"
+				    #"Added Parent org-shortened"
 
 	annotation PBI_NavigationStepName = Navigation
 

@@ -1,0 +1,237 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "c105ce743923c711fdbf",
+  "position": {
+    "x": 928.2782608695652,
+    "y": 536.4869565217391,
+    "z": 12000,
+    "height": 183.28115942028987,
+    "width": 351.7217391304348,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020",
+    "query": {
+      "queryState": {
+        "Source": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_tblOrg-SplitChildren"
+                    }
+                  },
+                  "Property": "Organisation-shortened"
+                }
+              },
+              "queryRef": "010_tblOrg-SplitChildren.Organisation-shortened",
+              "nativeQueryRef": "Organisation-shortened"
+            }
+          ]
+        },
+        "Destination": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_tblOrg-SplitChildren"
+                    }
+                  },
+                  "Property": "Parent org-shortened"
+                }
+              },
+              "queryRef": "010_tblOrg-SplitChildren.Parent org-shortened",
+              "nativeQueryRef": "Parent org-shortened"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "nodeComplexSettings": [
+        {
+          "properties": {
+            "nodePositions": {
+              "expr": {
+                "Literal": {
+                  "Value": "'[{\"name\":\"AU\",\"x\":\"0\",\"y\":\"0\"},{\"name\":\"CA\",\"x\":\"0\",\"y\":\"356\"},{\"name\":\"EA\",\"x\":\"0\",\"y\":\"374\"},{\"name\":\"EU\",\"x\":\"0\",\"y\":\"419\"},{\"name\":\"JP\",\"x\":\"0\",\"y\":\"437\"},{\"name\":\"KR\",\"x\":\"0\",\"y\":\"454\"},{\"name\":\"NL\",\"x\":\"0\",\"y\":\"472\"},{\"name\":\"SG\",\"x\":\"0\",\"y\":\"489\"},{\"name\":\"UK\",\"x\":\"0\",\"y\":\"506\"},{\"name\":\"US\",\"x\":\"0\",\"y\":\"552\"},{\"name\":\"AI Safety Support\",\"x\":\"442\",\"y\":\"0\"},{\"name\":\"AISANZ\",\"x\":\"442\",\"y\":\"43\"},{\"name\":\"ARAAC\",\"x\":\"442\",\"y\":\"58\"},{\"name\":\"Aus AI Industry\",\"x\":\"442\",\"y\":\"73\"},{\"name\":\"Aus Fed Govt\",\"x\":\"442\",\"y\":\"88\"},{\"name\":\"Aus Fed Parliament\",\"x\":\"442\",\"y\":\"103\"},{\"name\":\"Aus Fed Senate\",\"x\":\"442\",\"y\":\"118\"},{\"name\":\"Aus media\",\"x\":\"442\",\"y\":\"133\"},{\"name\":\"AUSCL\",\"x\":\"442\",\"y\":\"147\"},{\"name\":\"Campaign for AI Safety\",\"x\":\"442\",\"y\":\"162\"},{\"name\":\"Commission for the Human Future\",\"x\":\"442\",\"y\":\"177\"},{\"name\":\"Council for the Human Future\",\"x\":\"442\",\"y\":\"192\"},{\"name\":\"Data Analytics Wednesday\",\"x\":\"442\",\"y\":\"207\"},{\"name\":\"DSAi\",\"x\":\"442\",\"y\":\"222\"},{\"name\":\"FORE\",\"x\":\"442\",\"y\":\"237\"},{\"name\":\"ForHumanity Aus\",\"x\":\"442\",\"y\":\"252\"},{\"name\":\"GAP\",\"x\":\"442\",\"y\":\"267\"},{\"name\":\"QLD\",\"x\":\"442\",\"y\":\"282\"},{\"name\":\"Safeground\",\"x\":\"442\",\"y\":\"297\"},{\"name\":\"State Govt ACT\",\"x\":\"442\",\"y\":\"311\"},{\"name\":\"State Govt NSW\",\"x\":\"442\",\"y\":\"326\"},{\"name\":\"State Govt SA\",\"x\":\"442\",\"y\":\"341\"},{\"name\":\"State Govt VIC\",\"x\":\"442\",\"y\":\"356\"},{\"name\":\"State Govt WA\",\"x\":\"442\",\"y\":\"371\"},{\"name\":\"Tech Council of Aus\",\"x\":\"442\",\"y\":\"386\"},{\"name\":\"AISI CA\",\"x\":\"442\",\"y\":\"401\"},{\"name\":\"EA AU\",\"x\":\"442\",\"y\":\"416\"},{\"name\":\"EAGx\",\"x\":\"442\",\"y\":\"431\"},{\"name\":\"EAGx Virtual\",\"x\":\"442\",\"y\":\"446\"},{\"name\":\"AIO EU\",\"x\":\"442\",\"y\":\"460\"},{\"name\":\"AISI JP\",\"x\":\"442\",\"y\":\"475\"},{\"name\":\"AISI KR\",\"x\":\"442\",\"y\":\"490\"},{\"name\":\"Exist. Risk Observatory\",\"x\":\"442\",\"y\":\"505\"},{\"name\":\"AISI SG\",\"x\":\"442\",\"y\":\"520\"},{\"name\":\"80K Hours\",\"x\":\"442\",\"y\":\"535\"},{\"name\":\"AISI UK\",\"x\":\"442\",\"y\":\"550\"},{\"name\":\"AISI US\",\"x\":\"442\",\"y\":\"565\"},{\"name\":\"All Tech Is Human\",\"x\":\"442\",\"y\":\"580\"},{\"name\":\"Anthropic\",\"x\":\"442\",\"y\":\"595\"},{\"name\":\"Ashgro\",\"x\":\"442\",\"y\":\"610\"},{\"name\":\"MIT\",\"x\":\"442\",\"y\":\"624\"},{\"name\":\"Palisade Research\",\"x\":\"442\",\"y\":\"639\"}]'"
+                }
+              }
+            },
+            "viewportSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"height\":\"654.2429149797571\",\"width\":\"450\"}'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "linkLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "properties": {
+            "nodesWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "25D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "scaleSettings": [
+        {
+          "properties": {
+            "provideMinHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "lnScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "cyclesLinks": [
+        {
+          "properties": {
+            "drawCycles": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Children'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "425afcdc1dec398a1e70",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_tblOrg-SplitChildren"
+              }
+            },
+            "Property": "Organisation-shortened"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e856352b33981a46adeb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_tblOrg-SplitChildren"
+              }
+            },
+            "Property": "Parent org-shortened"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

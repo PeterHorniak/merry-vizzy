@@ -4,10 +4,10 @@
   "position": {
     "x": 61.518296013107594,
     "y": 6.2916439104314588,
-    "z": 7000,
+    "z": 5000,
     "height": 42.64336428181322,
     "width": 638.25232113599134,
-    "tabOrder": 6000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -138,7 +138,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "'disr'"
+                            "Value": "'ai safet'"
                           }
                         }
                       }
