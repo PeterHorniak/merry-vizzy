@@ -271,6 +271,14 @@
                   }
                 ],
                 "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Use custom tooltip pages for when the existing tooltips are confusing."
+                  }
+                ],
+                "listType": "bullet"
               }
             ]
           }

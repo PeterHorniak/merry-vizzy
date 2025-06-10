@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "b6b5aa9ec45531e3f5d7",
   "position": {
-    "x": 666.06645230439449,
-    "y": 388.93890675241158,
-    "z": 9000,
-    "height": 227.05251875669882,
-    "width": 268.89603429796358,
-    "tabOrder": 8000
+    "x": 432.02621518296013,
+    "y": 483.0584380120153,
+    "z": 3000,
+    "height": 227.198252321136,
+    "width": 403.36428181321685,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020",
@@ -41,11 +41,11 @@
                       "Entity": "Org"
                     }
                   },
-                  "Property": "Organisation"
+                  "Property": "Organisation-Shortened"
                 }
               },
-              "queryRef": "Org.Organisation",
-              "nativeQueryRef": "Organisation"
+              "queryRef": "Org.Organisation-Shortened",
+              "nativeQueryRef": "Organisation-Shortened"
             }
           ]
         }
@@ -79,6 +79,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }
@@ -165,7 +172,52 @@
             }
           }
         }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "66e658659c57605b7bbc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "Parent org"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6d5bd7c9cdd4958130c9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "Organisation-Shortened"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

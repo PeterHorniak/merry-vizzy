@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "a18276f40e4b2821d55a",
   "position": {
-    "x": 356.52648825778266,
-    "y": 592.11359912616058,
-    "z": 13000,
+    "x": 0,
+    "y": 441.81321682140907,
+    "z": 6000,
     "height": 127.93009284543966,
-    "width": 304.795193883124,
-    "tabOrder": 12000
+    "width": 356.52648825778266,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "lineChart",
@@ -1079,6 +1079,19 @@
             }
           }
         }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   },
@@ -1193,7 +1206,7 @@
         "howCreated": "User"
       },
       {
-        "name": "ab45c09547419e63d674",
+        "name": "c2ee27682875008ef2f6",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -1212,7 +1225,7 @@
         "type": "Advanced"
       },
       {
-        "name": "86078b609790f5fa1285",
+        "name": "6c3e3dc6b5a8e48b523c",
         "field": {
           "Column": {
             "Expression": {

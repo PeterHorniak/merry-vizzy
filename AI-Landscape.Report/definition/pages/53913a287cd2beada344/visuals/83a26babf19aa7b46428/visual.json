@@ -4,10 +4,10 @@
   "position": {
     "x": 618.67831785909345,
     "y": 248.17039868924087,
-    "z": 15001,
+    "z": 14000,
     "height": 101.36537411250683,
     "width": 120.9393773894047,
-    "tabOrder": 15001
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "tableEx",
@@ -131,37 +131,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "93ae4d194fe377f85ade",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "URL"
-              }
-            },
-            "Property": "URLWithMain"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "3c6728dbadcc904eba79",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "URL"
-              }
-            },
-            "Property": "IsMain"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

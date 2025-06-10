@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "4e948005ce1cf7ea943e",
+  "name": "172f718142f84db612a6",
   "position": {
     "x": 62.217367558711089,
-    "y": 311.08683779355545,
-    "z": 0,
-    "height": 97.170944838885859,
-    "width": 303.39705079191697,
-    "tabOrder": 0
+    "y": 69.208083014746038,
+    "z": 11001,
+    "height": 140.51338066630257,
+    "width": 345.34134352812674,
+    "tabOrder": 11001
   },
   "visual": {
-    "visualType": "multiRowCard",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
         "Values": {
@@ -20,47 +20,75 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "020_ActivitiesSplit"
+                      "Entity": "Org"
                     }
                   },
-                  "Property": "Activities AI"
+                  "Property": "Mission"
                 }
               },
-              "queryRef": "020_ActivitiesSplit.Activities AI",
-              "nativeQueryRef": "Activities AI1"
+              "queryRef": "Org.Mission",
+              "nativeQueryRef": "Mission"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "Mission"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
-    "visualContainerObjects": {
-      "title": [
+    "objects": {
+      "columnWidth": [
         {
           "properties": {
-            "show": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "314.71217274160654D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Org.Mission"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Activities in AI (if any)'"
-                }
-              }
             }
           }
         }
-      ],
-      "border": [
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
         {
           "properties": {
-            "show": {
+            "name": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'None'"
                 }
               }
             }
@@ -85,15 +113,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "be3bfdab5e40f94770c0",
+        "name": "c746371e53d43450c618",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "020_ActivitiesSplit"
+                "Entity": "Org"
               }
             },
-            "Property": "Activities AI"
+            "Property": "Mission"
           }
         },
         "type": "Categorical"
