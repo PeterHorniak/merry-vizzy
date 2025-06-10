@@ -1,0 +1,57 @@
+table Contact
+	lineageTag: e8cefdb2-9c80-46c2-95ec-718926245664
+
+	column Organisation
+		dataType: string
+		lineageTag: 19b159a3-9ff1-4240-bdcc-5ed85f240225
+		summarizeBy: none
+		sourceColumn: Organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: f0cc4979-3a70-4ab6-8448-9f3a89ab914f
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 9e853f92-6f8f-4fb0-b56f-f9c82edb51ae
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Link
+		dataType: string
+		lineageTag: f7d6b2cc-b14e-4e33-9c07-6c4ed35b9e58
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: Link
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsMain
+		dataType: string
+		lineageTag: 6c1ffc60-7a98-483c-b3d4-a383fb1c7268
+		summarizeBy: none
+		sourceColumn: IsMain
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Contact = m
+		mode: import
+		queryGroup: 3-Load
+		source =
+				let
+				    Source = #"005_tblOrg-SplitContacts"
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

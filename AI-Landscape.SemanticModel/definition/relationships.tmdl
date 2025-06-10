@@ -1,13 +1,20 @@
-relationship AutoDetected_8a517aa5-8730-4a76-8193-0a9c85a034db
-	fromColumn: 000_tblHeadcount.Organisation
-	toColumn: 020_ParentsHierarchy.Organisation
-
 relationship AutoDetected_356d5830-65ea-4330-8b7e-27c3a3657dbc
+	crossFilteringBehavior: bothDirections
 	fromColumn: 000_tblHeadcount.Organisation
 	toColumn: Org.Organisation
 
 relationship 254f5655-6963-9342-ce4f-fede99d89588
 	crossFilteringBehavior: bothDirections
 	fromColumn: 010_Hierarchy.LowestLevelOrg
+	toColumn: Org.Organisation
+
+relationship d9600304-ceb6-c3e6-690b-82c4bbb293c3
+	crossFilteringBehavior: bothDirections
+	fromColumn: 020_ActivitiesSplit.Organisation
+	toColumn: Org.Organisation
+
+relationship 52a1627e-fd67-0c99-7ef4-45a034f6bb8e
+	crossFilteringBehavior: bothDirections
+	fromColumn: Contact.Organisation
 	toColumn: Org.Organisation
 
