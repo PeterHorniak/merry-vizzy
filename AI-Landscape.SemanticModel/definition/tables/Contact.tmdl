@@ -54,9 +54,10 @@ table Contact
 		queryGroup: 3-Load
 		source =
 				let
-				    Source = #"005_tblOrg-SplitContacts"
+				    Source = #"005_tblOrg-SplitContacts",
+				    #"Sorted Rows" = Table.Sort(Source,{{"Organisation", Order.Ascending}, {"IsMain", Order.Ascending}, {"Name", Order.Ascending}, {"Title", Order.Ascending}})
 				in
-				    Source
+				    #"Sorted Rows"
 
 	annotation PBI_NavigationStepName = Navigation
 

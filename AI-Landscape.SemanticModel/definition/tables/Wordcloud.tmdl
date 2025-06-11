@@ -22,7 +22,7 @@ table Wordcloud
 		queryGroup: 3-Load
 		source =
 				let
-				    Source = Table.Combine({#"015_tblOrg-AcronymForMerge", #"015_tblOrg-BaseForMerge"})
+				    Source = Table.Combine({#"015_tblOrg-AcronymForMerge", #"015_tblOrg-BaseNameForMerge"})
 				in
 				    Source
 

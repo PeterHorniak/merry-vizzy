@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "010_tblOrg-events"
+                      "Entity": "Event"
                     }
                   },
                   "Property": "Date"
@@ -34,7 +34,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "010_tblOrg-events"
+                      "Entity": "Event"
                     }
                   },
                   "Property": "Event"
@@ -53,7 +53,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "010_tblOrg-events"
+                    "Entity": "Event"
                   }
                 },
                 "Property": "Date"
@@ -133,5 +133,37 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d8e8db01dc63830ac595",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "72f48788afe623056d10",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event"
+              }
+            },
+            "Property": "Event"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

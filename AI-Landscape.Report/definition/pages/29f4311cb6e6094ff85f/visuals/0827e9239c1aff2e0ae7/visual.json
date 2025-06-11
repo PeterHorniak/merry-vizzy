@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "010_tblOrg-events"
+                      "Entity": "Event"
                     }
                   },
                   "Property": "Organisation-Shortened"
@@ -35,7 +35,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "010_tblOrg-events"
+                      "Entity": "Event"
                     }
                   },
                   "Property": "Date"
@@ -49,7 +49,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "010_tblOrg-events"
+                      "Entity": "Event"
                     }
                   },
                   "Property": "Event"
@@ -65,7 +65,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "010_tblOrg-events"
+                          "Entity": "Event"
                         }
                       },
                       "Property": "Index-Asc-ByDate"
@@ -84,7 +84,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "010_tblOrg-events"
+                          "Entity": "Event"
                         }
                       },
                       "Property": "Index-Asc-ByDate"
@@ -107,7 +107,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "010_tblOrg-events"
+                    "Entity": "Event"
                   }
                 },
                 "Property": "Date"

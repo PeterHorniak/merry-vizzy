@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "010_tblOrg-events"
+                      "Entity": "Event"
                     }
                   },
                   "Property": "Date"
@@ -34,7 +34,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "010_tblOrg-events"
+                      "Entity": "Event"
                     }
                   },
                   "Property": "Event"

@@ -1,0 +1,126 @@
+table Event
+	lineageTag: 32d25435-011d-4f2d-b13a-f73159591caa
+
+	column Organisation
+		dataType: string
+		lineageTag: a24b7394-a77f-457a-b63d-3ce0f59a37af
+		summarizeBy: none
+		sourceColumn: Organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: 53456777-228b-42c4-9e8e-ca3cea1a8801
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: yyyy-mm
+		lineageTag: 11be9495-2622-47a5-b8d6-dcf9d98611db
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Event
+		dataType: string
+		lineageTag: d54ae7ea-883a-410e-aba3-bed84d21e229
+		summarizeBy: none
+		sourceColumn: Event
+
+		annotation SummarizationSetBy = Automatic
+
+	column Event-Type
+		dataType: string
+		lineageTag: 9cfd88b8-68e1-4b4e-b3a7-613c41f66953
+		summarizeBy: none
+		sourceColumn: Event-Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index-Asc-ByOrgDate
+		dataType: int64
+		formatString: 0
+		lineageTag: c44e4553-ce2f-45cc-bbbb-7044eeb5d1a6
+		summarizeBy: sum
+		sourceColumn: Index-Asc-ByOrgDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index-Asc-ByDate
+		dataType: int64
+		formatString: 0
+		lineageTag: ebc7f5f8-359c-47e1-89e8-80e15193f98c
+		summarizeBy: sum
+		sourceColumn: Index-Asc-ByDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Organisation-Shortened
+		dataType: string
+		lineageTag: dc36a542-cf8d-4386-9ce3-d1532435d418
+		summarizeBy: none
+		sourceColumn: Organisation-Shortened
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date-NextEntry
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 21aa8ed4-3611-4190-bce5-73af953289af
+		summarizeBy: none
+		sourceColumn: Date-NextEntry
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DaysSincePreviousEntry
+		dataType: int64
+		formatString: 0
+		lineageTag: 3a9f2234-2e0b-4d56-bbd5-9e3de1405132
+		summarizeBy: sum
+		sourceColumn: DaysSincePreviousEntry
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index-Asc-ByDate-WithJumps
+		dataType: double
+		lineageTag: 1c0e6f69-f4d6-4765-a3f7-0628fd9b5cdb
+		summarizeBy: sum
+		sourceColumn: Index-Asc-ByDate-WithJumps
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Event-Icon
+		dataType: string
+		lineageTag: cb0aa46c-502b-4611-967e-4e6fccb5197d
+		summarizeBy: none
+		sourceColumn: Event-Icon
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Event = m
+		mode: import
+		queryGroup: 3-Load
+		source =
+				let
+				    Source = #"010_tblOrg-events"
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

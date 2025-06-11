@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "010_tblOrg-events"
+                      "Entity": "Event"
                     }
                   },
                   "Property": "Date"
@@ -38,7 +38,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "010_tblOrg-events"
+                      "Entity": "Event"
                     }
                   },
                   "Property": "Event"
@@ -57,7 +57,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "010_tblOrg-events"
+                    "Entity": "Event"
                   }
                 },
                 "Property": "Date"
@@ -184,7 +184,7 @@
                               "Column": {
                                 "Expression": {
                                   "SourceRef": {
-                                    "Entity": "010_tblOrg-events"
+                                    "Entity": "Event"
                                   }
                                 },
                                 "Property": "Date"
@@ -204,7 +204,7 @@
                               "Column": {
                                 "Expression": {
                                   "SourceRef": {
-                                    "Entity": "010_tblOrg-events"
+                                    "Entity": "Event"
                                   }
                                 },
                                 "Property": "Event-Type"
@@ -226,7 +226,7 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Entity": "010_tblOrg-events"
+                                "Entity": "Event"
                               }
                             },
                             "Property": "Event"

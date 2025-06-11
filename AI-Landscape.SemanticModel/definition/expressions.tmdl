@@ -84,22 +84,6 @@ expression 000_tblLocationsAcronyms =
 
 	annotation PBI_ResultType = Table
 
-expression 015_tblOrg-SplitURLs =
-		let
-		    Source = #"010_tblOrg-Formatting",
-		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened", "URL-Main"}),
-		    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"URL-Main", Splitter.SplitTextByDelimiter("#(cr)#(lf)", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "URL-Main"),
-		    #"Split Column by Delimiter1" = Table.ExpandListColumn(Table.TransformColumns(#"Split Column by Delimiter", {{"URL-Main", Splitter.SplitTextByEachDelimiter({"#(cr)"}, QuoteStyle.Csv, false), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "URL-Main"),
-		    #"Split Column by Delimiter2" = Table.ExpandListColumn(Table.TransformColumns(#"Split Column by Delimiter1", {{"URL-Main", Splitter.SplitTextByDelimiter("#(lf)", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "URL-Main")
-		in
-		    #"Split Column by Delimiter2"
-	lineageTag: b17da685-ca3c-4608-b9e1-2f7706fa0ace
-	queryGroup: 2-Transform
-
-	annotation PBI_NavigationStepName = Navigation
-
-	annotation PBI_ResultType = Table
-
 expression 005_tblOrg-events-count =
 		let
 		    Source = #"000_tblOrg",
@@ -121,7 +105,7 @@ expression 005_tblOrg-events-count =
 		in
 		    #"Counted Rows"
 	lineageTag: 30045c78-3f0a-426d-b3c8-43f53a7342b6
-	queryGroup: 2-Transform
+	queryGroup: 2-Transform\Events
 
 	annotation PBI_NavigationStepName = Navigation
 
@@ -147,7 +131,7 @@ expression 005_tblOrg-events-ForMerge =
 		in
 		    #"Added Index3"
 	lineageTag: f65ee772-89bb-483a-b5c9-ffe30f87eb83
-	queryGroup: 2-Transform
+	queryGroup: 2-Transform\Events
 
 	annotation PBI_NavigationStepName = Navigation
 
@@ -198,7 +182,7 @@ expression 005_tblOrg-SplitURLs =
 
 	annotation PBI_ResultType = Table
 
-expression 015_tblOrg-BaseForMerge =
+expression 015_tblOrg-BaseNameForMerge =
 		let
 		    Source = #"010_tblOrg-Formatting",
 		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened.1"}),
@@ -206,7 +190,7 @@ expression 015_tblOrg-BaseForMerge =
 		in
 		    #"Renamed Columns"
 	lineageTag: e6b73457-b824-4220-ada8-ced939fb73af
-	queryGroup: 2-Transform
+	queryGroup: 2-Transform\Wordcloud
 
 	annotation PBI_NavigationStepName = Navigation
 
@@ -221,7 +205,100 @@ expression 015_tblOrg-AcronymForMerge =
 		in
 		    #"Renamed Columns"
 	lineageTag: 77669451-2630-49bf-bcb3-61a7af4b55ee
+	queryGroup: 2-Transform\Wordcloud
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 005_ActivitiesSplit =
+		let
+		    Source = #"000_tblOrg",
+		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Activities AI"}),
+		    #"Replaced Value15" = Table.ReplaceValue(#"Removed Other Columns","Charity / nonprofit","Charity/nonprofit",Replacer.ReplaceText,{"Activities AI"}),
+		    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Replaced Value15", {{"Activities AI", Splitter.SplitTextByDelimiter(", ", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Activities AI"),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Activities AI", type text}}),
+		    #"Duplicated Column" = Table.DuplicateColumn(#"Changed Type", "Activities AI", "Activities AI-shortened"),
+		    #"Replaced Value" = Table.ReplaceValue(#"Duplicated Column","mid-career","mid",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","No specific AI focus","None",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","government","govt",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","Coworking","Cowork",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","Advocacy","Advoc.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","Research","Rsrch",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","Advisory","Advis.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","capabilities","capab.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","Charity / nonprofit","Nonprofit",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","existential","exist.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value11" = Table.ReplaceValue(#"Replaced Value9","catastrophic","catast.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value11","mundane","mund.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value12" = Table.ReplaceValue(#"Replaced Value10","commercial","commrc.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value13" = Table.ReplaceValue(#"Replaced Value12","Company","Co.",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value13","Nonprofit","NPO",Replacer.ReplaceText,{"Activities AI-shortened"}),
+		    #"Added Activities-Explainer" = Table.AddColumn(#"Replaced Value14", "Activities-Explainer", each if [Activities AI] = "Talent early" then "Gets more people into the talent pipeline.#(#)(#)(#)(#)(cr)#(#)(#)(#)(#)(lf) Allows minimal or <3 years experience with no qualifications." else if [Activities AI] = "Talent mid-career" then "For moderately experienced peeps in AI safety, or experienced people in other fields transitioning over." else if [Activities AI] = "Research policy" then "Creates policy proposals and researches governance structures." else if [Activities AI] = "Research safety mundane" then "Looks at mundane harms that society already has coping mechanisms for. E.g. deepfakes, cheating on school exams." else if [Activities AI] = "Research safety existential" then "Explores AI ability to hurt thousands or cost billions" else if [Activities AI] = "Company private" then "Commercial incentives & no public oversight but also not suable for not maximising shareholder profits." else if [Activities AI] = "Company public" then "Commercial incentives & public oversight but suable for not maxxing profits." else if [Activities AI] = "Research capabilities" then "Improves AI capabilities, i.e. letting it do stuff whether safe or not." else if [Activities AI] = "Research safety catastrophic" then "Explores AI ability to hurt thousands or cost billions" else if [Activities AI] = "Advis. public" then "Informs public in neutral way" else if [Activities AI] = "Advoc. public" then "Advocates for particular actions" else null),
+		    #"Duplicated Column1" = Table.DuplicateColumn(#"Added Activities-Explainer", "Activities AI-shortened", "Activities AI - Level"),
+		    #"Split Column by Delimiter1" = Table.SplitColumn(#"Duplicated Column1", "Activities AI - Level", Splitter.SplitTextByDelimiter(" ", QuoteStyle.Csv), {"Activities AI - Level.1", "Activities AI - Level.2", "Activities AI - Level.3"}),
+		    #"Replaced Value16" = Table.ReplaceValue(#"Split Column by Delimiter1","None","No specific AI focus",Replacer.ReplaceText,{"Activities AI-shortened", "Activities AI", "Activities AI - Level.1"})
+		in
+		    #"Replaced Value16"
+	lineageTag: 7e5cc78f-95af-42ad-88c8-b737dfaef4fe
 	queryGroup: 2-Transform
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 010_tblOrg-events =
+		let
+		    Source = #"000_tblOrg",
+		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened", "Status"}),
+		    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"Status", Splitter.SplitTextByDelimiter("#(lf)", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Status"),
+		    #"Filtered Rows" = Table.SelectRows(#"Split Column by Delimiter", each ([Status] <> "" and [Status] <> "Active!" and [Status] <> "Formerly in CSIRO" and [Status] <> "Inactive" and [Status] <> "Not Yet Active")),
+		    #"Split Column by Delimiter1" = Table.SplitColumn(#"Filtered Rows", "Status", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Date", "Event"}),
+		    #"Replaced Value" = Table.ReplaceValue(#"Split Column by Delimiter1",":","",Replacer.ReplaceText,{"Date"}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"Date", type date}}),
+		    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Changed Type"),
+		    #"Sorted Rows" = Table.Sort(#"Removed Errors",{{"Date", Order.Descending}}),
+		    #"Added Index" = Table.AddIndexColumn(#"Sorted Rows", "Index", 1, 1, Int64.Type),
+		    #"Sorted Rows1" = Table.Sort(#"Added Index",{{"Date", Order.Ascending}, {"Organisation", Order.Ascending}}),
+		    #"Added Index1" = Table.AddIndexColumn(#"Sorted Rows1", "Index-Asc-ByOrgDate", 1, 1, Int64.Type),
+		    #"Sorted Rows2" = Table.Sort(#"Added Index1",{{"Date", Order.Ascending}}),
+		    #"Added Index2" = Table.AddIndexColumn(#"Sorted Rows2", "Index-Asc-ByDate", 1, 1, Int64.Type),
+		    #"Replaced Value13" = Table.ReplaceValue(#"Added Index2","Founded","founded",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value13","Active","⚡ Active",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","launch","🚀 launch",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","Merge","🤝 Merge",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","inactive","💤 inactive",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value18" = Table.ReplaceValue(#"Replaced Value6","Inactive","💤 inactive",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value18","founded","👶 founded",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","ended","🪦 ended",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value2","created","👶 created",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","started","👶 started",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","moved","🤝moved",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value9","application","📋 application",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value11" = Table.ReplaceValue(#"Replaced Value10","incorporated","👶 incorporated",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value12" = Table.ReplaceValue(#"Replaced Value11","announced","📢 announced",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value12","concept","💡 concept",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value15" = Table.ReplaceValue(#"Replaced Value14","milestone","🎯 milestone",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value16" = Table.ReplaceValue(#"Replaced Value15","active","⚡ active",Replacer.ReplaceValue,{"Event"}),
+		    #"Replaced Value17" = Table.ReplaceValue(#"Replaced Value16","published","📄 published",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value19" = Table.ReplaceValue(#"Replaced Value17","consultation","👥 consultation",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value20" = Table.ReplaceValue(#"Replaced Value19","start","⚡ start",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value21" = Table.ReplaceValue(#"Replaced Value20","Start","⚡ start",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value22" = Table.ReplaceValue(#"Replaced Value21","occurred","📅 occurred",Replacer.ReplaceText,{"Event"}),
+		    #"Replaced Value23" = Table.ReplaceValue(#"Replaced Value22","event","📅 event",Replacer.ReplaceText,{"Event"}),
+		    #"Added Event-Type" = Table.AddColumn(#"Replaced Value23", "Event-Type", each if Text.Contains([Event], "👶") then "- 👶 founded" else if Text.Contains([Event], "🪦") then "-🪦ended" else if Text.Contains([Event], "🤝") then "- 🤝 merged" else if Text.Contains([Event], "💤") then "- 💤 inactive" else if Text.Contains([Event], "📋") then "- 📋 application" else if Text.Contains([Event], "⚡") then "- ⚡ active" else if Text.Contains([Event], "📢") then "- 📢 announced" else if Text.Contains([Event], "💡") then "-💡 concept" else if Text.Contains([Event], "📅 ") then "- 📅  event" else if Text.Contains([Event], "🚀") then "- 🚀 launch" else if Text.Contains([Event], "👥") then "- 👥 consultation" else if Text.Contains([Event], "📄") then "- 📄 published" else "- Misc"),
+		    #"Merged Queries" = Table.NestedJoin(#"Added Event-Type", {"Index-Asc-ByDate"}, #"005_tblOrg-events-ForMerge", {"Index-Asc-ByDate-ForMerge"}, "005_tblOrg-events-ForMerge", JoinKind.LeftOuter),
+		    #"Expanded 005_tblOrg-events-ForMerge" = Table.ExpandTableColumn(#"Merged Queries", "005_tblOrg-events-ForMerge", {"Date"}, {"Date-NextEntry"}),
+		    #"Added Custom" = Table.AddColumn(#"Expanded 005_tblOrg-events-ForMerge", "DaysSincePreviousEntry", each [#"Date-NextEntry"]-[Date]),
+		    #"Replaced Value24" = Table.ReplaceValue(#"Added Custom",null,#duration(0, 0, 0, 0),Replacer.ReplaceValue,{"DaysSincePreviousEntry"}),
+		    #"Changed Type1" = Table.TransformColumnTypes(#"Replaced Value24",{{"DaysSincePreviousEntry", Int64.Type}}),
+		    #"Added Conditional Column" = Table.AddColumn(#"Changed Type1", "Index-Asc-ByDate-WithJumps", each if [DaysSincePreviousEntry] > 61 then [#"Index-Asc-ByDate"] else (Number.RandomBetween(1,10)*[#"Index-Asc-ByDate"])),
+		    #"Changed Type2" = Table.TransformColumnTypes(#"Added Conditional Column",{{"Index-Asc-ByDate-WithJumps", type number}}),
+		    Custom1 = Table.AddColumn(#"Changed Type2", "Event-Icon", each if Text.Contains([Event], "👶") then "👶" else if Text.Contains([Event], "🪦") then "🪦" else if Text.Contains([Event], "🤝") then "🤝" else if Text.Contains([Event], "💤") then "💤" else if Text.Contains([Event], "📋") then "📋" else if Text.Contains([Event], "⚡") then "⚡" else if Text.Contains([Event], "📢") then "📢" else if Text.Contains([Event], "💡") then "💡" else if Text.Contains([Event], "📅 ") then "📅 " else if Text.Contains([Event], "🚀") then "🚀" else if Text.Contains([Event], "👥") then "👥" else if Text.Contains([Event], "📄") then "📄" else "❔")
+		in
+		    Custom1
+	lineageTag: 9f834d2d-90e0-4bb6-8894-9909d97afe40
+	queryGroup: 2-Transform\Events
 
 	annotation PBI_NavigationStepName = Navigation
 

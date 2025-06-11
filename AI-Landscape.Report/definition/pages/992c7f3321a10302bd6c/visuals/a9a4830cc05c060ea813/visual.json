@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "010_tblOrg-events"
+                      "Entity": "Event"
                     }
                   },
                   "Property": "Organisation-Shortened"
@@ -57,7 +57,7 @@
                 "From": [
                   {
                     "Name": "0",
-                    "Entity": "010_tblOrg-events",
+                    "Entity": "Event",
                     "Type": 0
                   }
                 ],

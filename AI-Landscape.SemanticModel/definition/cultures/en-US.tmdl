@@ -4563,7 +4563,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events"
+			          "ConceptualEntity": "Event"
 			        }
 			      },
 			      "State": "Generated",
@@ -4685,7 +4685,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event.organisation": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualEntity": "Event",
 			          "ConceptualProperty": "Organisation"
 			        }
 			      },
@@ -4754,7 +4754,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event.index": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualEntity": "Event",
 			          "ConceptualProperty": "Index"
 			        }
 			      },
@@ -4870,7 +4870,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event.date": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualEntity": "Event",
 			          "ConceptualProperty": "Date"
 			        }
 			      },
@@ -4907,7 +4907,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event.event": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualEntity": "Event",
 			          "ConceptualProperty": "Event"
 			        }
 			      },
@@ -5023,7 +5023,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event.eventtype": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualEntity": "Event",
 			          "ConceptualProperty": "Event-Type"
 			        }
 			      },
@@ -5155,7 +5155,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event.indexascByOrgDate": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualEntity": "Event",
 			          "ConceptualProperty": "Index-Asc-ByOrgDate"
 			        }
 			      },
@@ -5177,7 +5177,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event.indexascByDate": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualEntity": "Event",
 			          "ConceptualProperty": "Index-Asc-ByDate"
 			        }
 			      },
@@ -5199,7 +5199,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event.organisationshortened": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualEntity": "Event",
 			          "ConceptualProperty": "Organisation-Shortened"
 			        }
 			      },
@@ -5331,7 +5331,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event.dateNextEntry": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualEntity": "Event",
 			          "ConceptualProperty": "Date-NextEntry"
 			        }
 			      },
@@ -5394,7 +5394,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event.day_since_previous_entry": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualEntity": "Event",
 			          "ConceptualProperty": "DaysSincePreviousEntry"
 			        }
 			      },
@@ -5417,7 +5417,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event.indexascByDateWithJump": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualEntity": "Event",
 			          "ConceptualProperty": "Index-Asc-ByDate-WithJumps"
 			        }
 			      },
@@ -5439,7 +5439,7 @@ cultureInfo en-US
 			    "entity_010_tbl_org_event.eventicon": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "010_tblOrg-events",
+			          "ConceptualEntity": "Event",
 			          "ConceptualProperty": "Event-Icon"
 			        }
 			      },
@@ -8220,7 +8220,7 @@ cultureInfo en-US
 			    },
 			    "entity_010_tbl_org_event_has_org": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
+			        "ConceptualEntity": "Event"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9229,7 +9229,7 @@ cultureInfo en-US
 			    },
 			    "entity_010_tbl_org_event_has_eventicon": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
+			        "ConceptualEntity": "Event"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9262,7 +9262,7 @@ cultureInfo en-US
 			    },
 			    "entity_010_tbl_org_event_has_indexascByDateWithJump": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
+			        "ConceptualEntity": "Event"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9295,7 +9295,7 @@ cultureInfo en-US
 			    },
 			    "entity_010_tbl_org_event_has_day_since_previous_entry": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
+			        "ConceptualEntity": "Event"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9328,7 +9328,7 @@ cultureInfo en-US
 			    },
 			    "entity_010_tbl_org_event_has_dateNextEntry": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
+			        "ConceptualEntity": "Event"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9361,7 +9361,7 @@ cultureInfo en-US
 			    },
 			    "entity_010_tbl_org_event_has_organisationshortened": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
+			        "ConceptualEntity": "Event"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9394,7 +9394,7 @@ cultureInfo en-US
 			    },
 			    "entity_010_tbl_org_event_has_indexascByDate": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
+			        "ConceptualEntity": "Event"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9427,7 +9427,7 @@ cultureInfo en-US
 			    },
 			    "entity_010_tbl_org_event_has_indexascByOrgDate": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
+			        "ConceptualEntity": "Event"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9460,7 +9460,7 @@ cultureInfo en-US
 			    },
 			    "entity_010_tbl_org_event_has_eventtype": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
+			        "ConceptualEntity": "Event"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9493,7 +9493,7 @@ cultureInfo en-US
 			    },
 			    "entity_010_tbl_org_event_has_event": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
+			        "ConceptualEntity": "Event"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9526,7 +9526,7 @@ cultureInfo en-US
 			    },
 			    "entity_010_tbl_org_event_has_date": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
+			        "ConceptualEntity": "Event"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -9559,7 +9559,7 @@ cultureInfo en-US
 			    },
 			    "entity_010_tbl_org_event_has_index": {
 			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
+			        "ConceptualEntity": "Event"
 			      },
 			      "State": "Generated",
 			      "Roles": {
