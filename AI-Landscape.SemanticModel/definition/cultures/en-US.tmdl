@@ -1098,6 +1098,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.605
 			          }
+			        },
+			        {
+			          "Org acronyms": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7958,6 +7968,59 @@ cultureInfo en-US
 			    }
 			  },
 			  "Relationships": {
+			    "entity_010_tbl_org_event_has_org": {
+			      "Binding": {
+			        "ConceptualEntity": "010_tblOrg-events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_tbl_org_event": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_event"
+			          }
+			        },
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_tbl_org_event"
+			            },
+			            "Object": {
+			              "Role": "org"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_tbl_org_events_have_org"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "entity_010_tbl_org_event"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_010_tbl_org_events"
+			        }
+			      ]
+			    },
 			    "entity_005_tbl_org_split_parent_has_org": {
 			      "Binding": {
 			        "ConceptualEntity": "005_tblOrg-SplitParents"
@@ -10976,59 +11039,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "qry_last_refreshed_are_refreshed_on_qry_last_refreshed"
-			        }
-			      ]
-			    },
-			    "entity_010_tbl_org_event_has_org": {
-			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-events"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_010_tbl_org_event": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_event"
-			          }
-			        },
-			        "org": {
-			          "Target": {
-			            "Entity": "org"
-			          },
-			          "Nouns": [
-			            {
-			              "organisation": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_010_tbl_org_event"
-			            },
-			            "Object": {
-			              "Role": "org"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_events_have_org"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "org"
-			            },
-			            "Object": {
-			              "Role": "entity_010_tbl_org_event"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "org_have_010_tbl_org_events"
 			        }
 			      ]
 			    },

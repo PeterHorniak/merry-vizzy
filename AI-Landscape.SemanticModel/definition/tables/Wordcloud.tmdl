@@ -1,0 +1,32 @@
+table Wordcloud
+	lineageTag: 36ca1059-c0d6-42f4-8a1f-274837336b44
+
+	column OrganisationForWordcloud
+		dataType: string
+		lineageTag: 17c2bd9b-638c-4898-b041-372a7ef06b89
+		summarizeBy: none
+		sourceColumn: OrganisationForWordcloud
+
+		annotation SummarizationSetBy = Automatic
+
+	column Organisation
+		dataType: string
+		lineageTag: 4cdffe5e-2ccf-4f81-ba52-a2abf5f587f1
+		summarizeBy: none
+		sourceColumn: Organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Wordcloud = m
+		mode: import
+		queryGroup: 3-Load
+		source =
+				let
+				    Source = Table.Combine({#"015_tblOrg-AcronymForMerge", #"015_tblOrg-BaseForMerge"})
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "aa409233dccc5d56a731",
+  "name": "5737745bdee15df39988",
   "position": {
-    "x": 0,
-    "y": 0,
-    "z": 2000,
-    "height": 55.747851002865332,
-    "width": 61.616045845272204,
-    "tabOrder": 4000
+    "x": 203.99783900594275,
+    "y": 4.8406266882766076,
+    "z": 5000,
+    "height": 40.108049702863319,
+    "width": 52.555375472717451,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "actionButton",
@@ -18,7 +18,7 @@
             "shapeType": {
               "expr": {
                 "Literal": {
-                  "Value": "'reset'"
+                  "Value": "'information'"
                 }
               }
             }
@@ -40,44 +40,17 @@
                 }
               }
             },
-            "type": {
-              "expr": {
-                "Literal": {
-                  "Value": "'PageNavigation'"
-                }
-              }
-            },
-            "navigationSection": {
-              "expr": {
-                "Literal": {
-                  "Value": "'c283fb1a79ed61c39f7b'"
-                }
-              }
-            },
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Back to Intro page'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "'There are a lot of similar-sounding names! '"
                 }
               }
             },
-            "text": {
+            "type": {
               "expr": {
                 "Literal": {
-                  "Value": "'Home'"
+                  "Value": "'Bookmark'"
                 }
               }
             }

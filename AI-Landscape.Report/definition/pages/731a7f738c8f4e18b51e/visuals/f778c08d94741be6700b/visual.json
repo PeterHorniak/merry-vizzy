@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "244658a275d6ff5ce10b",
+  "name": "f778c08d94741be6700b",
   "position": {
     "x": 54.629929767693142,
     "y": 0,
-    "z": 3000,
+    "z": 4000,
     "height": 49.0977849810913,
-    "width": 79.5245813074014,
-    "tabOrder": 3000
+    "width": 161.81523500810374,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Tree",
+                    "value": "Org naming",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "20pt"

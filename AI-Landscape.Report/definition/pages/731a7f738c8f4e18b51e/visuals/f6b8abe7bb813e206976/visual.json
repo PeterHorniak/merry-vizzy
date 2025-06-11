@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "f6b8abe7bb813e206976",
+  "position": {
+    "x": 256.43586833144155,
+    "y": 65.38024971623156,
+    "z": 8002,
+    "height": 643.63223609534623,
+    "width": 345.06242905788878
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Wordcloud"
+                    }
+                  },
+                  "Property": "Organisation"
+                }
+              },
+              "queryRef": "Wordcloud.Organisation",
+              "nativeQueryRef": "Organisation"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "317.40068104426786D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Wordcloud.Organisation"
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "90a9b81d00e19d501a8a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Wordcloud"
+              }
+            },
+            "Property": "Organisation"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

@@ -197,3 +197,32 @@ expression 005_tblOrg-SplitURLs =
 
 	annotation PBI_ResultType = Table
 
+expression 015_tblOrg-BaseForMerge =
+		let
+		    Source = #"010_tblOrg-Formatting",
+		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened.1"}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"Organisation-Shortened.1", "OrganisationForWordcloud"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: e6b73457-b824-4220-ada8-ced939fb73af
+	queryGroup: 2-Transform
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 015_tblOrg-AcronymForMerge =
+		let
+		    Source = #"010_tblOrg-Formatting",
+		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened.2"}),
+		    #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([#"Organisation-Shortened.2"] <> null)),
+		    #"Renamed Columns" = Table.RenameColumns(#"Filtered Rows",{{"Organisation-Shortened.2", "OrganisationForWordcloud"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: 77669451-2630-49bf-bcb3-61a7af4b55ee
+	queryGroup: 2-Transform
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

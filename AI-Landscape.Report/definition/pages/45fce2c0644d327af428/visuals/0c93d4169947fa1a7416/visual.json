@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "55cca70a13b722c0701a",
+  "name": "0c93d4169947fa1a7416",
   "position": {
-    "x": 9.7165991902834019,
-    "y": 20.08097165991903,
-    "z": 0,
-    "height": 340.08097165991904,
-    "width": 494.25101214574903,
-    "tabOrder": 0
+    "x": 62.3419689119171,
+    "y": 224.82901554404145,
+    "z": 11001,
+    "height": 99.481865284974091,
+    "width": 344.8704663212435,
+    "tabOrder": 11001
   },
   "visual": {
-    "visualType": "WordCloud1447959067750",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Category": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -23,44 +23,52 @@
                       "Entity": "Org"
                     }
                   },
-                  "Property": "Parent org"
+                  "Property": "Misc"
                 }
               },
-              "queryRef": "Org.Parent org",
-              "nativeQueryRef": "Parent org"
+              "queryRef": "Org.Misc",
+              "nativeQueryRef": "Misc"
             }
           ]
         }
       }
     },
     "objects": {
-      "rotateText": [
+      "values": [
         {
           "properties": {
-            "minAngle": {
+            "wordWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "-30D"
+                  "Value": "true"
                 }
               }
-            },
-            "maxAngle": {
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
               "expr": {
                 "Literal": {
-                  "Value": "45D"
+                  "Value": "'None'"
                 }
               }
             }
           }
         }
       ],
-      "general": [
+      "background": [
         {
           "properties": {
-            "isBrokenText": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }

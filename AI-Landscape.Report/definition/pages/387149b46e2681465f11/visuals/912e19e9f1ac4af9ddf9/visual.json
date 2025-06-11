@@ -202,23 +202,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "aa7d38b4b2809267a330",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_tblOrg-events"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
