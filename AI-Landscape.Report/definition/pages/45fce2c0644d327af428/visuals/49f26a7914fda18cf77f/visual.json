@@ -4,10 +4,10 @@
   "position": {
     "x": 421.47246376811592,
     "y": 347.26956521739129,
-    "z": 6000,
+    "z": 5000,
     "height": 150.631884057971,
     "width": 424.4405797101449,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "tableEx",
@@ -116,37 +116,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5728c8ea6b9778e61a7f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_tblOrg-events"
-              }
-            },
-            "Property": "Event"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "11a013b8f16d6b0f624a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_tblOrg-events"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

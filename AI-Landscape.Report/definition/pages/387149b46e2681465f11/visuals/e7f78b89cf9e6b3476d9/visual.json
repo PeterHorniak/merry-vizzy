@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "e7f78b89cf9e6b3476d9",
   "position": {
-    "x": 0,
-    "y": 0,
+    "x": 7.6897870016384493,
+    "y": 6.2916439104314588,
     "z": 1000,
-    "height": 99.115044247787608,
-    "width": 232.92035398230087,
+    "height": 99.268159475696351,
+    "width": 279.62861824139816,
     "tabOrder": 1000
   },
   "visual": {
@@ -59,7 +59,7 @@
             "startDate": {
               "expr": {
                 "Literal": {
-                  "Value": "datetime'2018-05-04T00:00:00'"
+                  "Value": "datetime'2017-01-01T00:00:00'"
                 }
               }
             },
@@ -103,7 +103,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "datetime'2018-05-04T00:00:00'"
+                            "Value": "datetime'2017-01-01T00:00:00'"
                           }
                         }
                       }
@@ -133,7 +133,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 7,
-                      "Percent": 0.6
+                      "Percent": 0
                     }
                   }
                 }
@@ -143,5 +143,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a1f645b9b6be521bbc96",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_tblOrg-events"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

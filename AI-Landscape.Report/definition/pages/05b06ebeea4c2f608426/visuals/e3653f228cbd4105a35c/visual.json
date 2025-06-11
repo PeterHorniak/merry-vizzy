@@ -3,10 +3,10 @@
   "name": "e3653f228cbd4105a35c",
   "position": {
     "x": 0,
-    "y": 374.784,
+    "y": 628.79439719859931,
     "z": 1000,
-    "height": 345.42933333333332,
-    "width": 370.00533333333334,
+    "height": 90.925462731365684,
+    "width": 211.30565282641319,
     "tabOrder": 1000
   },
   "visual": {
@@ -130,7 +130,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Click focus mode to expand this!'"
                 }
               }
             }

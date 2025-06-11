@@ -157,7 +157,8 @@ table 010_tblOrg-events
 				    #"Merged Queries" = Table.NestedJoin(#"Added Event-Type", {"Index-Asc-ByDate"}, #"005_tblOrg-events-ForMerge", {"Index-Asc-ByDate-ForMerge"}, "005_tblOrg-events-ForMerge", JoinKind.LeftOuter),
 				    #"Expanded 005_tblOrg-events-ForMerge" = Table.ExpandTableColumn(#"Merged Queries", "005_tblOrg-events-ForMerge", {"Date"}, {"Date-NextEntry"}),
 				    #"Added Custom" = Table.AddColumn(#"Expanded 005_tblOrg-events-ForMerge", "DaysSincePreviousEntry", each [#"Date-NextEntry"]-[Date]),
-				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"DaysSincePreviousEntry", Int64.Type}}),
+				    #"Replaced Value24" = Table.ReplaceValue(#"Added Custom",null,#duration(0, 0, 0, 0),Replacer.ReplaceValue,{"DaysSincePreviousEntry"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Replaced Value24",{{"DaysSincePreviousEntry", Int64.Type}}),
 				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type1", "Index-Asc-ByDate-WithJumps", each if [DaysSincePreviousEntry] > 61 then [#"Index-Asc-ByDate"] else (Number.RandomBetween(1,10)*[#"Index-Asc-ByDate"])),
 				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Conditional Column",{{"Index-Asc-ByDate-WithJumps", type number}}),
 				    Custom1 = Table.AddColumn(#"Changed Type2", "Event-Icon", each if Text.Contains([Event], "👶") then "👶" else if Text.Contains([Event], "🪦") then "🪦" else if Text.Contains([Event], "🤝") then "🤝" else if Text.Contains([Event], "💤") then "💤" else if Text.Contains([Event], "📋") then "📋" else if Text.Contains([Event], "⚡") then "⚡" else if Text.Contains([Event], "📢") then "📢" else if Text.Contains([Event], "💡") then "💡" else if Text.Contains([Event], "📅 ") then "📅 " else if Text.Contains([Event], "🚀") then "🚀" else if Text.Contains([Event], "👥") then "👥" else if Text.Contains([Event], "📄") then "📄" else "❔")

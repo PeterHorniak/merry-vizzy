@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "835b7a4c7de09a6ae2fe",
   "position": {
-    "x": 0,
-    "y": 250.37513397642016,
+    "x": 7.6897870016384493,
+    "y": 250.26761332605133,
     "z": 0,
-    "height": 469.88210075026797,
-    "width": 287.416934619507,
+    "height": 462.08629164391044,
+    "width": 279.62861824139816,
     "tabOrder": 0
   },
   "visual": {
@@ -57,45 +57,6 @@
               },
               "queryRef": "005_tblOrg-events.Event",
               "nativeQueryRef": "Event"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "010_tblOrg-events"
-                        }
-                      },
-                      "Property": "Index-Asc-ByDate"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(010_tblOrg-events.Index-Asc-ByDate)",
-              "nativeQueryRef": "Index-Asc-ByDate"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "010_tblOrg-events"
-                        }
-                      },
-                      "Property": "Index-Asc-ByDate"
-                    }
-                  },
-                  "Function": 5
-                }
-              },
-              "queryRef": "CountNonNull(010_tblOrg-events.Index-Asc-ByDate)",
-              "nativeQueryRef": "# Index-Asc-ByDate",
-              "displayName": "# Index-Asc-ByDate"
             }
           ]
         }
@@ -147,34 +108,6 @@
           "selector": {
             "metadata": "005_tblOrg-events.Organisation-Shortened"
           }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "75.07782300381436D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(010_tblOrg-events.Index-Asc-ByDate)"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "59.175094000724165D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "CountNonNull(010_tblOrg-events.Index-Asc-ByDate)"
-          }
         }
       ],
       "values": [
@@ -184,6 +117,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

@@ -4,10 +4,10 @@
   "position": {
     "x": 421.47246376811592,
     "y": 68.266666666666666,
-    "z": 7000,
+    "z": 6000,
     "height": 256,
     "width": 344.3014492753623,
-    "tabOrder": 7000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "tableEx",
@@ -172,65 +172,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6091f50afcfb2866c0e8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "Name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "059a9c32bc760ace5c75",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "Title"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ad36f48e38e8c2d14b54",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "Link"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d178366ed17211dc9594",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "IsMain"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

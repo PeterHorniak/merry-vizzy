@@ -5,11 +5,26 @@
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "187L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
   "visualInteractions": [
     {
       "source": "e7f78b89cf9e6b3476d9",
       "target": "3622290bfd6405c6580d",
-      "type": "NoFilter"
+      "type": "DataFilter"
     }
   ]
 }

@@ -4,10 +4,10 @@
   "position": {
     "x": 421.47246376811592,
     "y": 510.51594202898553,
-    "z": 11000,
+    "z": 10000,
     "height": 200.34782608695653,
     "width": 424.4405797101449,
-    "tabOrder": 11000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020",
@@ -232,37 +232,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "fdc19503bf0b553c9f25",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "005_tblOrg-SplitParents"
-              }
-            },
-            "Property": "Organisation-Shortened"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d9bf938bc6c839eed93b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "005_tblOrg-SplitParents"
-              }
-            },
-            "Property": "Parent org-shortened"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

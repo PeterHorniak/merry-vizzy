@@ -42,6 +42,13 @@ table Contact
 
 		annotation SummarizationSetBy = Automatic
 
+	column _ContactsShared = COUNTROWS(Contact) - DISTINCTCOUNT(Contact[Name])
+		formatString: 0
+		lineageTag: 2cd5e251-b04d-4c3d-9694-1d7d17cc60b3
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Contact = m
 		mode: import
 		queryGroup: 3-Load

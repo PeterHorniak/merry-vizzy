@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "ff0637c3394ed0aac91b",
   "position": {
-    "x": 294.22933333333333,
-    "y": 0,
+    "x": 296.4682341170585,
+    "y": 10.885442721360681,
     "z": 7000,
-    "height": 374.784,
-    "width": 586.41066666666666,
+    "height": 474.47723861930962,
+    "width": 475.1175587793897,
     "tabOrder": 6000
   },
   "visual": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "020_ActivitiesSplit.Activities AI - Level.2",
               "nativeQueryRef": "Activities AI - Level.2",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -108,46 +108,39 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "020_ActivitiesSplit"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "020_ActivitiesSplit"
+                      }
+                    },
+                    "Property": "Activities AI - Level.1"
                   }
                 },
-                "Property": "Activities AI - Level.1"
+                "Function": 5
               }
             },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "020_ActivitiesSplit"
-                  }
-                },
-                "Property": "Activities AI - Level.2"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "020_ActivitiesSplit"
-                  }
-                },
-                "Property": "Activities AI - Level.3"
-              }
-            },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right click to drill into any level!'"
+                }
+              }
+            }
+          }
+        }
+      ]
     }
   },
   "filterConfig": {
@@ -204,6 +197,13 @@
                           {
                             "Literal": {
                               "Value": "'No specific AI focus'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Government'"
                             }
                           }
                         ]

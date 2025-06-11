@@ -10,5 +10,6 @@
     "type": "Default",
     "parameters": [],
     "acceptsFilterContext": "None"
-  }
+  },
+  "visibility": "HiddenInViewMode"
 }

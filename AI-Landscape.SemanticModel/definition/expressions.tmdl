@@ -6,7 +6,7 @@ expression 010_tblOrg-Formatting =
 		    #"URL replaced ) with blank" = Table.ReplaceValue(#"URL replaced ( with https://",")","",Replacer.ReplaceText,{"URL"}),
 		    #"Split URL by linefeed" = Table.SplitColumn(#"URL replaced ) with blank", "URL", Splitter.SplitTextByEachDelimiter({"#(lf)"}, QuoteStyle.Csv, false), {"URL-Main", "URL-Secondary"}),
 		    #"Added ActiveOrNot" = Table.AddColumn(#"Split URL by linefeed", "ActiveOrNot", each if Text.StartsWith([Status], "Active") then "⚡ active" else if Text.StartsWith([Status], "Inactive") then "💤 inactive" else if Text.StartsWith([Status], "To Be Active") then "⏳ To Be Active" else "❔ unknown"),
-		    #"Added OrgStructure" = Table.AddColumn(#"Added ActiveOrNot", "OrgStructure", each if Text.Contains([Activities AI], "Company private") then "Company private" else if Text.Contains([Activities AI], "Company public") then "Company public" else if Text.Contains([Activities AI], "Charity / nonprofit") then "Charity / nonprofit" else if Text.Contains([Activities AI], "Approved research institute") then "Approved research institute (ARI)" else "No structure selected")
+		    #"Added OrgStructure" = Table.AddColumn(#"Added ActiveOrNot", "OrgStructure", each if Text.Contains([Activities AI], "Company private") then "Company private" else if Text.Contains([Activities AI], "Company public") then "Company public" else if Text.Contains([Activities AI], "Charity / nonprofit") then "Charity / nonprofit" else if Text.Contains([Activities AI], "Approved research institute") then "Approved research institute (ARI)" else if Text.Contains([Activities AI], "Government federal") then "Government federal" else if Text.Contains([Activities AI], "Government state") then "Government state" else "No structure selected")
 		in
 		    #"Added OrgStructure"
 	lineageTag: b515d12b-1bca-4180-9b56-1111d984fc1b
@@ -196,25 +196,4 @@ expression 005_tblOrg-SplitURLs =
 	annotation PBI_NavigationStepName = Navigation
 
 	annotation PBI_ResultType = Table
-
-expression 'Errors in 010_tblOrg-events' =
-		let
-		Source = #"010_tblOrg-events",
-		  #"Detected Type Mismatches" = let
-		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Source, Table.ColumnsOfType(Source, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
-		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
-		    fieldNames = Record.FieldNames(recordTypeFields),
-		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
-		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "The type of the value does not match the type of the column.", Detail = v], fieldTypes{i}})
-		in
-		    Table.TransformColumns(Source, pairs),
-		  #"Added Index" = Table.AddIndexColumn(#"Detected Type Mismatches", "Row Number" ,1),
-		  #"Kept Errors" = Table.SelectRowsWithErrors(#"Added Index", {"Organisation", "Organisation-Shortened", "Date", "Event", "Index", "Index-Asc-ByOrgDate", "Index-Asc-ByDate", "Event-Type", "Date-NextEntry", "DaysSincePreviousEntry", "Index-Asc-ByDate-WithJumps", "Event-Icon"}),
-		  #"Reordered Columns" = Table.ReorderColumns(#"Kept Errors", {"Row Number", "Organisation", "Organisation-Shortened", "Date", "Event", "Index", "Index-Asc-ByOrgDate", "Index-Asc-ByDate", "Event-Type", "Date-NextEntry", "DaysSincePreviousEntry", "Index-Asc-ByDate-WithJumps", "Event-Icon"})
-		in
-		  #"Reordered Columns"
-	lineageTag: e46d64af-a095-4fb8-b24f-1a3f9ec7a528
-	queryGroup: 'Query Errors - 11/06/2025 7:53:17 AM'
-
-	annotation PBI_NavigationStepName = Navigation
 

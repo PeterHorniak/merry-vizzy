@@ -4,10 +4,10 @@
   "position": {
     "x": 779.872463768116,
     "y": 68.266666666666666,
-    "z": 8000,
+    "z": 7000,
     "height": 256,
     "width": 66.040579710144925,
-    "tabOrder": 8000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "tableEx",
@@ -110,7 +110,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'URLs'"
+                  "Value": "'Websites'"
                 }
               }
             }
@@ -144,37 +144,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9614fd3cd72311070fb6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "URL"
-              }
-            },
-            "Property": "IsMain"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5180cc82963e3b43c8f5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "URL"
-              }
-            },
-            "Property": "URLWithMain"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

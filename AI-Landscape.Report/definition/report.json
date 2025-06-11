@@ -8,7 +8,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -42,10 +42,10 @@
   ],
   "settings": {
     "isPersistentUserStateDisabled": true,
-    "hideVisualContainerHeader": true,
     "useStylableVisualContainerHeader": true,
     "exportDataMode": "AllowSummarizedAndUnderlying",
     "allowInlineExploration": true,
+    "useEnhancedTooltips": true,
     "useScaledTooltips": true,
     "queryLimitOption": "None",
     "customMemoryLimit": "1048576",

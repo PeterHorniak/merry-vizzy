@@ -3,10 +3,10 @@
   "name": "3e1e900fcf4f2c4f421b",
   "position": {
     "x": 0,
-    "y": 314.76482617586913,
+    "y": 315.03751875937968,
     "z": 0,
-    "height": 215.95092024539878,
-    "width": 477.70961145194275,
+    "height": 215.78789394697347,
+    "width": 402.76138069034516,
     "tabOrder": 0
   },
   "visual": {
@@ -16,23 +16,6 @@
         {
           "properties": {
             "paragraphs": [
-              {
-                "textRuns": [
-                  {
-                    "value": "Click buttons on the right to navigate ->",
-                    "textStyle": {
-                      "fontSize": "26.6667px"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
               {
                 "textRuns": [
                   {
@@ -88,6 +71,24 @@
                   }
                 ],
                 "listType": "ordered"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Click buttons to navigate →",
+                    "textStyle": {
+                      "fontSize": "20pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
               }
             ]
           }

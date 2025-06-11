@@ -4,10 +4,10 @@
   "position": {
     "x": 845.91304347826087,
     "y": 0,
-    "z": 10000,
+    "z": 9000,
     "height": 55.652173913043477,
     "width": 434.08695652173913,
-    "tabOrder": 10000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "card",
@@ -101,28 +101,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ebde2c71f49ce4f3acb0",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Org"
-                  }
-                },
-                "Property": "OrgStructure"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

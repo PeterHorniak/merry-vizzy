@@ -5,75 +5,10 @@
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "77948a261b4edd407661",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
-        "name": "0654e1b3c5d1b142b45e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      }
-    ]
-  },
   "pageBinding": {
     "name": "d462080d96fa3bc9e504",
-    "type": "Drillthrough",
-    "parameters": [
-      {
-        "name": "c5f454a443f0f15ba50d",
-        "boundFilter": "77948a261b4edd407661",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation"
-          }
-        }
-      },
-      {
-        "name": "18b1eace8860a8c0332d",
-        "boundFilter": "0654e1b3c5d1b142b45e",
-        "asAggregation": true,
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation"
-          }
-        }
-      }
-    ],
-    "referenceScope": "CrossReport"
+    "type": "Default",
+    "parameters": []
   },
   "visibility": "HiddenInViewMode"
 }

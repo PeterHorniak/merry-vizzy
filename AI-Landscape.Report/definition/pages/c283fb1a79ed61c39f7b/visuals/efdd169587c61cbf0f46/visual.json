@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "efdd169587c61cbf0f46",
   "position": {
-    "x": 605.31697341513291,
-    "y": 213.98773006134971,
+    "x": 836.25812906453223,
+    "y": 265.7328664332166,
     "z": 12000,
-    "height": 94.233128834355824,
-    "width": 128.26175869120655,
+    "height": 94.127063531765884,
+    "width": 202.98149074537267,
     "tabOrder": 13000
   },
   "visual": {
@@ -22,7 +22,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "005_tblOrg-SplitContacts"
+                          "Entity": "Contact"
                         }
                       },
                       "Property": "Name"
@@ -31,29 +31,24 @@
                   "Function": 5
                 }
               },
-              "queryRef": "005_tblOrg-SplitContacts.Name1",
+              "queryRef": "Contact.Name",
               "nativeQueryRef": "Total contacts",
               "displayName": "Total contacts"
             },
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "005_tblOrg-SplitContacts"
-                        }
-                      },
-                      "Property": "Name"
+                    "SourceRef": {
+                      "Entity": "Contact"
                     }
                   },
-                  "Function": 2
+                  "Property": "_ContactsShared"
                 }
               },
-              "queryRef": "005_tblOrg-SplitContacts.Name",
-              "nativeQueryRef": "Unique contacts",
-              "displayName": "Unique contacts"
+              "queryRef": "Contact._ContactsShared",
+              "nativeQueryRef": "Contacts in multiple orgs",
+              "displayName": "Contacts in multiple orgs"
             }
           ]
         }
@@ -67,7 +62,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "005_tblOrg-SplitContacts"
+                        "Entity": "Contact"
                       }
                     },
                     "Property": "Name"

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "0ecb00c525b51db588e5",
   "position": {
-    "x": 917.46421267893663,
+    "x": 734.02512288367018,
     "y": 0,
     "z": 0,
-    "height": 75.910020449897758,
-    "width": 362.53578732106342,
+    "height": 92.277444019661388,
+    "width": 545.97487711632994,
     "tabOrder": 0
   },
   "visual": {
@@ -26,7 +26,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Lets you explore one branch at a time."
+                    "value": "Lets you quickly explore the structure"
                   }
                 ],
                 "listType": "bullet"
@@ -34,10 +34,42 @@
               {
                 "textRuns": [
                   {
-                    "value": "Doesn't show when same org has multiple parents"
+                    "value": "Doesn't make it obvious when an org has multiple parents"
                   }
                 ],
                 "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Would be cool if clicking an org let you drillthrough to Profile page"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Need to convey the number is just the orgs "
+                  },
+                  {
+                    "value": "directly ",
+                    "textStyle": {
+                      "fontSize": "12px"
+                    }
+                  },
+                  {
+                    "value": "influenced, doesn't count further levels"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
               }
             ]
           }

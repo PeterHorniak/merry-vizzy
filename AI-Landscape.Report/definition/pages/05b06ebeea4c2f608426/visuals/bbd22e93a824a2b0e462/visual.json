@@ -3,10 +3,10 @@
   "name": "bbd22e93a824a2b0e462",
   "position": {
     "x": 0,
-    "y": 96.938666666666663,
+    "y": 71.075537768884445,
     "z": 2000,
-    "height": 230.74133333333333,
-    "width": 263.50933333333336,
+    "height": 540.43021510755375,
+    "width": 279.17958979489742,
     "tabOrder": 2000
   },
   "visual": {
@@ -317,29 +317,7 @@
                   }
                 }
               ],
-              "isToggled": true,
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'govt'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'public'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
+              "isToggled": true
             },
             {
               "identityValues": [
@@ -517,7 +495,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "162.71895532680526D"
+                  "Value": "205.05313385904134D"
                 }
               }
             }

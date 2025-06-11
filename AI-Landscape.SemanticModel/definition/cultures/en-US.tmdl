@@ -7929,9 +7929,450 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "contact.entity__ContactsShared": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Contact",
+			          "ConceptualProperty": "_ContactsShared"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_ContactsShared": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Contacts in multiple orgs": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "entity_005_tbl_org_split_parent_has_org": {
+			      "Binding": {
+			        "ConceptualEntity": "005_tblOrg-SplitParents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_005_tbl_org_split_parent": {
+			          "Target": {
+			            "Entity": "entity_005_tbl_org_split_parent"
+			          }
+			        },
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_005_tbl_org_split_parent"
+			            },
+			            "Object": {
+			              "Role": "org"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing005_tbl_org_split_parents_have_org"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "entity_005_tbl_org_split_parent"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_005_tbl_org_split_parents"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_org": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          },
+			          "Nouns": [
+			            {
+			              "lowest level org": {
+			                "State": "Generated"
+			              }
+			            },
+			            {
+			              "level org": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "org"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_org"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_010_hierarchies"
+			        }
+			      ]
+			    },
+			    "entity_000_tbl_headcount_has_org": {
+			      "Binding": {
+			        "ConceptualEntity": "000_tblHeadcount"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_000_tbl_headcount": {
+			          "Target": {
+			            "Entity": "entity_000_tbl_headcount"
+			          }
+			        },
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_000_tbl_headcount"
+			            },
+			            "Object": {
+			              "Role": "org"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing000_tbl_headcounts_have_org"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "entity_000_tbl_headcount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_000_tbl_headcounts"
+			        }
+			      ]
+			    },
+			    "entity_020_activities_split_has_org": {
+			      "Binding": {
+			        "ConceptualEntity": "020_ActivitiesSplit"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_020_activities_split": {
+			          "Target": {
+			            "Entity": "entity_020_activities_split"
+			          }
+			        },
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_020_activities_split"
+			            },
+			            "Object": {
+			              "Role": "org"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing020_activities_splits_have_org"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "entity_020_activities_split"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_020_activities_splits"
+			        }
+			      ]
+			    },
+			    "contact_has_entity__ContactsShared": {
+			      "Binding": {
+			        "ConceptualEntity": "Contact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "contact": {
+			          "Target": {
+			            "Entity": "contact"
+			          }
+			        },
+			        "contact.entity__ContactsShared": {
+			          "Target": {
+			            "Entity": "contact.entity__ContactsShared"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "contact"
+			            },
+			            "Object": {
+			              "Role": "contact.entity__ContactsShared"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "contacts_have__ContactsShareds"
+			        }
+			      ]
+			    },
+			    "entity_010_tbl_org_split_child_has_organisationshortened": {
+			      "Binding": {
+			        "ConceptualEntity": "010_tblOrg-SplitChildren"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_tbl_org_split_child": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_split_child"
+			          }
+			        },
+			        "entity_010_tbl_org_split_child.organisationshortened": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_split_child.organisationshortened"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_tbl_org_split_child"
+			            },
+			            "Object": {
+			              "Role": "entity_010_tbl_org_split_child.organisationshortened"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_tbl_org_split_children_have_organisationshortened"
+			        }
+			      ]
+			    },
+			    "entity_010_tbl_org_split_child_has_organisationacronym": {
+			      "Binding": {
+			        "ConceptualEntity": "010_tblOrg-SplitChildren"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_tbl_org_split_child": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_split_child"
+			          }
+			        },
+			        "entity_010_tbl_org_split_child.organisationacronym": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_split_child.organisationacronym"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_tbl_org_split_child"
+			            },
+			            "Object": {
+			              "Role": "entity_010_tbl_org_split_child.organisationacronym"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_tbl_org_split_children_have_organisationacronyms"
+			        }
+			      ]
+			    },
+			    "entity_010_tbl_org_split_child_has_organisationbase": {
+			      "Binding": {
+			        "ConceptualEntity": "010_tblOrg-SplitChildren"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_tbl_org_split_child": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_split_child"
+			          }
+			        },
+			        "entity_010_tbl_org_split_child.organisationbase": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_split_child.organisationbase"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_tbl_org_split_child"
+			            },
+			            "Object": {
+			              "Role": "entity_010_tbl_org_split_child.organisationbase"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_tbl_org_split_children_have_organisationbases"
+			        }
+			      ]
+			    },
+			    "entity_010_tbl_org_split_child_has_URLParentOrg": {
+			      "Binding": {
+			        "ConceptualEntity": "010_tblOrg-SplitChildren"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_tbl_org_split_child": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_split_child"
+			          }
+			        },
+			        "entity_010_tbl_org_split_child.URLParentOrg": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_split_child.URLParentOrg"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_tbl_org_split_child"
+			            },
+			            "Object": {
+			              "Role": "entity_010_tbl_org_split_child.URLParentOrg"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_tbl_org_split_children_have_URLParentOrgs"
+			        }
+			      ]
+			    },
+			    "entity_010_tbl_org_split_child_has_parent_orgshortened": {
+			      "Binding": {
+			        "ConceptualEntity": "010_tblOrg-SplitChildren"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_tbl_org_split_child": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_split_child"
+			          }
+			        },
+			        "entity_010_tbl_org_split_child.parent_orgshortened": {
+			          "Target": {
+			            "Entity": "entity_010_tbl_org_split_child.parent_orgshortened"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_tbl_org_split_child"
+			            },
+			            "Object": {
+			              "Role": "entity_010_tbl_org_split_child.parent_orgshortened"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_tbl_org_split_children_have_parent_orgshortened"
+			        }
+			      ]
+			    },
 			    "entity_010_tbl_org_split_child_has_parent_org": {
 			      "Binding": {
 			        "ConceptualEntity": "010_tblOrg-SplitChildren"
@@ -10535,388 +10976,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "qry_last_refreshed_are_refreshed_on_qry_last_refreshed"
-			        }
-			      ]
-			    },
-			    "entity_010_tbl_org_split_child_has_parent_orgshortened": {
-			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-SplitChildren"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_010_tbl_org_split_child": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_split_child"
-			          }
-			        },
-			        "entity_010_tbl_org_split_child.parent_orgshortened": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_split_child.parent_orgshortened"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_010_tbl_org_split_child"
-			            },
-			            "Object": {
-			              "Role": "entity_010_tbl_org_split_child.parent_orgshortened"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_split_children_have_parent_orgshortened"
-			        }
-			      ]
-			    },
-			    "entity_010_tbl_org_split_child_has_URLParentOrg": {
-			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-SplitChildren"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_010_tbl_org_split_child": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_split_child"
-			          }
-			        },
-			        "entity_010_tbl_org_split_child.URLParentOrg": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_split_child.URLParentOrg"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_010_tbl_org_split_child"
-			            },
-			            "Object": {
-			              "Role": "entity_010_tbl_org_split_child.URLParentOrg"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_split_children_have_URLParentOrgs"
-			        }
-			      ]
-			    },
-			    "entity_010_tbl_org_split_child_has_organisationbase": {
-			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-SplitChildren"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_010_tbl_org_split_child": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_split_child"
-			          }
-			        },
-			        "entity_010_tbl_org_split_child.organisationbase": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_split_child.organisationbase"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_010_tbl_org_split_child"
-			            },
-			            "Object": {
-			              "Role": "entity_010_tbl_org_split_child.organisationbase"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_split_children_have_organisationbases"
-			        }
-			      ]
-			    },
-			    "entity_010_tbl_org_split_child_has_organisationacronym": {
-			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-SplitChildren"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_010_tbl_org_split_child": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_split_child"
-			          }
-			        },
-			        "entity_010_tbl_org_split_child.organisationacronym": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_split_child.organisationacronym"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_010_tbl_org_split_child"
-			            },
-			            "Object": {
-			              "Role": "entity_010_tbl_org_split_child.organisationacronym"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_split_children_have_organisationacronyms"
-			        }
-			      ]
-			    },
-			    "entity_010_tbl_org_split_child_has_organisationshortened": {
-			      "Binding": {
-			        "ConceptualEntity": "010_tblOrg-SplitChildren"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_010_tbl_org_split_child": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_split_child"
-			          }
-			        },
-			        "entity_010_tbl_org_split_child.organisationshortened": {
-			          "Target": {
-			            "Entity": "entity_010_tbl_org_split_child.organisationshortened"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_010_tbl_org_split_child"
-			            },
-			            "Object": {
-			              "Role": "entity_010_tbl_org_split_child.organisationshortened"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing010_tbl_org_split_children_have_organisationshortened"
-			        }
-			      ]
-			    },
-			    "entity_020_activities_split_has_org": {
-			      "Binding": {
-			        "ConceptualEntity": "020_ActivitiesSplit"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_020_activities_split": {
-			          "Target": {
-			            "Entity": "entity_020_activities_split"
-			          }
-			        },
-			        "org": {
-			          "Target": {
-			            "Entity": "org"
-			          },
-			          "Nouns": [
-			            {
-			              "organisation": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_020_activities_split"
-			            },
-			            "Object": {
-			              "Role": "org"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing020_activities_splits_have_org"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "org"
-			            },
-			            "Object": {
-			              "Role": "entity_020_activities_split"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "org_have_020_activities_splits"
-			        }
-			      ]
-			    },
-			    "entity_000_tbl_headcount_has_org": {
-			      "Binding": {
-			        "ConceptualEntity": "000_tblHeadcount"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_000_tbl_headcount": {
-			          "Target": {
-			            "Entity": "entity_000_tbl_headcount"
-			          }
-			        },
-			        "org": {
-			          "Target": {
-			            "Entity": "org"
-			          },
-			          "Nouns": [
-			            {
-			              "organisation": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_000_tbl_headcount"
-			            },
-			            "Object": {
-			              "Role": "org"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing000_tbl_headcounts_have_org"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "org"
-			            },
-			            "Object": {
-			              "Role": "entity_000_tbl_headcount"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "org_have_000_tbl_headcounts"
-			        }
-			      ]
-			    },
-			    "entity_010_hierarchy_has_org": {
-			      "Binding": {
-			        "ConceptualEntity": "010_Hierarchy"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_010_hierarchy": {
-			          "Target": {
-			            "Entity": "entity_010_hierarchy"
-			          }
-			        },
-			        "org": {
-			          "Target": {
-			            "Entity": "org"
-			          },
-			          "Nouns": [
-			            {
-			              "lowest level org": {
-			                "State": "Generated"
-			              }
-			            },
-			            {
-			              "level org": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_010_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "org"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing010_hierarchies_have_org"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "org"
-			            },
-			            "Object": {
-			              "Role": "entity_010_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "org_have_010_hierarchies"
-			        }
-			      ]
-			    },
-			    "entity_005_tbl_org_split_parent_has_org": {
-			      "Binding": {
-			        "ConceptualEntity": "005_tblOrg-SplitParents"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_005_tbl_org_split_parent": {
-			          "Target": {
-			            "Entity": "entity_005_tbl_org_split_parent"
-			          }
-			        },
-			        "org": {
-			          "Target": {
-			            "Entity": "org"
-			          },
-			          "Nouns": [
-			            {
-			              "organisation": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_005_tbl_org_split_parent"
-			            },
-			            "Object": {
-			              "Role": "org"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing005_tbl_org_split_parents_have_org"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "org"
-			            },
-			            "Object": {
-			              "Role": "entity_005_tbl_org_split_parent"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "org_have_005_tbl_org_split_parents"
 			        }
 			      ]
 			    },
