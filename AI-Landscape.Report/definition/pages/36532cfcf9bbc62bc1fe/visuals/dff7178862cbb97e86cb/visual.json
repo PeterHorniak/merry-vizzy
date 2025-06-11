@@ -1,0 +1,277 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "dff7178862cbb97e86cb",
+  "position": {
+    "x": 15.705521472392638,
+    "y": 594.19222903885486,
+    "z": 6000,
+    "height": 125.6441717791411,
+    "width": 1240.081799591002,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Level2"
+                }
+              },
+              "queryRef": "010_Hierarchy.Level2",
+              "nativeQueryRef": "Level2"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Level3"
+                }
+              },
+              "queryRef": "010_Hierarchy.Level3",
+              "nativeQueryRef": "Level3"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Level4"
+                }
+              },
+              "queryRef": "010_Hierarchy.Level4",
+              "nativeQueryRef": "Level4"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Level5"
+                }
+              },
+              "queryRef": "010_Hierarchy.Level5",
+              "nativeQueryRef": "Level5"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "Level6"
+                }
+              },
+              "queryRef": "010_Hierarchy.Level6",
+              "nativeQueryRef": "Level6"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Org"
+                    }
+                  },
+                  "Property": "OrgStructure"
+                }
+              },
+              "queryRef": "Org.OrgStructure",
+              "nativeQueryRef": "StructureLowestLevelOrg",
+              "displayName": "StructureLowestLevelOrg"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "LowestLevelOrg"
+                }
+              },
+              "queryRef": "010_Hierarchy.LowestLevelOrg",
+              "nativeQueryRef": "LowestLevelOrg"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "108.75051430013144D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "010_Hierarchy.LowestLevelOrg"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Underlying data'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "09072063928113f14b11",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_Hierarchy"
+              }
+            },
+            "Property": "Level2"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9e67284ecd451f9a04ca",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_Hierarchy"
+              }
+            },
+            "Property": "Level3"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ad2d256447cf4f1e3749",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_Hierarchy"
+              }
+            },
+            "Property": "Level4"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e9ebd60fb46e5fdd9366",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_Hierarchy"
+              }
+            },
+            "Property": "Level5"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6528d2a4c858d228bb39",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_Hierarchy"
+              }
+            },
+            "Property": "Level6"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e53170cc4258bbd610f7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "OrgStructure"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "47b0e091466aa9ebf467",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_Hierarchy"
+              }
+            },
+            "Property": "LowestLevelOrg"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

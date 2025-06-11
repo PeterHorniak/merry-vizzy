@@ -238,5 +238,84 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "341d90d6324bf4186c02",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_Hierarchy"
+              }
+            },
+            "Property": "Level1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c39156cf55336808172f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_Hierarchy"
+              }
+            },
+            "Property": "Lvl2"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "21077f38e434b10093bb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_Hierarchy"
+              }
+            },
+            "Property": "Lvl3"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6b2351819ed1de54ae91",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_Hierarchy"
+              }
+            },
+            "Property": "Lvl4"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d0475f49708187e35dec",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "010_Hierarchy"
+                  }
+                },
+                "Property": "Level1"
+              }
+            },
+            "Function": 2
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

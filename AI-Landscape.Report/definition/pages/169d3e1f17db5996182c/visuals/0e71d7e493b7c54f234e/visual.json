@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "ff0637c3394ed0aac91b",
+  "name": "0e71d7e493b7c54f234e",
   "position": {
-    "x": 296.4682341170585,
-    "y": 10.885442721360681,
+    "x": 801.75014392630976,
+    "y": 0,
     "z": 7000,
-    "height": 474.47723861930962,
-    "width": 475.1175587793897,
+    "height": 512.147380541163,
+    "width": 478.2498560736903,
     "tabOrder": 6000
   },
   "visual": {
@@ -230,6 +230,53 @@
             }
           ]
         }
+      },
+      {
+        "name": "27030eed1444297ca0f0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "020_ActivitiesSplit"
+              }
+            },
+            "Property": "Activities AI - Level.2"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "73bf5c36a75b8f57570f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "020_ActivitiesSplit"
+              }
+            },
+            "Property": "Activities AI - Level.3"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "04dc20c9344329536f77",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "020_ActivitiesSplit"
+                  }
+                },
+                "Property": "Activities AI - Level.1"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

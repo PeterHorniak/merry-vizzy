@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "db1ca6d91059cdf00ef9",
+  "name": "73389bf3319098185f08",
   "position": {
-    "x": 185.00266666666667,
+    "x": 0,
     "y": 0,
-    "z": 6000,
-    "height": 40.277333333333331,
-    "width": 52.565333333333335,
-    "tabOrder": 7000
+    "z": 0,
+    "height": 55.747851002865332,
+    "width": 61.616045845272204,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "actionButton",
@@ -18,7 +18,7 @@
             "shapeType": {
               "expr": {
                 "Literal": {
-                  "Value": "'information'"
+                  "Value": "'reset'"
                 }
               }
             }
@@ -40,17 +40,44 @@
                 }
               }
             },
-            "tooltip": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Shows frequency of activities among organisations '"
-                }
-              }
-            },
             "type": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bookmark'"
+                  "Value": "'PageNavigation'"
+                }
+              }
+            },
+            "navigationSection": {
+              "expr": {
+                "Literal": {
+                  "Value": "'c283fb1a79ed61c39f7b'"
+                }
+              }
+            },
+            "tooltip": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Back to Intro page'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Home'"
                 }
               }
             }

@@ -1,0 +1,84 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "8e5b77fd2f708c0e424f",
+  "position": {
+    "x": 409.71790443293037,
+    "y": 67.058146229130685,
+    "z": 9005,
+    "height": 66.32124352331607,
+    "width": 134.11629245826137,
+    "tabOrder": 9004
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Contact"
+                    }
+                  },
+                  "Property": "Organisation"
+                }
+              },
+              "queryRef": "Contact.Organisation",
+              "nativeQueryRef": "Organisation",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1a5536092d61a822236f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Contact"
+              }
+            },
+            "Property": "Organisation"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

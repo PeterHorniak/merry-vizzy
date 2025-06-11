@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "bbd22e93a824a2b0e462",
+  "name": "d3ff34aad0602aefb4bf",
   "position": {
     "x": 0,
-    "y": 71.075537768884445,
+    "y": 70.7426597582038,
     "z": 2000,
-    "height": 540.43021510755375,
-    "width": 279.17958979489742,
+    "height": 649.21128382268284,
+    "width": 279.28612550374208,
     "tabOrder": 2000
   },
   "visual": {
@@ -629,6 +629,67 @@
             }
           ]
         }
+      },
+      {
+        "name": "b79f54ccfd5dfcb1dcbd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "020_ActivitiesSplit"
+              }
+            },
+            "Property": "Activities AI - Level.2"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bab5b837ba2f685cd15c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "020_ActivitiesSplit"
+              }
+            },
+            "Property": "Activities AI - Level.3"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "206f57ea543228317e79",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "020_ActivitiesSplit"
+              }
+            },
+            "Property": "Organisation"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "146d5af260eaa80dde74",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "020_ActivitiesSplit"
+                  }
+                },
+                "Property": "Organisation"
+              }
+            },
+            "Function": 2
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

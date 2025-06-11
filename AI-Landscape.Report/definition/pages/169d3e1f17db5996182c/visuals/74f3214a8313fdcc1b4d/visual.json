@@ -1,20 +1,34 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "e3653f228cbd4105a35c",
+  "name": "74f3214a8313fdcc1b4d",
   "position": {
-    "x": 0,
-    "y": 628.79439719859931,
-    "z": 1000,
-    "height": 90.925462731365684,
-    "width": 211.30565282641319,
-    "tabOrder": 1000
+    "x": 296.4682341170585,
+    "y": 512.256128064032,
+    "z": 0,
+    "height": 208.104052026013,
+    "width": 983.5317658829415,
+    "tabOrder": 0
   },
   "visual": {
-    "visualType": "Sunburst1445472000808",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Nodes": {
+        "Values": {
           "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "020_ActivitiesSplit"
+                    }
+                  },
+                  "Property": "Organisation"
+                }
+              },
+              "queryRef": "020_ActivitiesSplit.Organisation",
+              "nativeQueryRef": "Organisation"
+            },
             {
               "field": {
                 "Column": {
@@ -27,7 +41,8 @@
                 }
               },
               "queryRef": "020_ActivitiesSplit.Activities AI - Level.1",
-              "nativeQueryRef": "Activities AI - Level.1"
+              "nativeQueryRef": "Level 1",
+              "displayName": "Level 1"
             },
             {
               "field": {
@@ -41,7 +56,8 @@
                 }
               },
               "queryRef": "020_ActivitiesSplit.Activities AI - Level.2",
-              "nativeQueryRef": "Activities AI - Level.2"
+              "nativeQueryRef": "Level 2",
+              "displayName": "Level 2"
             },
             {
               "field": {
@@ -55,75 +71,101 @@
                 }
               },
               "queryRef": "020_ActivitiesSplit.Activities AI - Level.3",
-              "nativeQueryRef": "Activities AI - Level.3"
-            }
-          ]
-        },
-        "Values": {
-          "projections": [
+              "nativeQueryRef": "Level 3",
+              "displayName": "Level 3"
+            },
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "020_ActivitiesSplit"
-                        }
-                      },
-                      "Property": "Organisation"
+                    "SourceRef": {
+                      "Entity": "020_ActivitiesSplit"
                     }
                   },
-                  "Function": 2
+                  "Property": "Activities-Explainer"
                 }
               },
-              "queryRef": "Min(020_ActivitiesSplit.Organisation)",
-              "nativeQueryRef": "# orgs",
-              "displayName": "# orgs"
+              "queryRef": "020_ActivitiesSplit.Activities-Explainer",
+              "nativeQueryRef": "Activities-Explainer"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "020_ActivitiesSplit"
-                      }
-                    },
-                    "Property": "Organisation"
-                  }
-                },
-                "Function": 2
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
-      "group": [
+      "columnWidth": [
         {
           "properties": {
-            "fontSizeLabel": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "195.46207794010874D"
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "020_ActivitiesSplit.Organisation"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "494.98333773021756D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "020_ActivitiesSplit.Activities-Explainer"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "71.52799999999999D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "020_ActivitiesSplit.Activities AI - Level.3"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107.77866473354986D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "020_ActivitiesSplit.Activities AI - Level.1"
           }
         }
       ]
     },
     "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -137,7 +179,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Click focus mode to expand this!'"
+                  "Value": "'Underlying data!'"
                 }
               }
             }
@@ -149,7 +191,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "4d0513521c75bf8f56df",
+        "name": "976e3f8fa24c015f9a5c",
         "field": {
           "Column": {
             "Expression": {
@@ -157,7 +199,7 @@
                 "Entity": "020_ActivitiesSplit"
               }
             },
-            "Property": "Activities AI - Level.1"
+            "Property": "Activities AI"
           }
         },
         "type": "Categorical",
@@ -184,7 +226,7 @@
                                 "Source": "0"
                               }
                             },
-                            "Property": "Activities AI - Level.1"
+                            "Property": "Activities AI"
                           }
                         }
                       ],
@@ -193,20 +235,6 @@
                           {
                             "Literal": {
                               "Value": "''"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'None'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'No specific AI focus'"
                             }
                           }
                         ]
@@ -218,6 +246,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {

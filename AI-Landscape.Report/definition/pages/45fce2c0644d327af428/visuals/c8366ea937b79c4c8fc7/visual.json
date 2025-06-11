@@ -41,7 +41,7 @@
             "mapTheme": {
               "expr": {
                 "Literal": {
-                  "Value": "'canvasDark'"
+                  "Value": "'grayscale'"
                 }
               }
             }

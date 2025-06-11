@@ -1,0 +1,178 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "e7dc15ef268d2c8d5b16",
+  "position": {
+    "x": 614.478527607362,
+    "y": 382.82208588957059,
+    "z": 7000,
+    "height": 321.30879345603273,
+    "width": 665.52147239263809,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "WordCloud1447959067750",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Org"
+                    }
+                  },
+                  "Property": "Mission"
+                }
+              },
+              "queryRef": "Org.Mission",
+              "nativeQueryRef": "Mission"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "Mission"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Min(Org.Mission)",
+              "nativeQueryRef": "Count of Mission"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "rotateText": [
+        {
+          "properties": {
+            "minAngle": {
+              "expr": {
+                "Literal": {
+                  "Value": "-30D"
+                }
+              }
+            },
+            "maxAngle": {
+              "expr": {
+                "Literal": {
+                  "Value": "45D"
+                }
+              }
+            },
+            "maxNumberOfOrientations": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "isBrokenText": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "minRepetitionsToDisplay": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "isPunctuationsCharacters": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "minFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "maxNumberOfWords": {
+              "expr": {
+                "Literal": {
+                  "Value": "800D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stopWords": [
+        {
+          "properties": {
+            "isDefaultStopWords": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Org mission keywords repeated >=2'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

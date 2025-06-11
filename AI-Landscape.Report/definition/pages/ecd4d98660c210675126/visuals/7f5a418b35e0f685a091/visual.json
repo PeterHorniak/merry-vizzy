@@ -1,0 +1,117 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "7f5a418b35e0f685a091",
+  "position": {
+    "x": 378.29959514170042,
+    "y": 0,
+    "z": 1002,
+    "height": 279.83805668016197,
+    "width": 150
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "020_ActivitiesSplit"
+                    }
+                  },
+                  "Property": "Activities AI"
+                }
+              },
+              "queryRef": "020_ActivitiesSplit.Activities AI",
+              "nativeQueryRef": "Activities AI",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "0",
+                    "Entity": "020_ActivitiesSplit",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "0"
+                                }
+                              },
+                              "Property": "Activities AI"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Advisory govt'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0798e610417ec0315bc2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "020_ActivitiesSplit"
+              }
+            },
+            "Property": "Activities AI"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

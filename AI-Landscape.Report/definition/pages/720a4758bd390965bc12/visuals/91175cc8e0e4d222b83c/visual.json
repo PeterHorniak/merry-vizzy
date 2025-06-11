@@ -1,0 +1,303 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "91175cc8e0e4d222b83c",
+  "position": {
+    "x": 590.259067357513,
+    "y": 0,
+    "z": 9004,
+    "height": 398.664363845711,
+    "width": 689.74093264248711,
+    "tabOrder": 9003
+  },
+  "visual": {
+    "visualType": "networkGraphA96234ADB8D143D1837FEC426BB34781",
+    "query": {
+      "queryState": {
+        "category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Contact"
+                    }
+                  },
+                  "Property": "Organisation"
+                }
+              },
+              "queryRef": "Contact.Organisation",
+              "nativeQueryRef": "Organisation"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Contact"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "Contact.Name",
+              "nativeQueryRef": "Name"
+            }
+          ]
+        },
+        "measure": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Contact"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(Contact.Name)",
+              "nativeQueryRef": "Count of Name"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "visualConfig": [
+        {
+          "properties": {
+            "advancedSettings": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "summaryTable": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "lasso": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "reverseLasso": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "footer": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Need way to easily navigate!'"
+                }
+              }
+            },
+            "webURL": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            },
+            "showBorder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "legendPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'RightTop'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "editor": [
+        {
+          "properties": {
+            "darkMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "numberFormatting": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "config": [
+        {
+          "properties": {
+            "linkOptions": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"linkStyleType\":\"dashed\",\"linkCurve\":\"straight\",\"linkColorType\":\"single\",\"gradientType\":\"default\",\"fillmin\":\"rgb(253,98,94)\",\"midcolor\":false,\"fillmid\":\"rgb(3,194,129)\",\"fillmax\":\"rgb(92,113,187)\",\"linkColor\":\"rgb(217,217,217)\",\"arrowColor\":\"rgb(245,166,35)\",\"linkOpacity\":100,\"linkWidthType\":\"dynamic\",\"linkWidth\":1.5,\"arrowSize\":2,\"showDirectionalArrow\":false}'"
+                }
+              }
+            },
+            "shapeOptions": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"type\":\"SHAPE\",\"byNodeLevel\":\"byNodeLevel\",\"singleShape\":\"circle\",\"singleIcon\":{\"prefix\":\"fas\",\"iconName\":\"circle\",\"icon\":[512,512,[],\"f111\",\"M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z\"],\"tabDetails\":{\"type\":\"faicon\",\"tabName\":\"__icons__\"}},\"iconXOffset\":0,\"iconYOffset\":0,\"singleImage\":\"\",\"iconColor\":\"\",\"iconSize\":\"\",\"byNodeLevelShapes\":[\"circle\",\"triangle\"],\"byNodeLevelIcons\":[\"\",\"\"],\"byNodeLevelImages\":[\"\",\"\"],\"selectedImageField\":\"\",\"nodeBorder\":false,\"borderAppliedOn\":\"parentNode\",\"isSameBorderColor\":true,\"borderWidth\":2,\"borderColor\":\"rgb(217,217,217)\",\"hideLabelForImageNodes\":false,\"equalSizedNodes\":false,\"imagesMappingByLevel\":[{\"index\":0,\"name\":\"Category 1\",\"image\":\"\"},{\"index\":1,\"name\":\"Category 2\",\"image\":\"\"}],\"imageSize\":3,\"maxNodeSize\":20,\"minNodeSize\":10,\"isAutoImageApplied\":false,\"enableAnimation\":false,\"isPopup\":true,\"isHighlight\":true,\"animateNetworkStimulation\":false,\"animationSpeed\":2,\"highlightColor\":\"rgb(183,183,183)\",\"isChangeMadeFromAS\":true}'"
+                }
+              }
+            },
+            "dataLabelsOptions": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"showInsideLabels\":false,\"customLabelfieldValue\":\"\",\"insideLabelStyle\":\"dataValue\",\"insideAutoFontSizeMode\":true,\"showBoldParentNode\":true,\"insideFontSize\":10,\"insideFontFamily\":\"\\\"Segoe UI\\\", wf_segoe-ui_normal, helvetica, arial, sans-serif\",\"insideColorType\":\"FIXED\",\"insideColor\":\"rgba(255,255,255,1)\",\"insideBackgroundColor\":\"rgba(143,139,139,1)\",\"styling\":[],\"insideLabelTextShadow\":true,\"maxCharLimitEnabled\":false,\"maxCharLimit\":10,\"applyBackgroundFor\":\"allNode\",\"backgroundType\":\"shadow\",\"showOutsideLabels\":true,\"outsideLabelStyle\":\"category\",\"outsideFontSizeMode\":\"auto\",\"outsideFontSize\":10,\"outsideFontFamily\":\"\\\"Segoe UI\\\", wf_segoe-ui_normal, helvetica, arial, sans-serif\",\"outsideColor\":\"rgba(255,255,255,1)\",\"enableOuterBackgroundColor\":true,\"outerStyling\":[],\"outsidemaxCharLimitEnabled\":true,\"outsidemaxCharLimit\":30,\"outsideAutoFontSizeMode\":true,\"outsideBackgroundColor\":\"rgba(183,183,183,27)\"}'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Free version, via Hierarchy table'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0f9dce24d02d2a0631ad",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Contact"
+              }
+            },
+            "Property": "Organisation"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0fa104700f04ae29349a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Contact"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a8ba8f779f36b9aa571e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Contact"
+                  }
+                },
+                "Property": "Name"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

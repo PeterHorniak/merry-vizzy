@@ -4,9 +4,10 @@
   "position": {
     "x": 256.43586833144155,
     "y": 65.38024971623156,
-    "z": 8002,
+    "z": 5000,
     "height": 643.63223609534623,
-    "width": 345.06242905788878
+    "width": 345.06242905788878,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "tableEx",
@@ -50,23 +51,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "90a9b81d00e19d501a8a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Wordcloud"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

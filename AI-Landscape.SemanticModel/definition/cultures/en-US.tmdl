@@ -6170,6 +6170,26 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.476
 			          }
+			        },
+			        {
+			          "Org structure at lowest level": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "StructureLowestLevelOrg": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -6665,6 +6685,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "_": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Contact type": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -7965,9 +7995,229 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "wordcloud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Wordcloud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "wordcloud": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "wordcloud.organisation_for_wordcloud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Wordcloud",
+			          "ConceptualProperty": "OrganisationForWordcloud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "organisation for wordcloud": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "OrganisationForWordcloud": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "organization for wordcloud": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "corporation for wordcloud": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "institution for wordcloud": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "org for wordcloud": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "business for wordcloud": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "company for wordcloud": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "wordcloud.organisation": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Wordcloud",
+			          "ConceptualProperty": "Organisation"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "organisation": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "corporation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "institution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "business": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "contact_has_org": {
+			      "Binding": {
+			        "ConceptualEntity": "Contact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "contact": {
+			          "Target": {
+			            "Entity": "contact"
+			          }
+			        },
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "contact"
+			            },
+			            "Object": {
+			              "Role": "org"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "contacts_have_org"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "contact"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_contacts"
+			        }
+			      ]
+			    },
 			    "entity_010_tbl_org_event_has_org": {
 			      "Binding": {
 			        "ConceptualEntity": "010_tblOrg-events"
@@ -8235,6 +8485,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "org_have_020_activities_splits"
+			        }
+			      ]
+			    },
+			    "wordcloud_has_organisation_for_wordcloud": {
+			      "Binding": {
+			        "ConceptualEntity": "Wordcloud"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wordcloud": {
+			          "Target": {
+			            "Entity": "wordcloud"
+			          }
+			        },
+			        "wordcloud.organisation_for_wordcloud": {
+			          "Target": {
+			            "Entity": "wordcloud.organisation_for_wordcloud"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wordcloud"
+			            },
+			            "Object": {
+			              "Role": "wordcloud.organisation_for_wordcloud"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "wordclouds_have_organisation_for_wordcloud"
 			        }
 			      ]
 			    },
@@ -11042,59 +11325,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "contact_has_org": {
-			      "Binding": {
-			        "ConceptualEntity": "Contact"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "contact": {
-			          "Target": {
-			            "Entity": "contact"
-			          }
-			        },
-			        "org": {
-			          "Target": {
-			            "Entity": "org"
-			          },
-			          "Nouns": [
-			            {
-			              "organisation": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "contact"
-			            },
-			            "Object": {
-			              "Role": "org"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "contacts_have_org"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "org"
-			            },
-			            "Object": {
-			              "Role": "contact"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "org_have_contacts"
-			        }
-			      ]
-			    },
 			    "url_has_org": {
 			      "Binding": {
 			        "ConceptualEntity": "URL"
@@ -11198,6 +11428,59 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "org_have_010_tbl_org_split_children"
+			        }
+			      ]
+			    },
+			    "wordcloud_has_org": {
+			      "Binding": {
+			        "ConceptualEntity": "Wordcloud"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wordcloud": {
+			          "Target": {
+			            "Entity": "wordcloud"
+			          }
+			        },
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wordcloud"
+			            },
+			            "Object": {
+			              "Role": "org"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "wordclouds_have_org"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "wordcloud"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_wordclouds"
 			        }
 			      ]
 			    }

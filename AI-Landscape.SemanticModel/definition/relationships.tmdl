@@ -40,6 +40,7 @@ relationship 0d274a17-2558-6a65-738a-16219d65b331
 
 relationship d44da765-aa71-82bf-2125-11f7dd492efa
 	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
 	fromColumn: Wordcloud.Organisation
 	toColumn: Org.Organisation
 

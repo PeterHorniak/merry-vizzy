@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "bd7050a384a163a9d76e",
   "position": {
-    "x": 614.57434733257662,
-    "y": 65.38024971623156,
-    "z": 8001,
-    "height": 643.63223609534623,
-    "width": 665.42565266742338,
-    "tabOrder": 8001
+    "x": 614.478527607362,
+    "y": 65.439672801636,
+    "z": 4000,
+    "height": 309.52965235173826,
+    "width": 665.52147239263809,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "WordCloud1447959067750",
@@ -133,14 +133,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Words used in [Organisation] in [Org] table'"
+                  "Value": "'Org names'"
                 }
               }
             },
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -161,42 +161,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "165991bfc8104aec1b8a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Wordcloud"
-              }
-            },
-            "Property": "OrganisationForWordcloud"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "28d694d7b1188a7574af",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Wordcloud"
-                  }
-                },
-                "Property": "OrganisationForWordcloud"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "8345b2117d7f18e70132",
+  "position": {
+    "x": 734.23312883435585,
+    "y": 0,
+    "z": 9000,
+    "height": 55.623721881390594,
+    "width": 545.76687116564415,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Thoughts:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "We may want to stick to just 1-2 contacts per org, unless we have automated way to scrape LinkedIn."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Worth standardising titles if this page useful, e.g. co-organiser -> organiser, contributor -> member"
+                  }
+                ],
+                "listType": "bullet"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

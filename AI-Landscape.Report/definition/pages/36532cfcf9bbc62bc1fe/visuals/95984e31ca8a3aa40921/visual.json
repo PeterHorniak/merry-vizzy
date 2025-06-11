@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "95984e31ca8a3aa40921",
   "position": {
-    "x": 0,
+    "x": 10.470347648261759,
     "y": 0,
     "z": 3000,
-    "height": 713.05297651556532,
-    "width": 195.74003276897869,
+    "height": 429.93865030674846,
+    "width": 195.66462167689161,
     "tabOrder": 4000
   },
   "visual": {
@@ -160,7 +160,7 @@
                             },
                             {
                               "Literal": {
-                                "Value": "'Aus AI Industry'"
+                                "Value": "'AusFedGov'"
                               }
                             }
                           ]
@@ -207,7 +207,7 @@
                                 "1": [
                                   {
                                     "Literal": {
-                                      "Value": "'Aus AI Industry'"
+                                      "Value": "'AusFedGov'"
                                     }
                                   }
                                 ]
@@ -244,7 +244,7 @@
                         "valueMap": [
                           {
                             "0": "AU",
-                            "1": "Aus AI Industry"
+                            "1": "AusFedGov"
                           }
                         ]
                       }
@@ -299,5 +299,37 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "af2bdb3e2dd7f8ff303c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_Hierarchy"
+              }
+            },
+            "Property": "Lvl2"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "66352ce0e8e518a52e9f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_Hierarchy"
+              }
+            },
+            "Property": "Lvl3"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
