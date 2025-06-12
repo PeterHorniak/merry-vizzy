@@ -1,36 +1,18 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "206b94a0b1e10f5539e3",
+  "name": "71e08803f3ae4ee361b2",
   "position": {
-    "x": 666.06645230439449,
-    "y": 388.93890675241158,
-    "z": 4000,
-    "height": 227.05251875669882,
-    "width": 268.89603429796358,
-    "tabOrder": 4000
+    "x": 662.56295467263578,
+    "y": 570.16228315612761,
+    "z": 16002,
+    "height": 149.70341354224959,
+    "width": 258.57862339115837,
+    "tabOrder": 16002
   },
   "visual": {
     "visualType": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020",
     "query": {
       "queryState": {
-        "Source": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Org"
-                    }
-                  },
-                  "Property": "Parent org"
-                }
-              },
-              "queryRef": "Org.Parent org",
-              "nativeQueryRef": "Parent org"
-            }
-          ]
-        },
         "Destination": {
           "projections": [
             {
@@ -38,14 +20,32 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Org"
+                      "Entity": "005_tblOrg-SplitParents"
                     }
                   },
-                  "Property": "Organisation"
+                  "Property": "Organisation-Shortened"
                 }
               },
-              "queryRef": "Org.Organisation",
-              "nativeQueryRef": "Organisation"
+              "queryRef": "005_tblOrg-SplitParents.Organisation-Shortened",
+              "nativeQueryRef": "Organisation-Shortened"
+            }
+          ]
+        },
+        "Source": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "005_tblOrg-SplitParents"
+                    }
+                  },
+                  "Property": "Parent org-shortened"
+                }
+              },
+              "queryRef": "005_tblOrg-SplitParents.Parent org-shortened",
+              "nativeQueryRef": "Parent org-shortened"
             }
           ]
         }
@@ -79,6 +79,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }
@@ -159,7 +166,65 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Separate table, grain of one row per parent?'"
+                  "Value": "'Influenced by'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
                 }
               }
             }
@@ -167,5 +232,37 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c30598f7b2c52bd42bbe",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "005_tblOrg-SplitParents"
+              }
+            },
+            "Property": "Organisation-Shortened"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d1d28d1208176613dbee",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "005_tblOrg-SplitParents"
+              }
+            },
+            "Property": "Parent org-shortened"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -1,4 +1,4 @@
-table 020_ActivitiesSplit
+table Activity
 	lineageTag: d743bfa4-b32b-4f80-9569-a8db58bab608
 
 	column Organisation
@@ -57,13 +57,13 @@ table 020_ActivitiesSplit
 
 		annotation SummarizationSetBy = Automatic
 
-	column _ActivitiesAI-Lvl2 = If('020_ActivitiesSplit'[Activities AI - Level.2] = "", "IsNull", '020_ActivitiesSplit'[Activities AI - Level.2])
+	column _ActivitiesAI-Lvl2 = If('Activity'[Activities AI - Level.2] = "", "IsNull", 'Activity'[Activities AI - Level.2])
 		lineageTag: 633c3e20-c7c8-4d45-b175-7dc2cc877e6e
 		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
-	partition 020_ActivitiesSplit = m
+	partition Activity = m
 		mode: import
 		queryGroup: 3-Load
 		source =

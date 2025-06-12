@@ -10,19 +10,6 @@
       "nodes": [
         {
           "location": {
-            "x": 259.00000000000006,
-            "y": 309.99999999999983
-          },
-          "nodeIndex": "020_ActivitiesSplit",
-          "nodeLineageTag": "d743bfa4-b32b-4f80-9569-a8db58bab608",
-          "size": {
-            "height": 315.99999999999983,
-            "width": 234
-          },
-          "zIndex": 3
-        },
-        {
-          "location": {
             "x": 1095.0000000000005,
             "y": 444.99999999999966
           },
@@ -58,7 +45,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 5
         },
         {
           "location": {
@@ -71,7 +58,7 @@
             "height": 358.99999999999994,
             "width": 234
           },
-          "zIndex": 11
+          "zIndex": 12
         },
         {
           "location": {
@@ -97,7 +84,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 4
         },
         {
           "location": {
@@ -110,12 +97,12 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 1557.0732385485016,
-            "y": 416.99999999999966
+            "x": 243.50515624299237,
+            "y": 1143.2187491429067
           },
           "nodeIndex": "010_tblOrg-SplitChildren",
           "nodeLineageTag": "42b5d267-e04d-452d-8632-c2fd925d80fc",
@@ -148,7 +135,32 @@
             "height": 387.99999999999966,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 259.00000000000006,
+            "y": 309.99999999999983
+          },
+          "nodeIndex": "Activity",
+          "size": {
+            "height": 315.99999999999983,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 819.24855485064154,
+            "y": 1040.9543977438866
+          },
+          "nodeIndex": "Association",
+          "nodeLineageTag": "3de44faf-68d1-4690-a221-0c70ffdae776",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 11
         }
       ],
       "name": "All tables",

@@ -19,70 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "For the nodes, also do by Key Contacts? to show who is main contact for many organisations"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Wordcloud? For mission statements & activities. Would need PBI Pro license.",
-                    "textStyle": {
-                      "fontSize": "18pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
                     "value": "Do AI activity hierarchy, e.g. Training -> Governance -> Intro vs Intermediate",
-                    "textStyle": {
-                      "fontSize": "18pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Add slicers to demo what it looks like",
-                    "textStyle": {
-                      "fontSize": "18pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Add an Intro page with readme on left, logos along bottom, refresh timestamp on top right.",
-                    "textStyle": {
-                      "fontSize": "18pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Visualise orgs by funding / revenue?",
-                    "textStyle": {
-                      "fontSize": "18pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Sankey for showing multiple parents? Maybe 2 side by side, sharing the same middle?",
                     "textStyle": {
                       "fontSize": "18pt"
                     }
@@ -115,28 +52,6 @@
               {
                 "textRuns": [
                   {
-                    "value": "Timeline where baby represents org born, tombstone that it's inactive",
-                    "textStyle": {
-                      "fontSize": "18pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Something to show when an individual contact is the main contact for multiple orgs?",
-                    "textStyle": {
-                      "fontSize": "18pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
                     "value": "Map showing where & when different coworking groups meet?",
                     "textStyle": {
                       "fontSize": "18pt"
@@ -159,37 +74,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Starburst of AI activity taxonomy: ",
-                    "textStyle": {
-                      "fontSize": "18pt"
-                    }
+                    "value": ""
                   }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "    Training -> Intro, Advanced",
-                    "textStyle": {
-                      "fontSize": "18pt"
-                    }
-                  }
-                ],
-                "listType": "bullet",
-                "indent": 2
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "    Policy -> Govt, Industry",
-                    "textStyle": {
-                      "fontSize": "18pt"
-                    }
-                  }
-                ],
-                "listType": "bullet",
-                "indent": 2
+                ]
               },
               {
                 "textRuns": [
@@ -216,37 +103,6 @@
                 ],
                 "listType": "bullet",
                 "indent": 5
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Custom function for simpler expanding of hierarchy?"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Network chart for showing which orgs connected to which ones?"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "- Gantt chart for when different organisations born & died & spawned suborgs"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
               },
               {
                 "textRuns": [
@@ -279,6 +135,20 @@
                   }
                 ],
                 "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Sankey add chart populated by table for children's children? And another for parent's parents? Instead of having hardcoded levels, we just join on name, so there should be no blanks."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Optimise for Phone viewing portrait mode? At least the front page and Profile page."
+                  }
+                ]
               }
             ]
           }

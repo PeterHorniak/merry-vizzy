@@ -43,7 +43,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "020_ActivitiesSplit"
+                "Entity": "Activity"
               }
             },
             "Property": "Organisation"
@@ -93,7 +93,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "020_ActivitiesSplit"
+                "Entity": "Activity"
               }
             },
             "Property": "Organisation"

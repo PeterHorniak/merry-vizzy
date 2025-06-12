@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "866705abc8e07ee382cf",
+  "name": "eb0b95755156c5f209ae",
   "position": {
-    "x": 836.25812906453223,
-    "y": 102.4512256128064,
-    "z": 9000,
-    "height": 98.609304652326159,
-    "width": 202.98149074537267,
-    "tabOrder": 9000
+    "x": 1061.8338727076591,
+    "y": 249.23408845738942,
+    "z": 13002,
+    "height": 131.17583603020495,
+    "width": 202.97734627831716,
+    "tabOrder": 13002
   },
   "visual": {
     "visualType": "tableEx",
@@ -20,15 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Org"
+                      "Entity": "Event"
                     }
                   },
-                  "Property": "ActiveOrNot"
+                  "Property": "Event-Type"
                 }
               },
-              "queryRef": "Org.ActiveOrNot",
-              "nativeQueryRef": "Org still active?",
-              "displayName": "Org still active?"
+              "queryRef": "Event.Event-Type",
+              "nativeQueryRef": "Event-Type"
             },
             {
               "field": {
@@ -39,10 +38,10 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Entity": "Org"
+                              "Entity": "Event"
                             }
                           },
-                          "Property": "ActiveOrNot"
+                          "Property": "Event-Type"
                         }
                       },
                       "Function": 5
@@ -56,10 +55,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Entity": "Org"
+                                  "Entity": "Event"
                                 }
                               },
-                              "Property": "ActiveOrNot"
+                              "Property": "Event-Type"
                             }
                           },
                           "Function": 5
@@ -71,7 +70,7 @@
                   "Operator": 3
                 }
               },
-              "queryRef": "Divide(CountNonNull(Org.ActiveOrNot), ScopedEval(CountNonNull(Org.ActiveOrNot), []))",
+              "queryRef": "Divide(CountNonNull(Event.Event-Type), ScopedEval(CountNonNull(Event.Event-Type), []))",
               "nativeQueryRef": "%",
               "displayName": "%"
             },
@@ -82,17 +81,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Org"
+                          "Entity": "Event"
                         }
                       },
-                      "Property": "ActiveOrNot"
+                      "Property": "Event-Type"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "Count(Org.ActiveOrNot)",
-              "nativeQueryRef": "Count of ActiveOrNot1",
+              "queryRef": "CountNonNull(Event.Event-Type)",
+              "nativeQueryRef": "#",
               "displayName": "#"
             }
           ]
@@ -109,10 +108,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Org"
+                            "Entity": "Event"
                           }
                         },
-                        "Property": "ActiveOrNot"
+                        "Property": "Event-Type"
                       }
                     },
                     "Function": 5
@@ -126,10 +125,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Entity": "Org"
+                                "Entity": "Event"
                               }
                             },
-                            "Property": "ActiveOrNot"
+                            "Property": "Event-Type"
                           }
                         },
                         "Function": 5
@@ -235,7 +234,7 @@
             }
           },
           "selector": {
-            "metadata": "Divide(CountNonNull(Org.ActiveOrNot), ScopedEval(CountNonNull(Org.ActiveOrNot), []))"
+            "metadata": "Divide(CountNonNull(Event.Event-Type), ScopedEval(CountNonNull(Event.Event-Type), []))"
           }
         }
       ],
@@ -245,13 +244,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "77.62789517845657D"
+                  "Value": "57.97195253505933D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Divide(CountNonNull(Org.ActiveOrNot), ScopedEval(CountNonNull(Org.ActiveOrNot), []))"
+            "metadata": "Divide(CountNonNull(Event.Event-Type), ScopedEval(CountNonNull(Event.Event-Type), []))"
           }
         }
       ]
@@ -288,21 +287,40 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "194e3bf53d5d66b2eda4",
+        "name": "1a71e90a56fc31e797e0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Event"
+                  }
+                },
+                "Property": "Event-Type"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c6c6ab9a5afbc8497b8b",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Org"
+                "Entity": "Event"
               }
             },
-            "Property": "ActiveOrNot"
+            "Property": "Event-Type"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "672fb57e6aabeac79f1b",
+        "name": "82cc59dca25fc41cda1e",
         "field": {
           "Arithmetic": {
             "Left": {
@@ -311,10 +329,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Org"
+                        "Entity": "Event"
                       }
                     },
-                    "Property": "ActiveOrNot"
+                    "Property": "Event-Type"
                   }
                 },
                 "Function": 5
@@ -328,10 +346,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Org"
+                            "Entity": "Event"
                           }
                         },
-                        "Property": "ActiveOrNot"
+                        "Property": "Event-Type"
                       }
                     },
                     "Function": 5
@@ -341,25 +359,6 @@
               }
             },
             "Operator": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4e0e34a58a9a1be5bcae",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Org"
-                  }
-                },
-                "Property": "ActiveOrNot"
-              }
-            },
-            "Function": 5
           }
         },
         "type": "Advanced"

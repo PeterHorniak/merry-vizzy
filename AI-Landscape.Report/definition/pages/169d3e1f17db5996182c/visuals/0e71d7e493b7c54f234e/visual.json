@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "020_ActivitiesSplit"
+                      "Entity": "Activity"
                     }
                   },
                   "Property": "Activities AI - Level.1"
@@ -35,7 +35,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "020_ActivitiesSplit"
+                      "Entity": "Activity"
                     }
                   },
                   "Property": "Activities AI - Level.2"
@@ -50,7 +50,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "020_ActivitiesSplit"
+                      "Entity": "Activity"
                     }
                   },
                   "Property": "Activities AI - Level.3"
@@ -69,7 +69,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "020_ActivitiesSplit"
+                      "Entity": "Activity"
                     }
                   },
                   "Property": "Activities AI - Level.1"
@@ -89,7 +89,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "020_ActivitiesSplit"
+                          "Entity": "Activity"
                         }
                       },
                       "Property": "Activities AI - Level.1"
@@ -113,7 +113,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "020_ActivitiesSplit"
+                        "Entity": "Activity"
                       }
                     },
                     "Property": "Activities AI - Level.1"
@@ -151,7 +151,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "020_ActivitiesSplit"
+                "Entity": "Activity"
               }
             },
             "Property": "Activities AI - Level.1"
@@ -163,7 +163,7 @@
           "From": [
             {
               "Name": "0",
-              "Entity": "020_ActivitiesSplit",
+              "Entity": "Activity",
               "Type": 0
             }
           ],
@@ -237,7 +237,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "020_ActivitiesSplit"
+                "Entity": "Activity"
               }
             },
             "Property": "Activities AI - Level.2"
@@ -251,7 +251,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "020_ActivitiesSplit"
+                "Entity": "Activity"
               }
             },
             "Property": "Activities AI - Level.3"
@@ -267,7 +267,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "020_ActivitiesSplit"
+                    "Entity": "Activity"
                   }
                 },
                 "Property": "Activities AI - Level.1"

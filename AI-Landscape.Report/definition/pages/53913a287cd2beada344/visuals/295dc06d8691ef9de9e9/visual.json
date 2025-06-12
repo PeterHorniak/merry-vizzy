@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "835b7a4c7de09a6ae2fe",
+  "name": "295dc06d8691ef9de9e9",
   "position": {
-    "x": 7.6897870016384493,
-    "y": 250.26761332605133,
-    "z": 0,
-    "height": 462.08629164391044,
-    "width": 279.62861824139816,
-    "tabOrder": 0
+    "x": 0,
+    "y": 450.83333333333337,
+    "z": 16001,
+    "height": 269.16666666666669,
+    "width": 662.5,
+    "tabOrder": 16001
   },
   "visual": {
     "visualType": "tableEx",
@@ -20,63 +20,59 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Event"
+                      "Entity": "Association"
                     }
                   },
-                  "Property": "Organisation-Shortened"
+                  "Property": "OrgStarting"
                 }
               },
-              "queryRef": "005_tblOrg-events.Organisation-Shortened",
-              "nativeQueryRef": "Org",
-              "displayName": "Org"
+              "queryRef": "Association.OrgStarting",
+              "nativeQueryRef": "OrgStarting"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Event"
+                      "Entity": "Association"
                     }
                   },
-                  "Property": "Date"
+                  "Property": "OrgAssociated"
                 }
               },
-              "queryRef": "005_tblOrg-events.Date",
-              "nativeQueryRef": "Date"
+              "queryRef": "Association.OrgAssociated",
+              "nativeQueryRef": "OrgAssociated"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Event"
+                      "Entity": "Association"
                     }
                   },
-                  "Property": "Event"
+                  "Property": "AssociationType"
                 }
               },
-              "queryRef": "005_tblOrg-events.Event",
-              "nativeQueryRef": "Event"
+              "queryRef": "Association.AssociationType",
+              "nativeQueryRef": "AssociationType"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Association"
+                    }
+                  },
+                  "Property": "Location"
+                }
+              },
+              "queryRef": "Association.Location",
+              "nativeQueryRef": "Location"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Event"
-                  }
-                },
-                "Property": "Date"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
@@ -86,13 +82,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "135.28245622372822D"
+                  "Value": "143.04100400660528D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "005_tblOrg-events.Event"
+            "metadata": "Association.OrgAssociated"
           }
         },
         {
@@ -100,69 +96,46 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "78.4231289642079D"
+                  "Value": "71.2468192364377D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "005_tblOrg-events.Organisation-Shortened"
+            "metadata": "Association.OrgStarting"
           }
-        }
-      ],
-      "values": [
+        },
         {
           "properties": {
-            "wordWrap": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "163.7578914097109D"
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "Association.AssociationType"
           }
-        }
-      ],
-      "total": [
+        },
         {
           "properties": {
-            "totals": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "231.57134996971445D"
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "Association.Location"
           }
         }
       ]
     },
     "visualContainerObjects": {
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 7,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
       "stylePreset": [
         {
           "properties": {
@@ -181,43 +154,57 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a2881ea6c780efae397c",
+        "name": "f6a036e1159d44a891c8",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Event"
+                "Entity": "Association"
               }
             },
-            "Property": "Organisation-Shortened"
+            "Property": "AssociationType"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "7b62fe875256f8e853fa",
+        "name": "fe6e546354a996aa9bae",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Event"
+                "Entity": "Association"
               }
             },
-            "Property": "Date"
+            "Property": "OrgStarting"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "e75554c4d8f0a6d9339e",
+        "name": "61268e5ebf89a7e4d9e2",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Event"
+                "Entity": "Association"
               }
             },
-            "Property": "Event"
+            "Property": "OrgAssociated"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f18ed7ee97c922b7734f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Association"
+              }
+            },
+            "Property": "Location"
           }
         },
         "type": "Categorical"

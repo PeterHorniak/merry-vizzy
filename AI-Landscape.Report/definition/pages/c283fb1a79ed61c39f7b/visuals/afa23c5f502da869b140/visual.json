@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "866705abc8e07ee382cf",
+  "name": "afa23c5f502da869b140",
   "position": {
-    "x": 836.25812906453223,
-    "y": 102.4512256128064,
-    "z": 9000,
-    "height": 98.609304652326159,
-    "width": 202.98149074537267,
-    "tabOrder": 9000
+    "x": 374.19633225458466,
+    "y": 105.63106796116504,
+    "z": 13001,
+    "height": 131.17583603020495,
+    "width": 202.97734627831716,
+    "tabOrder": 13001
   },
   "visual": {
     "visualType": "tableEx",
@@ -23,12 +23,11 @@
                       "Entity": "Org"
                     }
                   },
-                  "Property": "ActiveOrNot"
+                  "Property": "Country"
                 }
               },
-              "queryRef": "Org.ActiveOrNot",
-              "nativeQueryRef": "Org still active?",
-              "displayName": "Org still active?"
+              "queryRef": "Org.Country",
+              "nativeQueryRef": "Country"
             },
             {
               "field": {
@@ -42,7 +41,7 @@
                               "Entity": "Org"
                             }
                           },
-                          "Property": "ActiveOrNot"
+                          "Property": "Country"
                         }
                       },
                       "Function": 5
@@ -59,7 +58,7 @@
                                   "Entity": "Org"
                                 }
                               },
-                              "Property": "ActiveOrNot"
+                              "Property": "Country"
                             }
                           },
                           "Function": 5
@@ -71,8 +70,8 @@
                   "Operator": 3
                 }
               },
-              "queryRef": "Divide(CountNonNull(Org.ActiveOrNot), ScopedEval(CountNonNull(Org.ActiveOrNot), []))",
-              "nativeQueryRef": "%",
+              "queryRef": "CountNonNull(Org.Country)",
+              "nativeQueryRef": "%1",
               "displayName": "%"
             },
             {
@@ -85,14 +84,14 @@
                           "Entity": "Org"
                         }
                       },
-                      "Property": "ActiveOrNot"
+                      "Property": "Country"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "Count(Org.ActiveOrNot)",
-              "nativeQueryRef": "Count of ActiveOrNot1",
+              "queryRef": "CountNonNull(Org.Country)1",
+              "nativeQueryRef": "#",
               "displayName": "#"
             }
           ]
@@ -112,7 +111,7 @@
                             "Entity": "Org"
                           }
                         },
-                        "Property": "ActiveOrNot"
+                        "Property": "Country"
                       }
                     },
                     "Function": 5
@@ -129,7 +128,7 @@
                                 "Entity": "Org"
                               }
                             },
-                            "Property": "ActiveOrNot"
+                            "Property": "Country"
                           }
                         },
                         "Function": 5
@@ -153,7 +152,7 @@
             "totals": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -232,10 +231,43 @@
                   }
                 }
               }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
             }
           },
           "selector": {
-            "metadata": "Divide(CountNonNull(Org.ActiveOrNot), ScopedEval(CountNonNull(Org.ActiveOrNot), []))"
+            "metadata": "CountNonNull(Org.Country)"
           }
         }
       ],
@@ -245,13 +277,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "77.62789517845657D"
+                  "Value": "53.13915857605178D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Divide(CountNonNull(Org.ActiveOrNot), ScopedEval(CountNonNull(Org.ActiveOrNot), []))"
+            "metadata": "CountNonNull(Org.Country)"
           }
         }
       ]
@@ -288,21 +320,26 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "194e3bf53d5d66b2eda4",
+        "name": "63dd89e131395e8af41f",
         "field": {
-          "Column": {
+          "Aggregation": {
             "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "Country"
               }
             },
-            "Property": "ActiveOrNot"
+            "Function": 5
           }
         },
-        "type": "Categorical"
+        "type": "Advanced"
       },
       {
-        "name": "672fb57e6aabeac79f1b",
+        "name": "36ac388fae67fcea4588",
         "field": {
           "Arithmetic": {
             "Left": {
@@ -314,7 +351,7 @@
                         "Entity": "Org"
                       }
                     },
-                    "Property": "ActiveOrNot"
+                    "Property": "Country"
                   }
                 },
                 "Function": 5
@@ -331,7 +368,7 @@
                             "Entity": "Org"
                           }
                         },
-                        "Property": "ActiveOrNot"
+                        "Property": "Country"
                       }
                     },
                     "Function": 5
@@ -346,23 +383,18 @@
         "type": "Advanced"
       },
       {
-        "name": "4e0e34a58a9a1be5bcae",
+        "name": "37248058c4c1f5bdc038",
         "field": {
-          "Aggregation": {
+          "Column": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Org"
-                  }
-                },
-                "Property": "ActiveOrNot"
+              "SourceRef": {
+                "Entity": "Org"
               }
             },
-            "Function": 5
+            "Property": "Country"
           }
         },
-        "type": "Advanced"
+        "type": "Categorical"
       }
     ]
   }

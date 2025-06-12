@@ -165,7 +165,7 @@ table 010_Hierarchy
 
 	partition 010_Hierarchy = m
 		mode: import
-		queryGroup: 2-Transform
+		queryGroup: 2-Transform\Influences
 		source =
 				let
 				    Source = "World",

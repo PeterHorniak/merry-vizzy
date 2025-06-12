@@ -57,9 +57,17 @@ table 010_tblOrg-SplitChildren
 
 		annotation SummarizationSetBy = Automatic
 
+	column Location
+		dataType: string
+		lineageTag: 1673fd02-f10d-4fa7-aeb7-21986b72b712
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 010_tblOrg-SplitChildren = m
 		mode: import
-		queryGroup: 2-Transform
+		queryGroup: 2-Transform\Influences
 		source =
 				let
 				    Source = #"005_tblOrg-SplitParents",

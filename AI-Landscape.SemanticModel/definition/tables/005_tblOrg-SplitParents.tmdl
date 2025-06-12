@@ -57,13 +57,21 @@ table 005_tblOrg-SplitParents
 
 		annotation SummarizationSetBy = Automatic
 
+	column Location
+		dataType: string
+		lineageTag: fb96bb0d-dce2-4167-b150-8937556f9a92
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 005_tblOrg-SplitParents = m
 		mode: import
-		queryGroup: 2-Transform
+		queryGroup: 2-Transform\Influences
 		source =
 				let
 				    Source = #"000_tblOrg",
-				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened", "Parent org", "URL"}),
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened", "Parent org", "URL", "Location"}),
 				    #"Split Parent org by ," = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"Parent org", Splitter.SplitTextByDelimiter(", ", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Parent org"),
 				    #"Duplicated Parent org" = Table.DuplicateColumn(#"Split Parent org by ,", "Parent org", "Parent org-shortened"),
 				    #"Split Parent org-shortened by (" = Table.SplitColumn(#"Duplicated Parent org", "Parent org-shortened", Splitter.SplitTextByEachDelimiter({"("}, QuoteStyle.Csv, false), {"Parent org-base", "Parent org-acronym"}),

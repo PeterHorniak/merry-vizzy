@@ -7,9 +7,9 @@ expression 010_tblOrg-Formatting =
 		    #"Split URL by linefeed" = Table.SplitColumn(#"URL replaced ) with blank", "URL", Splitter.SplitTextByEachDelimiter({"#(lf)"}, QuoteStyle.Csv, false), {"URL-Main", "URL-Secondary"}),
 		    #"Added ActiveOrNot" = Table.AddColumn(#"Split URL by linefeed", "ActiveOrNot", each if Text.StartsWith([Status], "Active") then "⚡ active" else if Text.StartsWith([Status], "Inactive") then "💤 inactive" else if Text.StartsWith([Status], "To Be Active") then "⏳ To Be Active" else "❔ unknown"),
 		    #"Added OrgStructure" = Table.AddColumn(#"Added ActiveOrNot", "OrgStructure", each if Text.Contains([Activities AI], "Company private") then "Company private" else if Text.Contains([Activities AI], "Company public") then "Company public" else if Text.Contains([Activities AI], "Charity / nonprofit") then "Charity / nonprofit" else if Text.Contains([Activities AI], "Approved research institute") then "Approved research institute (ARI)" else if Text.Contains([Activities AI], "Government federal") then "Government federal" else if Text.Contains([Activities AI], "Government state") then "Government state" else "No structure selected"),
-		    #"Added Conditional Column" = Table.AddColumn(#"Added OrgStructure", "Country", each if Text.Contains([Location], "Australia") then "Australia" else if Text.Contains([Location], " AU ") then "Australia" else "Not Australia")
+		    #"Added Country" = Table.AddColumn(#"Added OrgStructure", "Country", each if Text.Contains([Location], "Australia") then "Australia" else if Text.Contains([Location], " AU ") then "Australia" else if Text.Contains([Location], "New Zealand") then "New Zealand" else if Text.Contains([Location], " NZ") then "New Zealand" else if Text.Contains([Location], " US") then "United States" else if Text.Contains([Location], "United States") then "United States" else if [Location] = null then "Not entered" else if [Location] = "" then "Not entered" else "Other")
 		in
-		    #"Added Conditional Column"
+		    #"Added Country"
 	lineageTag: b515d12b-1bca-4180-9b56-1111d984fc1b
 	queryGroup: 2-Transform
 
@@ -247,7 +247,7 @@ expression 005_ActivitiesSplit =
 
 	annotation PBI_ResultType = Table
 
-expression 010_tblOrg-events =
+expression 015_tblOrg-events =
 		let
 		    Source = #"000_tblOrg",
 		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened", "Status"}),
@@ -287,18 +287,94 @@ expression 010_tblOrg-events =
 		    #"Replaced Value22" = Table.ReplaceValue(#"Replaced Value21","occurred","📅 occurred",Replacer.ReplaceText,{"Event"}),
 		    #"Replaced Value23" = Table.ReplaceValue(#"Replaced Value22","event","📅 event",Replacer.ReplaceText,{"Event"}),
 		    #"Added Event-Type" = Table.AddColumn(#"Replaced Value23", "Event-Type", each if Text.Contains([Event], "👶") then "- 👶 founded" else if Text.Contains([Event], "🪦") then "-🪦ended" else if Text.Contains([Event], "🤝") then "- 🤝 merged" else if Text.Contains([Event], "💤") then "- 💤 inactive" else if Text.Contains([Event], "📋") then "- 📋 application" else if Text.Contains([Event], "⚡") then "- ⚡ active" else if Text.Contains([Event], "📢") then "- 📢 announced" else if Text.Contains([Event], "💡") then "-💡 concept" else if Text.Contains([Event], "📅 ") then "- 📅  event" else if Text.Contains([Event], "🚀") then "- 🚀 launch" else if Text.Contains([Event], "👥") then "- 👥 consultation" else if Text.Contains([Event], "📄") then "- 📄 published" else "- Misc"),
-		    #"Merged Queries" = Table.NestedJoin(#"Added Event-Type", {"Index-Asc-ByDate"}, #"005_tblOrg-events-ForMerge", {"Index-Asc-ByDate-ForMerge"}, "005_tblOrg-events-ForMerge", JoinKind.LeftOuter),
-		    #"Expanded 005_tblOrg-events-ForMerge" = Table.ExpandTableColumn(#"Merged Queries", "005_tblOrg-events-ForMerge", {"Date"}, {"Date-NextEntry"}),
-		    #"Added Custom" = Table.AddColumn(#"Expanded 005_tblOrg-events-ForMerge", "DaysSincePreviousEntry", each [#"Date-NextEntry"]-[Date]),
-		    #"Replaced Value24" = Table.ReplaceValue(#"Added Custom",null,#duration(0, 0, 0, 0),Replacer.ReplaceValue,{"DaysSincePreviousEntry"}),
-		    #"Changed Type1" = Table.TransformColumnTypes(#"Replaced Value24",{{"DaysSincePreviousEntry", Int64.Type}}),
-		    #"Added Conditional Column" = Table.AddColumn(#"Changed Type1", "Index-Asc-ByDate-WithJumps", each if [DaysSincePreviousEntry] > 61 then [#"Index-Asc-ByDate"] else (Number.RandomBetween(1,10)*[#"Index-Asc-ByDate"])),
-		    #"Changed Type2" = Table.TransformColumnTypes(#"Added Conditional Column",{{"Index-Asc-ByDate-WithJumps", type number}}),
-		    Custom1 = Table.AddColumn(#"Changed Type2", "Event-Icon", each if Text.Contains([Event], "👶") then "👶" else if Text.Contains([Event], "🪦") then "🪦" else if Text.Contains([Event], "🤝") then "🤝" else if Text.Contains([Event], "💤") then "💤" else if Text.Contains([Event], "📋") then "📋" else if Text.Contains([Event], "⚡") then "⚡" else if Text.Contains([Event], "📢") then "📢" else if Text.Contains([Event], "💡") then "💡" else if Text.Contains([Event], "📅 ") then "📅 " else if Text.Contains([Event], "🚀") then "🚀" else if Text.Contains([Event], "👥") then "👥" else if Text.Contains([Event], "📄") then "📄" else "❔")
+		    #"Merged Index-Asc-ByDate-ForMerge" = Table.NestedJoin(#"Added Event-Type", {"Index-Asc-ByDate"}, #"005_tblOrg-events-ForMerge", {"Index-Asc-ByDate-ForMerge"}, "005_tblOrg-events-ForMerge", JoinKind.LeftOuter),
+		    #"Expanded 005_tblOrg-events-ForMerge" = Table.ExpandTableColumn(#"Merged Index-Asc-ByDate-ForMerge", "005_tblOrg-events-ForMerge", {"Date"}, {"Date-NextEntry"}),
+		    #"Added DaysSincePreviousEntry" = Table.AddColumn(#"Expanded 005_tblOrg-events-ForMerge", "DaysSincePreviousEntry", each [#"Date-NextEntry"]-[Date]),
+		    #"Replaced null with 0days DaysSincePreviousEntry" = Table.ReplaceValue(#"Added DaysSincePreviousEntry",null,#duration(0, 0, 0, 0),Replacer.ReplaceValue,{"DaysSincePreviousEntry"}),
+		    #"Changed Type1" = Table.TransformColumnTypes(#"Replaced null with 0days DaysSincePreviousEntry",{{"DaysSincePreviousEntry", Int64.Type}}),
+		    #"Added Index-Asc-ByDate-WithJumps" = Table.AddColumn(#"Changed Type1", "Index-Asc-ByDate-WithJumps", each if [DaysSincePreviousEntry] > 61 then [#"Index-Asc-ByDate"] else (Number.RandomBetween(1,10)*[#"Index-Asc-ByDate"])),
+		    Custom1 = Table.AddColumn(#"Added Index-Asc-ByDate-WithJumps", "Event-Icon", each if Text.Contains([Event], "👶") then "👶" else if Text.Contains([Event], "🪦") then "🪦" else if Text.Contains([Event], "🤝") then "🤝" else if Text.Contains([Event], "💤") then "💤" else if Text.Contains([Event], "📋") then "📋" else if Text.Contains([Event], "⚡") then "⚡" else if Text.Contains([Event], "📢") then "📢" else if Text.Contains([Event], "💡") then "💡" else if Text.Contains([Event], "📅 ") then "📅 " else if Text.Contains([Event], "🚀") then "🚀" else if Text.Contains([Event], "👥") then "👥" else if Text.Contains([Event], "📄") then "📄" else "❔"),
+		    #"Appended Query" = Table.Combine({Custom1, #"010_tblOrg-events-TodayMarkers"}),
+		    #"Changed Type2" = Table.TransformColumnTypes(#"Appended Query",{{"Index-Asc-ByDate-WithJumps", type number}, {"Date", type date}})
 		in
-		    Custom1
+		    #"Changed Type2"
 	lineageTag: 9f834d2d-90e0-4bb6-8894-9909d97afe40
 	queryGroup: 2-Transform\Events
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 010_tblOrg-events-TodayMarkers = ```
+		let
+		    // Generate a list of numbers from 1 to 61
+		    IndexList = List.Numbers(1, 1) // formerly #"005_tblOrg-events-count"*10
+		,
+		    
+		    // Convert to table with Index column
+		    IndexTable = Table.FromList(IndexList, Splitter.SplitByNothing(), {"Index-Asc-ByDate-WithJumps"}),
+		    
+		    // Add Date column with today's date
+		    AddDateColumn = Table.AddColumn(IndexTable, "Date", each DateTime.Date(DateTimeZone.SwitchZone(DateTimeZone.UtcNow(), 10))),
+		    
+		    // Add Icon column with "|" symbol
+		    AddIconColumn = Table.AddColumn(AddDateColumn, "Event-Icon", each "TODAY"),
+		    
+		    #"Added Custom" = Table.AddColumn(AddIconColumn, "Event", each "Marker for current day"),
+		    #"Added Custom1" = Table.AddColumn(#"Added Custom", "Organisation-Shortened", each "n/a")
+		in
+		    #"Added Custom1"
+		```
+	lineageTag: 66874c89-7823-4fea-9f61-c1d4e9bb85af
+	queryGroup: 2-Transform\Events
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 020_tblOrg-AssociationParent =
+		let
+		    Source = #"005_tblOrg-SplitParents",
+		    #"Renamed Columns" = Table.RenameColumns(Source,{{"Organisation", "OrgStarting"}, {"Organisation-Shortened", "OrgStartingShortened"}, {"Parent org", "OrgAssociated"}, {"URL", "OrgStartingURL"}, {"Parent org-base", "OrgAssociatedBase"}, {"Parent org-acronym", "OrgAssociatedAcronym"}, {"Parent org-shortened", "OrgAssociatedShortened"}}),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Renamed Columns",{{"Location", "OrgStartingLocation"}}),
+		    #"Added AssociationType" = Table.AddColumn(#"Renamed Columns1", "AssociationType", each "Influenced by this org"),
+		    #"Merged Queries" = Table.NestedJoin(#"Added AssociationType", {"OrgAssociated"}, #"000_tblOrg", {"Organisation"}, "000_tblOrg", JoinKind.LeftOuter),
+		    #"Expanded 000_tblOrg" = Table.ExpandTableColumn(#"Merged Queries", "000_tblOrg", {"Location"}, {"Location"})
+		in
+		    #"Expanded 000_tblOrg"
+	lineageTag: a667b755-e013-4a76-b767-af67f58168ac
+	queryGroup: 2-Transform\Influences
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 005_tblOrg-AssociationStarting =
+		let
+		    Source = #"000_tblOrg",
+		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "URL", "Organisation-Shortened", "Organisation-Shortened.1", "Organisation-Shortened.2", "Location"}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"Organisation", "OrgStarting"}}),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Renamed Columns",{{"Organisation-Shortened.1", "OrgStartingBase"}, {"Organisation-Shortened.2", "OrgStartingAcronym"}, {"Organisation-Shortened", "OrgStartingShortened"}}),
+		    #"Added OrgAssociated" = Table.AddColumn(#"Renamed Columns1", "OrgAssociated", each [OrgStarting]),
+		    #"Added AssociationType" = Table.AddColumn(#"Added OrgAssociated", "AssociationType", each "Current org")
+		in
+		    #"Added AssociationType"
+	lineageTag: eaaf855f-f00c-4489-90ec-b7c267d8dc97
+	queryGroup: 2-Transform\Influences
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 015_tblOrg-AssociationChild =
+		let
+		    Source = #"010_tblOrg-SplitChildren",
+		    #"Renamed Columns" = Table.RenameColumns(Source,{{"Parent org", "OrgAssociated"}, {"Organisation", "OrgStarting"}, {"Parent org-shortened", "OrgAssociatedShortened"}, {"URL-ParentOrg", "OrgAssociatedURL"}, {"Organisation-base", "OrgStartingBase"}, {"Organisation-acronym", "OrgStartingAcronym"}, {"Organisation-shortened", "OrgStartingShortened"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "AssociationType", each "Influences this org")
+		in
+		    #"Added Custom"
+	lineageTag: 8d0a454f-85ac-4504-822d-43977bbbc4a2
+	queryGroup: 2-Transform\Influences
 
 	annotation PBI_NavigationStepName = Navigation
 

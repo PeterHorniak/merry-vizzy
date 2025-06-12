@@ -25,46 +25,6 @@
                           "Entity": "Org"
                         }
                       },
-                      "Property": "Location"
-                    }
-                  },
-                  "Function": 5
-                }
-              },
-              "queryRef": "Org.Location",
-              "nativeQueryRef": "Count of Location",
-              "displayName": "# Location"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Org"
-                        }
-                      },
-                      "Property": "_LocationsFilled"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(Org._LocationsFilled)",
-              "nativeQueryRef": "Filled",
-              "displayName": "Filled"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Org"
-                        }
-                      },
                       "Property": "Mission"
                     }
                   },
@@ -94,6 +54,156 @@
               "queryRef": "Sum(Org._%Mission)",
               "nativeQueryRef": "Filled1",
               "displayName": "Filled"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "Activities AI"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Org.Activities AI",
+              "nativeQueryRef": "Count of Activities AI",
+              "displayName": "# Activities AI"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "_%Activities"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Org._%Activities)",
+              "nativeQueryRef": "Filled2",
+              "displayName": "Filled"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "Location"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Org.Location",
+              "nativeQueryRef": "Count of Location",
+              "displayName": "# Location"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "_%Location"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Org._LocationsFilled)",
+              "nativeQueryRef": "Filled",
+              "displayName": "Filled"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "Parent org"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Org.Parent org",
+              "nativeQueryRef": "# Parent",
+              "displayName": "# Parent"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Org"
+                    }
+                  },
+                  "Property": "_mParent"
+                }
+              },
+              "queryRef": "Org._mParent",
+              "nativeQueryRef": "% filled",
+              "displayName": "% filled"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "URL-Main"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Org.URL-Main",
+              "nativeQueryRef": "Count of URL-Main",
+              "displayName": "# URL"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Org"
+                    }
+                  },
+                  "Property": "_mURL"
+                }
+              },
+              "queryRef": "Org._mURL",
+              "nativeQueryRef": "# filled URL",
+              "displayName": "# filled URL"
             }
           ]
         }
@@ -110,7 +220,7 @@
                         "Entity": "Org"
                       }
                     },
-                    "Property": "Location"
+                    "Property": "Mission"
                   }
                 },
                 "Function": 5
@@ -136,7 +246,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Worth adding % complete for all columns?'"
+                  "Value": "'Move to separate Data Quality page?'"
                 }
               }
             }
@@ -157,5 +267,189 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "145ebd0cf73353decd4d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "_%Activities"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b5622f070cf602bb795a",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "Activities AI"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6cfe4242973089e8e427",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "Mission"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "51d6c900a0b8b8e3d58d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "_%Mission"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a91305fc72670892f1d4",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "_%Location"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "376cca04adf54109edf8",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "Location"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2b327b9224c035701381",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "_mParent"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "38b32b6ca1cecaf8bc7a",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "Parent org"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ad3b5b0a90878ea2884d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "_mURL"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e144bfd3b5e6fc590d16",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "URL-Main"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

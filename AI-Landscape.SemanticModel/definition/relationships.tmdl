@@ -10,7 +10,7 @@ relationship 254f5655-6963-9342-ce4f-fede99d89588
 
 relationship d9600304-ceb6-c3e6-690b-82c4bbb293c3
 	crossFilteringBehavior: bothDirections
-	fromColumn: 020_ActivitiesSplit.Organisation
+	fromColumn: Activity.Organisation
 	toColumn: Org.Organisation
 
 relationship 52a1627e-fd67-0c99-7ef4-45a034f6bb8e
@@ -42,5 +42,10 @@ relationship d44da765-aa71-82bf-2125-11f7dd492efa
 	crossFilteringBehavior: bothDirections
 	securityFilteringBehavior: bothDirections
 	fromColumn: Wordcloud.Organisation
+	toColumn: Org.Organisation
+
+relationship 64a8aa40-8e13-d8c1-8ca6-6180927173c6
+	crossFilteringBehavior: bothDirections
+	fromColumn: Association.OrgStarting
 	toColumn: Org.Organisation
 

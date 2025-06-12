@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "9371ae23f79ecef3b16b",
   "position": {
-    "x": 1087.6073619631902,
+    "x": 729.893676552882,
     "y": 0,
     "z": 5000,
-    "height": 357.95501022494886,
-    "width": 192.39263803680981,
+    "height": 543.65976496922224,
+    "width": 550.10632344711814,
     "tabOrder": 5000
   },
   "visual": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Org"
+                      "Entity": "Association"
                     }
                   },
                   "Property": "Location"
                 }
               },
-              "queryRef": "Org.Location",
-              "nativeQueryRef": "Location",
+              "queryRef": "Association.Location",
+              "nativeQueryRef": "Location1",
               "active": true
             }
           ]
@@ -39,18 +39,18 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Org"
+                      "Entity": "Association"
                     }
                   },
-                  "Property": "Location"
+                  "Property": "AssociationType"
                 }
               },
-              "queryRef": "Org.Location",
-              "nativeQueryRef": "Location"
+              "queryRef": "Association.AssociationType",
+              "nativeQueryRef": "AssociationType"
             }
           ]
         },
-        "Size": {
+        "Tooltips": {
           "projections": [
             {
               "field": {
@@ -59,17 +59,38 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Org"
+                          "Entity": "Association"
                         }
                       },
-                      "Property": "Location"
+                      "Property": "OrgStarting"
                     }
                   },
-                  "Function": 5
+                  "Function": 3
                 }
               },
-              "queryRef": "CountNonNull(Org.Location)",
-              "nativeQueryRef": "Count of Location"
+              "queryRef": "Min(Association.OrgStarting)",
+              "nativeQueryRef": "This org...",
+              "displayName": "This org..."
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Association"
+                        }
+                      },
+                      "Property": "OrgAssociated"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Association.OrgAssociated)",
+              "nativeQueryRef": "...by this org",
+              "displayName": "...by this org"
             }
           ]
         }
@@ -95,7 +116,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'TopCenter'"
+                  "Value": "'BottomCenter'"
                 }
               }
             },
@@ -105,7 +126,142 @@
                   "Value": "true"
                 }
               }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Association"
+                          }
+                        },
+                        "Property": "AssociationType"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Influenced by this org'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Association"
+                          }
+                        },
+                        "Property": "AssociationType"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Current org'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Association"
+                          }
+                        },
+                        "Property": "AssociationType"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Influences this org'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ]
@@ -124,7 +280,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -132,5 +288,75 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a0e958a249360e21c0a4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Association"
+              }
+            },
+            "Property": "AssociationType"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7c3d718532eea370f9fe",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Association"
+              }
+            },
+            "Property": "Location"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e33a42d934fbe30b190b",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Association"
+                  }
+                },
+                "Property": "OrgAssociated"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e568041064fad53135f4",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Association"
+                  }
+                },
+                "Property": "OrgStarting"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

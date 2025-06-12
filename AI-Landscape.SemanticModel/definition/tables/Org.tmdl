@@ -1,6 +1,14 @@
 table Org
 	lineageTag: a95f0817-2701-4284-b228-3549caa6e99c
 
+	measure _mParent = (COUNTA(Org[Parent org])/countrows(Org))
+		formatString: 0%;-0%;0%
+		lineageTag: c68ac8bb-63a3-41ed-8d4e-55da9361200d
+
+	measure _mURL = (COUNTA(Org[URL-Main])/countrows(Org))
+		formatString: 0%;-0%;0%
+		lineageTag: 38c7f6c1-b8e2-487b-aa9f-84eaccdceeb8
+
 	column Organisation
 		dataType: string
 		lineageTag: af2a3529-8de3-40fa-ad3c-269749e0fef0
@@ -105,7 +113,7 @@ table Org
 
 		annotation SummarizationSetBy = Automatic
 
-	column _LocationsFilled = (COUNTA(Org[Location])/countrows(Org))/countrows(Org)
+	column _%Location = (COUNTA(Org[Location])/countrows(Org))/countrows(Org)
 		dataType: double
 		formatString: 0%;-0%;0%
 		lineageTag: 29a62380-9b9d-47a3-af51-f3eb8f8a9a96
@@ -143,6 +151,13 @@ table Org
 		lineageTag: d12c3d20-b57c-407c-bdc8-2a17dfd53811
 		summarizeBy: none
 		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column _%Activities = (COUNTA(Org[Activities AI])/countrows(Org))/countrows(Org)
+		formatString: 0%;-0%;0%
+		lineageTag: 3a7d2c48-247b-4273-927e-faf3ffde2872
+		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 

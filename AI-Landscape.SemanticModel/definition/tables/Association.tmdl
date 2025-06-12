@@ -1,0 +1,130 @@
+table Association
+	lineageTag: 3de44faf-68d1-4690-a221-0c70ffdae776
+
+	column OrgStarting
+		dataType: string
+		lineageTag: 5d2e5c81-aa44-4cc1-99b3-e3be75ac26d9
+		summarizeBy: none
+		sourceColumn: OrgStarting
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgStartingShortened
+		dataType: string
+		lineageTag: e7252777-764c-467e-9a08-3a95f6eb228e
+		summarizeBy: none
+		sourceColumn: OrgStartingShortened
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgAssociated
+		dataType: string
+		lineageTag: 7be9201d-d994-4782-8143-32ac5b43041f
+		summarizeBy: none
+		sourceColumn: OrgAssociated
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgStartingURL
+		dataType: string
+		lineageTag: bf0830b4-465b-4942-a7e2-93399516b137
+		summarizeBy: none
+		sourceColumn: OrgStartingURL
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgAssociatedBase
+		dataType: string
+		lineageTag: b7ee89b3-1ece-44a2-9163-23fb926b1129
+		summarizeBy: none
+		sourceColumn: OrgAssociatedBase
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgAssociatedAcronym
+		dataType: string
+		lineageTag: 6dc806b5-17a9-4fc6-a6e5-bef4f7da72d6
+		summarizeBy: none
+		sourceColumn: OrgAssociatedAcronym
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgAssociatedShortened
+		dataType: string
+		lineageTag: 74aeb6af-73d5-44a7-a7c5-0f7e549d3518
+		summarizeBy: none
+		sourceColumn: OrgAssociatedShortened
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssociationType
+		dataType: string
+		lineageTag: 91f405dc-de06-4e3a-a112-089ddcaf9aee
+		summarizeBy: none
+		sourceColumn: AssociationType
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL
+		dataType: string
+		lineageTag: 13601488-9bef-4f2f-b60e-825607e2e235
+		summarizeBy: none
+		sourceColumn: URL
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgAssociatedURL
+		dataType: string
+		lineageTag: 0a9aaba8-4338-4a31-b588-8a8f886af920
+		summarizeBy: none
+		sourceColumn: OrgAssociatedURL
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgStartingBase
+		dataType: string
+		lineageTag: 27fffe6a-07dc-490c-ab4d-c14e2c75f39f
+		summarizeBy: none
+		sourceColumn: OrgStartingBase
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgStartingAcronym
+		dataType: string
+		lineageTag: b1b2c5d3-4ba4-4705-90b6-275cde46bb8b
+		summarizeBy: none
+		sourceColumn: OrgStartingAcronym
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: a65b0f8e-eb06-4b43-a6da-89ddc68afde8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgStartingLocation
+		dataType: string
+		lineageTag: a6bc30bb-8144-4d5c-bd23-eab9437edc3f
+		summarizeBy: none
+		sourceColumn: OrgStartingLocation
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Association = m
+		mode: import
+		queryGroup: 3-Load
+		source =
+				let
+				    Source = Table.Combine({#"020_tblOrg-AssociationParent", #"005_tblOrg-AssociationStarting", #"015_tblOrg-AssociationChild"}),
+				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(Source, {{"Location", Splitter.SplitTextByDelimiter("|", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Location")
+				in
+				    #"Split Column by Delimiter"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

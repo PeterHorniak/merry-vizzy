@@ -116,7 +116,7 @@ table Event
 		queryGroup: 3-Load
 		source =
 				let
-				    Source = #"010_tblOrg-events"
+				    Source = #"015_tblOrg-events"
 				in
 				    Source
 

@@ -888,6 +888,20 @@
                   "Value": "true"
                 }
               }
+            },
+            "valueMax": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "valueSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "694820.7156921185D"
+                }
+              }
             }
           }
         }
@@ -1223,6 +1237,39 @@
         },
         "type": "Categorical",
         "howCreated": "User"
+      },
+      {
+        "name": "0763318171d053d0a23d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event"
+              }
+            },
+            "Property": "Event-Icon"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5374c8b57148fb3be8b1",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Event"
+                  }
+                },
+                "Property": "Index-Asc-ByDate-WithJumps"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "9a8f9ef472bc8a8c5087",
   "position": {
-    "x": 869.038854805726,
+    "x": 426.1891438164522,
     "y": 0,
     "z": 2000,
-    "height": 357.95501022494886,
-    "width": 201.55419222903885,
+    "height": 408.99832120872975,
+    "width": 271.47174034695024,
     "tabOrder": 2000
   },
   "visual": {
@@ -47,29 +47,6 @@
               },
               "queryRef": "Org.Location",
               "nativeQueryRef": "Location"
-            }
-          ]
-        },
-        "Size": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Org"
-                        }
-                      },
-                      "Property": "Location"
-                    }
-                  },
-                  "Function": 5
-                }
-              },
-              "queryRef": "CountNonNull(Org.Location)",
-              "nativeQueryRef": "Count of Location"
             }
           ]
         }
@@ -132,5 +109,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9947ee0107f8ff8fc039",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "Location"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

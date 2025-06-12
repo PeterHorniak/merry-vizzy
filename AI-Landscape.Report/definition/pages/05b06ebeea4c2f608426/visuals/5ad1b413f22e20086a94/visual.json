@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "020_ActivitiesSplit"
+                      "Entity": "Activity"
                     }
                   },
                   "Property": "Activities AI"
@@ -34,7 +34,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "020_ActivitiesSplit"
+                      "Entity": "Activity"
                     }
                   },
                   "Property": "Organisation"
@@ -54,7 +54,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "020_ActivitiesSplit"
+                          "Entity": "Activity"
                         }
                       },
                       "Property": "Organisation"
@@ -78,7 +78,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "020_ActivitiesSplit"
+                        "Entity": "Activity"
                       }
                     },
                     "Property": "Organisation"
@@ -185,7 +185,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "020_ActivitiesSplit"
+                "Entity": "Activity"
               }
             },
             "Property": "Activities AI"
@@ -197,7 +197,7 @@
           "From": [
             {
               "Name": "0",
-              "Entity": "020_ActivitiesSplit",
+              "Entity": "Activity",
               "Type": 0
             }
           ],
@@ -266,7 +266,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "020_ActivitiesSplit"
+                    "Entity": "Activity"
                   }
                 },
                 "Property": "Organisation"
@@ -283,7 +283,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "020_ActivitiesSplit"
+                "Entity": "Activity"
               }
             },
             "Property": "Organisation"
