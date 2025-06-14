@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "c41415f08e1a50609507",
   "position": {
-    "x": 421.47246376811592,
-    "y": 510.51594202898553,
-    "z": 10000,
-    "height": 200.34782608695653,
-    "width": 424.4405797101449,
-    "tabOrder": 10000
+    "x": 474.66666666666669,
+    "y": 534.66666666666663,
+    "z": 9000,
+    "height": 176,
+    "width": 402.66666666666669,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020",
@@ -230,39 +230,20 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f2888db4ee6c47456d54",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "005_tblOrg-SplitParents"
-              }
-            },
-            "Property": "Organisation-Shortened"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "24884e1ea6aa9c09a029",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "005_tblOrg-SplitParents"
-              }
-            },
-            "Property": "Parent org-shortened"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

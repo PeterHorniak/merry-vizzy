@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "4e948005ce1cf7ea943e",
   "position": {
-    "x": 862.23768115942028,
-    "y": 69.008695652173913,
+    "x": 61.333333333333336,
+    "y": 534.66666666666663,
     "z": 0,
-    "height": 255.25797101449277,
-    "width": 417.76231884057972,
+    "height": 176,
+    "width": 403.33333333333331,
     "tabOrder": 0
   },
   "visual": {
@@ -79,25 +79,20 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9e7e3e7b4d2a7da16f2f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Activities AI"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

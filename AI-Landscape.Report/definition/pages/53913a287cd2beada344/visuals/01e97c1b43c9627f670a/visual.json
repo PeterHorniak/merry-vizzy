@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 302.988248461108,
-    "z": 12000,
+    "z": 5000,
     "height": 158.29882484611082,
     "width": 364.58869613878011,
-    "tabOrder": 12000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "timelineByQueryon2DD9A171C1CB4B148AA3DD23CEF5B2F9",
@@ -364,37 +364,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4367c09a1ad2363e9e15",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Event"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6ef275c2afc0a94383ae",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Event"
-              }
-            },
-            "Property": "Event"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

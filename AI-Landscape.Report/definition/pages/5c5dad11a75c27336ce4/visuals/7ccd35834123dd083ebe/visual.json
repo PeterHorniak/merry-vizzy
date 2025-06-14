@@ -246,62 +246,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "ee52b6db0b2dbd20d2d5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "832821cd1e68a0c990e9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "Title"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "25c7afd1d5e78c1a4efc",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "Link"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0d579bb4666216cb0a5b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "IsMain"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

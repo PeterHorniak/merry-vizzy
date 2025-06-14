@@ -629,67 +629,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "b79f54ccfd5dfcb1dcbd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Activities AI - Level.2"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "bab5b837ba2f685cd15c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Activities AI - Level.3"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "206f57ea543228317e79",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "146d5af260eaa80dde74",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Activity"
-                  }
-                },
-                "Property": "Organisation"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

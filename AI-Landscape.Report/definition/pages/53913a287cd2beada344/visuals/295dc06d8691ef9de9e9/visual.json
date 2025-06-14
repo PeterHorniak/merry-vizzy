@@ -3,11 +3,11 @@
   "name": "295dc06d8691ef9de9e9",
   "position": {
     "x": 0,
-    "y": 450.83333333333337,
-    "z": 16001,
-    "height": 269.16666666666669,
+    "y": 506.66666666666669,
+    "z": 6000,
+    "height": 213.33333333333334,
     "width": 662.5,
-    "tabOrder": 16001
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "tableEx",
@@ -73,6 +73,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Association"
+                  }
+                },
+                "Property": "AssociationType"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
@@ -96,7 +113,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "71.2468192364377D"
+                  "Value": "149.51967405623702D"
                 }
               }
             }
@@ -110,7 +127,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "163.7578914097109D"
+                  "Value": "121.19301913466578D"
                 }
               }
             }
@@ -150,65 +167,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f6a036e1159d44a891c8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Association"
-              }
-            },
-            "Property": "AssociationType"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "fe6e546354a996aa9bae",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Association"
-              }
-            },
-            "Property": "OrgStarting"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "61268e5ebf89a7e4d9e2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Association"
-              }
-            },
-            "Property": "OrgAssociated"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f18ed7ee97c922b7734f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Association"
-              }
-            },
-            "Property": "Location"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

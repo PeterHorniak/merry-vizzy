@@ -4,9 +4,10 @@
   "position": {
     "x": 301.02249488752557,
     "y": 597.46421267893663,
-    "z": 9002,
+    "z": 9000,
     "height": 88.343558282208591,
-    "width": 149.85685071574642
+    "width": 149.85685071574642,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "slicer",
@@ -53,23 +54,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "255787e55a46308c9cfa",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Country"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

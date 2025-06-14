@@ -4,10 +4,10 @@
   "position": {
     "x": 156.22337363270006,
     "y": 67.058146229130685,
-    "z": 9006,
+    "z": 13000,
     "height": 66.32124352331607,
     "width": 253.49453080023031,
-    "tabOrder": 9005
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "slicer",
@@ -230,37 +230,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "58c11ce8740486bf55f2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Activities AI - Level.1"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7bc27a6f5b28b92b0983",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Activities AI - Level.2"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

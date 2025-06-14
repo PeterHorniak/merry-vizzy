@@ -398,39 +398,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "e96dc26d2abb3099e85e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "cb2a15c82e6b7c26aa4c",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Contact"
-                  }
-                },
-                "Property": "Name"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

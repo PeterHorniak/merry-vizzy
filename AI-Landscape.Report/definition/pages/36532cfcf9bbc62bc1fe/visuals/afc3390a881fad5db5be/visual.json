@@ -71,6 +71,178 @@
             }
           }
         }
+      ],
+      "nodes": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "010_Hierarchy"
+                          }
+                        },
+                        "Property": "Lvl4"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'ACMA'"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "010_Hierarchy"
+                          }
+                        },
+                        "Property": "Lvl5"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'No child orgs'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "010_Hierarchy"
+                          }
+                        },
+                        "Property": "Lvl4"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'No child orgs'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "010_Hierarchy"
+                          }
+                        },
+                        "Property": "Lvl4"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'AI Safety Careers Conf'"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "010_Hierarchy"
+                          }
+                        },
+                        "Property": "Lvl5"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'No child orgs'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -88,37 +260,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ebe155f2708416c25ef6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_Hierarchy"
-              }
-            },
-            "Property": "Lvl4"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a77b0596777811c92b86",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_Hierarchy"
-              }
-            },
-            "Property": "Lvl5"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

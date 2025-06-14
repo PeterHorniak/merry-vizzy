@@ -4,10 +4,10 @@
   "position": {
     "x": 590.259067357513,
     "y": 0,
-    "z": 9004,
+    "z": 11000,
     "height": 398.664363845711,
     "width": 689.74093264248711,
-    "tabOrder": 9003
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "networkGraphA96234ADB8D143D1837FEC426BB34781",
@@ -248,56 +248,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "0f9dce24d02d2a0631ad",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0fa104700f04ae29349a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "Name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a8ba8f779f36b9aa571e",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Contact"
-                  }
-                },
-                "Property": "Name"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

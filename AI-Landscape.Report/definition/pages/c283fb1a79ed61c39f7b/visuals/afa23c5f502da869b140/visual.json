@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "afa23c5f502da869b140",
   "position": {
-    "x": 374.19633225458466,
-    "y": 105.63106796116504,
-    "z": 13001,
-    "height": 131.17583603020495,
-    "width": 202.97734627831716,
-    "tabOrder": 13001
+    "x": 422.5,
+    "y": 102.5,
+    "z": 12000,
+    "height": 130,
+    "width": 203.75,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "tableEx",
@@ -316,86 +316,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "63dd89e131395e8af41f",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Org"
-                  }
-                },
-                "Property": "Country"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "36ac388fae67fcea4588",
-        "field": {
-          "Arithmetic": {
-            "Left": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Org"
-                      }
-                    },
-                    "Property": "Country"
-                  }
-                },
-                "Function": 5
-              }
-            },
-            "Right": {
-              "ScopedEval": {
-                "Expression": {
-                  "Aggregation": {
-                    "Expression": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "Org"
-                          }
-                        },
-                        "Property": "Country"
-                      }
-                    },
-                    "Function": 5
-                  }
-                },
-                "Scope": []
-              }
-            },
-            "Operator": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "37248058c4c1f5bdc038",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Country"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -4,10 +4,10 @@
   "position": {
     "x": 382.45250431778931,
     "y": 16.948762233736328,
-    "z": 7001,
+    "z": 4000,
     "height": 538.67587795048939,
     "width": 897.54749568221075,
-    "tabOrder": 7001
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "ZoomChartsDrillDownNetworkProA1D59E3B59078E6D50A4CB1C3D4E2129C500",
@@ -257,39 +257,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "6959b753096da77e626f",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Activity"
-                  }
-                },
-                "Property": "Organisation"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ae9c7ccd1570285fe2ff",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

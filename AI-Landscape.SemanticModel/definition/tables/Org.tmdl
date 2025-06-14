@@ -161,6 +161,14 @@ table Org
 
 		annotation SummarizationSetBy = Automatic
 
+	column AIFocus
+		dataType: string
+		lineageTag: 0589a35e-fcab-4fd5-aad1-6bd775e1fd14
+		summarizeBy: none
+		sourceColumn: AIFocus
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Org = m
 		mode: import
 		queryGroup: 3-Load

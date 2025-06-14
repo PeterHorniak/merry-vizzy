@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "eb0b95755156c5f209ae",
   "position": {
-    "x": 1061.8338727076591,
-    "y": 249.23408845738942,
-    "z": 13002,
-    "height": 131.17583603020495,
-    "width": 202.97734627831716,
-    "tabOrder": 13002
+    "x": 905,
+    "y": 96.666666666666671,
+    "z": 13000,
+    "height": 246.66666666666669,
+    "width": 203.33333333333334,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "tableEx",
@@ -283,86 +283,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1a71e90a56fc31e797e0",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Event"
-                  }
-                },
-                "Property": "Event-Type"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c6c6ab9a5afbc8497b8b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Event"
-              }
-            },
-            "Property": "Event-Type"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "82cc59dca25fc41cda1e",
-        "field": {
-          "Arithmetic": {
-            "Left": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Event"
-                      }
-                    },
-                    "Property": "Event-Type"
-                  }
-                },
-                "Function": 5
-              }
-            },
-            "Right": {
-              "ScopedEval": {
-                "Expression": {
-                  "Aggregation": {
-                    "Expression": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "Event"
-                          }
-                        },
-                        "Property": "Event-Type"
-                      }
-                    },
-                    "Function": 5
-                  }
-                },
-                "Scope": []
-              }
-            },
-            "Operator": 3
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

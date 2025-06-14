@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "56ac1734a88e3a917ee7",
   "position": {
-    "x": 421.47246376811592,
-    "y": 68.266666666666666,
-    "z": 6000,
-    "height": 256,
-    "width": 344.3014492753623,
-    "tabOrder": 6000
+    "x": 61.333333333333336,
+    "y": 300,
+    "z": 5000,
+    "height": 224,
+    "width": 317.33333333333331,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "tableEx",
@@ -120,6 +120,34 @@
           },
           "selector": {
             "metadata": "Contact.IsMain"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "148.33333333333334D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Contact.Title"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "119D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Contact.Name"
           }
         }
       ]

@@ -465,25 +465,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "71d1cadfee4e6b010a86",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Contact"
-                  }
-                },
-                "Property": "Name"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

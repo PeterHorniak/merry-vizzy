@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "b39f2b1671edbcfe6275",
   "position": {
-    "x": 954.0906547285955,
-    "y": 559.41801902630107,
-    "z": 16003,
-    "height": 151.85226636821488,
-    "width": 325.90934527140462,
-    "tabOrder": 16003
+    "x": 954.16666666666674,
+    "y": 570,
+    "z": 8000,
+    "height": 141.66666666666669,
+    "width": 325.83333333333337,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020",
@@ -58,14 +58,14 @@
             "nodePositions": {
               "expr": {
                 "Literal": {
-                  "Value": "'[{\"name\":\"AU\",\"x\":\"0\",\"y\":\"0\"},{\"name\":\"CA\",\"x\":\"0\",\"y\":\"356\"},{\"name\":\"EA\",\"x\":\"0\",\"y\":\"374\"},{\"name\":\"EU\",\"x\":\"0\",\"y\":\"419\"},{\"name\":\"JP\",\"x\":\"0\",\"y\":\"437\"},{\"name\":\"KR\",\"x\":\"0\",\"y\":\"454\"},{\"name\":\"NL\",\"x\":\"0\",\"y\":\"472\"},{\"name\":\"SG\",\"x\":\"0\",\"y\":\"489\"},{\"name\":\"UK\",\"x\":\"0\",\"y\":\"506\"},{\"name\":\"US\",\"x\":\"0\",\"y\":\"552\"},{\"name\":\"AI Safety Support\",\"x\":\"442\",\"y\":\"0\"},{\"name\":\"AISANZ\",\"x\":\"442\",\"y\":\"43\"},{\"name\":\"ARAAC\",\"x\":\"442\",\"y\":\"58\"},{\"name\":\"Aus AI Industry\",\"x\":\"442\",\"y\":\"73\"},{\"name\":\"Aus Fed Govt\",\"x\":\"442\",\"y\":\"88\"},{\"name\":\"Aus Fed Parliament\",\"x\":\"442\",\"y\":\"103\"},{\"name\":\"Aus Fed Senate\",\"x\":\"442\",\"y\":\"118\"},{\"name\":\"Aus media\",\"x\":\"442\",\"y\":\"133\"},{\"name\":\"AUSCL\",\"x\":\"442\",\"y\":\"147\"},{\"name\":\"Campaign for AI Safety\",\"x\":\"442\",\"y\":\"162\"},{\"name\":\"Commission for the Human Future\",\"x\":\"442\",\"y\":\"177\"},{\"name\":\"Council for the Human Future\",\"x\":\"442\",\"y\":\"192\"},{\"name\":\"Data Analytics Wednesday\",\"x\":\"442\",\"y\":\"207\"},{\"name\":\"DSAi\",\"x\":\"442\",\"y\":\"222\"},{\"name\":\"FORE\",\"x\":\"442\",\"y\":\"237\"},{\"name\":\"ForHumanity Aus\",\"x\":\"442\",\"y\":\"252\"},{\"name\":\"GAP\",\"x\":\"442\",\"y\":\"267\"},{\"name\":\"QLD\",\"x\":\"442\",\"y\":\"282\"},{\"name\":\"Safeground\",\"x\":\"442\",\"y\":\"297\"},{\"name\":\"State Govt ACT\",\"x\":\"442\",\"y\":\"311\"},{\"name\":\"State Govt NSW\",\"x\":\"442\",\"y\":\"326\"},{\"name\":\"State Govt SA\",\"x\":\"442\",\"y\":\"341\"},{\"name\":\"State Govt VIC\",\"x\":\"442\",\"y\":\"356\"},{\"name\":\"State Govt WA\",\"x\":\"442\",\"y\":\"371\"},{\"name\":\"Tech Council of Aus\",\"x\":\"442\",\"y\":\"386\"},{\"name\":\"AISI CA\",\"x\":\"442\",\"y\":\"401\"},{\"name\":\"EA AU\",\"x\":\"442\",\"y\":\"416\"},{\"name\":\"EAGx\",\"x\":\"442\",\"y\":\"431\"},{\"name\":\"EAGx Virtual\",\"x\":\"442\",\"y\":\"446\"},{\"name\":\"AIO EU\",\"x\":\"442\",\"y\":\"460\"},{\"name\":\"AISI JP\",\"x\":\"442\",\"y\":\"475\"},{\"name\":\"AISI KR\",\"x\":\"442\",\"y\":\"490\"},{\"name\":\"Exist. Risk Observatory\",\"x\":\"442\",\"y\":\"505\"},{\"name\":\"AISI SG\",\"x\":\"442\",\"y\":\"520\"},{\"name\":\"80K Hours\",\"x\":\"442\",\"y\":\"535\"},{\"name\":\"AISI UK\",\"x\":\"442\",\"y\":\"550\"},{\"name\":\"AISI US\",\"x\":\"442\",\"y\":\"565\"},{\"name\":\"All Tech Is Human\",\"x\":\"442\",\"y\":\"580\"},{\"name\":\"Anthropic\",\"x\":\"442\",\"y\":\"595\"},{\"name\":\"Ashgro\",\"x\":\"442\",\"y\":\"610\"},{\"name\":\"MIT\",\"x\":\"442\",\"y\":\"624\"},{\"name\":\"Palisade Research\",\"x\":\"442\",\"y\":\"639\"}]'"
+                  "Value": "'[{\"name\":\"DISR\",\"x\":\"0\",\"y\":\"0\"},{\"name\":\"AI Adoption Tracker\",\"x\":\"274\",\"y\":\"0\"},{\"name\":\"AI Expert Grp\",\"x\":\"274\",\"y\":\"16\"},{\"name\":\"AIGT\",\"x\":\"274\",\"y\":\"32\"},{\"name\":\"Aus AI Safety Forum 2024\",\"x\":\"274\",\"y\":\"48\"},{\"name\":\"NAIC\",\"x\":\"274\",\"y\":\"64\"},{\"name\":\"Voluntary AI Ethics Principles\",\"x\":\"274\",\"y\":\"80\"}]'"
                 }
               }
             },
             "viewportSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\"height\":\"654.2429149797571\",\"width\":\"450\"}'"
+                  "Value": "'{\"height\":\"95.66666666666669\",\"width\":\"295.83333333333337\"}'"
                 }
               }
             }
@@ -232,37 +232,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9bf67e1117d4b30cecfb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_tblOrg-SplitChildren"
-              }
-            },
-            "Property": "Organisation-shortened"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5f6316f5491c3ce37dbd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_tblOrg-SplitChildren"
-              }
-            },
-            "Property": "Parent org-shortened"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

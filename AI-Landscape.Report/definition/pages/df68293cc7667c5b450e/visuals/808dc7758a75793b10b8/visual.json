@@ -161,56 +161,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "52e0bf8afdca1f5976ef",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_Hierarchy"
-              }
-            },
-            "Property": "Lvl2"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "30fb499bafbbabed5b01",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_Hierarchy"
-              }
-            },
-            "Property": "Level3"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0eb73438ad3ed0e27c57",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Org"
-                  }
-                },
-                "Property": "Parent org"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

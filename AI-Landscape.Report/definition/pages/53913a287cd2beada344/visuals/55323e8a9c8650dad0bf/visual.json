@@ -4,10 +4,10 @@
   "position": {
     "x": 88.102965864577513,
     "y": 50.856183547845554,
-    "z": 9000,
+    "z": 3000,
     "height": 221.33184107442642,
     "width": 310.15109121432573,
-    "tabOrder": 8000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -97,7 +97,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "'aisa'"
+                            "Value": "'ais'"
                           }
                         }
                       }
@@ -174,23 +174,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "dbc44f14cf387541b561",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

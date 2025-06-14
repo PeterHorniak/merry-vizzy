@@ -43,7 +43,7 @@
               },
               "queryRef": "010_Hierarchy.Lvl3",
               "nativeQueryRef": "Lvl3",
-              "active": true
+              "active": false
             }
           ]
         }
@@ -82,20 +82,7 @@
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'AU'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -114,146 +101,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "0",
-                    "Entity": "010_Hierarchy",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "0"
-                                }
-                              },
-                              "Property": "Lvl2"
-                            }
-                          },
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "0"
-                                }
-                              },
-                              "Property": "Lvl3"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'AU'"
-                              }
-                            },
-                            {
-                              "Literal": {
-                                "Value": "'AusFedGov'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    },
-                    "Annotations": {
-                      "filterExpressionMetadata": {
-                        "expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "010_Hierarchy"
-                                }
-                              },
-                              "Property": "Lvl2"
-                            }
-                          },
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "010_Hierarchy"
-                                }
-                              },
-                              "Property": "Lvl3"
-                            }
-                          }
-                        ],
-                        "decomposedIdentities": {
-                          "values": [
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'AU'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'AusFedGov'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
-                          ],
-                          "columns": [
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "010_Hierarchy"
-                                    }
-                                  },
-                                  "Property": "Lvl2"
-                                }
-                              }
-                            },
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "010_Hierarchy"
-                                    }
-                                  },
-                                  "Property": "Lvl3"
-                                }
-                              }
-                            }
-                          ]
-                        },
-                        "valueMap": [
-                          {
-                            "0": "AU",
-                            "1": "AusFedGov"
-                          }
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "header": [
@@ -299,37 +147,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "af2bdb3e2dd7f8ff303c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_Hierarchy"
-              }
-            },
-            "Property": "Lvl2"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "66352ce0e8e518a52e9f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_Hierarchy"
-              }
-            },
-            "Property": "Lvl3"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

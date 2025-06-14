@@ -233,53 +233,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "6c4f218f77e1509ce9a4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Activities AI - Level.2"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "36559aaa164fd463e6f2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Activities AI - Level.3"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "9f967c179a52cd82e1fd",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Activity"
-                  }
-                },
-                "Property": "Organisation"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

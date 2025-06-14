@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "49f26a7914fda18cf77f",
+  "name": "1371dbd565d2379a1ea8",
   "position": {
-    "x": 474.66666666666669,
-    "y": 385.33333333333331,
-    "z": 4000,
-    "height": 138.66666666666666,
-    "width": 392.66666666666669,
-    "tabOrder": 4000
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 237.08333333333334,
+    "width": 320,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "tableEx",
@@ -20,65 +20,50 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Event"
+                      "Entity": "Association"
                     }
                   },
-                  "Property": "Date"
+                  "Property": "AssociationType"
                 }
               },
-              "queryRef": "010_tblOrg-events.Date",
-              "nativeQueryRef": "Date"
+              "queryRef": "Min(Association.AssociationType)",
+              "nativeQueryRef": "Association",
+              "displayName": "Association"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Event"
+                      "Entity": "Association"
                     }
                   },
-                  "Property": "Event"
+                  "Property": "OrgAssociated"
                 }
               },
-              "queryRef": "010_tblOrg-events.Event",
-              "nativeQueryRef": "Event"
+              "queryRef": "Min(Association.OrgAssociated)",
+              "nativeQueryRef": "Organisation",
+              "displayName": "Organisation"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Event"
-                  }
-                },
-                "Property": "Date"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
-      "grid": [
+      "values": [
         {
           "properties": {
-            "gridVertical": {
+            "wordWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
-            "outlineStyle": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "11D"
                 }
               }
             }
@@ -91,13 +76,52 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "296.3757556279938D"
+                  "Value": "105.61495767733061D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "010_tblOrg-events.Event"
+            "metadata": "Min(Association.AssociationType)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "176.0206671095458D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(Association.OrgAssociated)"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       ]
@@ -110,38 +134,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'None'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
                 }
               }
             }

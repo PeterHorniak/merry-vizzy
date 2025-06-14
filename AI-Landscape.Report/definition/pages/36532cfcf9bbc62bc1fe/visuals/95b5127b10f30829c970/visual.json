@@ -58,14 +58,14 @@
             "nodePositions": {
               "expr": {
                 "Literal": {
-                  "Value": "'[{\"name\":\"80K Hours\",\"x\":\"0\",\"y\":\"0\"},{\"name\":\"AI Safety Support\",\"x\":\"0\",\"y\":\"11\"},{\"name\":\"AIO EU\",\"x\":\"0\",\"y\":\"22\"},{\"name\":\"AISANZ\",\"x\":\"0\",\"y\":\"33\"},{\"name\":\"AISI CA\",\"x\":\"0\",\"y\":\"107\"},{\"name\":\"AISI JP\",\"x\":\"0\",\"y\":\"118\"},{\"name\":\"AISI KR\",\"x\":\"0\",\"y\":\"129\"},{\"name\":\"AISI SG\",\"x\":\"0\",\"y\":\"140\"},{\"name\":\"AISI UK\",\"x\":\"0\",\"y\":\"151\"},{\"name\":\"AISI US\",\"x\":\"0\",\"y\":\"162\"},{\"name\":\"All Tech Is Human\",\"x\":\"0\",\"y\":\"174\"},{\"name\":\"Anthropic\",\"x\":\"0\",\"y\":\"185\"},{\"name\":\"ARAAC\",\"x\":\"0\",\"y\":\"196\"},{\"name\":\"Ashgro\",\"x\":\"0\",\"y\":\"207\"},{\"name\":\"Aus AI Industry\",\"x\":\"0\",\"y\":\"218\"},{\"name\":\"Aus Fed Govt\",\"x\":\"0\",\"y\":\"271\"},{\"name\":\"Aus Fed Parliament\",\"x\":\"0\",\"y\":\"292\"},{\"name\":\"Aus Fed Senate\",\"x\":\"0\",\"y\":\"303\"},{\"name\":\"Aus media\",\"x\":\"0\",\"y\":\"314\"},{\"name\":\"AUSCL\",\"x\":\"0\",\"y\":\"326\"},{\"name\":\"Campaign for AI Safety\",\"x\":\"0\",\"y\":\"337\"},{\"name\":\"Commission for the Human Future\",\"x\":\"0\",\"y\":\"348\"},{\"name\":\"Council for the Human Future\",\"x\":\"0\",\"y\":\"359\"},{\"name\":\"Data Analytics Wednesday\",\"x\":\"0\",\"y\":\"370\"},{\"name\":\"DSAi\",\"x\":\"0\",\"y\":\"381\"},{\"name\":\"EA AU\",\"x\":\"0\",\"y\":\"392\"},{\"name\":\"EAGx\",\"x\":\"0\",\"y\":\"404\"},{\"name\":\"EAGx Virtual\",\"x\":\"0\",\"y\":\"415\"},{\"name\":\"Exist. Risk Observatory\",\"x\":\"0\",\"y\":\"426\"},{\"name\":\"FORE\",\"x\":\"0\",\"y\":\"437\"},{\"name\":\"ForHumanity Aus\",\"x\":\"0\",\"y\":\"448\"},{\"name\":\"GAP\",\"x\":\"0\",\"y\":\"459\"},{\"name\":\"MIT\",\"x\":\"0\",\"y\":\"470\"},{\"name\":\"Palisade Research\",\"x\":\"0\",\"y\":\"502\"},{\"name\":\"QLD\",\"x\":\"0\",\"y\":\"513\"},{\"name\":\"Safeground\",\"x\":\"0\",\"y\":\"556\"},{\"name\":\"State Govt ACT\",\"x\":\"0\",\"y\":\"567\"},{\"name\":\"State Govt NSW\",\"x\":\"0\",\"y\":\"578\"},{\"name\":\"State Govt SA\",\"x\":\"0\",\"y\":\"610\"},{\"name\":\"State Govt VIC\",\"x\":\"0\",\"y\":\"621\"},{\"name\":\"State Govt WA\",\"x\":\"0\",\"y\":\"632\"},{\"name\":\"Tech Council of Aus\",\"x\":\"0\",\"y\":\"643\"},{\"name\":null,\"x\":\"323\",\"y\":\"0\"},{\"name\":\"AI Safety Careers Conf\",\"x\":\"323\",\"y\":\"281\"},{\"name\":\"AISANZ AUCK\",\"x\":\"323\",\"y\":\"292\"},{\"name\":\"AISANZ BRIS\",\"x\":\"323\",\"y\":\"303\"},{\"name\":\"AISANZ CANB\",\"x\":\"323\",\"y\":\"315\"},{\"name\":\"AISANZ MELB\",\"x\":\"323\",\"y\":\"326\"},{\"name\":\"AISANZ SYD\",\"x\":\"323\",\"y\":\"337\"},{\"name\":\"AISANZ WELL\",\"x\":\"323\",\"y\":\"349\"},{\"name\":\"Timaeus\",\"x\":\"323\",\"y\":\"360\"},{\"name\":\"ACS\",\"x\":\"323\",\"y\":\"371\"},{\"name\":\"Ethe\",\"x\":\"323\",\"y\":\"383\"},{\"name\":\"Harmony Intell.\",\"x\":\"323\",\"y\":\"394\"},{\"name\":\"Humane Intell.\",\"x\":\"323\",\"y\":\"405\"},{\"name\":\"Mileva Security Labs\",\"x\":\"323\",\"y\":\"417\"},{\"name\":\"CSIRO\",\"x\":\"323\",\"y\":\"428\"},{\"name\":\"DISR\",\"x\":\"323\",\"y\":\"439\"},{\"name\":\"Select Committee on Adoption of AI\",\"x\":\"323\",\"y\":\"450\"},{\"name\":\"AFR\",\"x\":\"323\",\"y\":\"462\"},{\"name\":\"AI Gov slack\",\"x\":\"323\",\"y\":\"473\"},{\"name\":\"AFAIS\",\"x\":\"323\",\"y\":\"484\"},{\"name\":\"FLI\",\"x\":\"323\",\"y\":\"496\"},{\"name\":\"MIT Computer Science & AI Laboratory\",\"x\":\"323\",\"y\":\"507\"},{\"name\":\"MIT FutureTech\",\"x\":\"323\",\"y\":\"518\"},{\"name\":\"Griffith Uni\",\"x\":\"323\",\"y\":\"530\"},{\"name\":\"QUT\",\"x\":\"323\",\"y\":\"541\"},{\"name\":\"UniSC\",\"x\":\"323\",\"y\":\"552\"},{\"name\":\"UQ\",\"x\":\"323\",\"y\":\"564\"},{\"name\":\"ANU\",\"x\":\"323\",\"y\":\"575\"},{\"name\":\"CSU\",\"x\":\"323\",\"y\":\"586\"},{\"name\":\"USYD\",\"x\":\"323\",\"y\":\"598\"},{\"name\":\"UTS\",\"x\":\"323\",\"y\":\"609\"},{\"name\":\"Uni of Adelaide\",\"x\":\"323\",\"y\":\"620\"},{\"name\":\"Uni of Melbourne\",\"x\":\"323\",\"y\":\"632\"},{\"name\":\"UWA\",\"x\":\"323\",\"y\":\"643\"}]'"
+                  "Value": "'[{\"name\":\"80K Hours\",\"x\":\"0\",\"y\":\"0\"},{\"name\":\"a16z\",\"x\":\"0\",\"y\":\"5\"},{\"name\":\"ACM\",\"x\":\"0\",\"y\":\"10\"},{\"name\":\"ACT\",\"x\":\"0\",\"y\":\"15\"},{\"name\":\"AE Studio\",\"x\":\"0\",\"y\":\"21\"},{\"name\":\"AI Safety In Aus\",\"x\":\"0\",\"y\":\"26\"},{\"name\":\"AI Safety Melbourne coworking\",\"x\":\"0\",\"y\":\"31\"},{\"name\":\"AI Safety Support\",\"x\":\"0\",\"y\":\"36\"},{\"name\":\"AIGI\",\"x\":\"0\",\"y\":\"42\"},{\"name\":\"AIO EU\",\"x\":\"0\",\"y\":\"46\"},{\"name\":\"AISI CA\",\"x\":\"0\",\"y\":\"52\"},{\"name\":\"AISI JP\",\"x\":\"0\",\"y\":\"57\"},{\"name\":\"AISI KR\",\"x\":\"0\",\"y\":\"62\"},{\"name\":\"AISI SG\",\"x\":\"0\",\"y\":\"67\"},{\"name\":\"AISI UK\",\"x\":\"0\",\"y\":\"72\"},{\"name\":\"AISI US\",\"x\":\"0\",\"y\":\"78\"},{\"name\":\"All Tech Is Human\",\"x\":\"0\",\"y\":\"82\"},{\"name\":\"Alphabet Inc\",\"x\":\"0\",\"y\":\"88\"},{\"name\":\"Amazon\",\"x\":\"0\",\"y\":\"93\"},{\"name\":\"Animal Justice Party\",\"x\":\"0\",\"y\":\"99\"},{\"name\":\"ARAAC\",\"x\":\"0\",\"y\":\"103\"},{\"name\":\"ARIA\",\"x\":\"0\",\"y\":\"109\"},{\"name\":\"Ashgro\",\"x\":\"0\",\"y\":\"114\"},{\"name\":\"Aus AI Industry\",\"x\":\"0\",\"y\":\"119\"},{\"name\":\"Aus Greens\",\"x\":\"0\",\"y\":\"153\"},{\"name\":\"Aus Labor Party\",\"x\":\"0\",\"y\":\"157\"},{\"name\":\"Aus media\",\"x\":\"0\",\"y\":\"163\"},{\"name\":\"AusFedGov\",\"x\":\"0\",\"y\":\"168\"},{\"name\":\"AusFedParl\",\"x\":\"0\",\"y\":\"230\"},{\"name\":\"BERI\",\"x\":\"0\",\"y\":\"235\"},{\"name\":\"BXL\",\"x\":\"0\",\"y\":\"241\"},{\"name\":\"CAIS\",\"x\":\"0\",\"y\":\"245\"},{\"name\":\"Cambridge\",\"x\":\"0\",\"y\":\"251\"},{\"name\":\"Campaign for AI Safety\",\"x\":\"0\",\"y\":\"256\"},{\"name\":\"CIFAR\",\"x\":\"0\",\"y\":\"261\"},{\"name\":\"CivAI\",\"x\":\"0\",\"y\":\"266\"},{\"name\":\"CLTR\",\"x\":\"0\",\"y\":\"271\"},{\"name\":\"Collective Action for Exist. Safety\",\"x\":\"0\",\"y\":\"277\"},{\"name\":\"Commission for the Human Future\",\"x\":\"0\",\"y\":\"281\"},{\"name\":\"ControlAI\",\"x\":\"0\",\"y\":\"287\"},{\"name\":\"Council for the Human Future\",\"x\":\"0\",\"y\":\"292\"},{\"name\":\"Data Analytics Wednesday\",\"x\":\"0\",\"y\":\"298\"},{\"name\":\"David Pocock\",\"x\":\"0\",\"y\":\"302\"},{\"name\":\"Deepmind\",\"x\":\"0\",\"y\":\"308\"},{\"name\":\"DSAi\",\"x\":\"0\",\"y\":\"318\"},{\"name\":\"DSIT\",\"x\":\"0\",\"y\":\"323\"},{\"name\":\"EAA\",\"x\":\"0\",\"y\":\"327\"},{\"name\":\"EAGx\",\"x\":\"0\",\"y\":\"333\"},{\"name\":\"EAGx Virtual\",\"x\":\"0\",\"y\":\"338\"},{\"name\":\"Exist. Risk Observatory\",\"x\":\"0\",\"y\":\"344\"},{\"name\":\"FAR AI\",\"x\":\"0\",\"y\":\"348\"},{\"name\":\"FORE\",\"x\":\"0\",\"y\":\"354\"},{\"name\":\"ForHumanity Aus\",\"x\":\"0\",\"y\":\"359\"},{\"name\":\"Fusion Party\",\"x\":\"0\",\"y\":\"364\"},{\"name\":\"Georgetown\",\"x\":\"0\",\"y\":\"369\"},{\"name\":\"ICAN AU\",\"x\":\"0\",\"y\":\"375\"},{\"name\":\"Indigenous - Aboriginal Party of Aus\",\"x\":\"0\",\"y\":\"380\"},{\"name\":\"Machine Learning Research Grp\",\"x\":\"0\",\"y\":\"384\"},{\"name\":\"Meta\",\"x\":\"0\",\"y\":\"390\"},{\"name\":\"Microsoft\",\"x\":\"0\",\"y\":\"395\"},{\"name\":\"MIT\",\"x\":\"0\",\"y\":\"400\"},{\"name\":\"NSW\",\"x\":\"0\",\"y\":\"415\"},{\"name\":\"NT\",\"x\":\"0\",\"y\":\"434\"},{\"name\":\"OpenAI Inc\",\"x\":\"0\",\"y\":\"440\"},{\"name\":\"Palisade Research\",\"x\":\"0\",\"y\":\"454\"},{\"name\":\"PauseAI\",\"x\":\"0\",\"y\":\"460\"},{\"name\":\"QLD\",\"x\":\"0\",\"y\":\"493\"},{\"name\":\"SA\",\"x\":\"0\",\"y\":\"517\"},{\"name\":\"Safeground\",\"x\":\"0\",\"y\":\"522\"},{\"name\":\"Standards Aus\",\"x\":\"0\",\"y\":\"527\"},{\"name\":\"Tech Council of Aus\",\"x\":\"0\",\"y\":\"533\"},{\"name\":\"Trumpet of Patriots\",\"x\":\"0\",\"y\":\"537\"},{\"name\":\"US Fed Gov\",\"x\":\"0\",\"y\":\"543\"},{\"name\":\"Vector Inst.\",\"x\":\"0\",\"y\":\"548\"},{\"name\":\"VIC\",\"x\":\"0\",\"y\":\"553\"},{\"name\":\"WA\",\"x\":\"0\",\"y\":\"558\"},{\"name\":\"Wollemi\",\"x\":\"0\",\"y\":\"564\"},{\"name\":\"X\",\"x\":\"0\",\"y\":\"569\"},{\"name\":\"No child orgs_SK_SELFLINK\",\"x\":\"0\",\"y\":\"574\"},{\"name\":\"Anthropic\",\"x\":\"63\",\"y\":\"0\"},{\"name\":\"AusFedSen\",\"x\":\"63\",\"y\":\"5\"},{\"name\":\"GAP\",\"x\":\"63\",\"y\":\"10\"},{\"name\":\"No child orgs\",\"x\":\"63\",\"y\":\"20\"},{\"name\":\"World Labs\",\"x\":\"63\",\"y\":\"262\"},{\"name\":\"Google\",\"x\":\"63\",\"y\":\"268\"},{\"name\":\"Safeguarded AI programme\",\"x\":\"63\",\"y\":\"273\"},{\"name\":\"Timaeus\",\"x\":\"63\",\"y\":\"279\"},{\"name\":\"ACS\",\"x\":\"63\",\"y\":\"283\"},{\"name\":\"BCA\",\"x\":\"63\",\"y\":\"289\"},{\"name\":\"Cadent\",\"x\":\"63\",\"y\":\"294\"},{\"name\":\"Ethe\",\"x\":\"63\",\"y\":\"299\"},{\"name\":\"Harmony Intell.\",\"x\":\"63\",\"y\":\"304\"},{\"name\":\"Humane Intell.\",\"x\":\"63\",\"y\":\"309\"},{\"name\":\"Mileva Security Labs\",\"x\":\"63\",\"y\":\"315\"},{\"name\":\"AFR\",\"x\":\"63\",\"y\":\"319\"},{\"name\":\"ACMA\",\"x\":\"63\",\"y\":\"325\"},{\"name\":\"AG\",\"x\":\"63\",\"y\":\"330\"},{\"name\":\"ARC\",\"x\":\"63\",\"y\":\"336\"},{\"name\":\"ARGC\",\"x\":\"63\",\"y\":\"340\"},{\"name\":\"CSIRO\",\"x\":\"63\",\"y\":\"346\"},{\"name\":\"DISR\",\"x\":\"63\",\"y\":\"351\"},{\"name\":\"DoF\",\"x\":\"63\",\"y\":\"356\"},{\"name\":\"DoHDA\",\"x\":\"63\",\"y\":\"361\"},{\"name\":\"DTA\",\"x\":\"63\",\"y\":\"366\"},{\"name\":\"OAIC\",\"x\":\"63\",\"y\":\"372\"},{\"name\":\"PC\",\"x\":\"63\",\"y\":\"377\"},{\"name\":\"PM&C\",\"x\":\"63\",\"y\":\"382\"},{\"name\":\"SFF\",\"x\":\"63\",\"y\":\"387\"},{\"name\":\"AI Frontiers programme\",\"x\":\"63\",\"y\":\"393\"},{\"name\":\"CSER\",\"x\":\"63\",\"y\":\"398\"},{\"name\":\"Siliconversations\",\"x\":\"63\",\"y\":\"403\"},{\"name\":\"Google AI\",\"x\":\"63\",\"y\":\"408\"},{\"name\":\"OpenAI GP LLC\",\"x\":\"63\",\"y\":\"413\"},{\"name\":\"EA Canb\",\"x\":\"63\",\"y\":\"423\"},{\"name\":\"CSET\",\"x\":\"63\",\"y\":\"428\"},{\"name\":\"Meta AI\",\"x\":\"63\",\"y\":\"433\"},{\"name\":\"OpenAI Global LLC\",\"x\":\"63\",\"y\":\"439\"},{\"name\":\"FLI\",\"x\":\"63\",\"y\":\"444\"},{\"name\":\"MIT Computer Science & AI Laboratory\",\"x\":\"63\",\"y\":\"449\"},{\"name\":\"MIT FutureTech\",\"x\":\"63\",\"y\":\"454\"},{\"name\":\"CSU\",\"x\":\"63\",\"y\":\"460\"},{\"name\":\"UNSW\",\"x\":\"63\",\"y\":\"465\"},{\"name\":\"USYD\",\"x\":\"63\",\"y\":\"470\"},{\"name\":\"UTS\",\"x\":\"63\",\"y\":\"475\"},{\"name\":\"OpenAI holding company\",\"x\":\"63\",\"y\":\"480\"},{\"name\":\"Thinking Machines Lab\",\"x\":\"63\",\"y\":\"486\"},{\"name\":\"PauseAI AU\",\"x\":\"63\",\"y\":\"490\"},{\"name\":\"PauseAI Cameroon\",\"x\":\"63\",\"y\":\"496\"},{\"name\":\"PauseAI CN\",\"x\":\"63\",\"y\":\"501\"},{\"name\":\"PauseAI FR\",\"x\":\"63\",\"y\":\"507\"},{\"name\":\"PauseAI Kenya\",\"x\":\"63\",\"y\":\"511\"},{\"name\":\"PauseAI US\",\"x\":\"63\",\"y\":\"517\"},{\"name\":\"PauseAI VN\",\"x\":\"63\",\"y\":\"522\"},{\"name\":\"DDMM\",\"x\":\"63\",\"y\":\"527\"},{\"name\":\"Griffith Uni\",\"x\":\"63\",\"y\":\"532\"},{\"name\":\"QUT\",\"x\":\"63\",\"y\":\"537\"},{\"name\":\"UniSC\",\"x\":\"63\",\"y\":\"543\"},{\"name\":\"UQ\",\"x\":\"63\",\"y\":\"548\"},{\"name\":\"Uni of Adelaide\",\"x\":\"63\",\"y\":\"553\"},{\"name\":\"NIST\",\"x\":\"63\",\"y\":\"558\"},{\"name\":\"Uni of Melbourne\",\"x\":\"63\",\"y\":\"564\"},{\"name\":\"UWA\",\"x\":\"63\",\"y\":\"569\"},{\"name\":\"xAI\",\"x\":\"63\",\"y\":\"574\"},{\"name\":\"OpenPhil\",\"x\":\"127\",\"y\":\"0\"},{\"name\":\"Select Committee on Adoption of AI\",\"x\":\"127\",\"y\":\"145\"},{\"name\":\"AFAIS\",\"x\":\"127\",\"y\":\"290\"},{\"name\":\"GAPolicy\",\"x\":\"127\",\"y\":\"434\"},{\"name\":\"AISANZ\",\"x\":\"190\",\"y\":\"0\"},{\"name\":\"AI Safety Careers Conf\",\"x\":\"254\",\"y\":\"0\"},{\"name\":\"AISANZ AUCK\",\"x\":\"254\",\"y\":\"82\"},{\"name\":\"AISANZ BRIS\",\"x\":\"254\",\"y\":\"166\"},{\"name\":\"AISANZ CANB\",\"x\":\"254\",\"y\":\"248\"},{\"name\":\"AISANZ MELB\",\"x\":\"254\",\"y\":\"331\"},{\"name\":\"AISANZ SYD\",\"x\":\"254\",\"y\":\"413\"},{\"name\":\"AISANZ WELL\",\"x\":\"254\",\"y\":\"497\"}]'"
                 }
               }
             },
             "viewportSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\"height\":\"654.2429149797571\",\"width\":\"339.2307692307692\"}'"
+                  "Value": "'{\"height\":\"578.5889570552148\",\"width\":\"257.93456032719837\"}'"
                 }
               }
             }
@@ -97,6 +97,50 @@
             }
           }
         }
+      ],
+      "nodes": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "010_Hierarchy"
+                          }
+                        },
+                        "Property": "Lvl3"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'No child orgs'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -114,37 +158,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "68a2cc4dd23bfa05c010",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_Hierarchy"
-              }
-            },
-            "Property": "Lvl3"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8844c7f73a993489f787",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_Hierarchy"
-              }
-            },
-            "Property": "Lvl4"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

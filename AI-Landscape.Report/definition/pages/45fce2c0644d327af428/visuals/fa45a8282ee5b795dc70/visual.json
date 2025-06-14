@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "fa45a8282ee5b795dc70",
   "position": {
-    "x": 61.518296013107594,
-    "y": 6.2916439104314588,
-    "z": 4000,
-    "height": 42.64336428181322,
-    "width": 638.25232113599134,
-    "tabOrder": 3000
+    "x": 61.333333333333336,
+    "y": 6,
+    "z": 3000,
+    "height": 49.333333333333336,
+    "width": 413.33333333333331,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -94,7 +94,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Department of Industry Science and Resources (DISR)'"
+                                "Value": "'State Government Australian Capital Territory'"
                               }
                             }
                           ]
@@ -138,7 +138,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "'disr'"
+                            "Value": "'state '"
                           }
                         }
                       }

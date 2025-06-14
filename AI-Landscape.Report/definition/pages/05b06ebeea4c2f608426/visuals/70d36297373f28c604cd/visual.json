@@ -4,10 +4,10 @@
   "position": {
     "x": 190.12089810017272,
     "y": 3.684513529073115,
-    "z": 7002,
+    "z": 5000,
     "height": 40.529648819804265,
     "width": 175.38284398388026,
-    "tabOrder": 7002
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -328,20 +328,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "cbc84cbf336b9f5680da",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Activities AI - Level.2"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

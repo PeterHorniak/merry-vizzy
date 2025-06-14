@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 54.5308002302821,
-    "z": 5000,
+    "z": 3000,
     "height": 665.42314335060451,
     "width": 365.503742084053,
-    "tabOrder": 5000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "treemap",
@@ -334,91 +334,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "6a3820938a06781f1323",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Activities-Explainer"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "bc828807d12e8e9d5026",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Activities AI-shortened"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ed19df6f0c75e3307fac",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Org"
-                  }
-                },
-                "Property": "Organisation"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a3eb159234fc172dda10",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Activity"
-                  }
-                },
-                "Property": "Organisation"
-              }
-            },
-            "Function": 4
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c7a513fd3080afec9897",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Activity"
-                  }
-                },
-                "Property": "Organisation"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

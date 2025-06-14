@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "a18276f40e4b2821d55a",
   "position": {
-    "x": 862.23768115942028,
-    "y": 347.26956521739129,
-    "z": 3000,
-    "height": 150.631884057971,
-    "width": 417.76231884057972,
-    "tabOrder": 2000
+    "x": 874.66666666666663,
+    "y": 385.33333333333331,
+    "z": 2000,
+    "height": 138.66666666666666,
+    "width": 396.66666666666669,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineChart",
@@ -1223,39 +1223,6 @@
         },
         "type": "Categorical",
         "howCreated": "User"
-      },
-      {
-        "name": "daa2f73984faa6d0d279",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Event"
-              }
-            },
-            "Property": "Event-Icon"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "9a9b9423c638ddfa5cb7",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Event"
-                  }
-                },
-                "Property": "Index-Asc-ByDate-WithJumps"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

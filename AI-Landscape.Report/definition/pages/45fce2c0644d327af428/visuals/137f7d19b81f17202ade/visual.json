@@ -4,10 +4,10 @@
   "position": {
     "x": 845.91304347826087,
     "y": 0,
-    "z": 9000,
+    "z": 8000,
     "height": 55.652173913043477,
     "width": 434.08695652173913,
-    "tabOrder": 9000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "card",
@@ -94,6 +94,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'Structure'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

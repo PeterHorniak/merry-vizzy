@@ -7,9 +7,10 @@ expression 010_tblOrg-Formatting =
 		    #"Split URL by linefeed" = Table.SplitColumn(#"URL replaced ) with blank", "URL", Splitter.SplitTextByEachDelimiter({"#(lf)"}, QuoteStyle.Csv, false), {"URL-Main", "URL-Secondary"}),
 		    #"Added ActiveOrNot" = Table.AddColumn(#"Split URL by linefeed", "ActiveOrNot", each if Text.StartsWith([Status], "Active") then "⚡ active" else if Text.StartsWith([Status], "Inactive") then "💤 inactive" else if Text.StartsWith([Status], "To Be Active") then "⏳ To Be Active" else "❔ unknown"),
 		    #"Added OrgStructure" = Table.AddColumn(#"Added ActiveOrNot", "OrgStructure", each if Text.Contains([Activities AI], "Company private") then "Company private" else if Text.Contains([Activities AI], "Company public") then "Company public" else if Text.Contains([Activities AI], "Charity / nonprofit") then "Charity / nonprofit" else if Text.Contains([Activities AI], "Approved research institute") then "Approved research institute (ARI)" else if Text.Contains([Activities AI], "Government federal") then "Government federal" else if Text.Contains([Activities AI], "Government state") then "Government state" else "No structure selected"),
-		    #"Added Country" = Table.AddColumn(#"Added OrgStructure", "Country", each if Text.Contains([Location], "Australia") then "Australia" else if Text.Contains([Location], " AU ") then "Australia" else if Text.Contains([Location], "New Zealand") then "New Zealand" else if Text.Contains([Location], " NZ") then "New Zealand" else if Text.Contains([Location], " US") then "United States" else if Text.Contains([Location], "United States") then "United States" else if [Location] = null then "Not entered" else if [Location] = "" then "Not entered" else "Other")
+		    #"Added Country" = Table.AddColumn(#"Added OrgStructure", "Country", each if Text.Contains([Location], "Australia") then "Australia" else if Text.Contains([Location], " AU ") then "Australia" else if Text.Contains([Location], "New Zealand") then "New Zealand" else if Text.Contains([Location], " NZ") then "New Zealand" else if Text.Contains([Location], " US") then "United States" else if Text.Contains([Location], "United States") then "United States" else if [Location] = null then "Not entered" else if [Location] = "" then "Not entered" else "Other"),
+		    #"Added AIFocus" = Table.AddColumn(#"Added Country", "AIFocus", each if [Activities AI] = null then "No specific AI focus" else if [Activities AI] = "blank" then "No specific AI focus" else if Text.Contains([Activities AI], "No specific AI focus") then "No specific AI focus" else "Has AI focus")
 		in
-		    #"Added Country"
+		    #"Added AIFocus"
 	lineageTag: b515d12b-1bca-4180-9b56-1111d984fc1b
 	queryGroup: 2-Transform
 
@@ -23,9 +24,9 @@ expression 000_tblOrg =
 		    Organisations_Table = Source{[name="Organisation",ItemKind="Table"]}[Data],
 		    #"Promoted Headers" = Table.PromoteHeaders(Organisations_Table, [PromoteAllScalars=true]),
 		    #"Promoted Headers1" = Table.PromoteHeaders(#"Promoted Headers", [PromoteAllScalars=true]),
-		    #"Removed blank column" = Table.RemoveColumns(#"Promoted Headers1",{""}),
-		    #"Removed bottom row" = Table.RemoveLastN(#"Removed blank column",1),
-		    #"Duplicated Organisation" = Table.DuplicateColumn(#"Removed bottom row", "Organisation", "Organisation-Shortened"),
+		    #"Removed bottom row" = Table.RemoveLastN(#"Promoted Headers1",1),
+		    #"Renamed Columns" = Table.RenameColumns(#"Removed bottom row",{{"Influenced by", "Parent org"}}),
+		    #"Duplicated Organisation" = Table.DuplicateColumn(#"Renamed Columns", "Organisation", "Organisation-Shortened"),
 		    #"Split Organisation by (" = Table.SplitColumn(#"Duplicated Organisation", "Organisation-Shortened", Splitter.SplitTextByEachDelimiter({"("}, QuoteStyle.Csv, true), {"Organisation-Shortened.1", "Organisation-Shortened.2"}),
 		    #"Replaced ) in Organisation-Shortened.2" = Table.ReplaceValue(#"Split Organisation by (",")","",Replacer.ReplaceText,{"Organisation-Shortened.2"}),
 		    #"Added Organisation-Shortened" = Table.AddColumn(#"Replaced ) in Organisation-Shortened.2", "Organisation-Shortened", each if [#"Organisation-Shortened.2"] = null then [#"Organisation-Shortened.1"] else [#"Organisation-Shortened.2"]),
@@ -337,11 +338,12 @@ expression 020_tblOrg-AssociationParent =
 		    Source = #"005_tblOrg-SplitParents",
 		    #"Renamed Columns" = Table.RenameColumns(Source,{{"Organisation", "OrgStarting"}, {"Organisation-Shortened", "OrgStartingShortened"}, {"Parent org", "OrgAssociated"}, {"URL", "OrgStartingURL"}, {"Parent org-base", "OrgAssociatedBase"}, {"Parent org-acronym", "OrgAssociatedAcronym"}, {"Parent org-shortened", "OrgAssociatedShortened"}}),
 		    #"Renamed Columns1" = Table.RenameColumns(#"Renamed Columns",{{"Location", "OrgStartingLocation"}}),
-		    #"Added AssociationType" = Table.AddColumn(#"Renamed Columns1", "AssociationType", each "Influenced by this org"),
+		    #"Added AssociationType" = Table.AddColumn(#"Renamed Columns1", "AssociationType", each "Influenced by"),
 		    #"Merged Queries" = Table.NestedJoin(#"Added AssociationType", {"OrgAssociated"}, #"000_tblOrg", {"Organisation"}, "000_tblOrg", JoinKind.LeftOuter),
-		    #"Expanded 000_tblOrg" = Table.ExpandTableColumn(#"Merged Queries", "000_tblOrg", {"Location"}, {"Location"})
+		    #"Expanded 000_tblOrg" = Table.ExpandTableColumn(#"Merged Queries", "000_tblOrg", {"Location"}, {"Location"}),
+		    #"Sorted Rows" = Table.Sort(#"Expanded 000_tblOrg",{{"OrgStarting", Order.Ascending}})
 		in
-		    #"Expanded 000_tblOrg"
+		    #"Sorted Rows"
 	lineageTag: a667b755-e013-4a76-b767-af67f58168ac
 	queryGroup: 2-Transform\Influences
 
@@ -370,9 +372,10 @@ expression 015_tblOrg-AssociationChild =
 		let
 		    Source = #"010_tblOrg-SplitChildren",
 		    #"Renamed Columns" = Table.RenameColumns(Source,{{"Parent org", "OrgAssociated"}, {"Organisation", "OrgStarting"}, {"Parent org-shortened", "OrgAssociatedShortened"}, {"URL-ParentOrg", "OrgAssociatedURL"}, {"Organisation-base", "OrgStartingBase"}, {"Organisation-acronym", "OrgStartingAcronym"}, {"Organisation-shortened", "OrgStartingShortened"}}),
-		    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "AssociationType", each "Influences this org")
+		    #"Added AssociationType" = Table.AddColumn(#"Renamed Columns", "AssociationType", each "Influences"),
+		    #"Sorted Rows" = Table.Sort(#"Added AssociationType",{{"OrgAssociated", Order.Ascending}})
 		in
-		    #"Added Custom"
+		    #"Sorted Rows"
 	lineageTag: 8d0a454f-85ac-4504-822d-43977bbbc4a2
 	queryGroup: 2-Transform\Influences
 

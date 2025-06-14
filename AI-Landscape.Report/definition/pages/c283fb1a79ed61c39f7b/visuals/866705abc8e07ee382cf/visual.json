@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "866705abc8e07ee382cf",
   "position": {
-    "x": 836.25812906453223,
-    "y": 102.4512256128064,
-    "z": 9000,
-    "height": 98.609304652326159,
-    "width": 202.98149074537267,
-    "tabOrder": 9000
+    "x": 633.75,
+    "y": 102.5,
+    "z": 8000,
+    "height": 98.75,
+    "width": 202.5,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "tableEx",
@@ -284,86 +284,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "194e3bf53d5d66b2eda4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "ActiveOrNot"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "672fb57e6aabeac79f1b",
-        "field": {
-          "Arithmetic": {
-            "Left": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Org"
-                      }
-                    },
-                    "Property": "ActiveOrNot"
-                  }
-                },
-                "Function": 5
-              }
-            },
-            "Right": {
-              "ScopedEval": {
-                "Expression": {
-                  "Aggregation": {
-                    "Expression": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "Org"
-                          }
-                        },
-                        "Property": "ActiveOrNot"
-                      }
-                    },
-                    "Function": 5
-                  }
-                },
-                "Scope": []
-              }
-            },
-            "Operator": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4e0e34a58a9a1be5bcae",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Org"
-                  }
-                },
-                "Property": "ActiveOrNot"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

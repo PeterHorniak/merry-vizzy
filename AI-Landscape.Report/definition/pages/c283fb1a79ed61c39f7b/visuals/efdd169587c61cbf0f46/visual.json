@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "efdd169587c61cbf0f46",
   "position": {
-    "x": 836.25812906453223,
-    "y": 265.7328664332166,
-    "z": 12000,
-    "height": 94.127063531765884,
-    "width": 202.98149074537267,
-    "tabOrder": 13000
+    "x": 423.75,
+    "y": 248.75,
+    "z": 11000,
+    "height": 93.75,
+    "width": 202.5,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "multiRowCard",
@@ -92,42 +92,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8550b7c211dd04a5ec9d",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Contact"
-                  }
-                },
-                "Property": "Name"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9caa03c380e4460c5162",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "_ContactsShared"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

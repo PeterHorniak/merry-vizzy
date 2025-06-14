@@ -7,7 +7,7 @@
     "z": 6000,
     "height": 66.74846625766871,
     "width": 133.49693251533742,
-    "tabOrder": 8000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -62,23 +62,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "95b1ebef0e3bc45982da",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "Title"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
