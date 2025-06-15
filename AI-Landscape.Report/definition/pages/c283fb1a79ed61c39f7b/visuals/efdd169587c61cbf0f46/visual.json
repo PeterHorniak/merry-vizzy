@@ -3,7 +3,7 @@
   "name": "efdd169587c61cbf0f46",
   "position": {
     "x": 1103.0769230769231,
-    "y": 96.92307692307692,
+    "y": 176.15384615384616,
     "z": 10000,
     "height": 93.84615384615384,
     "width": 176.92307692307691,
@@ -92,5 +92,42 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b1fb4ee1ac9284e6e055",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Contact"
+                  }
+                },
+                "Property": "Name"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9b3a5110725a12c84d4d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Contact"
+              }
+            },
+            "Property": "_ContactsShared"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -3,10 +3,10 @@
   "name": "6d89a928107b30613156",
   "position": {
     "x": 0,
-    "y": 96.25,
+    "y": 96.153846153846146,
     "z": 8000,
-    "height": 205,
-    "width": 385,
+    "height": 300.76923076923077,
+    "width": 385.38461538461536,
     "tabOrder": 8000
   },
   "visual": {
@@ -19,10 +19,127 @@
               {
                 "textRuns": [
                   {
-                    "value": "Let's work together to get the benefits of mundane AI while avoiding the risks of frontier AI!",
+                    "value": "Explore Australia's AI Safety ecosystem through visuals built from our community database.",
                     "textStyle": {
-                      "fontSize": "20pt"
+                      "fontSize": "14pt"
                     }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "We'd love your feedback!🙏 ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Are the visuals useful?",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- What patterns do you want to see?",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "- Spot any bugs or issues?",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Comment on ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "the Google sheet",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    },
+                    "url": "https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI"
+                  },
+                  {
+                    "value": " or ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "contact us",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    },
+                    "url": "mailto:p.horniak.aus@gmail.com?subject=AI Landscape PBI feedback"
+                  },
+                  {
+                    "value": ".",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Visuals auto-refresh every few hours.",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               }

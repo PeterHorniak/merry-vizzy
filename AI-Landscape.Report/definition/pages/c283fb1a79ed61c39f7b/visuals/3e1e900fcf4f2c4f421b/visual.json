@@ -3,10 +3,10 @@
   "name": "3e1e900fcf4f2c4f421b",
   "position": {
     "x": 0,
-    "y": 315.03751875937968,
+    "y": 386.92307692307691,
     "z": 0,
-    "height": 215.78789394697347,
-    "width": 402.76138069034516,
+    "height": 143.84615384615384,
+    "width": 403.07692307692304,
     "tabOrder": 0
   },
   "visual": {
@@ -19,58 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Source data in ",
-                    "textStyle": {
-                      "fontSize": "20pt"
-                    }
-                  },
-                  {
-                    "value": "this Google sheet",
-                    "textStyle": {
-                      "fontSize": "20pt"
-                    },
-                    "url": "https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI/edit?usp=sharing"
-                  },
-                  {
-                    "value": "!",
-                    "textStyle": {
-                      "fontSize": "20pt"
-                    }
+                    "value": ""
                   }
                 ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "add comments",
-                    "textStyle": {
-                      "fontSize": "20pt"
-                    }
-                  }
-                ],
-                "listType": "ordered"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "admins add / update data",
-                    "textStyle": {
-                      "fontSize": "20pt"
-                    }
-                  }
-                ],
-                "listType": "ordered"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "report refreshes every few hours",
-                    "textStyle": {
-                      "fontSize": "20pt"
-                    }
-                  }
-                ],
-                "listType": "ordered"
               },
               {
                 "textRuns": [

@@ -38,33 +38,41 @@ table 000_tblHeadcount
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Date
-		dataType: string
+		dataType: dateTime
+		formatString: yyyy/mm/dd
 		lineageTag: fa6443b7-aab7-4b03-b856-547cbb37b954
 		summarizeBy: none
 		sourceColumn: Date
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
 	column 'Revenue total'
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: bc8b7f92-83af-4911-975b-1a2a9e4efd95
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Revenue total
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'Revenue notkilleveryoneism'
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: f3d63a3d-bbac-41e2-b798-1b304c49a578
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Revenue notkilleveryoneism
 
 		annotation SummarizationSetBy = Automatic
 
 	column Volunteers
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: b8c88819-ceec-428f-b539-5985d4f07012
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Volunteers
 
 		annotation SummarizationSetBy = Automatic
@@ -80,7 +88,7 @@ table 000_tblHeadcount
 				    #"Promoted Headers1" = Table.PromoteHeaders(#"Promoted Headers", [PromoteAllScalars=true]),
 				    #"Removed Columns" = Table.RemoveColumns(#"Promoted Headers1",{""}),
 				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each ([Date] <> null and [Date] <> "")),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Filtered Rows",{{"FTE notkilleveryoneism", type number}, {"FTE total", type number}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Filtered Rows",{{"FTE notkilleveryoneism", type number}, {"FTE total", type number}, {"Date", type date}, {"Revenue total", Int64.Type}, {"Revenue notkilleveryoneism", Int64.Type}, {"Volunteers", Int64.Type}})
 				in
 				    #"Changed Type"
 

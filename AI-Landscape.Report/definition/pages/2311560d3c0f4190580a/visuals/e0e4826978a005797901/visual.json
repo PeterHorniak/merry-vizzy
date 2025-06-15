@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "1550bedf088c09d540db",
+  "name": "e0e4826978a005797901",
   "position": {
     "x": 1108.4615384615383,
     "y": 190.76923076923077,
-    "z": 13000,
+    "z": 3000,
     "height": 109.23076923076923,
     "width": 171.53846153846152,
-    "tabOrder": 13000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "tableEx",
@@ -27,8 +27,8 @@
                 }
               },
               "queryRef": "Org.AIFocus",
-              "nativeQueryRef": "AI focus?",
-              "displayName": "AI focus?"
+              "nativeQueryRef": "Org AI focus?",
+              "displayName": "Org AI focus?"
             },
             {
               "field": {

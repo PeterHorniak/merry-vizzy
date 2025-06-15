@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "0b9780e396e54cbfa00b",
   "position": {
-    "x": 17.68566493955095,
-    "y": 145.16983304548071,
+    "x": 17.692307692307693,
+    "y": 145.38461538461539,
     "z": 2000,
-    "height": 174.64594127806564,
-    "width": 495.19861830742661,
+    "height": 174.61538461538461,
+    "width": 512.30769230769226,
     "tabOrder": 2000
   },
   "visual": {
@@ -83,8 +83,8 @@
                 }
               },
               "queryRef": "Contact.IsMain",
-              "nativeQueryRef": "Contact type",
-              "displayName": "Contact type"
+              "nativeQueryRef": "Org contact type",
+              "displayName": "Org contact type"
             }
           ]
         }

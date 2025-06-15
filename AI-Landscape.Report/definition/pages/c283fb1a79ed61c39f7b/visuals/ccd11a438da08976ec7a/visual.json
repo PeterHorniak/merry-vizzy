@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "ccd11a438da08976ec7a",
   "position": {
-    "x": 1082.0266666666666,
-    "y": 0,
+    "x": 1064.6153846153845,
+    "y": 10.769230769230768,
     "z": 5000,
-    "height": 51.882666666666665,
-    "width": 197.97333333333333,
+    "height": 51.53846153846154,
+    "width": 215.38461538461539,
     "tabOrder": 6000
   },
   "visual": {
@@ -116,7 +116,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Last data refresh (AEST)'"
+                  "Value": "'Last data refresh🔄(AEST)'"
                 }
               }
             },

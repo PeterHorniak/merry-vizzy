@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Event.Event-Type",
-              "nativeQueryRef": "Event-Type"
+              "nativeQueryRef": "Org events",
+              "displayName": "Org events"
             },
             {
               "field": {

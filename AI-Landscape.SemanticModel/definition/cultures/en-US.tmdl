@@ -5107,6 +5107,16 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "Org events": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Event type": {
 			            "State": "Suggested",
 			            "Source": {
@@ -6761,6 +6771,26 @@ cultureInfo en-US
 			        },
 			        {
 			          "Contact type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Org contact type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "IsMainContact": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -9991,7 +10021,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "AI focus?": {
+			          "Org AI focus?": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -10275,6 +10305,29 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "event.entity__DateYear": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Event",
+			          "ConceptualProperty": "_DateYear"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_DateYear": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
 			    }
 			  },
 			  "Relationships": {
@@ -10598,6 +10651,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "org_have_activities"
+			        }
+			      ]
+			    },
+			    "event_has_entity__DateYear": {
+			      "Binding": {
+			        "ConceptualEntity": "Event"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "event": {
+			          "Target": {
+			            "Entity": "event"
+			          }
+			        },
+			        "event.entity__DateYear": {
+			          "Target": {
+			            "Entity": "event.entity__DateYear"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "event"
+			            },
+			            "Object": {
+			              "Role": "event.entity__DateYear"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "events_have__DateYears"
 			        }
 			      ]
 			    },

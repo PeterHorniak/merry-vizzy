@@ -1,0 +1,120 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "46a3772ce335488053c9",
+  "position": {
+    "x": 725.38461538461536,
+    "y": 576.92307692307691,
+    "z": 4000,
+    "height": 143.07692307692307,
+    "width": 174.61538461538461,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "000_tblHeadcount"
+                    }
+                  },
+                  "Property": "Organisation"
+                }
+              },
+              "queryRef": "000_tblHeadcount.Organisation",
+              "nativeQueryRef": "Organisation"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "000_tblHeadcount"
+                    }
+                  },
+                  "Property": "Revenue notkilleveryoneism"
+                }
+              },
+              "queryRef": "000_tblHeadcount.Revenue notkilleveryoneism",
+              "nativeQueryRef": "Revenue notkilleveryoneism",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "000_tblHeadcount"
+                    }
+                  },
+                  "Property": "FTE notkilleveryoneism"
+                }
+              },
+              "queryRef": "000_tblHeadcount.FTE notkilleveryoneism",
+              "nativeQueryRef": "FTE notkilleveryoneism"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "291358cb83d2e703d514",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "000_tblHeadcount"
+              }
+            },
+            "Property": "Organisation"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1a4b0fda82604404d5e2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "000_tblHeadcount"
+              }
+            },
+            "Property": "FTE notkilleveryoneism"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "144d2a5100a808680325",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "000_tblHeadcount"
+              }
+            },
+            "Property": "Revenue notkilleveryoneism"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

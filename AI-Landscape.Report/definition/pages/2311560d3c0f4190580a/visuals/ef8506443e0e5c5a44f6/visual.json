@@ -19,141 +19,131 @@
               {
                 "textRuns": [
                   {
-                    "value": "Do AI activity hierarchy, e.g. Training -> Governance -> Intro vs Intermediate",
+                    "value": "Navigation:",
                     "textStyle": {
-                      "fontSize": "18pt"
+                      "fontFamily": "Segoe UI"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Ribbon chart test out.",
+                    "value": "\t",
                     "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
+                  },
+                  {
+                    "value": "drilldown, filtering visuals using each other, bookmarks",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
                       "fontSize": "18pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Show off: drilldown, filtering visuals using each other, bookmarks",
+                    "value": "\tOptimise for Phone viewing portrait mode? At least the front page and Profile page.",
                     "textStyle": {
-                      "fontSize": "18pt"
+                      "fontFamily": "Segoe UI"
                     }
                   }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Map showing where & when different coworking groups meet?",
-                    "textStyle": {
-                      "fontSize": "18pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Chloropleth at suburb level showing who is advocating / meeting politicians / distributing flyers there?",
-                    "textStyle": {
-                      "fontSize": "18pt"
-                    }
-                  }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
                   {
                     "value": ""
                   }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "      Outreach: govt fed, govt local, industry, public"
-                  }
                 ],
-                "listType": "bullet",
-                "indent": 2
+                "indent": 1
               },
               {
                 "textRuns": [
                   {
-                    "value": "Funnel chart of talent pipeline?"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "          Schema: MPs contacted row, then MP meetings, then MP endorsed"
-                  }
-                ],
-                "listType": "bullet",
-                "indent": 5
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Pull data from AI Safety.org/jobs into here?"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Add drilldowns from other pages to Profile page."
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Headcount page to show dynamic chart over time?"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Use custom tooltip pages for when the existing tooltips are confusing."
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Sankey add chart populated by table for children's children? And another for parent's parents? Instead of having hardcoded levels, we just join on name, so there should be no blanks."
+                    "value": "Geomap",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "18pt"
+                    }
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Optimise for Phone viewing portrait mode? At least the front page and Profile page."
+                    "value": "Filter for showing where & when different coworking groups meet?",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "18pt"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Chloropleth at suburb level showing who is advocating / meeting politicians / distributing flyers there?",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "18pt"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Funnel chart of talent pipeline?",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Have way to track accesses of PBI published to web? Some links said possible."
+                    "value": "Schema: MPs contacted row, then MP meetings, then MP endorsed",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ],
+                "indent": 1
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Pull data from AI Safety.org/jobs into here?",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Headcount page to show dynamic chart over time?",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Use custom tooltip pages for when the existing tooltips are confusing.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
                   }
                 ],
                 "listType": "bullet"
@@ -161,37 +151,101 @@
               {
                 "textRuns": [
                   {
-                    "value": "Set report placeholder in case of heavy usage: https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web#heavy-usage"
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Try changing Influence thickness based on strength of influence? E.g. have separate sheet "
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "[Org] [Single Parent] [StrengthInfluence]"
+                    "value": "Have way to track accesses of PBI published to web? Some links said possible.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "inherit"
+                    }
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "AFAIS\t| GAP\t| 0.5"
+                    "value": "Set report placeholder in case of heavy usage: https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web#heavy-usage",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "AFAIS\t| Arkadia Impact | 0.2"
+                    "value": "Influence",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\tTry changing Influence thickness based on strength of influence? E.g. have separate sheet ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t[Org] [Single Parent] [StrengthInfluence]",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\tAFAIS\t| GAP\t| 0.5",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\tAFAIS\t| Arkadia Impact | 0.2",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "CONTACT",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\tContact titles, also shorten them, e.g. Associate Professor -> Assc.Prof.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\tCONTACT: Have a table on the side suggesting contacts not currently selected, which have multiple connections to the selected ones? Kinda like LinkedIn?",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI"
+                    }
                   }
                 ]
               }
