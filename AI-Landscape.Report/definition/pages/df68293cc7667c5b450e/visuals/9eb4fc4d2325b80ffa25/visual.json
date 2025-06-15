@@ -1,0 +1,67 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "9eb4fc4d2325b80ffa25",
+  "position": {
+    "x": 512,
+    "y": 20,
+    "z": 1,
+    "height": 566.66666666666663,
+    "width": 666
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Org"
+                    }
+                  },
+                  "Property": "Parent org"
+                }
+              },
+              "queryRef": "Org.Parent org",
+              "nativeQueryRef": "Parent org"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Org"
+                    }
+                  },
+                  "Property": "OrgStructure"
+                }
+              },
+              "queryRef": "Org.OrgStructure",
+              "nativeQueryRef": "OrgStructure"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "Parent org"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    }
+  }
+}

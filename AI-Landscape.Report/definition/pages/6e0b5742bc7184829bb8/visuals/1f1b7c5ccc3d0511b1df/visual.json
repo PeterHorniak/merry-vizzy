@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "49d87ccb94e019551d0e",
+  "name": "1f1b7c5ccc3d0511b1df",
   "position": {
-    "x": 733.84615384615381,
+    "x": 552.30769230769226,
     "y": 0,
-    "z": 2000,
-    "height": 133.84615384615384,
-    "width": 546.15384615384619,
-    "tabOrder": 4000
+    "z": 3006,
+    "height": 63.076923076923073,
+    "width": 175.38461538461539,
+    "tabOrder": 4006
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "slicer",
     "query": {
       "queryState": {
         "Values": {
@@ -23,63 +23,125 @@
                       "Entity": "Org"
                     }
                   },
-                  "Property": "Organisation"
+                  "Property": "Country"
                 }
               },
-              "queryRef": "Org.Organisation",
-              "nativeQueryRef": "Organisation"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Org"
-                    }
-                  },
-                  "Property": "Location"
-                }
-              },
-              "queryRef": "Org.Location",
-              "nativeQueryRef": "Location"
+              "queryRef": "Org.Country",
+              "nativeQueryRef": "Country",
+              "active": true
             }
           ]
         }
       }
     },
     "objects": {
-      "columnWidth": [
+      "data": [
         {
           "properties": {
-            "value": {
+            "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "322.1381439996272D"
+                  "Value": "'Dropdown'"
                 }
               }
             }
-          },
-          "selector": {
-            "metadata": "Org.Location"
           }
-        },
+        }
+      ],
+      "header": [
         {
           "properties": {
-            "value": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "189.30768636232818D"
+                  "Value": "false"
                 }
               }
             }
-          },
-          "selector": {
-            "metadata": "Org.Organisation"
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ]
     },
     "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Country'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading3'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
       "stylePreset": [
         {
           "properties": {
@@ -98,15 +160,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "692c34811ef4aeb93dd5",
+        "name": "43200ee74252100bf678",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Org"
+                "Entity": "Activity"
               }
             },
-            "Property": "Location"
+            "Property": "Activities AI - Level.1"
           }
         },
         "type": "Categorical",
@@ -114,8 +176,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "o",
-              "Entity": "Org",
+              "Name": "0",
+              "Entity": "Activity",
               "Type": 0
             }
           ],
@@ -130,10 +192,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "o"
+                                "Source": "0"
                               }
                             },
-                            "Property": "Location"
+                            "Property": "Activities AI - Level.1"
                           }
                         }
                       ],
@@ -141,7 +203,7 @@
                         [
                           {
                             "Literal": {
-                              "Value": "null"
+                              "Value": "''"
                             }
                           }
                         ]
@@ -153,6 +215,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {
@@ -170,7 +233,7 @@
         }
       },
       {
-        "name": "e7a3f250d9f3791d1522",
+        "name": "1c7ff638397d819ace46",
         "field": {
           "Column": {
             "Expression": {
@@ -178,7 +241,7 @@
                 "Entity": "Org"
               }
             },
-            "Property": "Organisation"
+            "Property": "Country"
           }
         },
         "type": "Categorical"

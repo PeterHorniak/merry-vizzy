@@ -43,12 +43,111 @@
               },
               "queryRef": "Org.Organisation-Shortened",
               "nativeQueryRef": "Organisation-Shortened",
-              "active": false
+              "active": true
             }
           ]
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Org.Parent org"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Org"
+                    }
+                  },
+                  "Property": "Parent org"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Org.Organisation-Shortened"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'United States (US)'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'United States (US), Anthropic, OpenAI Global LLC'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'OpenAI Inc, OpenAI GP LLC'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'OpenAI Inc, Deepmind'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'OpenAI Inc'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'OpenAI holding company, Microsoft, OpenAI GP LLC'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
     "objects": {
       "data": [
         {
@@ -66,95 +165,11 @@
       "general": [
         {
           "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "o",
-                    "Entity": "Org",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "o"
-                                }
-                              },
-                              "Property": "Parent org"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Australia (AU)'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    },
-                    "Annotations": {
-                      "filterExpressionMetadata": {
-                        "expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "Org"
-                                }
-                              },
-                              "Property": "Parent org"
-                            }
-                          }
-                        ],
-                        "decomposedIdentities": {
-                          "values": [
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'Australia (AU)'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
-                          ],
-                          "columns": [
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Org"
-                                    }
-                                  },
-                                  "Property": "Parent org"
-                                }
-                              }
-                            }
-                          ]
-                        },
-                        "valueMap": [
-                          {
-                            "0": "Australia (AU)"
-                          }
-                        ]
-                      }
-                    }
-                  }
-                ]
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
               }
             }
           }

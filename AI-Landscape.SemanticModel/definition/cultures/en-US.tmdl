@@ -6107,6 +6107,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Active:": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -9852,6 +9862,228 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "org.AI_focus": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Org",
+			          "ConceptualProperty": "AIFocus"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "AI focus": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AIFocus": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "focus": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ai emphasis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ai attention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ai effort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ai concentration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ai motivation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "emphasis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "attention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "effort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "concentration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "motivation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.level_6_misc": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "Level6Misc"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "level 6 misc": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Level6Misc": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quantity 6 misc": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "threshold 6 misc": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "amount 6 misc": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "grade 6 misc": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "point 6 misc": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "rank 6 misc": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "tier 6 misc": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -10175,6 +10407,72 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "org_have_activities"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_level_6_misc": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.level_6_misc": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.level_6_misc"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.level_6_misc"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_level_6_miscs"
+			        }
+			      ]
+			    },
+			    "org_has_AI_focus": {
+			      "Binding": {
+			        "ConceptualEntity": "Org"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          }
+			        },
+			        "org.AI_focus": {
+			          "Target": {
+			            "Entity": "org.AI_focus"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "org.AI_focus"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_AI_focusses"
 			        }
 			      ]
 			    },

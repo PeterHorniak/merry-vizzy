@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "95984e31ca8a3aa40921",
+  "name": "fb707a0ecca7bb427bf9",
   "position": {
-    "x": 0,
+    "x": 242.66666666666666,
     "y": 0,
-    "z": 4000,
+    "z": 8000,
     "height": 60,
-    "width": 168,
-    "tabOrder": 4000
+    "width": 154.66666666666666,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "010_Hierarchy"
                     }
                   },
-                  "Property": "Lvl2"
+                  "Property": "Lvl3"
                 }
               },
-              "queryRef": "010_Hierarchy.Lvl2",
-              "nativeQueryRef": "Lvl2",
+              "queryRef": "010_Hierarchy.Lvl3",
+              "nativeQueryRef": "Lvl3",
               "active": true
             }
           ]
@@ -42,7 +42,7 @@
         "levels": [
           {
             "queryRefs": [
-              "010_Hierarchy.Lvl2"
+              "010_Hierarchy.Lvl3"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -53,27 +53,14 @@
                       "Entity": "010_Hierarchy"
                     }
                   },
-                  "Property": "Lvl2"
+                  "Property": "Lvl3"
                 }
               }
             ],
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'AI Safety Asia'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -151,7 +138,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Lvl2'"
+                  "Value": "'Lvl3'"
                 }
               }
             },

@@ -3,10 +3,10 @@
   "name": "0bc599a433ef0b7d3af0",
   "position": {
     "x": 0,
-    "y": 0,
+    "y": 66.92307692307692,
     "z": 3000,
-    "height": 251.94274028629857,
-    "width": 493.41513292433541,
+    "height": 66.92307692307692,
+    "width": 685.38461538461536,
     "tabOrder": 2000
   },
   "visual": {
@@ -34,7 +34,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Filled map might be useful at suburb level, e.g. to see which politicians need reaching out, where to put posters etc?"
+                    "value": "Filled map might be useful at suburb level, e.g. to see which politicians need reaching out, where to put posters etc? PauseAI may already have something set up. Also very specific addresses don't work here, need to aggregate them somehow. Also filled map needs to have locations at same level, e.g. if got city/state level then cannot have Country level or it will overlap."
                   }
                 ],
                 "listType": "bullet"

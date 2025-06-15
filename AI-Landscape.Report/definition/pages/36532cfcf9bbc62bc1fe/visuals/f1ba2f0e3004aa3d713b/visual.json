@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "95984e31ca8a3aa40921",
+  "name": "f1ba2f0e3004aa3d713b",
   "position": {
-    "x": 0,
+    "x": 562.66666666666663,
     "y": 0,
-    "z": 4000,
+    "z": 10001,
     "height": 60,
-    "width": 168,
-    "tabOrder": 4000
+    "width": 154.66666666666666,
+    "tabOrder": 9002
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "010_Hierarchy"
                     }
                   },
-                  "Property": "Lvl2"
+                  "Property": "Lvl4"
                 }
               },
-              "queryRef": "010_Hierarchy.Lvl2",
-              "nativeQueryRef": "Lvl2",
+              "queryRef": "010_Hierarchy.Lvl4",
+              "nativeQueryRef": "Lvl4",
               "active": true
             }
           ]
@@ -42,38 +42,13 @@
         "levels": [
           {
             "queryRefs": [
-              "010_Hierarchy.Lvl2"
+              "010_Hierarchy.Lvl4"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "010_Hierarchy"
-                    }
-                  },
-                  "Property": "Lvl2"
-                }
-              }
-            ],
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'AI Safety Asia'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -84,6 +59,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
+                }
+              }
+            },
+            "isInvertedSelectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -151,7 +133,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Lvl2'"
+                  "Value": "'Lvl4'"
                 }
               }
             },

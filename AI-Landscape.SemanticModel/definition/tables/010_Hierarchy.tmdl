@@ -163,6 +163,14 @@ table 010_Hierarchy
 
 		annotation SummarizationSetBy = Automatic
 
+	column Level6Misc
+		dataType: string
+		lineageTag: 63ec7a3b-7f9b-4e05-9389-bf89d6746d91
+		summarizeBy: none
+		sourceColumn: Level6Misc
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 010_Hierarchy = m
 		mode: import
 		queryGroup: 2-Transform\Influences
@@ -181,7 +189,7 @@ table 010_Hierarchy
 				    #"Merged Queries Level5" = Table.NestedJoin(#"Expanded Level4", {"Level4"}, #"005_tblOrg-SplitParents", {"Parent org"}, "005_tblOrg-SplitParents", JoinKind.LeftOuter),
 				    #"Expanded Level5" = Table.ExpandTableColumn(#"Merged Queries Level5", "005_tblOrg-SplitParents", {"Organisation", "Organisation-Shortened", "URL"}, {"Level5", "Lvl5", "Level5URL"}),
 				    #"Merged Queries Level6" = Table.NestedJoin(#"Expanded Level5", {"Level5"}, #"005_tblOrg-SplitParents", {"Parent org"}, "005_tblOrg-SplitParents", JoinKind.LeftOuter),
-				    #"Expanded Level6" = Table.ExpandTableColumn(#"Merged Queries Level6", "005_tblOrg-SplitParents", {"Organisation", "URL"}, {"Level6", "Level6URL"}),
+				    #"Expanded Level6" = Table.ExpandTableColumn(#"Merged Queries Level6", "005_tblOrg-SplitParents", {"Organisation", "URL", "Misc"}, {"Level6", "Level6URL", "Level6Misc"}),
 				    #"Merged Queries Level7" = Table.NestedJoin(#"Expanded Level6", {"Level6"}, #"005_tblOrg-SplitParents", {"Parent org"}, "005_tblOrg-SplitParents", JoinKind.LeftOuter),
 				    #"Expanded Level7" = Table.ExpandTableColumn(#"Merged Queries Level7", "005_tblOrg-SplitParents", {"Organisation", "URL"}, {"Level7", "Level7URL"}),
 				    #"Added URL-Combined" = Table.AddColumn(#"Expanded Level7", "URL-Combined", each if [Level7] <> null then [Level7URL] else if [Level6] <> null then [Level6URL] else if [Level5] <> null then [Level5URL] else if [Level4] <> null then [Level4URL] else if [Level3] <> null then [Level3URL] else if [Level2] <> null then [Level2URL] else null),

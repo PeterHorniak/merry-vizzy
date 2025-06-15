@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "dff7178862cbb97e86cb",
   "position": {
-    "x": 15.705521472392638,
-    "y": 594.19222903885486,
-    "z": 6000,
-    "height": 125.6441717791411,
-    "width": 1240.081799591002,
+    "x": 226.42857142857144,
+    "y": 643.57142857142867,
+    "z": 7000,
+    "height": 76.428571428571431,
+    "width": 1053.5714285714287,
     "tabOrder": 6000
   },
   "visual": {
@@ -163,7 +163,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Underlying data'"
+                  "Value": "'Underlying data (use Focus Mode to expand!)'"
                 }
               }
             }

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "fa45a8282ee5b795dc70",
+  "name": "b3183aa7707970761fec",
   "position": {
-    "x": 61.333333333333336,
-    "y": 6,
-    "z": 3000,
-    "height": 49.333333333333336,
-    "width": 413.33333333333331,
-    "tabOrder": 2000
+    "x": 1154,
+    "y": 0,
+    "z": 10000,
+    "height": 60,
+    "width": 126,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,20 +20,37 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Org"
+                      "Entity": "010_Hierarchy"
                     }
                   },
-                  "Property": "Organisation"
+                  "Property": "Level6"
                 }
               },
-              "queryRef": "Org.Organisation",
-              "nativeQueryRef": "Full name",
+              "queryRef": "010_Hierarchy.Level6",
+              "nativeQueryRef": "Level6",
               "active": true
             }
           ]
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "010_Hierarchy.Level6"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "objects": {
       "data": [
         {
@@ -48,29 +65,23 @@
           }
         }
       ],
-      "selection": [
+      "general": [
         {
           "properties": {
-            "strictSingleSelect": {
+            "selfFilterEnabled": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
-            }
-          }
-        }
-      ],
-      "general": [
-        {
-          "properties": {
+            },
             "filter": {
               "filter": {
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "o",
-                    "Entity": "Org",
+                    "Name": "0",
+                    "Entity": "010_Hierarchy",
                     "Type": 0
                   }
                 ],
@@ -83,10 +94,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "o"
+                                  "Source": "0"
                                 }
                               },
-                              "Property": "Organisation"
+                              "Property": "Level6"
                             }
                           }
                         ],
@@ -94,7 +105,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'PauseAI Global (PauseAI)'"
+                                "Value": "'Open Philanthropy (OpenPhil)'"
                               }
                             }
                           ]
@@ -104,56 +115,73 @@
                   }
                 ]
               }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             },
-            "selfFilterEnabled": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "selfFilter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "o",
-                    "Entity": "Org",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "Contains": {
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "o"
-                              }
-                            },
-                            "Property": "Organisation"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "'pause'"
-                          }
-                        }
-                      }
-                    },
-                    "Annotations": {
-                      "PowerBI.MParameterBehavior": 1
-                    }
-                  }
-                ]
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Lvl6'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
               }
             }
           }
         }
       ],
-      "header": [
+      "visualHeader": [
         {
           "properties": {
             "show": {

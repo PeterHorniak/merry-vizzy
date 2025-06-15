@@ -3,10 +3,10 @@
   "name": "de5b4a094273adab4513",
   "position": {
     "x": 0,
-    "y": 239.99999999999997,
+    "y": 356,
     "z": 2000,
-    "height": 264.77876106194691,
-    "width": 332.03539823008845,
+    "height": 364,
+    "width": 332,
     "tabOrder": 2000
   },
   "visual": {
@@ -113,7 +113,7 @@
                     "Entity": "010_Hierarchy"
                   }
                 },
-                "Property": "Level2"
+                "Property": "Level3"
               }
             },
             "direction": "Ascending"

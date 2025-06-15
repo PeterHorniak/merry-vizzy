@@ -37,6 +37,20 @@
                       "Entity": "Event"
                     }
                   },
+                  "Property": "_DateYYYY-MM-DD"
+                }
+              },
+              "queryRef": "Event._DateYYYY-MM-DD",
+              "nativeQueryRef": "_DateYYYY-MM-DD"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Event"
+                    }
+                  },
                   "Property": "Event"
                 }
               },
@@ -149,5 +163,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8cab1b5bf3d7aea03fb5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event"
+              }
+            },
+            "Property": "Event"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

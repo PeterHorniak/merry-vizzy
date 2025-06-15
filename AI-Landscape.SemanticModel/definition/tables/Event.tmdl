@@ -111,6 +111,15 @@ table Event
 
 		annotation SummarizationSetBy = Automatic
 
+	column _DateYYYY-MM-DD = Event[Date]
+		formatString: yyyy-mm-dd
+		lineageTag: 30a0fcfe-8df3-4c73-82cc-98f767b5cb4e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
 	partition Event = m
 		mode: import
 		queryGroup: 3-Load

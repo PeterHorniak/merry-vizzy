@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "ea46bf2f8b67644c3996",
   "position": {
-    "x": 1043.1083844580778,
-    "y": 0,
-    "z": 4000,
-    "height": 599.42740286298567,
-    "width": 236.89161554192231,
+    "x": 944.16666666666674,
+    "y": 55,
+    "z": 5000,
+    "height": 585,
+    "width": 320,
     "tabOrder": 3000
   },
   "visual": {
@@ -59,14 +59,14 @@
             "nodePositions": {
               "expr": {
                 "Literal": {
-                  "Value": "'[{\"name\":\"AEHRC\",\"x\":\"0\",\"y\":\"0\"},{\"name\":\"AI Adoption Tracker\",\"x\":\"0\",\"y\":\"22\"},{\"name\":\"AI Expert Grp\",\"x\":\"0\",\"y\":\"44\"},{\"name\":\"AIGT\",\"x\":\"0\",\"y\":\"66\"},{\"name\":\"ARC CoE ADM+S\",\"x\":\"0\",\"y\":\"88\"},{\"name\":\"Aus AI Safety Forum 2024\",\"x\":\"0\",\"y\":\"110\"},{\"name\":\"AusFedGov\",\"x\":\"0\",\"y\":\"132\"},{\"name\":\"Data61\",\"x\":\"0\",\"y\":\"415\"},{\"name\":\"DDMM\",\"x\":\"0\",\"y\":\"437\"},{\"name\":\"NAIC\",\"x\":\"0\",\"y\":\"459\"},{\"name\":\"Select Committee on Adoption of AI\",\"x\":\"0\",\"y\":\"481\"},{\"name\":\"TGA\",\"x\":\"0\",\"y\":\"503\"},{\"name\":\"Voluntary AI Ethics Principles\",\"x\":\"0\",\"y\":\"525\"},{\"name\":\"No child orgs_SK_SELFLINK\",\"x\":\"0\",\"y\":\"547\"},{\"name\":\"No child orgs\",\"x\":\"185\",\"y\":\"0\"},{\"name\":\"Attorney-General''s Department (AG)\",\"x\":\"185\",\"y\":\"242\"},{\"name\":\"Australian Communications and Media Authority (ACMA)\",\"x\":\"185\",\"y\":\"264\"},{\"name\":\"Australian Federal Parliament (AusFedParl)\",\"x\":\"185\",\"y\":\"286\"},{\"name\":\"Australian Federal Senate (AusFedSen)\",\"x\":\"185\",\"y\":\"308\"},{\"name\":\"Australian Research Council (ARC)\",\"x\":\"185\",\"y\":\"329\"},{\"name\":\"Australian Research Grants Committee (ARGC)\",\"x\":\"185\",\"y\":\"351\"},{\"name\":\"Commonwealth Scientific and Industrial Research Organisation (CSIRO)\",\"x\":\"185\",\"y\":\"373\"},{\"name\":\"Department of Finance (DoF)\",\"x\":\"185\",\"y\":\"395\"},{\"name\":\"Department of Health, Disability and Aging (DoHDA)\",\"x\":\"185\",\"y\":\"417\"},{\"name\":\"Department of Industry Science and Resources (DISR)\",\"x\":\"185\",\"y\":\"439\"},{\"name\":\"Digital Transformation Agency (DTA)\",\"x\":\"185\",\"y\":\"460\"},{\"name\":\"Office of Australian Information Commissioner (OAIC)\",\"x\":\"185\",\"y\":\"482\"},{\"name\":\"Prime Minister & Cabinet (PM&C)\",\"x\":\"185\",\"y\":\"504\"},{\"name\":\"Productivity Commission (PC)\",\"x\":\"185\",\"y\":\"526\"},{\"name\":\"Gradient Institute\",\"x\":\"185\",\"y\":\"548\"}]'"
+                  "Value": "'[{\"name\":\"AFAIS\",\"x\":\"0\",\"y\":\"0\"},{\"name\":\"AISANZ\",\"x\":\"0\",\"y\":\"45\"},{\"name\":\"Data61\",\"x\":\"0\",\"y\":\"332\"},{\"name\":\"Google Brain\",\"x\":\"0\",\"y\":\"377\"},{\"name\":\"OpenAI holding company\",\"x\":\"0\",\"y\":\"421\"},{\"name\":\"OpenPhil\",\"x\":\"0\",\"y\":\"466\"},{\"name\":\"Sydney Knowledge Hub\",\"x\":\"0\",\"y\":\"510\"},{\"name\":\"AISANZ SYD\",\"x\":\"134\",\"y\":\"0\"},{\"name\":\"OpenAI Global LLC\",\"x\":\"134\",\"y\":\"43\"},{\"name\":\"Technical Alignment Research Accelerator (TARA)\",\"x\":\"134\",\"y\":\"85\"},{\"name\":\"AI Safety Careers Conference\",\"x\":\"134\",\"y\":\"128\"},{\"name\":\"AISANZ AUCK\",\"x\":\"134\",\"y\":\"171\"},{\"name\":\"AISANZ BRIS\",\"x\":\"134\",\"y\":\"213\"},{\"name\":\"AISANZ CANB\",\"x\":\"134\",\"y\":\"256\"},{\"name\":\"AISANZ MELB\",\"x\":\"134\",\"y\":\"299\"},{\"name\":\"AISANZ WELL\",\"x\":\"134\",\"y\":\"342\"},{\"name\":\"Gradient Institute\",\"x\":\"134\",\"y\":\"384\"},{\"name\":\"Google AI\",\"x\":\"134\",\"y\":\"427\"},{\"name\":\"AI Safety Australia and New Zealand (AISANZ)\",\"x\":\"134\",\"y\":\"470\"},{\"name\":\"Australian AI Safety Forum 2024\",\"x\":\"134\",\"y\":\"512\"},{\"name\":\"Sydney AI Safety Hub (SASH)\",\"x\":\"269\",\"y\":\"0\"},{\"name\":\"Open Philanthropy (OpenPhil)\",\"x\":\"269\",\"y\":\"278\"}]'"
                 }
               }
             },
             "viewportSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\"height\":\"569.4274028629857\",\"width\":\"206.8916155419223\"}'"
+                  "Value": "'{\"height\":\"555\",\"width\":\"290\"}'"
                 }
               }
             }
@@ -120,6 +120,19 @@
     },
     "visualContainerObjects": {
       "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
         {
           "properties": {
             "show": {
