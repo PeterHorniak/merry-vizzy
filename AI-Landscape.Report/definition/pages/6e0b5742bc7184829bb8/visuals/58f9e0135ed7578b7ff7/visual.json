@@ -46,8 +46,8 @@
                 }
               },
               "queryRef": "Org.ActiveOrNot",
-              "nativeQueryRef": "Active:",
-              "displayName": "Active:"
+              "nativeQueryRef": "Activity:",
+              "displayName": "Activity:"
             }
           ]
         },
@@ -111,48 +111,6 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "Org"
-                          }
-                        },
-                        "Property": "ActiveOrNot"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'❔ unknown'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
                       "ColorId": 2,
                       "Percent": 0
                     }
@@ -195,7 +153,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 5,
+                      "ColorId": 7,
                       "Percent": 0
                     }
                   }
@@ -228,6 +186,61 @@
                 }
               }
             ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Org"
+                          }
+                        },
+                        "Property": "ActiveOrNot"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'❔ unknown'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]

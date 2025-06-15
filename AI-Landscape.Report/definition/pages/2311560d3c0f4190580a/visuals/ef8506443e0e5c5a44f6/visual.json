@@ -149,6 +149,14 @@
                     "value": "Optimise for Phone viewing portrait mode? At least the front page and Profile page."
                   }
                 ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Have way to track accesses of PBI visual."
+                  }
+                ],
+                "listType": "bullet"
               }
             ]
           }

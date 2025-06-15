@@ -4,7 +4,7 @@
   "position": {
     "x": 944.16666666666674,
     "y": 55,
-    "z": 5000,
+    "z": 6000,
     "height": 585,
     "width": 320,
     "tabOrder": 3000
@@ -59,7 +59,7 @@
             "nodePositions": {
               "expr": {
                 "Literal": {
-                  "Value": "'[{\"name\":\"AFAIS\",\"x\":\"0\",\"y\":\"0\"},{\"name\":\"AISANZ\",\"x\":\"0\",\"y\":\"45\"},{\"name\":\"Data61\",\"x\":\"0\",\"y\":\"332\"},{\"name\":\"Google Brain\",\"x\":\"0\",\"y\":\"377\"},{\"name\":\"OpenAI holding company\",\"x\":\"0\",\"y\":\"421\"},{\"name\":\"OpenPhil\",\"x\":\"0\",\"y\":\"466\"},{\"name\":\"Sydney Knowledge Hub\",\"x\":\"0\",\"y\":\"510\"},{\"name\":\"AISANZ SYD\",\"x\":\"134\",\"y\":\"0\"},{\"name\":\"OpenAI Global LLC\",\"x\":\"134\",\"y\":\"43\"},{\"name\":\"Technical Alignment Research Accelerator (TARA)\",\"x\":\"134\",\"y\":\"85\"},{\"name\":\"AI Safety Careers Conference\",\"x\":\"134\",\"y\":\"128\"},{\"name\":\"AISANZ AUCK\",\"x\":\"134\",\"y\":\"171\"},{\"name\":\"AISANZ BRIS\",\"x\":\"134\",\"y\":\"213\"},{\"name\":\"AISANZ CANB\",\"x\":\"134\",\"y\":\"256\"},{\"name\":\"AISANZ MELB\",\"x\":\"134\",\"y\":\"299\"},{\"name\":\"AISANZ WELL\",\"x\":\"134\",\"y\":\"342\"},{\"name\":\"Gradient Institute\",\"x\":\"134\",\"y\":\"384\"},{\"name\":\"Google AI\",\"x\":\"134\",\"y\":\"427\"},{\"name\":\"AI Safety Australia and New Zealand (AISANZ)\",\"x\":\"134\",\"y\":\"470\"},{\"name\":\"Australian AI Safety Forum 2024\",\"x\":\"134\",\"y\":\"512\"},{\"name\":\"Sydney AI Safety Hub (SASH)\",\"x\":\"269\",\"y\":\"0\"},{\"name\":\"Open Philanthropy (OpenPhil)\",\"x\":\"269\",\"y\":\"278\"}]'"
+                  "Value": "'[{\"name\":\"AI Safety Careers Conf\",\"x\":\"0\",\"y\":\"0\"},{\"name\":\"AISANZ\",\"x\":\"0\",\"y\":\"68\"},{\"name\":\"OpenPhil\",\"x\":\"0\",\"y\":\"487\"},{\"name\":\"AISANZ AUCK\",\"x\":\"134\",\"y\":\"0\"},{\"name\":\"AISANZ BRIS\",\"x\":\"134\",\"y\":\"69\"},{\"name\":\"AISANZ CANB\",\"x\":\"134\",\"y\":\"139\"},{\"name\":\"AISANZ MELB\",\"x\":\"134\",\"y\":\"208\"},{\"name\":\"AISANZ SYD\",\"x\":\"134\",\"y\":\"278\"},{\"name\":\"AISANZ WELL\",\"x\":\"134\",\"y\":\"347\"},{\"name\":\"AI Safety Careers Conference\",\"x\":\"134\",\"y\":\"416\"},{\"name\":\"AI Safety Australia and New Zealand (AISANZ)\",\"x\":\"134\",\"y\":\"486\"},{\"name\":\"No child orgs\",\"x\":\"269\",\"y\":\"0\"},{\"name\":\"Sydney AI Safety Hub (SASH)\",\"x\":\"269\",\"y\":\"424\"}]'"
                 }
               }
             },
@@ -114,6 +114,59 @@
                 }
               }
             ]
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "forceDisplay": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "linkLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "scaleSettings": [
+        {
+          "properties": {
+            "lnScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "provideMinHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ]

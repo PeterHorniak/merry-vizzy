@@ -4,7 +4,7 @@
   "position": {
     "x": 862.66666666666663,
     "y": 0,
-    "z": 9000,
+    "z": 10000,
     "height": 60,
     "width": 148,
     "tabOrder": 8000
@@ -73,6 +73,44 @@
                 "Literal": {
                   "Value": "true"
                 }
+              }
+            },
+            "selfFilter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "0",
+                    "Entity": "010_Hierarchy",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Contains": {
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "0"
+                              }
+                            },
+                            "Property": "Lvl5"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'open'"
+                          }
+                        }
+                      }
+                    },
+                    "Annotations": {
+                      "PowerBI.MParameterBehavior": 1
+                    }
+                  }
+                ]
               }
             }
           }

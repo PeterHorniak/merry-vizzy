@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "113db1422c5805c79646",
+  "position": {
+    "x": 167.69230769230768,
+    "y": 643.84615384615381,
+    "z": 13000,
+    "height": 76.153846153846146,
+    "width": 384.61538461538458,
+    "tabOrder": 9004
+  },
+  "visual": {
+    "visualType": "textFilter25A4896A83E0487089E2B90C9AE57C8A",
+    "query": {
+      "queryState": {
+        "field": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "010_Hierarchy"
+                    }
+                  },
+                  "Property": "LevelsMerged"
+                }
+              },
+              "queryRef": "010_Hierarchy.LevelsMerged",
+              "nativeQueryRef": "LevelsMerged"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "0",
+                    "Entity": "010_Hierarchy",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Contains": {
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "0"
+                              }
+                            },
+                            "Property": "LevelsMerged"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'good anc'"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Search for org across all levels of hierarchy!'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

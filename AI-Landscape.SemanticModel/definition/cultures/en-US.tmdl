@@ -6109,7 +6109,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Active:": {
+			          "Activity:": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -10084,62 +10084,71 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "event.date_YYYY_MM_DD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Event",
+			          "ConceptualProperty": "_DateYYYY-MM-DD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date YYYY MM DD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_DateYYYY-MM-DD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "DD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "MM DD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "YYYY MM DD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "moment yyyy mm dd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "period yyyy mm dd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
 			    }
 			  },
 			  "Relationships": {
-			    "contact_has_org": {
-			      "Binding": {
-			        "ConceptualEntity": "Contact"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "contact": {
-			          "Target": {
-			            "Entity": "contact"
-			          }
-			        },
-			        "org": {
-			          "Target": {
-			            "Entity": "org"
-			          },
-			          "Nouns": [
-			            {
-			              "organisation": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "contact"
-			            },
-			            "Object": {
-			              "Role": "org"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "contacts_have_org"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "org"
-			            },
-			            "Object": {
-			              "Role": "contact"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "org_have_contacts"
-			        }
-			      ]
-			    },
 			    "event_has_org": {
 			      "Binding": {
 			        "ConceptualEntity": "Event"
@@ -10407,6 +10416,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "org_have_activities"
+			        }
+			      ]
+			    },
+			    "event_has_date_YYYY_MM_DD": {
+			      "Binding": {
+			        "ConceptualEntity": "Event"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "event": {
+			          "Target": {
+			            "Entity": "event"
+			          }
+			        },
+			        "event.date_YYYY_MM_DD": {
+			          "Target": {
+			            "Entity": "event.date_YYYY_MM_DD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "event"
+			            },
+			            "Object": {
+			              "Role": "event.date_YYYY_MM_DD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "events_have_date_YYYY_MM_DD"
 			        }
 			      ]
 			    },
@@ -14175,6 +14217,59 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "qry_last_refreshed_are_refreshed_on_qry_last_refreshed"
+			        }
+			      ]
+			    },
+			    "contact_has_org": {
+			      "Binding": {
+			        "ConceptualEntity": "Contact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "contact": {
+			          "Target": {
+			            "Entity": "contact"
+			          }
+			        },
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "contact"
+			            },
+			            "Object": {
+			              "Role": "org"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "contacts_have_org"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "contact"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_contacts"
 			        }
 			      ]
 			    },

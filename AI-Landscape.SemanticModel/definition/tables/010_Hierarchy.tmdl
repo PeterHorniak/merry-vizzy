@@ -171,6 +171,14 @@ table 010_Hierarchy
 
 		annotation SummarizationSetBy = Automatic
 
+	column LevelsMerged
+		dataType: string
+		lineageTag: 765d8d80-e64d-4953-b3b9-0e3e8e72ecf4
+		summarizeBy: none
+		sourceColumn: LevelsMerged
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 010_Hierarchy = m
 		mode: import
 		queryGroup: 2-Transform\Influences
@@ -198,9 +206,10 @@ table 010_Hierarchy
 				    #"Replaced Value URL-Combined" = Table.ReplaceValue(#"Added LowestLevelOrg","(","https://",Replacer.ReplaceText,{"URL-Combined"}),
 				    #"Replaced Value1 URL-Combined" = Table.ReplaceValue(#"Replaced Value URL-Combined",")","",Replacer.ReplaceText,{"URL-Combined"}),
 				    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value1 URL-Combined", "URL-Combined", Splitter.SplitTextByEachDelimiter({"#(lf)"}, QuoteStyle.Csv, false), {"URL-Main", "URL-Secondary"}),
-				    #"Replaced Value" = Table.ReplaceValue(#"Split Column by Delimiter",null,"No child orgs",Replacer.ReplaceValue,{"Level2", "Lvl2", "Level3", "Lvl3", "Level4", "Lvl4", "Level5", "Lvl5", "Level6", "Level7"})
+				    #"Replaced Value" = Table.ReplaceValue(#"Split Column by Delimiter",null,"No child orgs",Replacer.ReplaceValue,{"Level2", "Lvl2", "Level3", "Lvl3", "Level4", "Lvl4", "Level5", "Lvl5", "Level6", "Level7"}),
+				    #"Added Custom" = Table.AddColumn(#"Replaced Value", "LevelsMerged", each [Level2] & " | " & [Level3] & " | " & [Level4] & " | " & [Level5] & " | " & [Level6] & " | " & [Level7])
 				in
-				    #"Replaced Value"
+				    #"Added Custom"
 
 	annotation PBI_NavigationStepName = Navigation
 

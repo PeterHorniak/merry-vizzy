@@ -94,7 +94,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'PauseAI Global (PauseAI)'"
+                                "Value": "'International AI summits'"
                               }
                             }
                           ]
@@ -138,7 +138,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "'pause'"
+                            "Value": "'intern'"
                           }
                         }
                       }
