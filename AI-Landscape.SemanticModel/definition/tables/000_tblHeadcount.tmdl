@@ -61,6 +61,14 @@ table 000_tblHeadcount
 
 		annotation SummarizationSetBy = Automatic
 
+	column Volunteers
+		dataType: string
+		lineageTag: b8c88819-ceec-428f-b539-5985d4f07012
+		summarizeBy: none
+		sourceColumn: Volunteers
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 000_tblHeadcount = m
 		mode: import
 		queryGroup: 1-Extract

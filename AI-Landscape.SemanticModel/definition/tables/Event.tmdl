@@ -120,6 +120,13 @@ table Event
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
+	column _DateYear = year(Event[Date])
+		formatString: 0
+		lineageTag: 50de9f04-1ba7-4265-9525-9a32951ba184
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Event = m
 		mode: import
 		queryGroup: 3-Load

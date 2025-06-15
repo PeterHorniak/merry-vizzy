@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "866705abc8e07ee382cf",
   "position": {
-    "x": 633.75,
-    "y": 102.5,
-    "z": 8000,
-    "height": 98.75,
-    "width": 202.5,
-    "tabOrder": 8000
+    "x": 633.84615384615381,
+    "y": 102.30769230769231,
+    "z": 7000,
+    "height": 109.23076923076923,
+    "width": 229.23076923076923,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "tableEx",
@@ -245,13 +245,27 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "77.62789517845657D"
+                  "Value": "56.75835015719068D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Divide(CountNonNull(Org.ActiveOrNot), ScopedEval(CountNonNull(Org.ActiveOrNot), []))"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "130.62669927824126D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Org.ActiveOrNot"
           }
         }
       ]

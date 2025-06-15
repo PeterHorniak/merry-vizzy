@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "ef8506443e0e5c5a44f6",
   "position": {
-    "x": 10.977738320574884,
-    "y": 19.211042061006047,
+    "x": 10.769230769230768,
+    "y": 19.23076923076923,
     "z": 0,
-    "height": 701.20303522672077,
-    "width": 1196.5734769426624,
+    "height": 415.38461538461536,
+    "width": 1196.9230769230769,
     "tabOrder": 0
   },
   "visual": {
@@ -153,10 +153,47 @@
               {
                 "textRuns": [
                   {
-                    "value": "Have way to track accesses of PBI visual."
+                    "value": "Have way to track accesses of PBI published to web? Some links said possible."
                   }
                 ],
                 "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Set report placeholder in case of heavy usage: https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web#heavy-usage"
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Try changing Influence thickness based on strength of influence? E.g. have separate sheet "
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "[Org] [Single Parent] [StrengthInfluence]"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "AFAIS\t| GAP\t| 0.5"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "AFAIS\t| Arkadia Impact | 0.2"
+                  }
+                ]
               }
             ]
           }

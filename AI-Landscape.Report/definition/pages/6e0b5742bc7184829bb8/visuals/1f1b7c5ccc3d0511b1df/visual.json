@@ -4,10 +4,10 @@
   "position": {
     "x": 552.30769230769226,
     "y": 0,
-    "z": 3006,
+    "z": 8000,
     "height": 63.076923076923073,
     "width": 175.38461538461539,
-    "tabOrder": 4006
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -231,20 +231,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "1c7ff638397d819ace46",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Country"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

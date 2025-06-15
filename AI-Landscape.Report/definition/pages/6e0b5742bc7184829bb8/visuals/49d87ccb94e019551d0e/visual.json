@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 133.84615384615384,
     "width": 546.15384615384619,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "tableEx",
@@ -168,20 +168,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "e7a3f250d9f3791d1522",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

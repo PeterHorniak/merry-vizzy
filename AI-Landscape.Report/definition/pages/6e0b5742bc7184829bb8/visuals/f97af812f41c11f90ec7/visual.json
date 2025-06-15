@@ -279,37 +279,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "260cfdea59ce39829e41",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Location"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "908149d20e8f1107c01c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "ActiveOrNot"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

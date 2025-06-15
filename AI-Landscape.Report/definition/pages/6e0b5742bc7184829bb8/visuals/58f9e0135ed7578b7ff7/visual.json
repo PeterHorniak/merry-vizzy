@@ -260,56 +260,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f96c92a488aebd1ddd5a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Org"
-                  }
-                },
-                "Property": "Location"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "30d015d4bac29d85b4ec",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Location"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5aefd822ad57136af264",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "ActiveOrNot"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

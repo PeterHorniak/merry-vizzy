@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "a66c5c51e8413f59e62f",
+  "name": "1550bedf088c09d540db",
   "position": {
-    "x": 634.16666666666674,
-    "y": 220,
-    "z": 9000,
-    "height": 135,
-    "width": 229.16666666666669,
-    "tabOrder": 9000
+    "x": 1108.4615384615383,
+    "y": 190.76923076923077,
+    "z": 13000,
+    "height": 109.23076923076923,
+    "width": 171.53846153846152,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "tableEx",
@@ -23,12 +23,12 @@
                       "Entity": "Org"
                     }
                   },
-                  "Property": "OrgStructure"
+                  "Property": "AIFocus"
                 }
               },
-              "queryRef": "Org.OrgStructure",
-              "nativeQueryRef": "Structure",
-              "displayName": "Structure"
+              "queryRef": "Org.AIFocus",
+              "nativeQueryRef": "AI focus?",
+              "displayName": "AI focus?"
             },
             {
               "field": {
@@ -42,7 +42,7 @@
                               "Entity": "Org"
                             }
                           },
-                          "Property": "OrgStructure"
+                          "Property": "AIFocus"
                         }
                       },
                       "Function": 5
@@ -59,7 +59,7 @@
                                   "Entity": "Org"
                                 }
                               },
-                              "Property": "OrgStructure"
+                              "Property": "AIFocus"
                             }
                           },
                           "Function": 5
@@ -71,7 +71,7 @@
                   "Operator": 3
                 }
               },
-              "queryRef": "Divide(CountNonNull(Org.OrgStructure), ScopedEval(CountNonNull(Org.OrgStructure), []))",
+              "queryRef": "Divide(CountNonNull(Org.AIFocus), ScopedEval(CountNonNull(Org.AIFocus), []))",
               "nativeQueryRef": "%",
               "displayName": "%"
             },
@@ -85,14 +85,14 @@
                           "Entity": "Org"
                         }
                       },
-                      "Property": "OrgStructure"
+                      "Property": "AIFocus"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Org.OrgStructure)",
-              "nativeQueryRef": "Count of OrgStructure",
+              "queryRef": "CountNonNull(Org.AIFocus)",
+              "nativeQueryRef": "#",
               "displayName": "#"
             }
           ]
@@ -112,7 +112,7 @@
                             "Entity": "Org"
                           }
                         },
-                        "Property": "OrgStructure"
+                        "Property": "AIFocus"
                       }
                     },
                     "Function": 5
@@ -129,7 +129,7 @@
                                 "Entity": "Org"
                               }
                             },
-                            "Property": "OrgStructure"
+                            "Property": "AIFocus"
                           }
                         },
                         "Function": 5
@@ -157,36 +157,6 @@
                 }
               }
             }
-          }
-        }
-      ],
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "52.19836400817996D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Divide(CountNonNull(Org.OrgStructure), ScopedEval(CountNonNull(Org.OrgStructure), []))"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "131.184D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Org.OrgStructure"
           }
         }
       ],
@@ -265,7 +235,7 @@
             }
           },
           "selector": {
-            "metadata": "Divide(CountNonNull(Org.OrgStructure), ScopedEval(CountNonNull(Org.OrgStructure), []))"
+            "metadata": "Divide(CountNonNull(Org.AIFocus), ScopedEval(CountNonNull(Org.AIFocus), []))"
           }
         }
       ]

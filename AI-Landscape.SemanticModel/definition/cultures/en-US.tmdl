@@ -9989,6 +9989,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.491
 			          }
+			        },
+			        {
+			          "AI focus?": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -10146,9 +10156,181 @@ cultureInfo en-US
 			        }
 			      ],
 			      "SemanticType": "Time"
+			    },
+			    "entity_000_tbl_headcount.volunteer": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "000_tblHeadcount",
+			          "ConceptualProperty": "Volunteers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "volunteer": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "helper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy.level_merged": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "010_Hierarchy",
+			          "ConceptualProperty": "LevelsMerged"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "level merged": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LevelsMerged": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quantity merged": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "threshold merged": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "amount merged": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "grade merged": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "point merged": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "rank merged": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "tier merged": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "contact_has_org": {
+			      "Binding": {
+			        "ConceptualEntity": "Contact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "contact": {
+			          "Target": {
+			            "Entity": "contact"
+			          }
+			        },
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "contact"
+			            },
+			            "Object": {
+			              "Role": "org"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "contacts_have_org"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "contact"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_contacts"
+			        }
+			      ]
+			    },
 			    "event_has_org": {
 			      "Binding": {
 			        "ConceptualEntity": "Event"
@@ -10416,6 +10598,72 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "org_have_activities"
+			        }
+			      ]
+			    },
+			    "entity_010_hierarchy_has_level_merged": {
+			      "Binding": {
+			        "ConceptualEntity": "010_Hierarchy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_010_hierarchy": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy"
+			          }
+			        },
+			        "entity_010_hierarchy.level_merged": {
+			          "Target": {
+			            "Entity": "entity_010_hierarchy.level_merged"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_010_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "entity_010_hierarchy.level_merged"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing010_hierarchies_have_level_merged"
+			        }
+			      ]
+			    },
+			    "entity_000_tbl_headcount_has_volunteer": {
+			      "Binding": {
+			        "ConceptualEntity": "000_tblHeadcount"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_000_tbl_headcount": {
+			          "Target": {
+			            "Entity": "entity_000_tbl_headcount"
+			          }
+			        },
+			        "entity_000_tbl_headcount.volunteer": {
+			          "Target": {
+			            "Entity": "entity_000_tbl_headcount.volunteer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_000_tbl_headcount"
+			            },
+			            "Object": {
+			              "Role": "entity_000_tbl_headcount.volunteer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing000_tbl_headcounts_have_volunteers"
 			        }
 			      ]
 			    },
@@ -14217,59 +14465,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "qry_last_refreshed_are_refreshed_on_qry_last_refreshed"
-			        }
-			      ]
-			    },
-			    "contact_has_org": {
-			      "Binding": {
-			        "ConceptualEntity": "Contact"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "contact": {
-			          "Target": {
-			            "Entity": "contact"
-			          }
-			        },
-			        "org": {
-			          "Target": {
-			            "Entity": "org"
-			          },
-			          "Nouns": [
-			            {
-			              "organisation": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "contact"
-			            },
-			            "Object": {
-			              "Role": "org"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "contacts_have_org"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "org"
-			            },
-			            "Object": {
-			              "Role": "contact"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "org_have_contacts"
 			        }
 			      ]
 			    },

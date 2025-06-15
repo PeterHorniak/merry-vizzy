@@ -4,10 +4,10 @@
   "position": {
     "x": 370.76923076923077,
     "y": 0,
-    "z": 3005,
+    "z": 7000,
     "height": 63.076923076923073,
     "width": 175.38461538461539,
-    "tabOrder": 4005
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -253,34 +253,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "f1fcd643bec15b2432c4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation-Shortened"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "95a29fb6aa188086e202",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Parent org"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

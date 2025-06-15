@@ -1,39 +1,60 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "113db1422c5805c79646",
+  "name": "780c36a73561b4062dc6",
   "position": {
-    "x": 167.69230769230768,
-    "y": 643.84615384615381,
-    "z": 12000,
-    "height": 76.153846153846146,
-    "width": 384.61538461538458,
-    "tabOrder": 12000
+    "x": 0,
+    "y": 476.15384615384613,
+    "z": 2000,
+    "height": 243.84615384615384,
+    "width": 185.38461538461539,
+    "tabOrder": 1000
   },
   "visual": {
-    "visualType": "textFilter25A4896A83E0487089E2B90C9AE57C8A",
+    "visualType": "slicer",
     "query": {
       "queryState": {
-        "field": {
+        "Values": {
           "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "010_Hierarchy"
+                      "Entity": "Event"
                     }
                   },
-                  "Property": "LevelsMerged"
+                  "Property": "_DateYear"
                 }
               },
-              "queryRef": "010_Hierarchy.LevelsMerged",
-              "nativeQueryRef": "LevelsMerged"
+              "queryRef": "Event._DateYear",
+              "nativeQueryRef": "_DateYear",
+              "active": true
             }
           ]
         }
       }
     },
     "objects": {
+      "data": [
+        {
+          "properties": {
+            "numericStart": {
+              "expr": {
+                "Literal": {
+                  "Value": "2015D"
+                }
+              }
+            },
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Between'"
+                }
+              }
+            }
+          }
+        }
+      ],
       "general": [
         {
           "properties": {
@@ -42,49 +63,35 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "0",
-                    "Entity": "010_Hierarchy",
+                    "Name": "e",
+                    "Entity": "Event",
                     "Type": 0
                   }
                 ],
                 "Where": [
                   {
                     "Condition": {
-                      "Contains": {
+                      "Comparison": {
+                        "ComparisonKind": 2,
                         "Left": {
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "0"
+                                "Source": "e"
                               }
                             },
-                            "Property": "LevelsMerged"
+                            "Property": "_DateYear"
                           }
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "'good anc'"
+                            "Value": "2015D"
                           }
                         }
                       }
                     }
                   }
                 ]
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Search for org across all levels of hierarchy!'"
-                }
               }
             }
           }

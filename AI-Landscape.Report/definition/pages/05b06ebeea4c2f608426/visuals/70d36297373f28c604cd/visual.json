@@ -328,20 +328,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "11f776cb5cd292cf0cd4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Activities AI - Level.2"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }
