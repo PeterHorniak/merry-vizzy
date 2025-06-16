@@ -1,100 +1,54 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "5ad1b413f22e20086a94",
+  "name": "1182041575912b848079",
   "position": {
-    "x": 382.30769230769232,
-    "y": 119.23076923076923,
-    "z": 4000,
-    "height": 595.38461538461536,
-    "width": 897.69230769230762,
-    "tabOrder": 4000
+    "x": 0,
+    "y": 288.46153846153845,
+    "z": 8000,
+    "height": 63.076923076923073,
+    "width": 175.38461538461539,
+    "tabOrder": 8000
   },
   "visual": {
-    "visualType": "ZoomChartsDrillDownNetworkProA1D59E3B59078E6D50A4CB1C3D4E2129C500",
+    "visualType": "slicer",
     "query": {
       "queryState": {
-        "Nodes": {
+        "Values": {
           "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Activity"
+                      "Entity": "Org"
                     }
                   },
-                  "Property": "Activities AI"
+                  "Property": "Country"
                 }
               },
-              "queryRef": "020_ActivitiesSplit.Activities AI",
-              "nativeQueryRef": "Activities AI"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Activity"
-                    }
-                  },
-                  "Property": "Organisation"
-                }
-              },
-              "queryRef": "020_ActivitiesSplit.Organisation",
-              "nativeQueryRef": "Organisation"
-            }
-          ]
-        },
-        "Size": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Activity"
-                        }
-                      },
-                      "Property": "Organisation"
-                    }
-                  },
-                  "Function": 5
-                }
-              },
-              "queryRef": "Min(020_ActivitiesSplit.Organisation)",
-              "nativeQueryRef": "Count of Organisation"
+              "queryRef": "Org.Country",
+              "nativeQueryRef": "Country",
+              "active": true
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Activity"
-                      }
-                    },
-                    "Property": "Organisation"
-                  }
-                },
-                "Function": 5
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
-      "paid": [
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
         {
           "properties": {
             "show": {
@@ -107,23 +61,10 @@
           }
         }
       ],
-      "trialLicense": [
+      "general": [
         {
           "properties": {
-            "preTrialAccessStartDate": {
-              "expr": {
-                "Literal": {
-                  "Value": "1749088500000D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "show": {
+            "selfFilterEnabled": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -133,24 +74,17 @@
           }
         }
       ],
-      "layout": [
+      "selection": [
         {
           "properties": {
-            "layoutMode": {
-              "expr": {
-                "Literal": {
-                  "Value": "'static'"
-                }
-              }
-            },
-            "dynamic": {
+            "strictSingleSelect": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "static": {
+            "selectAllCheckboxEnabled": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -168,7 +102,53 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Country'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading3'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
                 }
               }
             }
@@ -180,7 +160,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "3f3b804336d73bc095ce",
+        "name": "43200ee74252100bf678",
         "field": {
           "Column": {
             "Expression": {
@@ -188,7 +168,7 @@
                 "Entity": "Activity"
               }
             },
-            "Property": "Activities AI"
+            "Property": "Activities AI - Level.1"
           }
         },
         "type": "Categorical",
@@ -215,7 +195,7 @@
                                 "Source": "0"
                               }
                             },
-                            "Property": "Activities AI"
+                            "Property": "Activities AI - Level.1"
                           }
                         }
                       ],
@@ -224,13 +204,6 @@
                           {
                             "Literal": {
                               "Value": "''"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'No specific AI focus'"
                             }
                           }
                         ]
@@ -242,6 +215,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {
@@ -257,6 +231,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "32afd13d0e002b9b800d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "Country"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

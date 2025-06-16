@@ -2301,7 +2301,8 @@ cultureInfo en-US
 			            "Weight": 0.714
 			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Time"
 			    },
 			    "entity_010_hierarchy.level_7": {
 			      "Definition": {
@@ -6780,6 +6781,16 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "IsMainOrgContact": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Org contact type": {
 			            "State": "Suggested",
 			            "Source": {
@@ -8255,6 +8266,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Organisation full names": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]

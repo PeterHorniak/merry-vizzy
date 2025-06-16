@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "f6b8abe7bb813e206976",
   "position": {
-    "x": 256.43586833144155,
-    "y": 65.38024971623156,
+    "x": 184.61538461538461,
+    "y": 65.384615384615387,
     "z": 5000,
-    "height": 643.63223609534623,
-    "width": 345.06242905788878,
+    "height": 643.84615384615381,
+    "width": 417.69230769230768,
     "tabOrder": 7000
   },
   "visual": {
@@ -27,7 +27,22 @@
                 }
               },
               "queryRef": "Wordcloud.Organisation",
-              "nativeQueryRef": "Organisation"
+              "nativeQueryRef": "Organisation full names",
+              "displayName": "Organisation full names"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Org"
+                    }
+                  },
+                  "Property": "Mission"
+                }
+              },
+              "queryRef": "Org.Mission",
+              "nativeQueryRef": "Mission"
             }
           ]
         }
@@ -40,13 +55,27 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "317.40068104426786D"
+                  "Value": "243.62271897643697D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Wordcloud.Organisation"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "144.51875843601863D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Org.Mission"
           }
         }
       ]

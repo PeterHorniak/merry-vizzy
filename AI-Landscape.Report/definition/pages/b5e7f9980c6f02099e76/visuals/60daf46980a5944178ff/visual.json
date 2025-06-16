@@ -112,7 +112,7 @@
               },
               "queryRef": "010_Hierarchy.Level6",
               "nativeQueryRef": "Lvl6",
-              "active": false,
+              "active": true,
               "displayName": "Lvl6"
             }
           ]
@@ -354,7 +354,7 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'EA'"
+                    "Value": "'AU'"
                   }
                 }
               ],
@@ -364,7 +364,7 @@
                   "identityValues": [
                     {
                       "Literal": {
-                        "Value": "'EA AU'"
+                        "Value": "'Aus AI Industry'"
                       }
                     }
                   ],
@@ -374,11 +374,23 @@
                       "identityValues": [
                         {
                           "Literal": {
-                            "Value": "'Timaeus'"
+                            "Value": "'Harmony Intell.'"
                           }
                         }
                       ],
-                      "isToggled": true
+                      "isToggled": true,
+                      "children": [
+                        {
+                          "identityValues": [
+                            {
+                              "Literal": {
+                                "Value": "'MIT AI Risk Repository'"
+                              }
+                            }
+                          ],
+                          "isToggled": true
+                        }
+                      ]
                     }
                   ]
                 }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "e7dc15ef268d2c8d5b16",
   "position": {
-    "x": 614.478527607362,
-    "y": 382.82208588957059,
+    "x": 614.61538461538464,
+    "y": 350,
     "z": 7000,
-    "height": 321.30879345603273,
-    "width": 665.52147239263809,
+    "height": 370,
+    "width": 665.38461538461536,
     "tabOrder": 6000
   },
   "visual": {
@@ -146,7 +146,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Org mission keywords repeated >=2'"
+                  "Value": "'Org mission keywords repeated ≥2 times'"
                 }
               }
             },

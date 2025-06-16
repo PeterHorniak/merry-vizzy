@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "5ab8f8cb084221d58846",
+  "name": "af7b30fd673c581ba5ab",
   "position": {
-    "x": 54.629929767693142,
-    "y": 0,
-    "z": 1000,
-    "height": 49.0977849810913,
-    "width": 161.81523500810374,
-    "tabOrder": 1000
+    "x": 0,
+    "y": 66.92307692307692,
+    "z": 3000,
+    "height": 62.307692307692307,
+    "width": 206.92307692307691,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,11 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Contacts alt",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "20pt"
-                    }
+                    "value": "Events happening in past 3 months & future."
                   }
                 ]
               }

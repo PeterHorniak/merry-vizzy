@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "bd7050a384a163a9d76e",
   "position": {
-    "x": 614.478527607362,
-    "y": 65.439672801636,
+    "x": 614.61538461538464,
+    "y": 4.615384615384615,
     "z": 4000,
-    "height": 309.52965235173826,
-    "width": 665.52147239263809,
+    "height": 345.38461538461536,
+    "width": 665.38461538461536,
     "tabOrder": 4000
   },
   "visual": {
@@ -133,7 +133,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Org names'"
+                  "Value": "'Org name keywords'"
                 }
               }
             },

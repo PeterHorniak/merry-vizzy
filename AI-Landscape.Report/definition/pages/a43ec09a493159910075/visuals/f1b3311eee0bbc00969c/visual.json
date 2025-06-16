@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "10226a5e296f7e2398de",
+  "name": "f1b3311eee0bbc00969c",
   "position": {
-    "x": 734.23312883435585,
+    "x": 42.325333333333333,
     "y": 0,
-    "z": 6000,
-    "height": 55.623721881390594,
-    "width": 545.76687116564415,
-    "tabOrder": 5000
+    "z": 4000,
+    "height": 49.152,
+    "width": 142.67733333333334,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,17 +19,13 @@
               {
                 "textRuns": [
                   {
-                    "value": "Thoughts:"
+                    "value": "Locations",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "20pt"
+                    }
                   }
                 ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Shows common themes among orgs?"
-                  }
-                ],
-                "listType": "bullet"
               }
             ]
           }
