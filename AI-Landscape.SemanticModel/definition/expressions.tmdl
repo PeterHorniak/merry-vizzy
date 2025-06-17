@@ -165,17 +165,21 @@ expression 005_tblOrg-SplitURLs =
 		let
 		    Source = #"000_tblOrg",
 		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "URL"}),
-		    #"URL replaced (https:// with (" = Table.ReplaceValue(#"Removed Other Columns","(https://","(",Replacer.ReplaceText,{"URL"}),
-		    #"URL replaced ( with https://" = Table.ReplaceValue(#"URL replaced (https:// with (","(","https://",Replacer.ReplaceText,{"URL"}),
-		    #"URL replaced ) with blank" = Table.ReplaceValue(#"URL replaced ( with https://",")","",Replacer.ReplaceText,{"URL"}),
-		    #"Filtered Rows" = Table.SelectRows(#"URL replaced ) with blank", each ([URL] <> "")),
-		    #"Added Custom" = Table.AddColumn(#"Filtered Rows", "URLWithMain", each "(main)"&[URL]),
-		    #"Split URL by linefeed" = Table.ExpandListColumn(Table.TransformColumns(#"Added Custom", {{"URLWithMain", Splitter.SplitTextByDelimiter("#(lf)", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "URLWithMain"),
-		    #"Added IsMain" = Table.AddColumn(#"Split URL by linefeed", "IsMain", each if Text.StartsWith([URLWithMain], "(main)") then "Main" else "Secondary"),
-		    #"Replaced Value" = Table.ReplaceValue(#"Added IsMain","(main)","",Replacer.ReplaceText,{"URLWithMain"}),
-		    #"Removed Columns" = Table.RemoveColumns(#"Replaced Value",{"URL"})
+		    #"Filtered out blanks" = Table.SelectRows(#"Removed Other Columns", each ([URL] <> "")),
+		    #"Added URLWithMain" = Table.AddColumn(#"Filtered out blanks", "URLWithMain", each "┆main┆"&[URL]),
+		    #"Split URL by linefeed" = Table.ExpandListColumn(Table.TransformColumns(#"Added URLWithMain", {{"URLWithMain", Splitter.SplitTextByDelimiter("#(lf)", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "URLWithMain"),
+		    #"Added IsMainDraft" = Table.AddColumn(#"Split URL by linefeed", "IsMainDraft", each if Text.StartsWith([URLWithMain], "┆main┆") then "Main" else "Other"),
+		    #"Removed ┆main┆ from URLWithMain" = Table.ReplaceValue(#"Added IsMainDraft","┆main┆","",Replacer.ReplaceText,{"URLWithMain"}),
+		    #"URL replaced (https:// with (" = Table.ReplaceValue(#"Removed ┆main┆ from URLWithMain","(https://","(",Replacer.ReplaceText,{"URLWithMain"}),
+		    #"Replaced ( with ╏" = Table.ReplaceValue(#"URL replaced (https:// with (","(","╏(",Replacer.ReplaceText,{"URLWithMain"}),
+		    #"Split URLWithMain by ╏" = Table.SplitColumn(#"Replaced ( with ╏", "URLWithMain", Splitter.SplitTextByEachDelimiter({"╏"}, QuoteStyle.Csv, false), {"URLCategoryDraft", "URLSplit"}),
+		    #"URL replaced ( with https://" = Table.ReplaceValue(#"Split URLWithMain by ╏","(","https://",Replacer.ReplaceText,{"URLSplit"}),
+		    #"URL replaced ) with blank" = Table.ReplaceValue(#"URL replaced ( with https://",")","",Replacer.ReplaceText,{"URLSplit"}),
+		    #"Added IsMain" = Table.AddColumn(#"URL replaced ) with blank", "IsMain", each if [URLCategoryDraft] = "" then [IsMainDraft] else [URLCategoryDraft]),
+		    #"Removed Columns" = Table.RemoveColumns(#"Added IsMain",{"URL", "URLCategoryDraft", "IsMainDraft"}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"URLSplit", "URL"}})
 		in
-		    #"Removed Columns"
+		    #"Renamed Columns"
 	lineageTag: ae69c755-2b13-4306-8f9f-f1b43023c04f
 	queryGroup: 2-Transform
 

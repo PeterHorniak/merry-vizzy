@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "ea6e8a063e279ba48e37",
   "position": {
-    "x": 398.66666666666669,
+    "x": 351.53846153846155,
     "y": 300,
     "z": 6000,
-    "height": 224,
-    "width": 66,
+    "height": 223.84615384615384,
+    "width": 113.07692307692307,
     "tabOrder": 6000
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "URL.IsMain",
-              "nativeQueryRef": "IsMain"
+              "nativeQueryRef": "Type",
+              "displayName": "Type"
             },
             {
               "field": {
@@ -37,12 +38,12 @@
                       "Entity": "URL"
                     }
                   },
-                  "Property": "URLWithMain"
+                  "Property": "URL"
                 }
               },
-              "queryRef": "URL.URLWithMain",
-              "nativeQueryRef": "URL",
-              "displayName": "URL"
+              "queryRef": "URL.URL",
+              "nativeQueryRef": "Link",
+              "displayName": "Link"
             }
           ]
         }
@@ -85,7 +86,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "70.84431634023386D"
                 }
               }
             }
@@ -144,5 +145,37 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9a3abef8de09a0756057",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "URL"
+              }
+            },
+            "Property": "IsMain"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "58fb823547dbe3e0d910",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "URL"
+              }
+            },
+            "Property": "URL"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -9,20 +9,20 @@ table URL
 
 		annotation SummarizationSetBy = Automatic
 
-	column URLWithMain
-		dataType: string
-		lineageTag: e6419747-0831-43c3-945d-df9b99116220
-		dataCategory: WebUrl
-		summarizeBy: none
-		sourceColumn: URLWithMain
-
-		annotation SummarizationSetBy = Automatic
-
 	column IsMain
 		dataType: string
 		lineageTag: d8d79910-bbbf-4060-a2e7-a97bf70d98d9
 		summarizeBy: none
 		sourceColumn: IsMain
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL
+		dataType: string
+		lineageTag: dd6397ac-f6bb-4a44-92a8-ec7ccfb0dae7
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: URL
 
 		annotation SummarizationSetBy = Automatic
 

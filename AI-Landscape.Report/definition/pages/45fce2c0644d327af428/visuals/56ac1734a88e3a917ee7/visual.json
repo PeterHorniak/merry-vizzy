@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "56ac1734a88e3a917ee7",
   "position": {
-    "x": 61.333333333333336,
+    "x": 61.538461538461533,
     "y": 300,
     "z": 5000,
-    "height": 224,
-    "width": 317.33333333333331,
+    "height": 223.84615384615384,
+    "width": 283.84615384615381,
     "tabOrder": 5000
   },
   "visual": {
@@ -127,7 +127,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "148.33333333333334D"
+                  "Value": "116.09454571682265D"
                 }
               }
             }
@@ -200,5 +200,65 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "45cac2d79a6c6250d3c3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Contact"
+              }
+            },
+            "Property": "IsMain"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cd5a3f4f03b6c5bc5d74",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Contact"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "defe4acc7c8468252320",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Contact"
+              }
+            },
+            "Property": "Title"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d6b7a4c0311dec108db5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Contact"
+              }
+            },
+            "Property": "Link"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
