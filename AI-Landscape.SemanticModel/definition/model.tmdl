@@ -38,7 +38,7 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBIDesktopVersion = 2.144.679.0 (25.06)+ef40146207b86a826d1c72a7727a743ee37450e9
 
-annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocationsAcronyms","000_tblHeadcount","005_tblOrg-SplitParents","010_tblOrg-SplitChildren","010_Hierarchy","005_tblOrg-SplitURLs","005_tblOrg-SplitContacts","005_tblOrg-events-ForMerge","005_tblOrg-events-count","010_tblOrg-events-TodayMarkers","015_tblOrg-events","010_tblOrg-Formatting","015_tblOrg-BaseNameForMerge","015_tblOrg-AcronymForMerge","005_ActivitiesSplit","Association","Activity","Event","URL","Contact","Org","Wordcloud","qryLastRefreshed","020_tblOrg-AssociationParent","005_tblOrg-AssociationStarting","015_tblOrg-AssociationChild"]
+annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocationsAcronyms","000_tblHeadcount","005_tblOrg-SplitParents","010_tblOrg-SplitChildren","010_Hierarchy","005_tblOrg-SplitLocation","005_tblOrg-SplitURLs","005_tblOrg-SplitContacts","005_tblOrg-events-ForMerge","005_tblOrg-events-count","010_tblOrg-events-TodayMarkers","015_tblOrg-events","010_tblOrg-Formatting","015_tblOrg-BaseNameForMerge","015_tblOrg-AcronymForMerge","005_ActivitiesSplit","Org","qryLastRefreshed","Association","Activity","Contact","Event","Location","URL","Wordcloud","020_tblOrg-AssociationParent","005_tblOrg-AssociationStarting","015_tblOrg-AssociationChild"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -54,6 +54,7 @@ ref table URL
 ref table 010_tblOrg-SplitChildren
 ref table Wordcloud
 ref table Association
+ref table Location
 
 ref cultureInfo en-US
 

@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Org"
+                      "Entity": "Location"
                     }
                   },
                   "Property": "Location"
                 }
               },
-              "queryRef": "Org.Location",
-              "nativeQueryRef": "Location",
+              "queryRef": "Location.Location",
+              "nativeQueryRef": "Location1",
               "active": true
             }
           ]
@@ -71,6 +71,48 @@
               },
               "queryRef": "CountNonNull(Org.Location)",
               "nativeQueryRef": "Count of Location"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Location"
+                        }
+                      },
+                      "Property": "Aussie state"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Location.Aussie state)",
+              "nativeQueryRef": "First Aussie state"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Location"
+                        }
+                      },
+                      "Property": "Aussie state"
+                    }
+                  },
+                  "Function": 4
+                }
+              },
+              "queryRef": "Max(Location.Aussie state)",
+              "nativeQueryRef": "Last Aussie state"
             }
           ]
         }

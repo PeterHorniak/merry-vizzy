@@ -94,23 +94,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d08145a8a4e1c14d8a5d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Activities AI"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

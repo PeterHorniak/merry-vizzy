@@ -165,20 +165,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "12a795639b01280b87e7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "87a2e613ce321209834b",
         "field": {
           "Column": {
@@ -249,25 +235,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "611cb9c3da0a60b070c8",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Contact"
-                  }
-                },
-                "Property": "Name"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -20,64 +20,32 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Org"
+                      "Entity": "Location"
                     }
                   },
                   "Property": "Organisation"
                 }
               },
-              "queryRef": "Org.Organisation",
-              "nativeQueryRef": "Organisation"
+              "queryRef": "Location.Organisation",
+              "nativeQueryRef": "Organisation1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Org"
+                      "Entity": "Location"
                     }
                   },
                   "Property": "Location"
                 }
               },
-              "queryRef": "Org.Location",
-              "nativeQueryRef": "Location"
+              "queryRef": "Location.Location",
+              "nativeQueryRef": "Location1"
             }
           ]
         }
       }
-    },
-    "objects": {
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "322.1381439996272D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Org.Location"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "189.30768636232818D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Org.Organisation"
-          }
-        }
-      ]
     },
     "visualContainerObjects": {
       "stylePreset": [
@@ -153,6 +121,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {

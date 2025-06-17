@@ -3,9 +3,9 @@
   "name": "f97af812f41c11f90ec7",
   "position": {
     "x": 0,
-    "y": 166.15384615384616,
+    "y": 280,
     "z": 0,
-    "height": 553.84615384615381,
+    "height": 440,
     "width": 566.15384615384619,
     "tabOrder": 0
   },
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Org"
+                      "Entity": "Location"
                     }
                   },
                   "Property": "Location"
                 }
               },
-              "queryRef": "Org.Location",
-              "nativeQueryRef": "Location",
+              "queryRef": "Location.Location",
+              "nativeQueryRef": "Location1",
               "active": true
             }
           ]

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "5d6add8e6794686cbd62",
+  "name": "bc2c2f5db7d920a530aa",
   "position": {
-    "x": 370.76923076923077,
-    "y": 0,
-    "z": 7000,
+    "x": 184.61538461538461,
+    "y": 63.076923076923073,
+    "z": 8000,
     "height": 63.076923076923073,
     "width": 175.38461538461539,
-    "tabOrder": 7000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,30 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Org"
+                      "Entity": "Location"
                     }
                   },
-                  "Property": "Parent org"
+                  "Property": "Country"
                 }
               },
-              "queryRef": "Org.Parent org",
-              "nativeQueryRef": "Parent org",
+              "queryRef": "Location.Country",
+              "nativeQueryRef": "Country1",
               "active": true
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Org"
-                    }
-                  },
-                  "Property": "Organisation-Shortened"
-                }
-              },
-              "queryRef": "Org.Organisation-Shortened",
-              "nativeQueryRef": "Organisation-Shortened",
-              "active": false
             }
           ]
         }
@@ -92,6 +77,51 @@
                   "Value": "true"
                 }
               }
+            },
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "l",
+                    "Entity": "Location",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "l"
+                                    }
+                                  },
+                                  "Property": "Country"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Australia'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
             }
           }
         }
@@ -131,7 +161,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Org'"
+                  "Value": "'Country'"
                 }
               }
             },

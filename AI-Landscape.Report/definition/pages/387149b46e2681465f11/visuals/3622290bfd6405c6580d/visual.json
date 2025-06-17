@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "3622290bfd6405c6580d",
   "position": {
-    "x": 296.40633533588203,
-    "y": 367.01256144183509,
+    "x": 304.61538461538458,
+    "y": 366.92307692307691,
     "z": 3000,
-    "height": 345.34134352812674,
-    "width": 975.204806116876,
+    "height": 345.38461538461536,
+    "width": 975.38461538461536,
     "tabOrder": 3000
   },
   "visual": {
@@ -91,6 +91,26 @@
               "queryRef": "Min(005_tblOrg-events.Event)",
               "nativeQueryRef": "Event details",
               "displayName": "Event details"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Event"
+                        }
+                      },
+                      "Property": "_DateYYYY-MM-DD"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Event._DateYYYY-MM-DD)",
+              "nativeQueryRef": "Date1",
+              "displayName": "Date"
             }
           ]
         },
@@ -1239,7 +1259,7 @@
         "howCreated": "User"
       },
       {
-        "name": "d51a20f38c9064026e2b",
+        "name": "c190dd44a9b09163d9e5",
         "field": {
           "Column": {
             "Expression": {
@@ -1253,7 +1273,7 @@
         "type": "Categorical"
       },
       {
-        "name": "6c55ff99d74793094394",
+        "name": "25aa27eba90a6bc96350",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -1267,6 +1287,25 @@
               }
             },
             "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "37048d94d054a1ea292a",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Event"
+                  }
+                },
+                "Property": "_DateYYYY-MM-DD"
+              }
+            },
+            "Function": 3
           }
         },
         "type": "Advanced"

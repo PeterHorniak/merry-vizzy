@@ -92,42 +92,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b1fb4ee1ac9284e6e055",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Contact"
-                  }
-                },
-                "Property": "Name"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9b3a5110725a12c84d4d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Contact"
-              }
-            },
-            "Property": "_ContactsShared"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

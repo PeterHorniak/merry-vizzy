@@ -1,0 +1,48 @@
+table Location
+	lineageTag: c46655ef-4e4c-4ad8-bd2e-9515ea78b25b
+
+	column Organisation
+		dataType: string
+		lineageTag: cc3372bb-e05e-4b70-8b18-2f39de7e73e9
+		summarizeBy: none
+		sourceColumn: Organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: 8ae689da-dcfc-4f43-a607-bf6b323075d8
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 42acaca4-5f24-43a0-91c1-f6706050f235
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Aussie state'
+		dataType: string
+		lineageTag: 6fe492ae-4195-4183-92ce-b31b02c023fe
+		summarizeBy: none
+		sourceColumn: Aussie state
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Location = m
+		mode: import
+		queryGroup: 3-Load
+		source =
+				let
+				    Source = #"005_tblOrg-SplitLocation"
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

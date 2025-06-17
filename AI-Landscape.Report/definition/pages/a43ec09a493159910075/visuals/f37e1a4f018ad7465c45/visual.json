@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 153.84615384615384,
-    "z": 6000,
+    "z": 4000,
     "height": 63.076923076923073,
     "width": 175.38461538461539,
-    "tabOrder": 6000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -88,13 +88,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
-                }
-              }
-            },
-            "isInvertedSelectionMode": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }
@@ -285,7 +278,7 @@
         }
       },
       {
-        "name": "e7a721ad05cd707a8841",
+        "name": "be6a5ee464a490e06e7b",
         "field": {
           "Column": {
             "Expression": {

@@ -145,37 +145,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9a3abef8de09a0756057",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "URL"
-              }
-            },
-            "Property": "IsMain"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "58fb823547dbe3e0d910",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "URL"
-              }
-            },
-            "Property": "URL"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

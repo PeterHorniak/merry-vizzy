@@ -4,10 +4,10 @@
   "position": {
     "x": 252.30769230769229,
     "y": 614.61538461538464,
-    "z": 8001,
+    "z": 6000,
     "height": 105.38461538461539,
     "width": 1027.6923076923076,
-    "tabOrder": 8001
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "lineChart",
@@ -91,6 +91,26 @@
               "queryRef": "Min(005_tblOrg-events.Event)",
               "nativeQueryRef": "Event details",
               "displayName": "Event details"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Event"
+                        }
+                      },
+                      "Property": "_DateYYYY-MM-DD"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Event._DateYYYY-MM-DD)",
+              "nativeQueryRef": "Date1",
+              "displayName": "Date"
             }
           ]
         },
@@ -1132,8 +1152,63 @@
         "type": "Categorical"
       },
       {
-        "name": "9acfe39eee78007a9466",
+        "name": "8f9d7bab941ddd9667b7",
         "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event"
+              }
+            },
+            "Property": "_IsRecent"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "e",
+              "Entity": "Event",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "e"
+                          }
+                        },
+                        "Property": "_IsRecent"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Recent'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "9acfe39eee78007a9466",
+        "ordinal": 2,
         "field": {
           "Aggregation": {
             "Expression": {
@@ -1153,7 +1228,7 @@
       },
       {
         "name": "6a7d04bc5c2ed2056021",
-        "ordinal": 2,
+        "ordinal": 3,
         "field": {
           "Column": {
             "Expression": {
@@ -1169,7 +1244,7 @@
       },
       {
         "name": "67f78cce116653b3acae",
-        "ordinal": 3,
+        "ordinal": 4,
         "field": {
           "Aggregation": {
             "Expression": {
@@ -1190,7 +1265,7 @@
       },
       {
         "name": "ab6270974eb87869759f",
-        "ordinal": 4,
+        "ordinal": 5,
         "field": {
           "Aggregation": {
             "Expression": {
@@ -1210,7 +1285,7 @@
       },
       {
         "name": "15e03d0d306cfeaf8ff5",
-        "ordinal": 5,
+        "ordinal": 6,
         "field": {
           "Column": {
             "Expression": {
@@ -1225,7 +1300,8 @@
         "howCreated": "User"
       },
       {
-        "name": "b55f0572ee4c0ce3329a",
+        "name": "33ef7535c7a809d16ec6",
+        "ordinal": 7,
         "field": {
           "Column": {
             "Expression": {
@@ -1239,7 +1315,8 @@
         "type": "Categorical"
       },
       {
-        "name": "57d2fae17255303cb665",
+        "name": "ad407d90a894b90d6abc",
+        "ordinal": 8,
         "field": {
           "Aggregation": {
             "Expression": {
@@ -1253,6 +1330,25 @@
               }
             },
             "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ee649f06ed929b8818ce",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Event"
+                  }
+                },
+                "Property": "_DateYYYY-MM-DD"
+              }
+            },
+            "Function": 3
           }
         },
         "type": "Advanced"

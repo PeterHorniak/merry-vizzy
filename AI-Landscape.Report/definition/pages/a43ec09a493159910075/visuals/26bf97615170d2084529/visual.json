@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "26bf97615170d2084529",
   "position": {
-    "x": 252.30769230769229,
-    "y": 66.92307692307692,
-    "z": 1000,
-    "height": 547.69230769230762,
-    "width": 1027.6923076923076,
-    "tabOrder": 1000
+    "x": 184.61538461538461,
+    "y": 0,
+    "z": 0,
+    "height": 614.61538461538464,
+    "width": 1095.3846153846152,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "map",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Org"
+                      "Entity": "Location"
                     }
                   },
                   "Property": "Location"
                 }
               },
-              "queryRef": "Org.Location",
-              "nativeQueryRef": "Location",
+              "queryRef": "Location.Location",
+              "nativeQueryRef": "Location1",
               "active": true
             }
           ]
@@ -60,7 +60,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Org"
+                          "Entity": "Location"
                         }
                       },
                       "Property": "Location"
@@ -69,7 +69,7 @@
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Org.Location)",
+              "queryRef": "CountNonNull(Location.Location)",
               "nativeQueryRef": "Count of Location"
             }
           ]
@@ -229,6 +229,47 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#00DA45'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Org"
+                          }
+                        },
+                        "Property": "ActiveOrNot"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'🔋 active'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
         }
       ],
       "categoryLabels": [
@@ -238,6 +279,26 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "mapControls": [
+        {
+          "properties": {
+            "showLassoButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showZoomButtons": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -271,40 +332,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b84148504460797291a3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Location"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5b7ce11f4a5e0c2d865a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Org"
-                  }
-                },
-                "Property": "Location"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9050cbb06d88094c1032",
+        "name": "73dba2120e0be92a4044",
         "field": {
           "Column": {
             "Expression": {
@@ -316,6 +344,39 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "9e0a3fe1ec22c2c01690",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Location"
+              }
+            },
+            "Property": "Location"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "adb23351eb8167c05d38",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Location"
+                  }
+                },
+                "Property": "Location"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -49,3 +49,8 @@ relationship 64a8aa40-8e13-d8c1-8ca6-6180927173c6
 	fromColumn: Association.OrgStarting
 	toColumn: Org.Organisation
 
+relationship fd68bb31-004c-5a33-c374-2e6f0f604f6a
+	crossFilteringBehavior: bothDirections
+	fromColumn: Location.Organisation
+	toColumn: Org.Organisation
+

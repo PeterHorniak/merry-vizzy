@@ -70,51 +70,5 @@
         }
       }
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "291358cb83d2e703d514",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "000_tblHeadcount"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "1a4b0fda82604404d5e2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "000_tblHeadcount"
-              }
-            },
-            "Property": "FTE notkilleveryoneism"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "144d2a5100a808680325",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "000_tblHeadcount"
-              }
-            },
-            "Property": "Revenue notkilleveryoneism"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

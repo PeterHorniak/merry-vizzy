@@ -127,6 +127,12 @@ table Event
 
 		annotation SummarizationSetBy = Automatic
 
+	column _IsRecent = IF(Event[Date]>(TODAY()-30), "Recent", "Old")
+		lineageTag: 7f25f0f3-a613-4083-b760-64d16ef826ba
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Event = m
 		mode: import
 		queryGroup: 3-Load

@@ -109,6 +109,26 @@
               "queryRef": "Min(005_tblOrg-events.Event)",
               "nativeQueryRef": "Event details",
               "displayName": "Event details"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Event"
+                        }
+                      },
+                      "Property": "_DateYYYY-MM-DD"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Event._DateYYYY-MM-DD)",
+              "nativeQueryRef": "Date1",
+              "displayName": "Date"
             }
           ]
         },
@@ -1299,6 +1319,58 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "4cdb44e889b027a2c609",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event"
+              }
+            },
+            "Property": "Event-Icon"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "aeff142e024a707d0a66",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Event"
+                  }
+                },
+                "Property": "Index-Asc-ByOrgDate"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "09a58a9ee2b51e37b0b2",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Event"
+                  }
+                },
+                "Property": "_DateYYYY-MM-DD"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"
