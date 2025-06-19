@@ -3,11 +3,11 @@
   "name": "38cc4dabd4344a83b395",
   "position": {
     "x": 0,
-    "y": 351.53846153846155,
-    "z": 9000,
+    "y": 296.92307692307691,
+    "z": 8000,
     "height": 63.076923076923073,
     "width": 175.38461538461539,
-    "tabOrder": 9000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -156,5 +156,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1bf9830cd96e808dd0a2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Location"
+              }
+            },
+            "Property": "Aussie state"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

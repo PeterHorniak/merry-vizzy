@@ -5,103 +5,11 @@
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "02cfce70d00a565f3483",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_Hierarchy"
-              }
-            },
-            "Property": "LowestLevelOrg"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
-        "name": "248559a6908cb6e12976",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
-        "name": "ce2bd27700c26264f01f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      }
-    ]
-  },
   "pageBinding": {
     "name": "eefcdaf6a36393ba806e",
-    "type": "Drillthrough",
-    "parameters": [
-      {
-        "name": "5ae17f942cebe9cc60ff",
-        "boundFilter": "02cfce70d00a565f3483",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_Hierarchy"
-              }
-            },
-            "Property": "LowestLevelOrg"
-          }
-        }
-      },
-      {
-        "name": "2ef8ae54f440130f0c14",
-        "boundFilter": "248559a6908cb6e12976",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation"
-          }
-        }
-      },
-      {
-        "name": "0f3f1d1ee146fb483e09",
-        "boundFilter": "ce2bd27700c26264f01f",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Activity"
-              }
-            },
-            "Property": "Organisation"
-          }
-        }
-      }
-    ],
-    "referenceScope": "CrossReport"
+    "type": "Default",
+    "parameters": [],
+    "acceptsFilterContext": "None"
   },
   "objects": {
     "background": [
@@ -127,7 +35,7 @@
           "width": {
             "expr": {
               "Literal": {
-                "Value": "306L"
+                "Value": "185L"
               }
             }
           }

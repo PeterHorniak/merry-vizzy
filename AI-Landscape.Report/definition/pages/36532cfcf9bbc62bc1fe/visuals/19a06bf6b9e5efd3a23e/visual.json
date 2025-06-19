@@ -55,5 +55,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "98d57f805089240d5b30",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "OrgStructure"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

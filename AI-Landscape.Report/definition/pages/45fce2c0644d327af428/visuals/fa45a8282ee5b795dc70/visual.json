@@ -94,7 +94,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Department of Industry Science and Resources (DISR)'"
+                                "Value": "'80,000 Hours (80K Hours)'"
                               }
                             }
                           ]
@@ -110,44 +110,6 @@
                 "Literal": {
                   "Value": "true"
                 }
-              }
-            },
-            "selfFilter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "o",
-                    "Entity": "Org",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "Contains": {
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "o"
-                              }
-                            },
-                            "Property": "Organisation"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "'disr'"
-                          }
-                        }
-                      }
-                    },
-                    "Annotations": {
-                      "PowerBI.MParameterBehavior": 1
-                    }
-                  }
-                ]
               }
             }
           }
@@ -167,5 +129,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d26de7924237505b112c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "Organisation"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

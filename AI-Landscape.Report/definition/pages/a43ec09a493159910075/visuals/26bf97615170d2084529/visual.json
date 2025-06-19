@@ -70,7 +70,52 @@
                 }
               },
               "queryRef": "CountNonNull(Location.Location)",
-              "nativeQueryRef": "Count of Location"
+              "nativeQueryRef": "#",
+              "displayName": "#"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "Organisation"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Org.Organisation)",
+              "nativeQueryRef": "First org",
+              "displayName": "First org"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "Organisation"
+                    }
+                  },
+                  "Function": 4
+                }
+              },
+              "queryRef": "Max(Org.Organisation)",
+              "nativeQueryRef": "Last org",
+              "displayName": "Last org"
             }
           ]
         }
@@ -332,7 +377,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "73dba2120e0be92a4044",
+        "name": "ae0a1ab0debbe000e0c2",
         "field": {
           "Column": {
             "Expression": {
@@ -346,7 +391,7 @@
         "type": "Categorical"
       },
       {
-        "name": "9e0a3fe1ec22c2c01690",
+        "name": "5400964f3404725d5681",
         "field": {
           "Column": {
             "Expression": {
@@ -360,7 +405,7 @@
         "type": "Categorical"
       },
       {
-        "name": "adb23351eb8167c05d38",
+        "name": "9f9500ceb1a0d2c99a1c",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -374,6 +419,44 @@
               }
             },
             "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6ad13e6a9e407a615093",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "Organisation"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "42e1b39f02100b616648",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "Organisation"
+              }
+            },
+            "Function": 4
           }
         },
         "type": "Advanced"

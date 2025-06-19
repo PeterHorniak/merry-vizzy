@@ -3,7 +3,7 @@
   "name": "2170f2df4890117c0c8b",
   "position": {
     "x": 0,
-    "y": 225.38461538461539,
+    "y": 74.615384615384613,
     "z": 5000,
     "height": 63.076923076923073,
     "width": 175.38461538461539,
@@ -178,5 +178,37 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b6af268c5d46c62029a0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "Organisation-Shortened"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0f5e100fc7048b9b1d2e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "Parent org"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

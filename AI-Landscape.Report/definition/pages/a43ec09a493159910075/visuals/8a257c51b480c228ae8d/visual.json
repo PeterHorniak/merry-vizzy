@@ -3,11 +3,11 @@
   "name": "8a257c51b480c228ae8d",
   "position": {
     "x": 0,
-    "y": 288.46153846153845,
-    "z": 8000,
+    "y": 224.61538461538461,
+    "z": 7000,
     "height": 63.076923076923073,
     "width": 175.38461538461539,
-    "tabOrder": 8000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -156,5 +156,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b97c1a3a31dde80a308e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Location"
+              }
+            },
+            "Property": "Country"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

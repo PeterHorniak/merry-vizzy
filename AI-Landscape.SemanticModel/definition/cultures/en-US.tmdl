@@ -2643,6 +2643,16 @@ cultureInfo en-US
 			          "parent org": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "📢Influenced by": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7464,6 +7474,16 @@ cultureInfo en-US
 			          "parent org": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Influences📢": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -10809,59 +10829,6 @@ cultureInfo en-US
 			    }
 			  },
 			  "Relationships": {
-			    "event_has_org": {
-			      "Binding": {
-			        "ConceptualEntity": "Event"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "event": {
-			          "Target": {
-			            "Entity": "event"
-			          }
-			        },
-			        "org": {
-			          "Target": {
-			            "Entity": "org"
-			          },
-			          "Nouns": [
-			            {
-			              "organisation": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "event"
-			            },
-			            "Object": {
-			              "Role": "org"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "events_have_org"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "org"
-			            },
-			            "Object": {
-			              "Role": "event"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "org_have_events"
-			        }
-			      ]
-			    },
 			    "entity_005_tbl_org_split_parent_has_org": {
 			      "Binding": {
 			        "ConceptualEntity": "005_tblOrg-SplitParents"
@@ -13867,6 +13834,26 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "Phrasing005_tbl_org_split_parents_have_parent_org"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "entity_005_tbl_org_split_parent.parent_org"
+			            },
+			            "Verbs": [
+			              {
+			                "📢Influenc": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "entity_005_tbl_org_split_parent"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "parent_org_Influenc_005_tbl_org_split_parents"
 			        }
 			      ]
 			    },
@@ -15269,6 +15256,59 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "qry_last_refreshed_are_refreshed_on_qry_last_refreshed"
+			        }
+			      ]
+			    },
+			    "event_has_org": {
+			      "Binding": {
+			        "ConceptualEntity": "Event"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "event": {
+			          "Target": {
+			            "Entity": "event"
+			          }
+			        },
+			        "org": {
+			          "Target": {
+			            "Entity": "org"
+			          },
+			          "Nouns": [
+			            {
+			              "organisation": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "event"
+			            },
+			            "Object": {
+			              "Role": "org"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "events_have_org"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "org"
+			            },
+			            "Object": {
+			              "Role": "event"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "org_have_events"
 			        }
 			      ]
 			    },

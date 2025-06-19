@@ -65,6 +65,14 @@ table 010_tblOrg-SplitChildren
 
 		annotation SummarizationSetBy = Automatic
 
+	column LocationParent
+		dataType: string
+		lineageTag: 401e88c0-4d9c-4a63-961b-c12f0b1734e8
+		summarizeBy: none
+		sourceColumn: LocationParent
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 010_tblOrg-SplitChildren = m
 		mode: import
 		queryGroup: 2-Transform\Influences

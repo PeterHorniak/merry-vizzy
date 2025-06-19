@@ -36,7 +36,17 @@
               {
                 "textRuns": [
                   {
-                    "value": "We'd love your feedback!🙏 ",
+                    "value": "We love your feedback",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "❤️"
+                  },
+                  {
+                    "value": " ",
                     "textStyle": {
                       "fontStyle": "italic",
                       "fontSize": "14pt"
@@ -128,7 +138,17 @@
               {
                 "textRuns": [
                   {
-                    "value": "Visuals auto-refresh every few hours.",
+                    "value": "Visuals auto-refresh",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "🔄"
+                  },
+                  {
+                    "value": " every few hours.",
                     "textStyle": {
                       "fontStyle": "italic",
                       "fontSize": "14pt"

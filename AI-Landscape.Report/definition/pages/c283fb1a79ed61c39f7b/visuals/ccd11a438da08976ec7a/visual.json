@@ -116,14 +116,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Last data refresh🔄(AEST)'"
+                  "Value": "'Last data refresh (AEST)'"
                 }
               }
             },
             "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'right'"
+                  "Value": "'center'"
                 }
               }
             },

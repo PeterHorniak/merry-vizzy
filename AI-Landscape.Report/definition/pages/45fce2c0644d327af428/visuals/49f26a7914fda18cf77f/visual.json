@@ -149,5 +149,37 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9458814604db2ca80c20",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "22daf236a1206615059a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Event"
+              }
+            },
+            "Property": "Event"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

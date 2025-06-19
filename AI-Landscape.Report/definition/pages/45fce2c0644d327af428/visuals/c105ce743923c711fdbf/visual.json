@@ -231,5 +231,37 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f18d5980137ec4d41075",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_tblOrg-SplitChildren"
+              }
+            },
+            "Property": "Organisation-shortened"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c95927804c0a64d42d0b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "010_tblOrg-SplitChildren"
+              }
+            },
+            "Property": "Parent org-shortened"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "bc04c8b03d5700dd05c0",
+  "position": {
+    "x": 61.333333333333336,
+    "y": 6,
+    "z": 3000,
+    "height": 49.333333333333336,
+    "width": 413.33333333333331,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Org"
+                        }
+                      },
+                      "Property": "Organisation"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Org.Organisation)",
+              "nativeQueryRef": "Full name"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ee5af9bd086d0c489644",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "Organisation"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "49d87ccb94e019551d0e",
   "position": {
-    "x": 733.84615384615381,
+    "x": 630.76923076923072,
     "y": 0,
     "z": 2000,
-    "height": 133.84615384615384,
-    "width": 546.15384615384619,
+    "height": 157.69230769230768,
+    "width": 649.23076923076917,
     "tabOrder": 3000
   },
   "visual": {
@@ -20,32 +20,120 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Location"
+                      "Entity": "005_tblOrg-SplitParents"
                     }
                   },
-                  "Property": "Organisation"
+                  "Property": "Parent org"
                 }
               },
-              "queryRef": "Location.Organisation",
-              "nativeQueryRef": "Organisation1"
+              "queryRef": "005_tblOrg-SplitParents.Parent org",
+              "nativeQueryRef": "Parent org"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Location"
+                      "Entity": "005_tblOrg-SplitParents"
+                    }
+                  },
+                  "Property": "LocationParent"
+                }
+              },
+              "queryRef": "005_tblOrg-SplitParents.LocationParent",
+              "nativeQueryRef": "LocationParent"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "005_tblOrg-SplitParents"
+                    }
+                  },
+                  "Property": "Organisation"
+                }
+              },
+              "queryRef": "005_tblOrg-SplitParents.Organisation",
+              "nativeQueryRef": "Organisation"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "005_tblOrg-SplitParents"
                     }
                   },
                   "Property": "Location"
                 }
               },
-              "queryRef": "Location.Location",
-              "nativeQueryRef": "Location1"
+              "queryRef": "005_tblOrg-SplitParents.Location",
+              "nativeQueryRef": "Location"
             }
           ]
         }
       }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "142.7692435888453D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "005_tblOrg-SplitParents.Parent org"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "128.84615384615387D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "005_tblOrg-SplitParents.LocationParent"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "120.23075496402919D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "005_tblOrg-SplitParents.Organisation"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "286.4615225553596D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "005_tblOrg-SplitParents.Location"
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "stylePreset": [
@@ -137,6 +225,62 @@
             }
           ]
         }
+      },
+      {
+        "name": "e7cbfbe5098888094db7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "005_tblOrg-SplitParents"
+              }
+            },
+            "Property": "Parent org"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "43180bf864ac7a7409e9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "005_tblOrg-SplitParents"
+              }
+            },
+            "Property": "LocationParent"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dbe08c25dcc570ee5597",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "005_tblOrg-SplitParents"
+              }
+            },
+            "Property": "Organisation"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d675aec38540ab2ee7c0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "005_tblOrg-SplitParents"
+              }
+            },
+            "Property": "Location"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

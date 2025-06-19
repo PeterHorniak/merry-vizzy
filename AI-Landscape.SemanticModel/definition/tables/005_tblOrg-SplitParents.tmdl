@@ -65,6 +65,14 @@ table 005_tblOrg-SplitParents
 
 		annotation SummarizationSetBy = Automatic
 
+	column LocationParent
+		dataType: string
+		lineageTag: 0aef7443-7bc8-4402-8c8d-d358caaff5a5
+		summarizeBy: none
+		sourceColumn: LocationParent
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 005_tblOrg-SplitParents = m
 		mode: import
 		queryGroup: 2-Transform\Influences
@@ -76,9 +84,12 @@ table 005_tblOrg-SplitParents
 				    #"Duplicated Parent org" = Table.DuplicateColumn(#"Split Parent org by ,", "Parent org", "Parent org-shortened"),
 				    #"Split Parent org-shortened by (" = Table.SplitColumn(#"Duplicated Parent org", "Parent org-shortened", Splitter.SplitTextByEachDelimiter({"("}, QuoteStyle.Csv, false), {"Parent org-base", "Parent org-acronym"}),
 				    #"Replaced ) in Parent org-acronym" = Table.ReplaceValue(#"Split Parent org-shortened by (",")","",Replacer.ReplaceText,{"Parent org-acronym"}),
-				    #"Added Parent org-shortened" = Table.AddColumn(#"Replaced ) in Parent org-acronym", "Parent org-shortened", each if [#"Parent org-acronym"] = null then [#"Parent org-base"] else [#"Parent org-acronym"])
+				    #"Added Parent org-shortened" = Table.AddColumn(#"Replaced ) in Parent org-acronym", "Parent org-shortened", each if [#"Parent org-acronym"] = null then [#"Parent org-base"] else [#"Parent org-acronym"]),
+				    #"Merged with Org" = Table.NestedJoin(#"Added Parent org-shortened", {"Parent org"}, #"000_tblOrg", {"Organisation"}, "000_tblOrg", JoinKind.LeftOuter),
+				    #"Expanded 000_tblOrg" = Table.ExpandTableColumn(#"Merged with Org", "000_tblOrg", {"Location"}, {"LocationParent"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Expanded 000_tblOrg"," aka Industry House","",Replacer.ReplaceText,{"Location", "LocationParent"})
 				in
-				    #"Added Parent org-shortened"
+				    #"Replaced Value"
 
 	annotation PBI_NavigationStepName = Navigation
 

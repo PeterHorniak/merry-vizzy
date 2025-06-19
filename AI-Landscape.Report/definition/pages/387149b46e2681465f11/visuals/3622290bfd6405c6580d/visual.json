@@ -1257,58 +1257,6 @@
         },
         "type": "Categorical",
         "howCreated": "User"
-      },
-      {
-        "name": "c190dd44a9b09163d9e5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Event"
-              }
-            },
-            "Property": "Event-Icon"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "25aa27eba90a6bc96350",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Event"
-                  }
-                },
-                "Property": "Index-Asc-ByDate-WithJumps"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "37048d94d054a1ea292a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Event"
-                  }
-                },
-                "Property": "_DateYYYY-MM-DD"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

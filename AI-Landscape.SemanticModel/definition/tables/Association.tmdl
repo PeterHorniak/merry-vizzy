@@ -114,6 +114,14 @@ table Association
 
 		annotation SummarizationSetBy = Automatic
 
+	column LocationParent
+		dataType: string
+		lineageTag: efed632b-4ddd-44e3-90bd-a36df120c61a
+		summarizeBy: none
+		sourceColumn: LocationParent
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Association = m
 		mode: import
 		queryGroup: 3-Load

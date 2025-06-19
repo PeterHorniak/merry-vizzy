@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "15f1bc93c5e5bbc4d4e8",
+  "position": {
+    "x": 733.84615384615381,
+    "y": 643.84615384615381,
+    "z": 9002,
+    "height": 76.153846153846146,
+    "width": 209.23076923076923,
+    "tabOrder": 9002
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Org"
+                    }
+                  },
+                  "Property": "OrgStructure"
+                }
+              },
+              "queryRef": "Org.OrgStructure",
+              "nativeQueryRef": "Org structure at lowest level",
+              "active": true,
+              "displayName": "Org structure at lowest level"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "409770e4e82b710d637d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "OrgStructure"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
