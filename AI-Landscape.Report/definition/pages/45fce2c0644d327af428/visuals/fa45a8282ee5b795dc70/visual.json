@@ -94,7 +94,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Sydney Knowledge Hub'"
+                                "Value": "'Department of Industry Science and Resources (DISR)'"
                               }
                             }
                           ]
@@ -138,7 +138,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "'syd'"
+                            "Value": "'disr'"
                           }
                         }
                       }
@@ -167,5 +167,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d0c1fd1a5eb1770c07c5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "Organisation"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

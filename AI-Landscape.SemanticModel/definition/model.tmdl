@@ -38,7 +38,7 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBIDesktopVersion = 2.144.878.0 (25.06)+9cca29236de5114792f4d7188221f91ad4a5cc50
 
-annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocationsAcronyms","000_tblHeadcount","005_tblOrg-SplitParents","010_tblOrg-SplitChildren","010_Hierarchy","005_tblOrg-SplitLocation","005_tblOrg-SplitURLs","005_tblOrg-SplitContacts","005_tblOrg-events-ForMerge","005_tblOrg-events-count","010_tblOrg-events-TodayMarkers","015_tblOrg-events","010_tblOrg-Formatting","015_tblOrg-BaseNameForMerge","015_tblOrg-AcronymForMerge","005_ActivitiesSplit","Org","qryLastRefreshed","Association","Activity","Contact","Event","Location","URL","Wordcloud","020_tblOrg-AssociationParent","005_tblOrg-AssociationStarting","015_tblOrg-AssociationChild"]
+annotation PBI_QueryOrder = ["000_tblOrg","000_tblLocationsAcronyms","000_tblHeadcount","000_MiriTimeline","005_tblOrg-SplitParents","010_tblOrg-SplitChildren","010_Hierarchy","005_tblOrg-SplitLocation","005_tblOrg-SplitURLs","005_tblOrg-SplitContacts","005_tblOrg-events-ForMerge","005_tblOrg-events-count","010_tblOrg-events-TodayMarkers","015_tblOrg-events","010_tblOrg-Formatting","015_tblOrg-BaseNameForMerge","015_tblOrg-AcronymForMerge","005_ActivitiesSplit","Org","qryLastRefreshed","Association","Activity","Contact","Event","Location","URL","Wordcloud","020_tblOrg-AssociationParent","005_tblOrg-AssociationStarting","015_tblOrg-AssociationChild","020_tblOrg-events"]
 
 annotation PBI_ProTooling = ["DevMode"]
 

@@ -3,7 +3,7 @@
   "name": "53372c90092239c304a0",
   "position": {
     "x": 630.50445103857567,
-    "y": 115.46587537091987,
+    "y": 108.62908011869436,
     "z": 12000,
     "height": 101.79228486646885,
     "width": 649.49554896142433,
@@ -155,48 +155,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "91161eecb8da772a4304",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Location"
-              }
-            },
-            "Property": "Location"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "3ec54d90c8628e4ddac0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Parent org"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ab6b8ebeeea861874392",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

@@ -3,10 +3,10 @@
   "name": "0bc599a433ef0b7d3af0",
   "position": {
     "x": 0,
-    "y": 140.91743119266053,
+    "y": 141.29376854599406,
     "z": 3000,
-    "height": 84.96492174851592,
-    "width": 484.92174851592011,
+    "height": 53.175074183976264,
+    "width": 293.98219584569733,
     "tabOrder": 2000
   },
   "visual": {
@@ -22,14 +22,6 @@
                     "value": "Thoughts:"
                   }
                 ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Needs more data to be meaningful."
-                  }
-                ],
-                "listType": "bullet"
               },
               {
                 "textRuns": [

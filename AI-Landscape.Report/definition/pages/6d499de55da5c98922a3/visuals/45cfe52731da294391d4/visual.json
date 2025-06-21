@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "987ab9cb2014b41e91e9",
+  "name": "45cfe52731da294391d4",
   "position": {
-    "x": 62.666666666666664,
-    "y": 211.33333333333334,
-    "z": 11000,
-    "height": 80.666666666666671,
-    "width": 402,
-    "tabOrder": 11000
+    "x": 0,
+    "y": 69.045643153526981,
+    "z": 14002,
+    "height": 109.25903971547126,
+    "width": 100.154119739182
   },
   "visual": {
     "visualType": "tableEx",
@@ -23,27 +22,60 @@
                       "Entity": "Org"
                     }
                   },
-                  "Property": "Misc"
+                  "Property": "Logo"
                 }
               },
-              "queryRef": "Org.Misc",
-              "nativeQueryRef": "Misc"
+              "queryRef": "Org.Logo",
+              "nativeQueryRef": "Logo"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Org"
+                  }
+                },
+                "Property": "Logo"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
       "values": [
         {
           "properties": {
-            "wordWrap": {
+            "urlIcon": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "66.4235294117647D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Org.Logo"
           }
         }
       ]
@@ -61,39 +93,13 @@
             }
           }
         }
-      ],
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "visualHeader": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
       ]
     }
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "3fd9d7a02b61c982c453",
+        "name": "ac03c9aa002083208219",
         "field": {
           "Column": {
             "Expression": {
@@ -101,7 +107,7 @@
                 "Entity": "Org"
               }
             },
-            "Property": "Misc"
+            "Property": "Logo"
           }
         },
         "type": "Categorical"

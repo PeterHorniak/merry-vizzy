@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "ef8506443e0e5c5a44f6",
   "position": {
-    "x": 10.769230769230768,
-    "y": 19.23076923076923,
+    "x": 10.635014836795252,
+    "y": 18.991097922848663,
     "z": 0,
-    "height": 415.38461538461536,
-    "width": 1088.4615384615383,
+    "height": 415.52522255192878,
+    "width": 874.35014836795256,
     "tabOrder": 0
   },
   "visual": {
@@ -58,8 +58,21 @@
                   {
                     "value": ""
                   }
-                ],
-                "indent": 1
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Profile page display logo via favicon, except need to do via HTML visual so it can display appropriately sized?"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
               },
               {
                 "textRuns": [

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "58f9e0135ed7578b7ff7",
   "position": {
-    "x": 703.20561252023742,
-    "y": 225.88235294117646,
+    "x": 703.43026706231456,
+    "y": 202.06528189910981,
     "z": 1000,
-    "height": 493.90178089584452,
-    "width": 576.79438747976246,
+    "height": 518.07715133531156,
+    "width": 576.56973293768544,
     "tabOrder": 1000
   },
   "visual": {
@@ -378,94 +378,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b90f33909351796eba9a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Location"
-              }
-            },
-            "Property": "Location"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "20f5b29fa720785e006e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "ActiveOrNot"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "98edfde8e631cd28bd04",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Org"
-                  }
-                },
-                "Property": "Location"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0a18a2fc7de6d8290206",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Location"
-                  }
-                },
-                "Property": "Aussie state"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7ca3e5a6398306b92e59",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Location"
-                  }
-                },
-                "Property": "Aussie state"
-              }
-            },
-            "Function": 4
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

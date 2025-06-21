@@ -888,6 +888,20 @@
                   "Value": "true"
                 }
               }
+            },
+            "categoryMin": {
+              "expr": {
+                "Literal": {
+                  "Value": "880535755186.4255D"
+                }
+              }
+            },
+            "categoryMax": {
+              "expr": {
+                "Literal": {
+                  "Value": "1218814962268.9153D"
+                }
+              }
             }
           }
         }

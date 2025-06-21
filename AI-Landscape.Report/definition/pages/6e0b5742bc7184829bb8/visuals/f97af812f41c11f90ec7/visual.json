@@ -3,10 +3,10 @@
   "name": "f97af812f41c11f90ec7",
   "position": {
     "x": 0,
-    "y": 225.88235294117646,
+    "y": 202.06528189910981,
     "z": 0,
-    "height": 488.37560712358334,
-    "width": 703.20561252023742,
+    "height": 512,
+    "width": 703.43026706231456,
     "tabOrder": 0
   },
   "visual": {
@@ -315,37 +315,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "fb7e1e90cd9975a8de38",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Location"
-              }
-            },
-            "Property": "Location"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ba5042ceba1038230466",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "ActiveOrNot"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

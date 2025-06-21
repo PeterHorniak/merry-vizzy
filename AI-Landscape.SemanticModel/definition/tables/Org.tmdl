@@ -169,6 +169,37 @@ table Org
 
 		annotation SummarizationSetBy = Automatic
 
+	column URL-Main_Domain
+		dataType: string
+		lineageTag: 90cf1a98-265a-4017-9053-a5399d7a6384
+		summarizeBy: none
+		sourceColumn: URL-Main_Domain
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL-Main_Subpage
+		dataType: string
+		lineageTag: 6ec4db8b-0e13-42e6-860a-c7b27ba27b37
+		summarizeBy: none
+		sourceColumn: URL-Main_Subpage
+
+		annotation SummarizationSetBy = Automatic
+
+	column Logo
+		dataType: string
+		lineageTag: a791df13-d97e-48ce-9ee1-6c49a702ecfe
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: Logo
+
+		annotation SummarizationSetBy = Automatic
+
+	column _LogoAsText = Org[Logo]
+		lineageTag: 8e5e1703-da66-4faa-914c-15b224cd6113
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Org = m
 		mode: import
 		queryGroup: 3-Load
