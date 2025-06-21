@@ -4,10 +4,10 @@
   "position": {
     "x": 465.10966212211031,
     "y": 0,
-    "z": 14001,
+    "z": 14000,
     "height": 49.318316538233553,
     "width": 413.5151155898044,
-    "tabOrder": 14001
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "slicer",
@@ -129,23 +129,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "2fb67b04122d59e3310e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

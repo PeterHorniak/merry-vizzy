@@ -89,23 +89,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3fd9d7a02b61c982c453",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Misc"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -122,6 +122,30 @@ table Association
 
 		annotation SummarizationSetBy = Automatic
 
+	column URLParent
+		dataType: string
+		lineageTag: 326fce69-b015-4cc4-9738-0fe4674a9fca
+		summarizeBy: none
+		sourceColumn: URLParent
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'URLParent.Remove'
+		dataType: string
+		lineageTag: 61ce64a9-2f36-4a35-b866-870a5f1f81b2
+		summarizeBy: none
+		sourceColumn: URLParent.Remove
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'URLParent.Remove2'
+		dataType: string
+		lineageTag: 6bc2b5d4-2679-4237-9e2b-ea941b3224a0
+		summarizeBy: none
+		sourceColumn: URLParent.Remove2
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Association = m
 		mode: import
 		queryGroup: 3-Load

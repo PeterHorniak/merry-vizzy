@@ -4,9 +4,10 @@
   "position": {
     "x": 0,
     "y": 69.045643153526981,
-    "z": 14002,
+    "z": 15000,
     "height": 109.25903971547126,
-    "width": 100.154119739182
+    "width": 100.154119739182,
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "tableEx",
@@ -95,23 +96,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ac03c9aa002083208219",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Logo"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

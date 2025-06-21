@@ -73,23 +73,51 @@ table 005_tblOrg-SplitParents
 
 		annotation SummarizationSetBy = Automatic
 
+	column URLParent
+		dataType: string
+		lineageTag: 41d21f26-7aab-48b4-bb35-8a20193d0ca9
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: URLParent
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'URLParent.Remove'
+		dataType: string
+		lineageTag: 840b86e6-f0e2-42aa-9036-835b04d46dec
+		summarizeBy: none
+		sourceColumn: URLParent.Remove
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'URLParent.Remove2'
+		dataType: string
+		lineageTag: a91a7f12-bc30-4878-b644-3785ecf05780
+		summarizeBy: none
+		sourceColumn: URLParent.Remove2
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 005_tblOrg-SplitParents = m
 		mode: import
 		queryGroup: 2-Transform\Influences
 		source =
 				let
 				    Source = #"000_tblOrg",
-				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened", "Parent org", "URL", "Location"}),
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Organisation-Shortened", "Parent org", "Location", "URL"}),
 				    #"Split Parent org by ," = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"Parent org", Splitter.SplitTextByDelimiter(", ", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Parent org"),
 				    #"Duplicated Parent org" = Table.DuplicateColumn(#"Split Parent org by ,", "Parent org", "Parent org-shortened"),
 				    #"Split Parent org-shortened by (" = Table.SplitColumn(#"Duplicated Parent org", "Parent org-shortened", Splitter.SplitTextByEachDelimiter({"("}, QuoteStyle.Csv, false), {"Parent org-base", "Parent org-acronym"}),
 				    #"Replaced ) in Parent org-acronym" = Table.ReplaceValue(#"Split Parent org-shortened by (",")","",Replacer.ReplaceText,{"Parent org-acronym"}),
 				    #"Added Parent org-shortened" = Table.AddColumn(#"Replaced ) in Parent org-acronym", "Parent org-shortened", each if [#"Parent org-acronym"] = null then [#"Parent org-base"] else [#"Parent org-acronym"]),
 				    #"Merged with Org" = Table.NestedJoin(#"Added Parent org-shortened", {"Parent org"}, #"000_tblOrg", {"Organisation"}, "000_tblOrg", JoinKind.LeftOuter),
-				    #"Expanded 000_tblOrg" = Table.ExpandTableColumn(#"Merged with Org", "000_tblOrg", {"Location"}, {"LocationParent"}),
-				    #"Replaced Value" = Table.ReplaceValue(#"Expanded 000_tblOrg"," aka Industry House","",Replacer.ReplaceText,{"Location", "LocationParent"})
+				    #"Expanded 000_tblOrg" = Table.ExpandTableColumn(#"Merged with Org", "000_tblOrg", {"URL", "Location"}, {"URLParent", "LocationParent"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Expanded 000_tblOrg"," aka Industry House","",Replacer.ReplaceText,{"Location", "LocationParent"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","(","(https://",Replacer.ReplaceText,{"URLParent"}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value1", "URLParent", Splitter.SplitTextByEachDelimiter({"("}, QuoteStyle.Csv, false), {"URLParent.Remove", "URLParent"}),
+				    #"Split Column by Delimiter1" = Table.SplitColumn(#"Split Column by Delimiter", "URLParent", Splitter.SplitTextByEachDelimiter({")"}, QuoteStyle.Csv, false), {"URLParent", "URLParent.Remove2"})
 				in
-				    #"Replaced Value"
+				    #"Split Column by Delimiter1"
 
 	annotation PBI_NavigationStepName = Navigation
 

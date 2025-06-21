@@ -122,23 +122,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "616a8d707b05ab85911a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Mission"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

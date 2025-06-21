@@ -77,6 +77,34 @@
               {
                 "textRuns": [
                   {
+                    "value": "Add dynamically timelines info from here? May need to customise a bit for every org."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "https://timelines.issarice.com/wiki/Main_Page"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
                     "value": "Geomap",
                     "textStyle": {
                       "fontFamily": "Segoe UI",

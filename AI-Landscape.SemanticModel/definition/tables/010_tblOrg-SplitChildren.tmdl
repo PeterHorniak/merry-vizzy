@@ -73,6 +73,30 @@ table 010_tblOrg-SplitChildren
 
 		annotation SummarizationSetBy = Automatic
 
+	column URLParent
+		dataType: string
+		lineageTag: de005e16-b387-4bc2-a531-3a247d178fbe
+		summarizeBy: none
+		sourceColumn: URLParent
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'URLParent.Remove'
+		dataType: string
+		lineageTag: 4fd33efc-2307-4373-bcc4-655875409eb4
+		summarizeBy: none
+		sourceColumn: URLParent.Remove
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'URLParent.Remove2'
+		dataType: string
+		lineageTag: b5a6f0a1-52f7-454e-8ae8-0530281c262b
+		summarizeBy: none
+		sourceColumn: URLParent.Remove2
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 010_tblOrg-SplitChildren = m
 		mode: import
 		queryGroup: 2-Transform\Influences
@@ -85,5 +109,5 @@ table 010_tblOrg-SplitChildren
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

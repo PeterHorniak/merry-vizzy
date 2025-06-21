@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "c41415f08e1a50609507",
+  "name": "dbe8dd9d0b19b38b23c5",
   "position": {
     "x": 474.61538461538458,
     "y": 534.61538461538464,
-    "z": 9000,
+    "z": 11000,
     "height": 176.15384615384616,
-    "width": 411.53846153846155,
-    "tabOrder": 9000
+    "width": 392.30769230769232,
+    "tabOrder": 11000
   },
   "visual": {
-    "visualType": "sankey02300D1BE6F5427989F3DE31CCA9E0F32020",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Destination": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -23,16 +23,13 @@
                       "Entity": "005_tblOrg-SplitParents"
                     }
                   },
-                  "Property": "Organisation-Shortened"
+                  "Property": "URLParent"
                 }
               },
-              "queryRef": "005_tblOrg-SplitParents.Organisation-Shortened",
-              "nativeQueryRef": "Organisation-Shortened"
-            }
-          ]
-        },
-        "Source": {
-          "projections": [
+              "queryRef": "005_tblOrg-SplitParents.URLParent",
+              "nativeQueryRef": "Link",
+              "displayName": "Link"
+            },
             {
               "field": {
                 "Column": {
@@ -41,110 +38,41 @@
                       "Entity": "005_tblOrg-SplitParents"
                     }
                   },
-                  "Property": "Parent org-shortened"
+                  "Property": "Parent org"
                 }
               },
-              "queryRef": "005_tblOrg-SplitParents.Parent org-shortened",
-              "nativeQueryRef": "Parent org-shortened"
+              "queryRef": "005_tblOrg-SplitParents.Parent org",
+              "nativeQueryRef": "📢Influenced by",
+              "displayName": "📢Influenced by"
             }
           ]
         }
       }
     },
     "objects": {
-      "nodeComplexSettings": [
+      "columnWidth": [
         {
           "properties": {
-            "nodePositions": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "'[{\"name\":\"World\",\"x\":\"0\",\"y\":\"0\"},{\"name\":\"Intl AI summits\",\"x\":\"360\",\"y\":\"0\"}]'"
-                }
-              }
-            },
-            "viewportSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "'{\"height\":\"130.15384615384616\",\"width\":\"381.53846153846155\"}'"
+                  "Value": "351.09104311920584D"
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "005_tblOrg-SplitParents.Parent org"
           }
         }
       ],
-      "labels": [
+      "values": [
         {
           "properties": {
-            "show": {
+            "urlIcon": {
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "linkLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "nodes": [
-        {
-          "properties": {
-            "nodesWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "scaleSettings": [
-        {
-          "properties": {
-            "provideMinHeight": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "lnScale": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "cyclesLinks": [
-        {
-          "properties": {
-            "drawCycles": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
                 }
               }
             }
@@ -159,7 +87,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -173,7 +101,7 @@
             "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "'center'"
                 }
               }
             },
@@ -244,5 +172,37 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a1acadc408c5604b26ab",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "005_tblOrg-SplitParents"
+              }
+            },
+            "Property": "Parent org"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c1202c7693a37251630c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "005_tblOrg-SplitParents"
+              }
+            },
+            "Property": "URLParent"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
