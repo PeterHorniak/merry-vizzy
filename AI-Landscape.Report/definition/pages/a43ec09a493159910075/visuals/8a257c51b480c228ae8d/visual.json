@@ -156,23 +156,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b97c1a3a31dde80a308e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Location"
-              }
-            },
-            "Property": "Country"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

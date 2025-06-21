@@ -144,23 +144,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7889902885763a3a07b0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "005_tblOrg-SplitParents"
-              }
-            },
-            "Property": "Parent org"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

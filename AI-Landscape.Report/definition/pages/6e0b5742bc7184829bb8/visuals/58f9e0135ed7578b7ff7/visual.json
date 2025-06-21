@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "58f9e0135ed7578b7ff7",
   "position": {
-    "x": 966.15384615384608,
-    "y": 420,
+    "x": 703.20561252023742,
+    "y": 225.88235294117646,
     "z": 1000,
-    "height": 300,
-    "width": 313.84615384615381,
+    "height": 493.90178089584452,
+    "width": 576.79438747976246,
     "tabOrder": 1000
   },
   "visual": {
-    "visualType": "map",
+    "visualType": "azureMap",
     "query": {
       "queryState": {
         "Category": {
@@ -119,26 +119,13 @@
       }
     },
     "objects": {
-      "mapStyles": [
-        {
-          "properties": {
-            "mapTheme": {
-              "expr": {
-                "Literal": {
-                  "Value": "'canvasDark'"
-                }
-              }
-            }
-          }
-        }
-      ],
       "legend": [
         {
           "properties": {
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'BottomCenter'"
+                  "Value": "'TopCenter'"
                 }
               }
             }
@@ -285,6 +272,95 @@
             }
           }
         }
+      ],
+      "mapControls": [
+        {
+          "properties": {
+            "defaultStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'night'"
+                }
+              }
+            },
+            "showStylePicker": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showNavigationControls": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showSelectionControl": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "bubbleLayer": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "bubbleRadius": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
+                }
+              }
+            },
+            "minBubbleRadius": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
+                }
+              }
+            },
+            "maxRadius": {
+              "expr": {
+                "Literal": {
+                  "Value": "21L"
+                }
+              }
+            },
+            "bubbleStrokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
+            "autoStrokeColor": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "layerPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -306,7 +382,35 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "1d6511fd0430c8a4a001",
+        "name": "b90f33909351796eba9a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Location"
+              }
+            },
+            "Property": "Location"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "20f5b29fa720785e006e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "ActiveOrNot"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "98edfde8e631cd28bd04",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -325,35 +429,7 @@
         "type": "Advanced"
       },
       {
-        "name": "513a963e5cb0904012de",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "ActiveOrNot"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "dea284c36849012901a2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Location"
-              }
-            },
-            "Property": "Location"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "821e1b840ce67989b26e",
+        "name": "0a18a2fc7de6d8290206",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -372,7 +448,7 @@
         "type": "Advanced"
       },
       {
-        "name": "7a9bbf0107081ba3ac7e",
+        "name": "7ca3e5a6398306b92e59",
         "field": {
           "Aggregation": {
             "Expression": {

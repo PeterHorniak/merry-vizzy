@@ -131,23 +131,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b05757c262101ba90106",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "010_tblOrg-SplitChildren"
-              }
-            },
-            "Property": "Parent org"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

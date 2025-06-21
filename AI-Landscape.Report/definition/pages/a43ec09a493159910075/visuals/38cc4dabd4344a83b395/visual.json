@@ -156,23 +156,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1bf9830cd96e808dd0a2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Location"
-              }
-            },
-            "Property": "Aussie state"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

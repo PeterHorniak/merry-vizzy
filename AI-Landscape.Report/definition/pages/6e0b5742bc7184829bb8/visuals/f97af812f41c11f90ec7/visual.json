@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "f97af812f41c11f90ec7",
   "position": {
-    "x": 777.69230769230762,
-    "y": 140.76923076923077,
+    "x": 0,
+    "y": 225.88235294117646,
     "z": 0,
-    "height": 234.61538461538461,
-    "width": 502.30769230769226,
+    "height": 488.37560712358334,
+    "width": 703.20561252023742,
     "tabOrder": 0
   },
   "visual": {
-    "visualType": "filledMap",
+    "visualType": "azureMap",
     "query": {
       "queryState": {
         "Category": {
@@ -56,37 +56,6 @@
       "dataPoint": [
         {
           "properties": {
-            "fillRule": {
-              "linearGradient2": {
-                "min": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'minColor'"
-                      }
-                    }
-                  }
-                },
-                "max": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'maxColor'"
-                      }
-                    }
-                  }
-                },
-                "nullColoringStrategy": {
-                  "strategy": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'asZero'"
-                      }
-                    }
-                  }
-                }
-              }
-            },
             "showAllDataPoints": {
               "expr": {
                 "Literal": {
@@ -223,13 +192,26 @@
           }
         }
       ],
-      "mapStyles": [
+      "legend": [
         {
           "properties": {
-            "mapTheme": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'canvasDark'"
+                  "Value": "'TopCenter'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "mapControls": [
+        {
+          "properties": {
+            "defaultStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'night'"
                 }
               }
             },
@@ -239,17 +221,71 @@
                   "Value": "true"
                 }
               }
+            },
+            "showStylePicker": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showNavigationControls": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showSelectionControl": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
       ],
-      "legend": [
+      "categoryLabels": [
         {
           "properties": {
-            "position": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'RightCenter'"
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "bubbleLayer": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "filledMap": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "mapTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "40L"
                 }
               }
             }
@@ -283,21 +319,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "eddf45f83dd534e2c6b8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "ActiveOrNot"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b6da5554050d622c817a",
+        "name": "fb7e1e90cd9975a8de38",
         "field": {
           "Column": {
             "Expression": {
@@ -306,6 +328,20 @@
               }
             },
             "Property": "Location"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ba5042ceba1038230466",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Org"
+              }
+            },
+            "Property": "ActiveOrNot"
           }
         },
         "type": "Categorical"

@@ -91,23 +91,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7caa418260b237091864",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

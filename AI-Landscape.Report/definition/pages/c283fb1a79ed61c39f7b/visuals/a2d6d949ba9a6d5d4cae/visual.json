@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "f5310d3df1d7fbfb0631",
+  "name": "a2d6d949ba9a6d5d4cae",
   "position": {
-    "x": 10.289389067524116,
-    "y": 0,
-    "z": 2000,
-    "height": 89.860664523043951,
-    "width": 701.05037513397644,
-    "tabOrder": 2000
+    "x": 0,
+    "y": 688.69940636805177,
+    "z": 12000,
+    "height": 31.084727468969238,
+    "width": 324.66270912034537,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,11 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Aussie AI Safety Landscape",
+                    "value": "CC BY 4.0 - Use freely with attribution",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontFamily": "DIN Light",
-                      "fontSize": "44pt"
+                      "fontStyle": "italic"
                     }
                   }
                 ]

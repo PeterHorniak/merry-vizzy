@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "e9e967101c1556f289b9",
   "position": {
-    "x": 543.07692307692309,
-    "y": 426.15384615384613,
-    "z": 10000,
-    "height": 293.84615384615381,
-    "width": 736.92307692307691,
+    "x": 544.328116567728,
+    "y": 403.41068537506743,
+    "z": 9000,
+    "height": 317.06422018348621,
+    "width": 735.6718834322719,
     "tabOrder": 9000
   },
   "visual": {
@@ -154,6 +154,21 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Expand via Focus Mode! Lock icon 🔒 keeps it steady'"
                 }
               }
             }

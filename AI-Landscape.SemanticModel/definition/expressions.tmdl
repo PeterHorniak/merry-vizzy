@@ -390,7 +390,8 @@ expression 015_tblOrg-AssociationChild =
 expression 005_tblOrg-SplitLocation =
 		let
 		    Source = #"000_tblOrg",
-		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation", "Location"}),
+		    #"Added LocationOrParentName" = Table.AddColumn(Source, "LocationOrParentName", each if [Location] = null then [Parent org] else if [Location] = "" then [Parent org] else [Location]),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Added LocationOrParentName",{"Organisation", "Location"}),
 		    #"Split Location by |" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Other Columns", {{"Location", Splitter.SplitTextByDelimiter("|", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Location"),
 		    #"Trimmed Location" = Table.TransformColumns(#"Split Location by |",{{"Location", Text.Trim, type text}}),
 		    #"Replaced triple space in Location" = Table.ReplaceValue(#"Trimmed Location","   "," ",Replacer.ReplaceText,{"Location"}),

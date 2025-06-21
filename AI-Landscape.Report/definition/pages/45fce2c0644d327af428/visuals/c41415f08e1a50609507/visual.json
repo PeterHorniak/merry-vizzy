@@ -244,37 +244,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c545ef404d1be85aaec8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "005_tblOrg-SplitParents"
-              }
-            },
-            "Property": "Organisation-Shortened"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "bfe4229e4399cc4267dd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "005_tblOrg-SplitParents"
-              }
-            },
-            "Property": "Parent org-shortened"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

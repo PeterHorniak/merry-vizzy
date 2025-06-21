@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "15f1bc93c5e5bbc4d4e8",
+  "name": "bec2b086b1e212c427d4",
   "position": {
-    "x": 733.84615384615381,
-    "y": 643.84615384615381,
-    "z": 9002,
-    "height": 76.153846153846146,
-    "width": 209.23076923076923,
-    "tabOrder": 9002
+    "x": 151.96977873718293,
+    "y": 67.004856988667029,
+    "z": 13000,
+    "height": 67.004856988667029,
+    "width": 151.27900701565028,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,13 +23,12 @@
                       "Entity": "Org"
                     }
                   },
-                  "Property": "OrgStructure"
+                  "Property": "Country"
                 }
               },
-              "queryRef": "Org.OrgStructure",
-              "nativeQueryRef": "Org structure at lowest level",
-              "active": true,
-              "displayName": "Org structure at lowest level"
+              "queryRef": "Org.Country",
+              "nativeQueryRef": "Country",
+              "active": true
             }
           ]
         }
@@ -51,27 +50,30 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "409770e4e82b710d637d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "OrgStructure"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

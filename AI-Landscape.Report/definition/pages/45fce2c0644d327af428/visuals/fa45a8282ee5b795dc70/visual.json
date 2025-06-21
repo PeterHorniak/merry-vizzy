@@ -94,7 +94,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'80,000 Hours (80K Hours)'"
+                                "Value": "'Sydney Knowledge Hub'"
                               }
                             }
                           ]
@@ -110,6 +110,44 @@
                 "Literal": {
                   "Value": "true"
                 }
+              }
+            },
+            "selfFilter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "o",
+                    "Entity": "Org",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Contains": {
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "o"
+                              }
+                            },
+                            "Property": "Organisation"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'syd'"
+                          }
+                        }
+                      }
+                    },
+                    "Annotations": {
+                      "PowerBI.MParameterBehavior": 1
+                    }
+                  }
+                ]
               }
             }
           }
@@ -129,23 +167,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d26de7924237505b112c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

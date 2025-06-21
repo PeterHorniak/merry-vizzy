@@ -178,37 +178,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "83609c86c8ae4adc1a80",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Organisation-Shortened"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a44b42b77c556a509399",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Org"
-              }
-            },
-            "Property": "Parent org"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

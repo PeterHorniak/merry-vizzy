@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "91175cc8e0e4d222b83c",
   "position": {
-    "x": 552.30769230769226,
+    "x": 544.328116567728,
     "y": 0,
-    "z": 11000,
-    "height": 398.46153846153845,
-    "width": 727.69230769230762,
+    "z": 10000,
+    "height": 403.41068537506743,
+    "width": 735.6718834322719,
     "tabOrder": 10000
   },
   "visual": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Contact"
+                      "Entity": "Org"
                     }
                   },
-                  "Property": "Organisation"
+                  "Property": "Organisation-Shortened"
                 }
               },
-              "queryRef": "Contact.Organisation",
-              "nativeQueryRef": "Organisation"
+              "queryRef": "Org.Organisation-Shortened",
+              "nativeQueryRef": "Organisation-Shortened"
             },
             {
               "field": {
@@ -215,6 +215,20 @@
                   "Value": "'{\"showInsideLabels\":false,\"customLabelfieldValue\":\"\",\"insideLabelStyle\":\"dataValue\",\"insideAutoFontSizeMode\":true,\"showBoldParentNode\":true,\"insideFontSize\":10,\"insideFontFamily\":\"\\\"Segoe UI\\\", wf_segoe-ui_normal, helvetica, arial, sans-serif\",\"insideColorType\":\"FIXED\",\"insideColor\":\"rgba(255,255,255,1)\",\"insideBackgroundColor\":\"rgba(143,139,139,1)\",\"styling\":[],\"insideLabelTextShadow\":true,\"maxCharLimitEnabled\":false,\"maxCharLimit\":10,\"applyBackgroundFor\":\"allNode\",\"backgroundType\":\"shadow\",\"showOutsideLabels\":true,\"outsideLabelStyle\":\"category\",\"outsideFontSizeMode\":\"auto\",\"outsideFontSize\":10,\"outsideFontFamily\":\"\\\"Segoe UI\\\", wf_segoe-ui_normal, helvetica, arial, sans-serif\",\"outsideColor\":\"rgba(255,255,255,1)\",\"enableOuterBackgroundColor\":true,\"outerStyling\":[],\"outsidemaxCharLimitEnabled\":true,\"outsidemaxCharLimit\":30,\"outsideAutoFontSizeMode\":true,\"outsideBackgroundColor\":\"rgba(183,183,183,27)\"}'"
                 }
               }
+            },
+            "nodePosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "toolbarSetting": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"zoomControl\":true,\"lockUnlock\":true,\"rearrange\":true,\"handleColor\":\"rgb(240,240,240)\",\"activeTrackColor\":\"rgb(92,113,187)\",\"remainingTrackColor\":\"rgb(92,113,187)\",\"sliderBorderColor\":\"rgb(92,113,187)\",\"sliderBorderSize\":25,\"rearrangeIconColor\":\"rgb(92,113,187)\",\"rearrangeIconSize\":25,\"lockUnlockIconColor\":\"rgb(92,113,187)\",\"lockUnlockIconSize\":25,\"isLockIconActive\":true}'"
+                }
+              }
             }
           }
         }
@@ -227,7 +241,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Free version, via Hierarchy table'"
+                  "Value": "'Expand via Focus Mode! Lock icon 🔒 keeps it steady'"
                 }
               }
             }
