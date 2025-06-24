@@ -3,18 +3,34 @@
   "name": "422068de4c75a9f25985",
   "position": {
     "x": 0,
-    "y": 65.384615384615387,
+    "y": 65.623313545601718,
     "z": 3000,
-    "height": 654.61538461538464,
-    "width": 184.61538461538461,
+    "height": 654.851592012952,
+    "width": 176.14678899082568,
     "tabOrder": 3000
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Values": {
+        "Rows": {
           "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Org"
+                    }
+                  },
+                  "Property": "OrgFirstLetter"
+                }
+              },
+              "queryRef": "Org.OrgFirstLetter",
+              "nativeQueryRef": "By letter",
+              "active": true,
+              "displayName": "By letter"
+            },
             {
               "field": {
                 "Column": {
@@ -28,12 +44,36 @@
               },
               "queryRef": "Org.Organisation-Shortened.2",
               "nativeQueryRef": "Org acronyms",
+              "active": true,
               "displayName": "Org acronyms"
             }
           ]
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Org.OrgFirstLetter"
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Org.Organisation-Shortened.2"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "objects": {
       "columnWidth": [
         {
@@ -48,6 +88,20 @@
           },
           "selector": {
             "metadata": "Org.Organisation-Shortened.2"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "157.14678899082568D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Org.OrgFirstLetter"
           }
         }
       ]

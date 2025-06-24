@@ -1,0 +1,252 @@
+table 015_OrgNames
+	lineageTag: d74b8599-ea6a-4fc3-b844-040015edf2ce
+
+	column RowIndex
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a70e389-ae96-4806-af57-0bff73204829
+		summarizeBy: sum
+		sourceColumn: RowIndex
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 8
+		dataType: string
+		lineageTag: aed5cf64-590e-4ea4-a310-23ae22de8de3
+		summarizeBy: none
+		sourceColumn: 8
+
+		annotation SummarizationSetBy = Automatic
+
+	column A
+		dataType: string
+		lineageTag: 8aba86c6-d8a8-4ad4-abd0-ed29cd97522a
+		summarizeBy: none
+		sourceColumn: A
+
+		annotation SummarizationSetBy = Automatic
+
+	column B
+		dataType: string
+		lineageTag: 849dbeac-9e5b-4707-ae3c-0228e51bf14d
+		summarizeBy: none
+		sourceColumn: B
+
+		annotation SummarizationSetBy = Automatic
+
+	column C
+		dataType: string
+		lineageTag: 9994567a-0970-4c86-8a70-516355601a68
+		summarizeBy: none
+		sourceColumn: C
+
+		annotation SummarizationSetBy = Automatic
+
+	column D
+		dataType: string
+		lineageTag: 0a07dcf5-6f6f-4c89-b3b2-dbee6d9357c2
+		summarizeBy: none
+		sourceColumn: D
+
+		annotation SummarizationSetBy = Automatic
+
+	column E
+		dataType: string
+		lineageTag: ba373b42-d56b-40ae-8dae-feacdb9aaa7e
+		summarizeBy: none
+		sourceColumn: E
+
+		annotation SummarizationSetBy = Automatic
+
+	column F
+		dataType: string
+		lineageTag: 57b20638-b4a9-484b-a13b-8480d494a130
+		summarizeBy: none
+		sourceColumn: F
+
+		annotation SummarizationSetBy = Automatic
+
+	column G
+		dataType: string
+		lineageTag: 93c5ba23-64af-4f0c-974f-ad083953aa4e
+		summarizeBy: none
+		sourceColumn: G
+
+		annotation SummarizationSetBy = Automatic
+
+	column H
+		dataType: string
+		lineageTag: 45b9881a-a59f-4d9b-8c57-34df98bd65e8
+		summarizeBy: none
+		sourceColumn: H
+
+		annotation SummarizationSetBy = Automatic
+
+	column I
+		dataType: string
+		lineageTag: 6e2f032a-5912-4e7e-96a1-8c00b8c555ce
+		summarizeBy: none
+		sourceColumn: I
+
+		annotation SummarizationSetBy = Automatic
+
+	column J
+		dataType: string
+		lineageTag: 541fdec2-b60e-48dc-a522-e348194e0078
+		summarizeBy: none
+		sourceColumn: J
+
+		annotation SummarizationSetBy = Automatic
+
+	column K
+		dataType: string
+		lineageTag: e5b1642b-5786-47fc-b0e1-11ea9272fb50
+		summarizeBy: none
+		sourceColumn: K
+
+		annotation SummarizationSetBy = Automatic
+
+	column L
+		dataType: string
+		lineageTag: b0055960-e02e-404a-9de1-d1ecc9626c95
+		summarizeBy: none
+		sourceColumn: L
+
+		annotation SummarizationSetBy = Automatic
+
+	column M
+		dataType: string
+		lineageTag: e5fd3878-bca1-49f9-b82a-f03fbb80c9d6
+		summarizeBy: none
+		sourceColumn: M
+
+		annotation SummarizationSetBy = Automatic
+
+	column N
+		dataType: string
+		lineageTag: 5d5faf10-1278-40be-878c-3d6318eff708
+		summarizeBy: none
+		sourceColumn: N
+
+		annotation SummarizationSetBy = Automatic
+
+	column O
+		dataType: string
+		lineageTag: 44e5e6f9-1e73-46dd-9e1b-0306dcddc257
+		summarizeBy: none
+		sourceColumn: O
+
+		annotation SummarizationSetBy = Automatic
+
+	column P
+		dataType: string
+		lineageTag: 5e20b11c-fbd9-4f3d-9b94-029cbde4abda
+		summarizeBy: none
+		sourceColumn: P
+
+		annotation SummarizationSetBy = Automatic
+
+	column Q
+		dataType: string
+		lineageTag: 5ff0e6f4-7aeb-4b5f-8844-34f7c1c9a3ac
+		summarizeBy: none
+		sourceColumn: Q
+
+		annotation SummarizationSetBy = Automatic
+
+	column R
+		dataType: string
+		lineageTag: 4c101743-76ac-45a4-b02d-c5f7ff747881
+		summarizeBy: none
+		sourceColumn: R
+
+		annotation SummarizationSetBy = Automatic
+
+	column S
+		dataType: string
+		lineageTag: 70b3d0c5-cf55-4872-a53c-838d6d2d7902
+		summarizeBy: none
+		sourceColumn: S
+
+		annotation SummarizationSetBy = Automatic
+
+	column T
+		dataType: string
+		lineageTag: 2726c9fd-68ca-4dda-90ec-d961e0f18f18
+		summarizeBy: none
+		sourceColumn: T
+
+		annotation SummarizationSetBy = Automatic
+
+	column U
+		dataType: string
+		lineageTag: bfa46007-ea36-4f52-8f03-59371d422f32
+		summarizeBy: none
+		sourceColumn: U
+
+		annotation SummarizationSetBy = Automatic
+
+	column V
+		dataType: string
+		lineageTag: ae54d9e9-3b65-4114-a307-ea316587d5e3
+		summarizeBy: none
+		sourceColumn: V
+
+		annotation SummarizationSetBy = Automatic
+
+	column W
+		dataType: string
+		lineageTag: ba00d4b2-f67f-4dcd-9378-057fc2e92eb6
+		summarizeBy: none
+		sourceColumn: W
+
+		annotation SummarizationSetBy = Automatic
+
+	column X
+		dataType: string
+		lineageTag: a9b99832-3a93-439c-8bd9-ed8daacc0a7b
+		summarizeBy: none
+		sourceColumn: X
+
+		annotation SummarizationSetBy = Automatic
+
+	column Y
+		dataType: string
+		lineageTag: a1ddaded-7a89-409c-bbc1-8802dbee1c8e
+		summarizeBy: none
+		sourceColumn: Y
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 015_OrgNames = m
+		mode: import
+		queryGroup: 2-Transform
+		source = ```
+				let
+				    Source = #"010_tblOrg-Formatting",
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Organisation-Shortened", "Organisation"}),
+				    #"Inserted First Characters" = Table.AddColumn(#"Removed Other Columns", "First Characters", each Text.Start([#"Organisation-Shortened"], 1), type text),
+				    #"Uppercased Text" = Table.TransformColumns(#"Inserted First Characters",{{"First Characters", Text.Upper, type text}}),
+				    #"Sorted Rows" = Table.Sort(#"Uppercased Text",{{"Organisation-Shortened", Order.Ascending}}),
+				    #"Added Index" = Table.AddIndexColumn(#"Sorted Rows", "Index", 1, 1, Int64.Type),
+				    #"Trimmed Text" = Table.TransformColumns(#"Added Index",{{"Organisation-Shortened", Text.Trim, type text}, {"Organisation", Text.Trim, type text}}),
+				
+				  
+				    // Add index within each group
+				     #"Grouped" = Table.Group(#"Trimmed Text", {"First Characters"}, 
+				        {{"Orgs", each Table.AddIndexColumn(_, "RowIndex", 1, 1), type table}}),
+				     #"Expanded" = Table.ExpandTableColumn(Grouped, "Orgs", 
+				        {"Organisation-Shortened", "RowIndex"}, {"Organisation-Shortened", "RowIndex"}),
+				    // Pivot to make letters into columns
+				     #"Pivoted" = Table.Pivot(Expanded, List.Distinct(Expanded[First Characters]), 
+				        "First Characters", "Organisation-Shortened")
+				in
+				    Pivoted
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

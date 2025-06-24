@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "050144ec65040767e377",
+  "position": {
+    "x": 562.97895304910946,
+    "y": 341.24123043712893,
+    "z": 1002,
+    "height": 378.54290339989205,
+    "width": 113.9773340528872,
+    "tabOrder": 1002
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RowNumbers"
+                    }
+                  },
+                  "Property": "Value"
+                }
+              },
+              "queryRef": "RowNumbers.Value",
+              "nativeQueryRef": "Value",
+              "active": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

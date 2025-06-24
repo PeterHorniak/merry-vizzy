@@ -14,9 +14,10 @@ expression 010_tblOrg-Formatting =
 		    #"Replaced Value1" = Table.ReplaceValue(#"Duplicated Column","https://","",Replacer.ReplaceText,{"URL-Main - Copy"}),
 		    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","www.","",Replacer.ReplaceText,{"URL-Main - Copy"}),
 		    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value2", "URL-Main - Copy", Splitter.SplitTextByEachDelimiter({"/"}, QuoteStyle.Csv, false), {"URL-Main_Domain", "URL-Main_Subpage"}),
-		    #"Added Logo" = Table.AddColumn(#"Split Column by Delimiter", "Logo", each if [#"URL-Main_Domain"] <> null then "https://"&[#"URL-Main_Domain"]&"/favicon.ico" else if [#"URL-Main_Domain"] <> "" then "https://"&[#"URL-Main_Domain"]&"/favicon.ico" else null)
+		    #"Added Logo" = Table.AddColumn(#"Split Column by Delimiter", "Logo", each if [#"URL-Main_Domain"] <> null then "https://"&[#"URL-Main_Domain"]&"/favicon.ico" else if [#"URL-Main_Domain"] <> "" then "https://"&[#"URL-Main_Domain"]&"/favicon.ico" else null),
+		    #"Inserted First Characters" = Table.AddColumn(#"Added Logo", "OrgFirstLetter", each Text.Start([Organisation], 1), type text)
 		in
-		    #"Added Logo"
+		    #"Inserted First Characters"
 	lineageTag: b515d12b-1bca-4180-9b56-1111d984fc1b
 	queryGroup: 2-Transform
 

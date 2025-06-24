@@ -3045,16 +3045,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.476
 			          }
-			        },
-			        {
-			          "Link": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -10880,6 +10870,66 @@ cultureInfo en-US
 			      "Terms": [
 			        {
 			          "Link": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "table015_orgnames.first_characters": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "015_OrgNames",
+			          "ConceptualProperty": "First Characters"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "table015_orgnames.index": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "015_OrgNames",
+			          "ConceptualProperty": "Index"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "table015_orgnames.rowindex": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "015_OrgNames",
+			          "ConceptualProperty": "RowIndex"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "#": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "org.orgfirstletter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Org",
+			          "ConceptualProperty": "OrgFirstLetter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "By letter": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

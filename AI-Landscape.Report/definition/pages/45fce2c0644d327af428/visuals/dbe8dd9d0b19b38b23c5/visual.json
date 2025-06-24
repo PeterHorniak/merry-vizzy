@@ -172,37 +172,5 @@
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a1acadc408c5604b26ab",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "005_tblOrg-SplitParents"
-              }
-            },
-            "Property": "Parent org"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c1202c7693a37251630c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "005_tblOrg-SplitParents"
-              }
-            },
-            "Property": "URLParent"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -1,0 +1,20 @@
+table RowNumbers
+	lineageTag: e0eddde8-b845-4e5b-9bd6-3de3504822e1
+
+	column Value
+		formatString: 0
+		lineageTag: 2acaea2a-c1a2-4d86-aca1-59e82d9e2f21
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RowNumbers = calculated
+		mode: import
+		source = ```
+				GENERATESERIES(1, 100) 
+				```
+
+	annotation PBI_Id = 682ed0e96c2c498690bc673344da952b
+

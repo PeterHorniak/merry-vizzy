@@ -9,6 +9,85 @@ table Org
 		formatString: 0%;-0%;0%
 		lineageTag: 38c7f6c1-b8e2-487b-aa9f-84eaccdceeb8
 
+	measure _mOrgNamesPivoted = ```
+			
+			VAR CurrentRowIndex = 
+			    RANKX(
+			        FILTER(
+			            ALLSELECTED(Org),
+			            Org[OrgFirstLetter] = MAX(Org[OrgFirstLetter])
+			        ),
+			        Org[Organisation-Shortened],
+			        ,
+			        ASC
+			    )
+			VAR RowNumber = 
+			    RANKX(
+			        ALLSELECTED(Org),
+			        CONCATENATE(Org[OrgFirstLetter], FORMAT(CurrentRowIndex, "000")),
+			        ,
+			        ASC
+			    )
+			RETURN
+			    IF(
+			        RowNumber = MAX(
+			            RANKX(
+			                ALLSELECTED(Org),
+			                CONCATENATE(Org[OrgFirstLetter], FORMAT(CurrentRowIndex, "000")),
+			                ,
+			                ASC
+			            )
+			        ),
+			        MAX(Org[Organisation-Shortened]),
+			        BLANK()
+			    )
+			```
+		lineageTag: 1ab4eac1-2693-498a-ac60-ae91df3e6927
+
+	measure _mOrgNamesPivoted2b = ```
+			
+			VAR RowNum = SELECTEDVALUE('RowNumbers'[Value])
+			VAR SelectedLetter = SELECTEDVALUE('Letters'[Letter])  // Need a Letters table
+			VAR FilteredOrgs = 
+			    FILTER(
+			        ALLSELECTED(Org),
+			        Org[OrgFirstLetter] = SelectedLetter
+			    )
+			VAR SortedOrgs = 
+			    ADDCOLUMNS(
+			        FilteredOrgs,
+			        "RowRank", 
+			        RANKX(FilteredOrgs, Org[Organisation-Shortened], , ASC)
+			    )
+			VAR SelectedOrg = 
+			    FILTER(SortedOrgs, [RowRank] = RowNum)
+			RETURN
+			    MAXX(SelectedOrg, Org[Organisation-Shortened])
+			```
+		lineageTag: ac578940-afa2-4d6b-914f-f38c5e495f7f
+
+	measure _mOrgNamesPivoted2a = ```
+			
+			VAR CurrentRow = SELECTEDVALUE(RowNumbers[Value])
+			VAR CurrentLetter = SELECTEDVALUE(Org[OrgFirstLetter])
+			VAR OrgsInLetter = 
+			    CALCULATETABLE(
+			        VALUES(Org[Organisation-Shortened]),
+			        Org[OrgFirstLetter] = CurrentLetter
+			    )
+			VAR SortedOrgs = 
+			    ADDCOLUMNS(
+			        OrgsInLetter,
+			        "RowRank", 
+			        RANKX(OrgsInLetter, Org[Organisation-Shortened], , ASC)
+			    )
+			VAR SelectedOrg = 
+			    FILTER(SortedOrgs, [RowRank] = CurrentRow)
+			RETURN
+			    MAXX(SelectedOrg, Org[Organisation-Shortened])
+			```
+		lineageTag: 0da9b063-349b-412f-abbd-458798ccb299
+
 	column Organisation
 		dataType: string
 		lineageTag: af2a3529-8de3-40fa-ad3c-269749e0fef0
@@ -197,6 +276,29 @@ table Org
 
 	column _LogoAsText = Org[Logo]
 		lineageTag: 8e5e1703-da66-4faa-914c-15b224cd6113
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgFirstLetter
+		dataType: string
+		lineageTag: a6fdee3e-6ab9-4cdf-98fc-9b803b352c05
+		summarizeBy: none
+		sourceColumn: OrgFirstLetter
+
+		annotation SummarizationSetBy = Automatic
+
+	column _OrgNameContainsAOrI =
+			
+			IF(
+			    AND(
+			        OR(CONTAINSSTRING(Org[Organisation-Shortened], "A"), CONTAINSSTRING(Org[Organisation-Shortened], "I")),
+			        LEN(Org[Organisation-Shortened]) < 8
+			    ),
+			    "Valid",
+			    IF(LEN(Org[Organisation-Shortened]) >= 8, "Too long", "Missing A or I")
+			)
+		lineageTag: 555b2b54-95d1-49df-a439-fcb92cd36d30
 		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic

@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "79180d1f0f61c84a8fa2",
+  "name": "0bd99a5fa07d27892d08",
   "position": {
-    "x": 1026.2789317507418,
+    "x": 1130.1025364274149,
     "y": 0,
-    "z": 1000,
-    "height": 548.46290801186944,
-    "width": 253.72106824925817,
-    "tabOrder": 2000
+    "z": 3001,
+    "height": 91.8726389638424,
+    "width": 149.897463572585
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +19,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "000_tblHeadcount"
+                      "Entity": "Org"
                     }
                   },
-                  "Property": "Organisation"
+                  "Property": "_OrgNameContainsAOrI"
                 }
               },
-              "queryRef": "000_tblHeadcount.Organisation",
-              "nativeQueryRef": "Organisation",
+              "queryRef": "Org._OrgNameContainsAOrI",
+              "nativeQueryRef": "_OrgNameContainsAOrI",
               "active": true
             }
           ]

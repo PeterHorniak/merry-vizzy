@@ -4,10 +4,10 @@
   "position": {
     "x": 614.61538461538464,
     "y": 350,
-    "z": 7000,
+    "z": 6000,
     "height": 370,
     "width": 665.38461538461536,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "WordCloud1447959067750",

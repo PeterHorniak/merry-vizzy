@@ -1,0 +1,479 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "ab3345e0ac9bad7b68db",
+  "position": {
+    "x": 0,
+    "y": 104.30652995143011,
+    "z": 0,
+    "height": 279.76254722072315,
+    "width": 1280,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "RowIndex"
+                }
+              },
+              "queryRef": "015_OrgNames.RowIndex",
+              "nativeQueryRef": "#",
+              "displayName": "#"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "8"
+                }
+              },
+              "queryRef": "015_OrgNames.8",
+              "nativeQueryRef": "8"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "A"
+                }
+              },
+              "queryRef": "015_OrgNames.A",
+              "nativeQueryRef": "A"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "B"
+                }
+              },
+              "queryRef": "015_OrgNames.B",
+              "nativeQueryRef": "B"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "C"
+                }
+              },
+              "queryRef": "015_OrgNames.C",
+              "nativeQueryRef": "C"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "D"
+                }
+              },
+              "queryRef": "015_OrgNames.D",
+              "nativeQueryRef": "D"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "E"
+                }
+              },
+              "queryRef": "015_OrgNames.E",
+              "nativeQueryRef": "E"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "F"
+                }
+              },
+              "queryRef": "015_OrgNames.F",
+              "nativeQueryRef": "F"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "G"
+                }
+              },
+              "queryRef": "015_OrgNames.G",
+              "nativeQueryRef": "G"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "H"
+                }
+              },
+              "queryRef": "015_OrgNames.H",
+              "nativeQueryRef": "H"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "I"
+                }
+              },
+              "queryRef": "015_OrgNames.I",
+              "nativeQueryRef": "I"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "J"
+                }
+              },
+              "queryRef": "015_OrgNames.J",
+              "nativeQueryRef": "J"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "K"
+                }
+              },
+              "queryRef": "015_OrgNames.K",
+              "nativeQueryRef": "K"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "015_OrgNames"
+                    }
+                  },
+                  "Property": "L"
+                }
+              },
+              "queryRef": "015_OrgNames.L",
+              "nativeQueryRef": "L"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "015_OrgNames"
+                  }
+                },
+                "Property": "RowIndex"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "25.270029673590503D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.RowIndex"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "92.6531399190269D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.A"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.64960670532199D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.8"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.85521614450134D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.B"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "97.58571258857532D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.C"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "92.57191311955329D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.D"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "93.11739944062643D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.E"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "90.2804904946278D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.F"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "96.00291700386657D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.G"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "92.3513743527385D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.H"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.87128836870716D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.I"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "91.33651380125372D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.J"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "96.6240890173588D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.K"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "89.5488471435721D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "015_OrgNames.L"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

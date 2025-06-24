@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "87cd3f4f72782726804d",
+  "position": {
+    "x": 895.536791314837,
+    "y": 55.585042219541613,
+    "z": 5000,
+    "height": 149.7708082026538,
+    "width": 384.46320868516284,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CAIS"
+                        }
+                      },
+                      "Property": "Index"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(CAIS.Index)",
+              "nativeQueryRef": "Index"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CAIS"
+                    }
+                  },
+                  "Property": "Signatory"
+                }
+              },
+              "queryRef": "CAIS.Signatory",
+              "nativeQueryRef": "Signatory"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CAIS"
+                    }
+                  },
+                  "Property": "TitleOrg"
+                }
+              },
+              "queryRef": "CAIS.TitleOrg",
+              "nativeQueryRef": "TitleOrg"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "CAIS"
+                      }
+                    },
+                    "Property": "Index"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    }
+  }
+}

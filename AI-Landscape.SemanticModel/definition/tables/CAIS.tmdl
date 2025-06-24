@@ -1,0 +1,47 @@
+table CAIS
+	lineageTag: 82a558d4-b6be-4cfe-9303-3e5a5c3ee69b
+
+	column Signatory
+		dataType: string
+		lineageTag: bb883470-0ca9-49b7-bf9d-eaa6210be1e5
+		summarizeBy: none
+		sourceColumn: Signatory
+
+		annotation SummarizationSetBy = Automatic
+
+	column TitleOrg
+		dataType: string
+		lineageTag: 6a4baeab-2d36-4fe1-920e-92f60f1ee564
+		summarizeBy: none
+		sourceColumn: TitleOrg
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: 57c079cc-dd5b-4f2a-850f-051fd3561a88
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CAIS = m
+		mode: import
+		source =
+				let
+				    Source = Web.BrowserContents("https://safe.ai/work/statement-on-ai-risk"),
+				    #"Extracted Table From Html" = Html.Table(Source, {{"Column1", ".text-weight-bold"}, {"Column2", ".text-size-tiny"}}, [RowSelector=".signatory"]),
+				    #"Renamed Columns" = Table.RenameColumns(#"Extracted Table From Html",{{"Column1", "Signatory"}, {"Column2", "TitleOrg"}}),
+				    #"Added Index" = Table.AddIndexColumn(#"Renamed Columns", "Index", 1, 1, Int64.Type),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Added Index",{"Index", "Signatory", "TitleOrg"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Reordered Columns","Former U.S. Assistant Secretary of Defense for Nuclear, Chemical, and Biological Defense Programs","Former U.S. Assistant Secretary of Defense for Nuclear Chemical and Biological Defense Programs",Replacer.ReplaceText,{"TitleOrg"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value","SVP Research Technology and Society,","",Replacer.ReplaceText,{"TitleOrg"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value2","Gates Ventures","founder,Gates Ventures",Replacer.ReplaceText,{"TitleOrg"})
+				in
+				    #"Replaced Value1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

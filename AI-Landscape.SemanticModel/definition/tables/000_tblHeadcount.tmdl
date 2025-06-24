@@ -77,6 +77,13 @@ table 000_tblHeadcount
 
 		annotation SummarizationSetBy = Automatic
 
+	column _Year = year('000_tblHeadcount'[Date])
+		formatString: 0
+		lineageTag: 7e446b0a-88fb-4a4e-8c1c-e6e577cbcdf0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 000_tblHeadcount = m
 		mode: import
 		queryGroup: 1-Extract

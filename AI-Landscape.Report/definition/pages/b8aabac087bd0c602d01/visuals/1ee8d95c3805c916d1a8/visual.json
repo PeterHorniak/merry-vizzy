@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "f6b8abe7bb813e206976",
+  "name": "1ee8d95c3805c916d1a8",
   "position": {
-    "x": 184.43604964921747,
-    "y": 65.623313545601718,
-    "z": 5000,
-    "height": 654.16082029141933,
-    "width": 417.91689152725309,
-    "tabOrder": 6000
+    "x": 676.95628710199674,
+    "y": 341.24123043712893,
+    "z": 1003,
+    "height": 378.54290339989205,
+    "width": 294.9595250944414,
+    "tabOrder": 1003
   },
   "visual": {
     "visualType": "tableEx",
@@ -20,15 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Wordcloud"
+                      "Entity": "Org"
                     }
                   },
-                  "Property": "Organisation"
+                  "Property": "Organisation-Shortened"
                 }
               },
-              "queryRef": "Wordcloud.Organisation",
-              "nativeQueryRef": "Organisation full names",
-              "displayName": "Organisation full names"
+              "queryRef": "Org.Organisation-Shortened",
+              "nativeQueryRef": "Organisation-Shortened"
             },
             {
               "field": {
@@ -38,11 +37,11 @@
                       "Entity": "Org"
                     }
                   },
-                  "Property": "Mission"
+                  "Property": "_OrgNameContainsAOrI"
                 }
               },
-              "queryRef": "Org.Mission",
-              "nativeQueryRef": "Mission"
+              "queryRef": "Org._OrgNameContainsAOrI",
+              "nativeQueryRef": "_OrgNameContainsAOrI"
             }
           ]
         }
@@ -55,27 +54,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "243.62271897643697D"
+                  "Value": "131.73341340671402D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Wordcloud.Organisation"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "144.51875843601863D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Org.Mission"
+            "metadata": "Org.Organisation-Shortened"
           }
         }
       ]
