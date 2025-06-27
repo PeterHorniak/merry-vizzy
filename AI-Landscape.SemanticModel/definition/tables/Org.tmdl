@@ -303,6 +303,14 @@ table Org
 
 		annotation SummarizationSetBy = Automatic
 
+	column LocationAlt
+		dataType: string
+		lineageTag: 96ff67ef-bd8d-4888-a172-611187fb1e04
+		summarizeBy: none
+		sourceColumn: LocationAlt
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Org = m
 		mode: import
 		queryGroup: 3-Load
