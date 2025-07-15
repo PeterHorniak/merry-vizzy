@@ -1,0 +1,132 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "0af2ca6c03054a896916",
+  "position": {
+    "x": 0,
+    "y": 413.7658053875756,
+    "z": 1000,
+    "height": 306.1022539857064,
+    "width": 1274.370533260033,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "lineClusteredColumnComboChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MetaculusAGI"
+                    }
+                  },
+                  "Property": "Start Time"
+                }
+              },
+              "queryRef": "MetaculusAGI.Start Time",
+              "nativeQueryRef": "Start Time",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MetaculusAGI"
+                        }
+                      },
+                      "Property": "Forecaster Count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(MetaculusAGI.Forecaster Count)",
+              "nativeQueryRef": "Forecaster Count"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MetaculusAGI"
+                        }
+                      },
+                      "Property": "Forecaster Count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(MetaculusAGI.Forecaster Count)",
+              "nativeQueryRef": "Forecaster Count"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "MetaculusAGI"
+                  }
+                },
+                "Property": "Start Time"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AGI predictions lowering as AI research progresses'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

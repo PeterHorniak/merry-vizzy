@@ -1,0 +1,156 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "63ef7c9118387c11006e",
+  "position": {
+    "x": 9.8515667949422756,
+    "y": 0,
+    "z": 0,
+    "height": 214.62341946124243,
+    "width": 1217.372182517867,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "lineClusteredColumnComboChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MetaculusAGI"
+                    }
+                  },
+                  "Property": "Start Time"
+                }
+              },
+              "queryRef": "MetaculusAGI.Start Time",
+              "nativeQueryRef": "Start Time",
+              "active": true
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MetaculusAGI"
+                        }
+                      },
+                      "Property": "Median"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(MetaculusAGI.Median)",
+              "nativeQueryRef": "Media",
+              "displayName": "Media"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MetaculusAGI"
+                        }
+                      },
+                      "Property": "_MedianAsNumber"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(MetaculusAGI._MedianAsNumber)",
+              "nativeQueryRef": "_MedianAsNumber"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MetaculusAGI"
+                        }
+                      },
+                      "Property": "_MedianAsNumber"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(MetaculusAGI._MedianAsNumber)",
+              "nativeQueryRef": "_MedianAsNumber"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "MetaculusAGI"
+                  }
+                },
+                "Property": "Start Time"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AGI predictions lowering as AI research progresses'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

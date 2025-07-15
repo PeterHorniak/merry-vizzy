@@ -4,27 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 30.733395339903595,
         "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 1095.0000000000005,
-            "y": 444.99999999999966
-          },
-          "nodeIndex": "000_tblHeadcount",
-          "nodeLineageTag": "8d5709c2-5678-4663-9b50-a962c3ba2d07",
-          "size": {
-            "height": 364.99999999999977,
-            "width": 234
-          },
-          "zIndex": 7
-        },
-        {
-          "location": {
-            "x": 252.07323854850284,
-            "y": 0
+            "x": 398.91057183915336,
+            "y": 803.6213744434051
           },
           "nodeIndex": "010_Hierarchy",
           "nodeLineageTag": "1b0ff087-9ecd-4948-962c-1ed2335ff8c0",
@@ -55,7 +42,7 @@
           "nodeIndex": "Org",
           "nodeLineageTag": "a95f0817-2701-4284-b228-3549caa6e99c",
           "size": {
-            "height": 358.99999999999994,
+            "height": 666.33395339903586,
             "width": 234
           },
           "zIndex": 13
@@ -75,13 +62,13 @@
         },
         {
           "location": {
-            "x": 215.92676145149926,
-            "y": 662.49999999999955
+            "x": 246.66015679140281,
+            "y": 0
           },
           "nodeIndex": "Contact",
           "nodeLineageTag": "e8cefdb2-9c80-46c2-95ec-718926245664",
           "size": {
-            "height": 200,
+            "height": 313.82739014779105,
             "width": 234
           },
           "zIndex": 4
@@ -139,10 +126,11 @@
         },
         {
           "location": {
-            "x": 259.00000000000006,
-            "y": 309.99999999999983
+            "x": 157.69362276846596,
+            "y": 610.50430999016828
           },
           "nodeIndex": "Activity",
+          "nodeLineageTag": "d743bfa4-b32b-4f80-9569-a8db58bab608",
           "size": {
             "height": 315.99999999999983,
             "width": 234

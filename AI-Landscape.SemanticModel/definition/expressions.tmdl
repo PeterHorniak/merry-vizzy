@@ -457,3 +457,50 @@ expression 020_tblOrg-events =
 
 	annotation PBI_ResultType = Table
 
+expression 000_forecast_data =
+		let
+		    Source = Csv.Document(File.Contents("C:\Users\peter\OneDrive\Desktop\forecast_data.csv"),[Delimiter=",", Columns=18, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Start Time", type datetime}, {"End Time", type datetime}, {"Forecaster Count", Int64.Type}, {"Probability Below Lower Bound", type number}, {"Probability Above Upper Bound", type number}, {"5th Percentile", type date}, {"25th Percentile", type date}, {"Median", type date}, {"75th Percentile", type date}, {"95th Percentile", type date}}),
+		    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Question ID", "Forecaster ID", "Probability Yes", "Probability Yes Per Category", "Probability of Resolution", "PDF at Resolution"}),
+		    #"Added Index" = Table.AddIndexColumn(#"Removed Columns", "Index", 1, 1, Int64.Type),
+		    #"Sorted Rows" = Table.Sort(#"Added Index",{{"Index", Order.Descending}})
+		in
+		    #"Sorted Rows"
+	lineageTag: 80ed0b9f-7c98-4d70-ac80-446781bf7bcd
+	queryGroup: 1-Extract
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+
+expression 000_tblHeadcount =
+		let
+		    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1zEiH7vRUdsV5oiYUqm0kHBdVJHJjveYz1IDTWHWsApI/"),
+		    Headcount_Table = Source{[name="Headcount",ItemKind="Table"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Headcount_Table, [PromoteAllScalars=true]),
+		    #"Promoted Headers1" = Table.PromoteHeaders(#"Promoted Headers", [PromoteAllScalars=true]),
+		    #"Removed Columns" = Table.RemoveColumns(#"Promoted Headers1",{""}),
+		    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each ([Date] <> null and [Date] <> "")),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Filtered Rows",{{"FTE notkilleveryoneism", type number}, {"FTE total", type number}, {"Date", type date}, {"Revenue total", Int64.Type}, {"Revenue notkilleveryoneism", Int64.Type}, {"Volunteers", Int64.Type}})
+		in
+		    #"Changed Type"
+	lineageTag: b427affa-77c5-4f91-8fba-bd171be5b052
+	queryGroup: 1-Extract
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+
+expression MetaculusAGI =
+		let
+		    Source = #"000_forecast_data"
+		in
+		    Source
+	lineageTag: 91535b8b-0961-4523-9f76-0c0484a8187f
+	queryGroup: 3-Load
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
