@@ -13,19 +13,19 @@ table 'Outreach actions'
 		dataType: int64
 		formatString: 0
 		lineageTag: 94e5f4e6-d143-43b4-a77d-4ee64a5b8ca7
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Time minimum (mins)
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column 'Time average (mins)'
 		dataType: int64
 		formatString: 0
 		lineageTag: b95b4a26-52c6-4b51-9f34-eb63c4d9bb99
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Time average (mins)
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column 'Cost min ($)'
 		dataType: int64
@@ -42,15 +42,6 @@ table 'Outreach actions'
 		lineageTag: 94414d5f-da1c-4603-bb59-37d777b44524
 		summarizeBy: sum
 		sourceColumn: Cost avg ($)
-
-		annotation SummarizationSetBy = Automatic
-
-	column Nanoutopias
-		dataType: int64
-		formatString: 0
-		lineageTag: c8808428-2f67-4538-ad2b-ecdad9022a31
-		summarizeBy: sum
-		sourceColumn: Nanoutopias
 
 		annotation SummarizationSetBy = Automatic
 
@@ -111,6 +102,48 @@ table 'Outreach actions'
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Utility avg (nanoutopias)'
+		dataType: int64
+		formatString: 0
+		lineageTag: b672b282-d1cf-4510-bff6-9a30078080c0
+		summarizeBy: none
+		sourceColumn: Utility avg (nanoutopias)
+
+		annotation SummarizationSetBy = User
+
+	column 'Utility max (nanoutopias)'
+		dataType: int64
+		formatString: 0
+		lineageTag: d1f7b116-b7d5-4c1e-8220-0ac4509806ec
+		summarizeBy: none
+		sourceColumn: Utility max (nanoutopias)
+
+		annotation SummarizationSetBy = User
+
+	column 'Time maximum (mins)'
+		dataType: string
+		lineageTag: 6955a072-dd57-4be5-9b4f-452b3d123759
+		summarizeBy: none
+		sourceColumn: Time maximum (mins)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cost max ($)'
+		dataType: string
+		lineageTag: 0d5ea7f8-b39f-46fe-b829-41940b7a68da
+		summarizeBy: none
+		sourceColumn: Cost max ($)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Utility min (nanoutopias)'
+		dataType: string
+		lineageTag: c3c30e2b-366b-4254-8eb6-e8ea04b36a53
+		summarizeBy: none
+		sourceColumn: Utility min (nanoutopias)
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Outreach actions' = m
 		mode: import
 		source =
@@ -119,7 +152,7 @@ table 'Outreach actions'
 				    #"Outreach actions_Table" = Source{[name="Outreach actions",ItemKind="Table"]}[Data],
 				    #"Removed Top Rows" = Table.Skip(#"Outreach actions_Table",1),
 				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Name", type text}, {"Time minimum (mins)", Int64.Type}, {"Time average (mins)", Int64.Type}, {"Cost min ($)", Int64.Type}, {"Cost avg ($)", Int64.Type}, {"Nanoutopias", Int64.Type}, {"Frequency", type text}, {"Time required", type text}, {"Skills", type text}, {"Proximity", type text}, {"Link to materials", type text}, {"Contact", type text}, {"Due by", type datetime}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Name", type text}, {"Time minimum (mins)", Int64.Type}, {"Time average (mins)", Int64.Type}, {"Cost min ($)", Int64.Type}, {"Cost avg ($)", Int64.Type}, {"Utility avg (nanoutopias)", Int64.Type}, {"Frequency", type text}, {"Time required", type text}, {"Skills", type text}, {"Proximity", type text}, {"Link to materials", type text}, {"Contact", type text}, {"Due by", type datetime}, {"Utility max (nanoutopias)", Int64.Type}})
 				in
 				    #"Changed Type"
 

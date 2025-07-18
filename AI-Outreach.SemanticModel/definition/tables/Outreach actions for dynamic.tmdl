@@ -1,0 +1,67 @@
+table 'Outreach actions for dynamic'
+	lineageTag: f4b33631-a7b7-4fcb-85b3-f56975bdc22d
+
+	column Name
+		dataType: string
+		lineageTag: 26526f2d-04d6-4341-8433-4d07e1639faf
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Min or avg'
+		dataType: string
+		lineageTag: 6efd7858-5cdc-4246-b97e-2be0608317c8
+		summarizeBy: none
+		sourceColumn: Min or avg
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Time (mins)'
+		dataType: int64
+		formatString: 0
+		lineageTag: b887b009-d318-478f-9775-3b66ddef2662
+		summarizeBy: sum
+		sourceColumn: Time (mins)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cost ($)'
+		dataType: int64
+		formatString: 0
+		lineageTag: df6b28ad-3d09-475a-a77a-d0248bd060b8
+		summarizeBy: sum
+		sourceColumn: Cost ($)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Utility (n-utopias)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 63a8b135-2489-4e08-9166-4a56d3ae43be
+		summarizeBy: sum
+		sourceColumn: Utility (n-utopias)
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Outreach actions for dynamic' = m
+		mode: import
+		source =
+				let
+				    Source = #"Outreach actions",
+				    #"Removed Columns1" = Table.RemoveColumns(Source,{"Frequency", "Time required", "Skills", "Proximity", "Link to materials", "Contact", "Due by"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Columns1",{"Name", "Utility avg (nanoutopias)", "Utility max (nanoutopias)", "Time minimum (mins)", "Time average (mins)", "Cost min ($)", "Cost avg ($)"}),
+				    #"Unpivoted Columns" = Table.UnpivotOtherColumns(#"Reordered Columns", {"Name"}, "Attribute", "Value"),
+				    #"Added Metrics" = Table.AddColumn(#"Unpivoted Columns", "Metrics", each if Text.Contains([Attribute], "Time") then "Time (mins)" else if Text.Contains([Attribute], "Cost") then "Cost ($)" else if Text.Contains([Attribute], "Utility") then "Utility (nanoutopias)" else null),
+				    #"Added Min or avg" = Table.AddColumn(#"Added Metrics", "Min or avg", each if Text.Contains([Attribute], " avg") then "2 - Avg" else if Text.Contains([Attribute], " average") then "2 - Avg" else if Text.Contains([Attribute], " min") then "1 - Min" else if Text.Contains([Attribute], " max") then "3 - Max" else null),
+				    #"Removed Attribute" = Table.RemoveColumns(#"Added Min or avg",{"Attribute"}),
+				    #"Pivoted Metrics" = Table.Pivot(#"Removed Attribute", List.Distinct(#"Removed Attribute"[Metrics]), "Metrics", "Value", List.Max),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Pivoted Metrics",{{"Utility (nanoutopias)", Int64.Type}, {"Time (mins)", Int64.Type}, {"Cost ($)", Int64.Type}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Utility (nanoutopias)", "Utility (n-utopias)"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

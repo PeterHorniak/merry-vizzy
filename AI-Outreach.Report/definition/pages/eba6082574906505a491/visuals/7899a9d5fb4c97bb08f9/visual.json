@@ -1,18 +1,36 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "54ee4b176f9684bc88da",
+  "name": "7899a9d5fb4c97bb08f9",
   "position": {
     "x": 0,
     "y": 0,
-    "z": 2000,
-    "height": 433.74093264248705,
-    "width": 741.47150259067359,
-    "tabOrder": 2000
+    "z": 1000,
+    "height": 720.24870466321238,
+    "width": 731.52331606217615,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "scatterChart",
     "query": {
       "queryState": {
+        "Play": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions for dynamic"
+                    }
+                  },
+                  "Property": "Min or avg"
+                }
+              },
+              "queryRef": "Outreach actions for dynamic.Min or avg",
+              "nativeQueryRef": "Min or avg"
+            }
+          ]
+        },
         "Series": {
           "projections": [
             {
@@ -20,13 +38,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Outreach actions"
+                      "Entity": "Outreach actions for dynamic"
                     }
                   },
                   "Property": "Name"
                 }
               },
-              "queryRef": "Outreach actions.Name",
+              "queryRef": "Outreach actions for dynamic.Name",
               "nativeQueryRef": "Name"
             }
           ]
@@ -40,21 +58,21 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Outreach actions"
+                          "Entity": "Outreach actions for dynamic"
                         }
                       },
-                      "Property": "Utility avg (nanoutopias)"
+                      "Property": "Utility (n-utopias)"
                     }
                   },
                   "Function": 4
                 }
               },
-              "queryRef": "Sum(Outreach actions.Utility avg (nanoutopias))",
-              "nativeQueryRef": "Max of Utility avg (nanoutopias)"
+              "queryRef": "CountNonNull(Outreach actions for dynamic.Utility (nanoutopias))",
+              "nativeQueryRef": "Max of Utility (nanoutopias)"
             }
           ]
         },
-        "Tooltips": {
+        "X": {
           "projections": [
             {
               "field": {
@@ -63,35 +81,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Outreach actions"
+                          "Entity": "Outreach actions for dynamic"
                         }
                       },
-                      "Property": "Name"
+                      "Property": "Time (mins)"
                     }
                   },
-                  "Function": 3
+                  "Function": 4
                 }
               },
-              "queryRef": "Min(Outreach actions.Name)",
-              "nativeQueryRef": "First Name"
-            }
-          ]
-        },
-        "X": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Outreach actions"
-                    }
-                  },
-                  "Property": "Time minimum (mins)"
-                }
-              },
-              "queryRef": "Sum(Outreach actions.Time minimum (mins))",
-              "nativeQueryRef": "Time minimum (mins)",
+              "queryRef": "Sum(Outreach actions for dynamic.Time (mins))",
+              "nativeQueryRef": "Max of Time (mins)",
               "active": true
             }
           ]
@@ -100,17 +100,22 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Outreach actions"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Outreach actions for dynamic"
+                        }
+                      },
+                      "Property": "Cost ($)"
                     }
                   },
-                  "Property": "Cost min ($)"
+                  "Function": 4
                 }
               },
-              "queryRef": "Outreach actions.Cost min ($)",
-              "nativeQueryRef": "Cost min ($)"
+              "queryRef": "Outreach actions for dynamic.Cost ($)",
+              "nativeQueryRef": "Max of Cost ($)"
             }
           ]
         }
@@ -124,6 +129,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'LeftCenter'"
+                }
+              }
+            },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -204,7 +223,33 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "bubbles": [
+        {
+          "properties": {
+            "bubbleSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "zoom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -360,6 +405,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {

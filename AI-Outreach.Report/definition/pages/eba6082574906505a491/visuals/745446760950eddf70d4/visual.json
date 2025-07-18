@@ -1,0 +1,203 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "745446760950eddf70d4",
+  "position": {
+    "x": 755.3989637305699,
+    "y": 137.94818652849742,
+    "z": 0,
+    "height": 173.09844559585491,
+    "width": 524.6010362694301
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions for dynamic"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "Outreach actions for dynamic.Name",
+              "nativeQueryRef": "Name1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions for dynamic"
+                    }
+                  },
+                  "Property": "Cost ($)"
+                }
+              },
+              "queryRef": "Sum(Outreach actions for dynamic.Cost ($))",
+              "nativeQueryRef": "Cost ($)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions for dynamic"
+                    }
+                  },
+                  "Property": "Time (mins)"
+                }
+              },
+              "queryRef": "Sum(Outreach actions for dynamic.Time (mins))",
+              "nativeQueryRef": "Time (mins)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions for dynamic"
+                    }
+                  },
+                  "Property": "Utility (n-utopias)"
+                }
+              },
+              "queryRef": "Outreach actions for dynamic.Utility (nanoutopias)",
+              "nativeQueryRef": "Utility (nanoutopias)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions for dynamic"
+                    }
+                  },
+                  "Property": "Min or avg"
+                }
+              },
+              "queryRef": "Outreach actions for dynamic.Min or avg",
+              "nativeQueryRef": "Min or avg"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Outreach actions for dynamic"
+                  }
+                },
+                "Property": "Name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "53.1139896373057D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Outreach actions for dynamic.Min or avg"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "55.12435233160622D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outreach actions for dynamic.Time (mins))"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "40.082901554404145D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outreach actions for dynamic.Cost ($))"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "158.48704663212436D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Outreach actions for dynamic.Name"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

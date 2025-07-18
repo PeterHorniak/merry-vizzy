@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "31a60818617ac4089699",
   "position": {
-    "x": 674.86946651532355,
-    "y": 539.0238365493758,
-    "z": 1000,
-    "height": 174.3473325766175,
-    "width": 605.13053348467656,
-    "tabOrder": 1000
+    "x": 234.77720207253887,
+    "y": 462.25906735751295,
+    "z": 0,
+    "height": 257.98963730569949,
+    "width": 1045.2227979274612
   },
   "visual": {
     "visualType": "tableEx",
@@ -56,57 +55,283 @@
               },
               "queryRef": "Max(Outreach actions.Cost avg ($))",
               "nativeQueryRef": "Cost avg ($)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions"
+                    }
+                  },
+                  "Property": "Cost max ($)"
+                }
+              },
+              "queryRef": "Outreach actions.Cost max ($)",
+              "nativeQueryRef": "Cost max ($)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions"
+                    }
+                  },
+                  "Property": "Time minimum (mins)"
+                }
+              },
+              "queryRef": "Sum(Outreach actions.Time minimum (mins))",
+              "nativeQueryRef": "Time minimum (mins)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions"
+                    }
+                  },
+                  "Property": "Time average (mins)"
+                }
+              },
+              "queryRef": "Sum(Outreach actions.Time average (mins))",
+              "nativeQueryRef": "Time average (mins)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions"
+                    }
+                  },
+                  "Property": "Time maximum (mins)"
+                }
+              },
+              "queryRef": "Outreach actions.Time maximum (mins)",
+              "nativeQueryRef": "Time maximum (mins)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions"
+                    }
+                  },
+                  "Property": "Utility min (nanoutopias)"
+                }
+              },
+              "queryRef": "Outreach actions.Utility min (nanoutopias)",
+              "nativeQueryRef": "Utility min (nanoutopias)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions"
+                    }
+                  },
+                  "Property": "Utility avg (nanoutopias)"
+                }
+              },
+              "queryRef": "Outreach actions.Utility avg (nanoutopias)",
+              "nativeQueryRef": "Utility avg (nanoutopias)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions"
+                    }
+                  },
+                  "Property": "Utility max (nanoutopias)"
+                }
+              },
+              "queryRef": "Outreach actions.Utility max (nanoutopias)",
+              "nativeQueryRef": "Utility max (nanoutopias)"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Outreach actions"
+                  }
+                },
+                "Property": "Name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "257.61080811284893D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Outreach actions.Name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "66.08290155440415D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Max(Outreach actions.Cost min ($))"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "61.10362694300518D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Max(Outreach actions.Cost avg ($))"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "99.20725388601036D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outreach actions.Time minimum (mins))"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "89.20725388601036D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outreach actions.Time average (mins))"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "103.19689119170985D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Outreach actions.Time maximum (mins)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "65.43005181347151D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Outreach actions.Cost max ($)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "96.97409326424871D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Outreach actions.Utility min (nanoutopias)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "93.32124352331607D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Outreach actions.Utility avg (nanoutopias)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "91.67875647668394D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Outreach actions.Utility max (nanoutopias)"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4153e1696c4cd285014f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Outreach actions"
-              }
-            },
-            "Property": "Name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "444352dd3259047184d7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Outreach actions"
-              }
-            },
-            "Property": "Cost min ($)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "033d147980a7fd99a808",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Outreach actions"
-              }
-            },
-            "Property": "Cost avg ($)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

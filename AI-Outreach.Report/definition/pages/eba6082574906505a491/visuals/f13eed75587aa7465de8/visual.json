@@ -1,0 +1,369 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "f13eed75587aa7465de8",
+  "position": {
+    "x": 738.81865284974094,
+    "y": 371.39896373056996,
+    "z": 3000,
+    "height": 325.63730569948189,
+    "width": 541.18134715025906,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions for dynamic"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "Outreach actions for dynamic.Name",
+              "nativeQueryRef": "Name1",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions for dynamic"
+                    }
+                  },
+                  "Property": "Min or avg"
+                }
+              },
+              "queryRef": "Outreach actions for dynamic.Min or avg",
+              "nativeQueryRef": "Min or avg",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Outreach actions for dynamic"
+                        }
+                      },
+                      "Property": "Time (mins)"
+                    }
+                  },
+                  "Function": 4
+                }
+              },
+              "queryRef": "Sum(Outreach actions for dynamic.Time (mins))",
+              "nativeQueryRef": "Time (mins)",
+              "displayName": "Time (mins)"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Outreach actions for dynamic"
+                        }
+                      },
+                      "Property": "Cost ($)"
+                    }
+                  },
+                  "Function": 4
+                }
+              },
+              "queryRef": "Sum(Outreach actions for dynamic.Cost ($))",
+              "nativeQueryRef": "Cost ($)",
+              "displayName": "Cost ($)"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Outreach actions for dynamic"
+                        }
+                      },
+                      "Property": "Utility (n-utopias)"
+                    }
+                  },
+                  "Function": 4
+                }
+              },
+              "queryRef": "Sum(Outreach actions for dynamic.Utility (nanoutopias))",
+              "nativeQueryRef": "Utility (n-utopias)",
+              "displayName": "Utility (n-utopias)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Outreach actions for dynamic"
+                  }
+                },
+                "Property": "Name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Outreach actions for dynamic.Name"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions for dynamic"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Outreach actions for dynamic.Min or avg"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Create a Google Form for Volunteer Board'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Flyering'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Rep national phonecall'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Rep state meeting'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "53.1139896373057D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Outreach actions for dynamic.Min or avg"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "55.12435233160622D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outreach actions for dynamic.Time (mins))"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "40.082901554404145D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outreach actions for dynamic.Cost ($))"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "309.89851752069757D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Outreach actions for dynamic.Name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "57.84974093264249D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outreach actions for dynamic.Utility (nanoutopias))"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
