@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "400719a4a556ec86d666",
+  "position": {
+    "x": 0,
+    "y": 539,
+    "z": 2002,
+    "height": 174,
+    "width": 615,
+    "tabOrder": 2002
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "It can be hard to know where to start with advocating. These visuals attempt to show that there are many actions available to you, that many have minimal costs in time or money, and that there can be a big difference in the utility of different actions. "
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "We encourage you to take the actions with biggest utility, but the main thing is to start doing something!"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

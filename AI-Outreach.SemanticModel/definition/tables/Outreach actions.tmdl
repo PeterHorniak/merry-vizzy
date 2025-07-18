@@ -1,0 +1,129 @@
+table 'Outreach actions'
+	lineageTag: 0d1dd7c2-6063-4e84-a515-e30dd480ca25
+
+	column Name
+		dataType: string
+		lineageTag: ea110eb1-1ea6-467b-813f-2c2c66a129d2
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Time minimum (mins)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 94e5f4e6-d143-43b4-a77d-4ee64a5b8ca7
+		summarizeBy: sum
+		sourceColumn: Time minimum (mins)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Time average (mins)'
+		dataType: int64
+		formatString: 0
+		lineageTag: b95b4a26-52c6-4b51-9f34-eb63c4d9bb99
+		summarizeBy: sum
+		sourceColumn: Time average (mins)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cost min ($)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8564d586-511c-4d38-94e6-1af2dc8905a5
+		summarizeBy: sum
+		sourceColumn: Cost min ($)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cost avg ($)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 94414d5f-da1c-4603-bb59-37d777b44524
+		summarizeBy: sum
+		sourceColumn: Cost avg ($)
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nanoutopias
+		dataType: int64
+		formatString: 0
+		lineageTag: c8808428-2f67-4538-ad2b-ecdad9022a31
+		summarizeBy: sum
+		sourceColumn: Nanoutopias
+
+		annotation SummarizationSetBy = Automatic
+
+	column Frequency
+		dataType: string
+		lineageTag: 56fb9bc2-8a4b-49c3-8301-0eff0a68e438
+		summarizeBy: none
+		sourceColumn: Frequency
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Time required'
+		dataType: string
+		lineageTag: 945325e3-6168-4f60-bb23-ff703b606bc7
+		summarizeBy: none
+		sourceColumn: Time required
+
+		annotation SummarizationSetBy = Automatic
+
+	column Skills
+		dataType: string
+		lineageTag: 4819be9d-4860-4e9b-9b67-0fdff117ffbf
+		summarizeBy: none
+		sourceColumn: Skills
+
+		annotation SummarizationSetBy = Automatic
+
+	column Proximity
+		dataType: string
+		lineageTag: c2265e00-1d04-4364-831b-6ef87b722ad2
+		summarizeBy: none
+		sourceColumn: Proximity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Link to materials'
+		dataType: string
+		lineageTag: 95a5937d-f66d-4829-b982-b16b18ab23e1
+		summarizeBy: none
+		sourceColumn: Link to materials
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contact
+		dataType: string
+		lineageTag: a87da4f3-7cf2-45fb-8ca5-a81cb0d434bc
+		summarizeBy: none
+		sourceColumn: Contact
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Due by'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 50846294-513f-473b-a569-d5dfe1e99eb4
+		summarizeBy: none
+		sourceColumn: Due by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Outreach actions' = m
+		mode: import
+		source =
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/11JNDqXGAOgSOEH_dz-yBVzH9dLjqShtVRRiWPG5dW-M/edit?usp=sharing"),
+				    #"Outreach actions_Table" = Source{[name="Outreach actions",ItemKind="Table"]}[Data],
+				    #"Removed Top Rows" = Table.Skip(#"Outreach actions_Table",1),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Name", type text}, {"Time minimum (mins)", Int64.Type}, {"Time average (mins)", Int64.Type}, {"Cost min ($)", Int64.Type}, {"Cost avg ($)", Int64.Type}, {"Nanoutopias", Int64.Type}, {"Frequency", type text}, {"Time required", type text}, {"Skills", type text}, {"Proximity", type text}, {"Link to materials", type text}, {"Contact", type text}, {"Due by", type datetime}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

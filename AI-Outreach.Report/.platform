@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "AI-Outreach"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5f055a3b-c461-4030-ae1c-69581dce379e"
+  }
+}

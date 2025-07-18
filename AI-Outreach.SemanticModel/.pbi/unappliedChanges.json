@@ -1,0 +1,43 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/semanticModel/unappliedChanges/1.0.0/schema.json",
+  "conceptualSchemaSettings": {},
+  "queries": [
+    {
+      "name": "Outreach actions",
+      "lineageTag": "0d1dd7c2-6063-4e84-a515-e30dd480ca25",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/11JNDqXGAOgSOEH_dz-yBVzH9dLjqShtVRRiWPG5dW-M/edit?usp=sharing\"),",
+        "    #\"Outreach actions_Table\" = Source{[name=\"Outreach actions\",ItemKind=\"Table\"]}[Data],",
+        "    #\"Removed Top Rows\" = Table.Skip(#\"Outreach actions_Table\",1),",
+        "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Removed Top Rows\", [PromoteAllScalars=true]),",
+        "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Name\", type text}, {\"Time minimum (mins)\", Int64.Type}, {\"Time average (mins)\", Int64.Type}, {\"Cost min ($)\", Int64.Type}, {\"Cost avg ($)\", Int64.Type}, {\"Utility (nanoutopias)\", Int64.Type}, {\"Frequency\", type text}, {\"Time required\", type text}, {\"Skills\", type text}, {\"Proximity\", type text}, {\"Link to materials\", type text}, {\"Contact\", type text}, {\"Due by\", type datetime}})",
+        "in",
+        "    #\"Changed Type\""
+      ],
+      "isDirectQuery": false,
+      "resultType": "Table"
+    },
+    {
+      "name": "Outreach actions for dynamic",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = #\"Outreach actions\",",
+        "    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(Source, {\"Name\", \"Utility (nanoutopias)\", \"Frequency\", \"Time required\", \"Skills\", \"Proximity\", \"Link to materials\", \"Contact\", \"Due by\"}, \"Attribute\", \"Value\"),",
+        "    #\"Added Conditional Column1\" = Table.AddColumn(#\"Unpivoted Columns\", \"Metrics\", each if Text.Contains([Attribute], \"Time\") then \"Time (mins)\" else if Text.Contains([Attribute], \"Cost\") then \"Cost ($)\" else null),",
+        "    #\"Added Conditional Column\" = Table.AddColumn(#\"Added Conditional Column1\", \"Min or avg\", each if Text.Contains([Attribute], \"avg\") then \"Avg\" else if Text.Contains([Attribute], \"min\") then \"Min\" else null),",
+        "    #\"Removed Columns\" = Table.RemoveColumns(#\"Added Conditional Column\",{\"Attribute\"}),",
+        "    #\"Pivoted Column\" = Table.Pivot(#\"Removed Columns\", List.Distinct(#\"Removed Columns\"[Metrics]), \"Metrics\", \"Value\", List.Max)",
+        "in",
+        "    #\"Pivoted Column\""
+      ],
+      "isDirectQuery": false,
+      "resultType": "Table"
+    }
+  ],
+  "queryGroups": [],
+  "culture": "en-AU",
+  "firewallEnabled": true
+}

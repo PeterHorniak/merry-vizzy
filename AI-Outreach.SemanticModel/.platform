@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "AI-Outreach"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2b1cf1ee-475a-4e66-b253-21884e7a47b3"
+  }
+}

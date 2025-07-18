@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "31a60818617ac4089699",
+  "position": {
+    "x": 674.86946651532355,
+    "y": 539.0238365493758,
+    "z": 1000,
+    "height": 174.3473325766175,
+    "width": 605.13053348467656,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "Outreach actions.Name",
+              "nativeQueryRef": "Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions"
+                    }
+                  },
+                  "Property": "Cost min ($)"
+                }
+              },
+              "queryRef": "Max(Outreach actions.Cost min ($))",
+              "nativeQueryRef": "Cost min ($)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outreach actions"
+                    }
+                  },
+                  "Property": "Cost avg ($)"
+                }
+              },
+              "queryRef": "Max(Outreach actions.Cost avg ($))",
+              "nativeQueryRef": "Cost avg ($)"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4153e1696c4cd285014f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Outreach actions"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "444352dd3259047184d7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Outreach actions"
+              }
+            },
+            "Property": "Cost min ($)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "033d147980a7fd99a808",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Outreach actions"
+              }
+            },
+            "Property": "Cost avg ($)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
